@@ -3,6 +3,7 @@ class Csound < Formula
   homepage "https://csound.com"
   url "https://github.com/csound/csound/archive/6.14.0.tar.gz"
   sha256 "bef349c5304b2d3431ef417933b4c9e9469c0a408a4fa4a98acf0070af360a22"
+  revision 1
   head "https://github.com/csound/csound.git", :branch => "develop"
 
   bottle do
