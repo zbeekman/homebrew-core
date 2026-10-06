@@ -19,10 +19,17 @@ class Code2prompt < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
+  end
+
+  # `cargo update --precise 0.9.114 openssl-sys` for minimum needed to use OpenSSL 4
+  patch do
+    file "Patches/code2prompt/4.2.0-openssl-sys-0.9.114.patch"
+    type :backport
+    resolves "https://github.com/mufeedvh/code2prompt/commit/f9ff9796f9835d0aae143d40bfc91a02a6c5ada0"
   end
 
   deny_network_access!
@@ -33,7 +40,7 @@ class Code2prompt < Formula
 
   def install
     # Ensure the correct `openssl` will be picked up.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
     system "cargo", "install", *std_cargo_args(path: "crates/code2prompt")
   end
@@ -53,8 +60,8 @@ class Code2prompt < Formula
     assert_match "ChatGPT models, text-embedding-ada-002", JSON.parse(json_output)["model_info"]
 
     [
-      formula_opt_lib("openssl@3")/shared_library("libssl"),
-      formula_opt_lib("openssl@3")/shared_library("libcrypto"),
+      formula_opt_lib("openssl@4")/shared_library("libssl"),
+      formula_opt_lib("openssl@4")/shared_library("libcrypto"),
     ].each do |library|
       assert Utils.binary_linked_to_library?(bin/"code2prompt", library),
              "No linkage with #{library.basename}! Cargo is likely using a vendored version."
