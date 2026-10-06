@@ -7,7 +7,11 @@ class Gerust < Formula
     url "https://github.com/mainmatter/gerust/archive/refs/tags/v0.0.6.tar.gz"
     sha256 "1036cc5461e91f775bf499575f2352cba8a91ac2c97d2b312bdc19601d300038"
 
-    depends_on "openssl@3"
+    depends_on "openssl@4"
+
+    # `cargo update --precise 0.9.114 openssl-sys` for minimum needed to use OpenSSL 4
+    # TODO: Remove in the next release and replace openssl dependency with aws-lc
+    patch :DATA
   end
 
   bottle do
@@ -42,7 +46,7 @@ class Gerust < Formula
 
   def install
     if build.stable?
-      ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+      ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
     else
       ENV["AWS_LC_SYS_USE_SYSTEM"] = "1"
     end
@@ -60,11 +64,29 @@ class Gerust < Formula
     assert_match "Could not generate project!", output
 
     [
-      formula_opt_lib("openssl@3")/shared_library("libssl"),
-      formula_opt_lib("openssl@3")/shared_library("libcrypto"),
+      formula_opt_lib("openssl@4")/shared_library("libssl"),
+      formula_opt_lib("openssl@4")/shared_library("libcrypto"),
     ].each do |library|
       assert Utils.binary_linked_to_library?(bin/"gerust", library),
              "No linkage with #{library.basename}! Cargo is likely using a vendored version."
     end
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 80c06be..f44b38b 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1592,9 +1592,9 @@ checksum = "d05e27ee213611ffe7d6348b942e8f942b37114c00cc03cec254295a4a17852e"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.106"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8bb61ea9811cc39e3c2069f40b8b8e2e70d8569b361f879786cc7ed48b777cdd"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
