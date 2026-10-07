@@ -5,6 +5,7 @@ class Julia < Formula
   url "https://github.com/JuliaLang/julia/releases/download/v1.13.1/julia-1.13.1-full.tar.gz"
   sha256 "1c2006bced7a1f8b6c92598ef65b7b24fc74aeaadc53535a45e4c6197001057c"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
+  revision 1
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
   # Upstream creates GitHub releases for both stable and LTS versions, so the
@@ -37,7 +38,7 @@ class Julia < Formula
   depends_on "mpfr" => :no_linkage
   depends_on "openblas64" => :no_linkage
   depends_on "openlibm" => :no_linkage
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "p7zip"
   depends_on "pcre2"
   depends_on "suite-sparse"
@@ -183,11 +184,11 @@ class Julia < Formula
     end
 
     # Remove library versions from nghttp2_jll and others
-    # https://git.archlinux.org/svntogit/community.git/tree/trunk/julia-hardcoded-libs.patch?h=packages/julia
-    stdlib_deps = %w[nghttp2 LibGit2 OpenLibm SuiteSparse]
+    # https://gitlab.archlinux.org/archlinux/packaging/packages/julia/-/blob/main/julia-hardcoded-libs.patch
+    stdlib_deps = %w[nghttp2 LibGit2 OpenLibm SuiteSparse OpenSSL]
     stdlib_deps.each do |dep|
-      inreplace (buildpath/"stdlib").glob("**/#{dep}_jll.jl") do |s|
-        s.gsub!(%r{@rpath/lib(\w+)(\.\d+)*\.dylib}, "@rpath/lib\\1.dylib")
+      inreplace "stdlib/#{dep}_jll/src/#{dep}_jll.jl" do |s|
+        s.gsub!(/lib(\w+)(\.\d+)*\.dylib/, "lib\\1.dylib")
         s.gsub!(/lib(\w+)\.so(\.\d+)*/, "lib\\1.so")
       end
     end
@@ -266,16 +267,10 @@ class Julia < Formula
     JULIA
     system bin/"julia", *args, "library_test.jl"
 
-    # Skipping tests on Intel macOS as CI runner is too slow and exceeds `brew test` 5 min limit
-    return if OS.mac? && Hardware::CPU.intel? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
     with_env(CI: nil) do
-      # FIXME: Skipping test on macOS as runners keep timing out
-      unless OS.mac?
-        # Julia writes JSON reports beside its test sources.
-        cp_r pkgshare/"test", testpath/"test"
-        system bin/"julia", *args, testpath/"test/runtests.jl", "--buildroot=#{pkgshare}", "core"
-      end
+      # Julia writes JSON reports beside its test sources.
+      cp_r pkgshare/"test", testpath/"test"
+      system bin/"julia", *args, testpath/"test/runtests.jl", "--buildroot=#{pkgshare}", "core"
     end
 
     # Check that Julia can load stdlibs that load non-Julia code.
