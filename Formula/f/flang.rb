@@ -2,6 +2,7 @@ class Flang < Formula
   desc "LLVM Fortran Frontend"
   homepage "https://flang.llvm.org/"
   license "Apache-2.0" => { with: "LLVM-exception" }
+  revision 1
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
@@ -55,15 +56,14 @@ class Flang < Formula
       -DLLVM_ENABLE_LTO=ON
     ]
 
-    # LLVM_INSTALL_TOOLCHAIN_ONLY is to avoid shipping unnecessary libraries. Gentoo uses the same option.
-    # Fedora builds as part of full LLVM so manually removes files after install to achieve a similar result:
-    # https://src.fedoraproject.org/rpms/llvm/blob/821c6dcbd0d721d2c91e7c87bb4e483aaf1af715/f/llvm.spec#_2477-2523
+    # Libraries are static because `-DBUILD_SHARED_LIBS=ON` duplicated MLIR singletons and miscompiled (#301233).
+    # Add back `-DBUILD_SHARED_LIBS=ON` when this is fixed upstream:
+    # https://github.com/llvm/llvm-project/issues/219579
     flang_args = %W[
       -DCLANG_DIR=#{llvm.opt_lib}/cmake/clang
       -DFLANG_INCLUDE_TESTS=OFF
       -DFLANG_REPOSITORY_STRING=#{tap&.issues_url}
       -DFLANG_VENDOR=#{tap&.user}
-      -DLLVM_INSTALL_TOOLCHAIN_ONLY=ON
       -DLLVM_RAM_PER_COMPILE_JOB=5000
       -DLLVM_RAM_PER_LINK_JOB=10000
       -DLLVM_USE_SYMLINKS=ON
@@ -181,5 +181,29 @@ class Flang < Formula
     assert_equal expected, shell_output("./omptest").lines(chomp: true).sort
 
     system bin/"flang", "-v", "runtimes.f90"
+
+    (testpath/"plugin.cpp").write <<~CPP
+      #include "flang/Frontend/FrontendActions.h"
+      #include "flang/Frontend/FrontendPluginRegistry.h"
+      #include "flang/Parser/parse-tree.h"
+      #include "flang/Parser/parsing.h"
+
+      using namespace Fortran::frontend;
+
+      struct CountUnits : PluginParseTreeAction {
+        void executeAction() override {
+          llvm::outs() << "units: " << getParsing().parseTree()->v.size() << "\\n";
+        }
+      };
+
+      static FrontendPluginRegistry::Add<CountUnits> X("count-units", "Count program units");
+    CPP
+
+    plugin = testpath/shared_library("plugin")
+    args = %W[-std=c++17 -shared -fPIC -DFLANG_LITTLE_ENDIAN=1 -I#{include} -I#{formula_opt_include("llvm")}]
+    args << "-Wl,-undefined,dynamic_lookup" if OS.mac?
+    system formula_opt_bin("llvm")/"clang++", *args, "plugin.cpp", "-o", plugin
+    output = shell_output("#{bin}/flang -fc1 -load #{plugin} -plugin count-units sqrt72.f90")
+    assert_equal "units: 2", output.strip
   end
 end
