@@ -2,8 +2,8 @@ class Ponyc < Formula
   desc "Object-oriented, actor-model, capabilities-secure programming language"
   homepage "https://www.ponylang.io/"
   url "https://github.com/ponylang/ponyc.git",
-      tag:      "0.74.0",
-      revision: "95ad18015d04f4414d0fd4f469ed6b2e9b9b9e73"
+      tag:      "0.75.0",
+      revision: "7c962f6b879fcf366db48ce3c5ef76ff39c2fde6"
   license "BSD-2-Clause"
 
   bottle do
@@ -23,14 +23,6 @@ class Ponyc < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
-  end
-
-  patch do
-    url "https://github.com/llvm/llvm-project/commit/b8007a8e4020b8bca2b12e941660e10bf5bf6716.patch?full_index=1"
-    sha256 "e41e300eb6f5cca9172ab344e572c3fb24f0d05885ae23dd7cb4f9c2528839f7"
-    directory "lib/llvm/src"
-    type :backport
-    resolves "https://github.com/llvm/llvm-project/pull/222721"
   end
 
   deny_network_access!
