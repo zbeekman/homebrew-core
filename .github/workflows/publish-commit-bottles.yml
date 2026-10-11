@@ -477,7 +477,7 @@ jobs:
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Enable automerge
+      - name: Enqueue PR for merge
         id: automerge
         env:
           GH_TOKEN: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
@@ -497,11 +497,13 @@ jobs:
             exit 1
           fi
 
-          gh pr merge "$PR" \
-            --auto \
-            --merge \
-            --match-head-commit "$EXPECTED_SHA" \
-            --repo "$GITHUB_REPOSITORY"
+          # Submit without waiting for enqueueing or merging; GitHub handles retries.
+          gh api --method PUT \
+            --header 'Accept: application/vnd.github+json' \
+            --header 'X-GitHub-Api-Version: 2026-03-10' \
+            "repos/$GITHUB_REPOSITORY/pulls/$PR/merge-async" \
+            --raw-field sha="$EXPECTED_SHA" \
+            --raw-field merge_action=merge_queue
 
       - name: Post comment on failure
         if: >
@@ -513,8 +515,8 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           issue: ${{inputs.pull_request}}
-          body: ":warning: @${{github.actor}} [Failed to enable automerge](${{env.RUN_URL}})."
-          bot_body: ":warning: [Failed to enable automerge](${{env.RUN_URL}})."
+          body: ":warning: @${{github.actor}} [Failed to enqueue PR for merge](${{env.RUN_URL}})."
+          bot_body: ":warning: [Failed to enqueue PR for merge](${{env.RUN_URL}})."
           bot: github-actions[bot]
 
   update-command-not-found-db:
