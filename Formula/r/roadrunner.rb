@@ -1,10 +1,16 @@
 class Roadrunner < Formula
   desc "High-performance PHP application server, load-balancer and process manager"
   homepage "https://docs.roadrunner.dev/docs"
-  url "https://github.com/roadrunner-server/roadrunner/archive/refs/tags/v2025.1.15.tar.gz"
-  sha256 "32e0196ae551b6ad2abf50cbfc961f91e9dd4134bd177b0f7aa03dada9e41979"
+  url "https://github.com/roadrunner-server/roadrunner/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "bf687e6ae9b544ef51db550a7d7588b4f35fa6e04de768c5e115d36f974030a5"
   license "MIT"
+  version_scheme 1
   head "https://github.com/roadrunner-server/roadrunner.git", branch: "master"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d{1,3}(?:\.\d+)+)$/i)
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f4812e61be40a36da86872f4fe19f7210e0831ea077cbda2813d44f76bee94d8"
@@ -29,7 +35,7 @@ class Roadrunner < Formula
       -X github.com/roadrunner-server/roadrunner/v#{version.major}/internal/meta.version=#{version}
       -X github.com/roadrunner-server/roadrunner/v#{version.major}/internal/meta.buildTime=#{time.iso8601}
     ]
-    system "go", "build", *std_go_args(ldflags:, tags: "aws", output: bin/"rr"), "./cmd/rr"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"rr"), "./cmd/rr"
 
     generate_completions_from_executable(bin/"rr", shell_parameter_format: :cobra)
   end
