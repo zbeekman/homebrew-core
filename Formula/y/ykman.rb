@@ -21,7 +21,7 @@ class Ykman < Formula
   depends_on "cmake" => :build # for more-itertools
   depends_on "swig" => :build
   depends_on "cryptography" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "pcsc-lite"
 
@@ -29,8 +29,8 @@ class Ykman < Formula
                 extra_packages:   %w[jeepney secretstorage]
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/76/d4/81420972a676e8ffea40450d8c8c92943e7218a78fe9b64359836cc9876b/click-8.4.2.tar.gz"
-    sha256 "9a6cea6e60b17ebe0a44c5cc636d94f09bd66142c1cd7d8b4cd731c4917a15f6"
+    url "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz"
+    sha256 "ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34"
   end
 
   resource "fido2" do
@@ -49,8 +49,8 @@ class Ykman < Formula
   end
 
   resource "jaraco-functools" do
-    url "https://files.pythonhosted.org/packages/36/cf/ea4ef2920830dea3f5ab2ea4da6fb67724e6dca80ee2553788c3607243d0/jaraco_functools-4.5.0.tar.gz"
-    sha256 "3bb5665ea4a020cf78a7040e89154c77edadb3ca74f366479669c5999aa70b03"
+    url "https://files.pythonhosted.org/packages/6c/1f/c23395957d41ccf27c4e535c3d334c4051e5395b3752057ba4cbaec35c56/jaraco_functools-4.6.0.tar.gz"
+    sha256 "880c577ec9720b3a052d5bc611fb9f2269b3d87902ef42440df443b88e443280"
   end
 
   resource "jeepney" do
