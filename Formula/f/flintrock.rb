@@ -9,13 +9,12 @@ class Flintrock < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "068261fc603755260c47e3395b992593d3222fd8c1688f6b20483c493b15e2e2"
-    sha256 cellar: :any,                 arm64_tahoe:       "1561728f5ee680f1cf1f42eef3667cdddba8800903c8b9a68c1d8f341d2a8c0f"
-    sha256 cellar: :any,                 arm64_sequoia:     "3189349906f04737772d0b1acb6f4a523b5430b65271626778f07e1d8d9c94f6"
-    sha256 cellar: :any,                 arm64_sonoma:      "148986f12dd15e824c46d2251521e19b6a5e19d9ee0eadf027ab692fb3f5183b"
-    sha256 cellar: :any,                 sonoma:            "e5d6aff8a0895ff834f6e74bbb1ef9166120566d264166fa339a1d6ef2d11f90"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c57d22478c82da7ea46b9b3f7b11315a9f7decb7862e557bb24214efe141ec45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "17ac5368bc13e842cb4b2649cf2872c3d75a7c2c47e3f29c3db2c8cd63cb7416"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "86a335255ba6d1451120e0f7062ca67d3ac50b94fe3ae5dd29a6c9b9baba481d"
+    sha256 cellar: :any, arm64_tahoe:       "3a705bb019d9e42abb195b88a62e3f10b479b9884fe29646559a1ee208c22a90"
+    sha256 cellar: :any, arm64_sequoia:     "4d9670222fc4f74432a69746b52ce12f7a06ae84a39529d172ac13f4db2a31bf"
+    sha256 cellar: :any, arm64_linux:       "c31a3d60556c00f3b9198a4cf9971629de6f1b243a9222b34a14ec716f04e077"
+    sha256 cellar: :any, x86_64_linux:      "3ed7e55f05b9101c34ad9e7aad5f541f26668a3c73b14d6fc3800a8915093fd8"
   end
 
   # `pkgconf` and `rust` are for bcrypt
