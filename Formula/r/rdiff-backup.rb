@@ -21,7 +21,7 @@ class RdiffBackup < Formula
 
   depends_on "librsync"
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages extra_packages: "pyxattr"
 
