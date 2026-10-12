@@ -28,7 +28,7 @@ class AwscliAT1 < Formula
   disable! date: "2027-07-15", because: :deprecated_upstream, replacement_formula: "awscli"
 
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "mandoc"
 
