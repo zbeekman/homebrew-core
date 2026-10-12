@@ -8,12 +8,11 @@ class Pylint < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "41c05ebf227140fe71d81bb992f66b47f506c83cd27d458767e43eaabad178c3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41c05ebf227140fe71d81bb992f66b47f506c83cd27d458767e43eaabad178c3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "41c05ebf227140fe71d81bb992f66b47f506c83cd27d458767e43eaabad178c3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "465cf70cd6a6569789b167ff1ee79436c77f5618e5b4e94f25d61c24bad40449"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "465cf70cd6a6569789b167ff1ee79436c77f5618e5b4e94f25d61c24bad40449"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "81e14d31863356f77bf4ba015e33cab5e1f60e58ac442e116ece12b57b600f09"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "81e14d31863356f77bf4ba015e33cab5e1f60e58ac442e116ece12b57b600f09"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "81e14d31863356f77bf4ba015e33cab5e1f60e58ac442e116ece12b57b600f09"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d75da858c50dfceba718649e91bedb33b983f80c1e9bd4cc5574f35b8708ceda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d75da858c50dfceba718649e91bedb33b983f80c1e9bd4cc5574f35b8708ceda"
   end
 
   depends_on "rust" => :build # for `isort`
