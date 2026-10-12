@@ -14,7 +14,7 @@ class Osc < Formula
   end
 
   depends_on "cryptography" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rpm"
 
   uses_from_macos "curl"
