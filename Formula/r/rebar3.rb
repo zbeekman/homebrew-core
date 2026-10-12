@@ -1,8 +1,8 @@
 class Rebar3 < Formula
   desc "Erlang build tool"
   homepage "https://rebar3.org"
-  url "https://github.com/erlang/rebar3/archive/refs/tags/3.27.1.tar.gz"
-  sha256 "e34cf5e8f25fc7e59b2ff5c56fed507cf1378d4eef2a4aa7957b3c7e80812d64"
+  url "https://github.com/erlang/rebar3/archive/refs/tags/3.27.2.tar.gz"
+  sha256 "f4256c8e50c1df4e2dd3a54bb0d3576d261fd12e25b04a5d82e37fa3669ec3c0"
   license "Apache-2.0"
 
   livecheck do
