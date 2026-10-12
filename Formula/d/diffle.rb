@@ -5,6 +5,10 @@ class Diffle < Formula
   sha256 "a88ce52918ada6deb4e875950f6c88aaa68f8b835f1f9a919f01e033602a8f7a"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "089bf89b0b0137c6db7467c477a8bc7a81219825c473270a577b7bc48b66ea62"
+  end
+
   depends_on "node"
 
   def install
