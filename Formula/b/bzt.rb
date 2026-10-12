@@ -21,11 +21,12 @@ class Bzt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a1f089f5907501e3b4ca6d0b217a7c51d2115d3c7d05007bee43636a2548f9fe"
-    sha256 cellar: :any, arm64_tahoe:       "f227356b6a0e9c3bc64c147848f2eda5bb6701ea93065b189989c482b6d9f66e"
-    sha256 cellar: :any, arm64_sequoia:     "f7f3f1aa9f36fda42126c5e6d2bd3093b9fd1fe9c9696aa2c9e86e220d8ee808"
-    sha256 cellar: :any, arm64_linux:       "8005596fd4aec77273f7bfbf24af7cfb09074e132b0a5c5b85c69b03a8b0d82e"
-    sha256 cellar: :any, x86_64_linux:      "c26074c35bc82c821b53ad63d1054fb3a8a27e92f5663dfcdd3fc6ecac572334"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "d0cc435a053d91b4a751ebfe012b4d024d5be5a8cecb6783ff8d55d1a236946a"
+    sha256 cellar: :any, arm64_tahoe:       "0922ccb99abda9679165dcfeb23ec1add076a4fff626cfb9ff2ef3b64274298c"
+    sha256 cellar: :any, arm64_sequoia:     "36b851f9fc8b56be54de2f9653911f777a3210d5b6c664205005deb7563f2f9f"
+    sha256 cellar: :any, arm64_linux:       "ea27d9f13a0a444a6a0ca77df7ec848eb43c5392db33414e92e99bb2c92488d2"
+    sha256 cellar: :any, x86_64_linux:      "2c51ae71ca2399205beaceb98ea0264cd56289f1b8b0b6535cff0f044aea42a1"
   end
 
   depends_on "cmake" => :build
