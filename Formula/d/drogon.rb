@@ -9,12 +9,11 @@ class Drogon < Formula
   head "https://github.com/drogonframework/drogon.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d0e62373deac65d1fb493b679c8bcd8df49fc2525cd0bbb46f2469323e7b9edf"
-    sha256 cellar: :any, arm64_tahoe:       "18dca8c71ad37b5bbb770932d6caaf0fb548ba7f139a6539b6966027ef111a03"
-    sha256 cellar: :any, arm64_sequoia:     "6814df6a07b39480cb2813ef644eb323d6082ecee79619825183d6d792bec4a3"
-    sha256 cellar: :any, arm64_linux:       "09023fabf142669b866365a24071e244380fa43a7144490a2d5d455c984f676e"
-    sha256 cellar: :any, x86_64_linux:      "fae8c1fdfe1d13392e692a87f7c024b13337ef047c4d7b46872e951c77eb7e22"
+    sha256 cellar: :any, arm64_golden_gate: "9a87aa794ec1b8fcefa96a03b41aafb03211f4271cbca7a784fcd2add0b7f15d"
+    sha256 cellar: :any, arm64_tahoe:       "dda5b31078f592a8856318c8c526961effd0e1e9e41dc04a7ad617ac59120b2c"
+    sha256 cellar: :any, arm64_sequoia:     "a682a4681c8999f5404f7d0086a4ac303df23fc53e91e66fc4b1e496622da836"
+    sha256 cellar: :any, arm64_linux:       "12c49819b5aeefeb7cc6cbb9ca1d3609fe23cb22af3b42d05f1036ac90d0be07"
+    sha256 cellar: :any, x86_64_linux:      "741ac3d98fa34e79878f408b17f1ecde11b089b9d9778d9d8a62a3ceb2325fcd"
   end
 
   depends_on "cmake" => [:build, :test]
