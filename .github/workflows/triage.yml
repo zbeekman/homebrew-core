@@ -403,7 +403,7 @@ jobs:
 
             - label: shell-completion
               path: Formula/.+
-              patch_content: '\n[-+].*(generate_completions_from_executable|bash_completion|zsh_completion|fish_completion|pwsh_completion)'
+              patch_content: '(^|\n)[-+].*(generate_completions_from_executable|bash_completion|zsh_completion|fish_completion|pwsh_completion)'
 
             - label: missing network sandbox
               path: Formula/.+
