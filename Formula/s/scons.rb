@@ -11,7 +11,7 @@ class Scons < Formula
     sha256 cellar: :any_skip_relocation, all: "85d173cb38af6698fda85e039969b97217ca2fb97ca4ec0411cc0737965586ed"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   def install
     virtualenv_install_with_resources
