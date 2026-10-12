@@ -17,7 +17,7 @@ class Trailscraper < Formula
     sha256 cellar: :any,                 x86_64_linux:      "a514e3546c7f53236597048e7cde38403429609065d287d56ca0805896eb8570"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "boto3" do
     url "https://files.pythonhosted.org/packages/61/ce/d6fbf9cdda1b40023ef60507adc1de1d7ba0786dc73ddca59f4bed487e40/boto3-1.38.3.tar.gz"
