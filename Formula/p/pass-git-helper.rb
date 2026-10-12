@@ -13,7 +13,7 @@ class PassGitHelper < Formula
 
   depends_on "gnupg" => :test
   depends_on "pass"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages package_name:   "",
                 extra_packages: "pyxdg"
