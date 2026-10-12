@@ -9,11 +9,12 @@ class Pferd < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8b21bbbee16d1cd8338661266baeeaba8f53c22537ae04abc4dc28c763bca4d1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "846266e334516f06281d751043a7856680d8c195bba5fce77a03c2a285d5fa7b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6f7b1ae673fcd961f7fa39c80ce72828850f798abad2c9e2812613ea39a02779"
-    sha256 cellar: :any,                 arm64_linux:       "21b72229a782a09026ddef749e17776768ba2c870b5af0e14e93b070a0e906c9"
-    sha256 cellar: :any,                 x86_64_linux:      "095ae9f9801a7a4ede32e5b903e164de3941ef08b92d731b3d019ce112d4ae13"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8bbf87b98faea821b2be0d193959cefdc6b9aaee6a30d57b500a4e1f22193448"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "241d5cfb873247c8c63ee779cb3fea71123cf70f84ccbc5d3a1df023ef4425aa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6cb831d2be2efb04d48233db1c9159f6d4fa3e235363d63b800a3ae9cf6366d3"
+    sha256 cellar: :any,                 arm64_linux:       "e5b53d97e76e46e14aa1990ccbf9f2a08c4994265115f73b93bdc3c44fd20ab8"
+    sha256 cellar: :any,                 x86_64_linux:      "5bce33d0ba67bbe60741ffe560145e78a0aed769d529148e5aca6e7c6626d8b0"
   end
 
   depends_on "certifi" => :no_linkage
