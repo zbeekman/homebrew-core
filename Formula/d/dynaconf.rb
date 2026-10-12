@@ -9,7 +9,8 @@ class Dynaconf < Formula
   head "https://github.com/dynaconf/dynaconf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c543c87d8be3af39cc71dae03bc4c0abd80c9b2ef4698a4356461eb5422dbe48"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "7e6d4a4db8ee43d3dcc2676c417e28c4471360331117af6ba8f60e158848d3c0"
   end
 
   depends_on "python@3.15"
