@@ -10,11 +10,12 @@ class RobotFramework < Formula
   head "https://github.com/robotframework/robotframework.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "2b3473a2ba83ec157fdc092e5789309bdcf459fb5899cff191aa856e11f6271f"
-    sha256 cellar: :any, arm64_tahoe:       "aec0b05617440fc9ecd3f3af503640162bf7193a820efea7257756773a7b143d"
-    sha256 cellar: :any, arm64_sequoia:     "770808d290e75b21f7147072bdcb55225964401ece77125775b415637768d5d4"
-    sha256 cellar: :any, arm64_linux:       "210d92b7ffc177f31446d6deb3331d49cea9d490b7dce575a9c171fe6d21733e"
-    sha256 cellar: :any, x86_64_linux:      "a2a44d17306e356eb19db5b2f6c094ccdd76c223eddbce691ff890969da1c172"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "6aa514724bff5611852a44f4d00e668e76519e8497cd2b0d26d3ff716a7aba58"
+    sha256 cellar: :any, arm64_tahoe:       "e1255c47a78dd59a06c60a0fdf140a9fe80d7cf6a4c9bce159d387e72dff59ca"
+    sha256 cellar: :any, arm64_sequoia:     "49bd47d57a7db0ff3dd90239110c505414c010daebdcbf1e52a2252c25cdabf3"
+    sha256 cellar: :any, arm64_linux:       "099d0b031ac9f50f6ae3732b11d2da6c8f964047c87037947cb8ea3908d3c218"
+    sha256 cellar: :any, x86_64_linux:      "0b4110a762071b8839acbab0cc804e15f26466c0025ad59506f6b1722fa9fe3e"
   end
 
   # `pkgconf` and `rust` are for bcrypt
