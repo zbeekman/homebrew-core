@@ -6,12 +6,11 @@ class Ols < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d1eea32145df80d1bba93312ec2f550b41dcedb3aab32265522e029fe09a3d86"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0a5a601616565b0bdcfaa484ffe0f589677848e88592b16722d48febeaa01b91"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "52f49213b3a19715408ff48c32af6105d876955e22ccb39b60c4f11eacdc0007"
-    sha256 cellar: :any,                 arm64_linux:       "12d2f63811a29d6d45042aa194651bd77d843038d925be9bb926062d67d22fd9"
-    sha256 cellar: :any,                 x86_64_linux:      "d454e3a6cc1e7d657c826533524b87b56bbf3b728775b68319515a743a253f72"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7881aeeed20800477c9730d037680e665262e94ff26f371f4e8098e64fcc50c9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2a6de3dacee6a90fc432756280b5342243defd93aa93dac67ef6db98b337a13"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f80f0da689ca207ce9cd4d88330617c15bd8980885db3fe7913dde03839d2f37"
+    sha256 cellar: :any,                 arm64_linux:       "226526cd5023323d5e922f6c829b6c26570a2ba670fbc097a7df58edfe06e7d0"
+    sha256 cellar: :any,                 x86_64_linux:      "52907b85383ea18f21bd5616bbfa3881b147317745fcaa3b3b752e039c377997"
   end
 
   depends_on "odin" => :build
