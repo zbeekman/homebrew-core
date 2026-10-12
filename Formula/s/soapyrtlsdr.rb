@@ -1,10 +1,9 @@
 class Soapyrtlsdr < Formula
   desc "SoapySDR RTL-SDR Support Module"
   homepage "https://github.com/pothosware/SoapyRTLSDR/wiki"
-  url "https://github.com/pothosware/SoapyRTLSDR/archive/refs/tags/soapy-rtl-sdr-0.3.3.tar.gz"
-  sha256 "757c3c3bd17c5a12c7168db2f2f0fd274457e65f35e23c5ec9aec34e3ef54ece"
+  url "https://github.com/pothosware/SoapyRTLSDR/archive/refs/tags/soapy-rtlsdr-0.3.4.tar.gz"
+  sha256 "1602035b849bca2e9c189712a08d22dc0c7c3a936f9063ac9851bf3229d4460e"
   license "MIT"
-  revision 3
   head "https://github.com/pothosware/SoapyRTLSDR.git", branch: "master"
 
   bottle do
@@ -22,9 +21,7 @@ class Soapyrtlsdr < Formula
   deny_network_access!
 
   def install
-    # Workaround to build with CMake 4
-    args = %w[-DCMAKE_POLICY_VERSION_MINIMUM=3.5]
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
