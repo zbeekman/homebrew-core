@@ -3,10 +3,9 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.37.12.tar.gz"
-  sha256 "6017e96c81b533894e26c3623fad446acdf11115cf695dce78da010874758899"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.37.13.tar.gz"
+  sha256 "e39287b59bed2fb8f530c12f58a605ee099a3548f1d1db72533263a0ea016d17"
   license "Apache-2.0"
-  revision 2
   compatibility_version 1
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
@@ -27,7 +26,7 @@ class Awscli < Formula
   depends_on "aws-c-mqtt"
   depends_on "aws-c-s3"
   depends_on "aws-checksums"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "mandoc"
 
