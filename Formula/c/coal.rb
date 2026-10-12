@@ -4,7 +4,7 @@ class Coal < Formula
   url "https://github.com/coal-library/coal/releases/download/v3.0.4/coal-3.0.4.tar.gz"
   sha256 "0a9091aa281f51b9513f11aae39758a6188bca63010524f36b3bdc566381ca4a"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
   compatibility_version 2
   head "https://github.com/coal-library/coal.git", branch: "devel"
 
@@ -32,7 +32,7 @@ class Coal < Formula
   depends_on "eigen"
   depends_on "eigenpy"
   depends_on "octomap"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   deny_network_access!
 
