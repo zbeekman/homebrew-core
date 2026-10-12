@@ -7,11 +7,11 @@ class SnxRs < Formula
   head "https://github.com/ancwrd1/snx-rs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d66df5c9868cddd9c4419cc29f44be0b2e850e0d75ead9b6f7ddde7a49b2f4be"
-    sha256 cellar: :any, arm64_tahoe:       "6f12ba323ca8c1d1f39abe932bed402efcc55c500aee7576cf2157e00f497ddd"
-    sha256 cellar: :any, arm64_sequoia:     "c02459b053fbffe3b9ae8a3e7b6cf2c4651067d6bada0fcba9db6f9e1b19f939"
-    sha256 cellar: :any, arm64_linux:       "16979c529487dcaace2208b9928cac286adfe702d31aa4728e7900216ccd217a"
-    sha256 cellar: :any, x86_64_linux:      "3e72651eb0aa44d8f9b8ca77b4669e6000465fdfaecb88590afd800748753f91"
+    sha256 cellar: :any, arm64_golden_gate: "750b4d3ff6d0cd3c0e8c44f77c996287f67f186ee51e91c58687bd6831b5c883"
+    sha256 cellar: :any, arm64_tahoe:       "9660132cec694f5c71f4f0d4e00789a9693a488567f55e5a5aa043dbce8e95aa"
+    sha256 cellar: :any, arm64_sequoia:     "71aacdb7b154f2bcff63040d30b9c1a12d64acbd9634239af41f358234c3eb89"
+    sha256 cellar: :any, arm64_linux:       "0716bd07a2162896091893ac07e6ec7de66493107f5601a94960c691a2f3fc61"
+    sha256 cellar: :any, x86_64_linux:      "fe7b0dcc4b3e17296218f746ce5932344cb94be52a89fc370dff38ca80d60430"
   end
 
   depends_on "pkgconf" => :build
