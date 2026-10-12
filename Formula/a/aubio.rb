@@ -27,7 +27,7 @@ class Aubio < Formula
   depends_on "python-setuptools" => :build
   depends_on "libsndfile"
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "homebrew-aiff", :test do
     url "https://archive.org/download/TestAifAiffFile/02DayIsDone.aif"
@@ -51,7 +51,7 @@ class Aubio < Formula
     # Work-around for build issue with Xcode 15.3: https://github.com/aubio/aubio/issues/402
     ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
 
-    system python3, "./waf", "configure", "--prefix=#{prefix}"
+    system python3, "./waf", "configure", "--prefix=#{prefix}", "--libdir=#{lib}"
     system python3, "./waf", "build"
     system python3, "./waf", "install"
 
