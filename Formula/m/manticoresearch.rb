@@ -5,6 +5,7 @@ class Manticoresearch < Formula
     "GPL-3.0-or-later",
     { any_of: ["Unlicense", "MIT"] }, # uni-algo (our formula is too new)
   ]
+  revision 1
   version_scheme 1
   head "https://github.com/manticoresoftware/manticoresearch.git", branch: "main"
 
@@ -54,7 +55,7 @@ class Manticoresearch < Formula
   depends_on "icu4c@78"
   depends_on "libpq"
   depends_on "mariadb-connector-c"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "re2"
   depends_on "unixodbc"
   depends_on "xxhash"
@@ -83,6 +84,7 @@ class Manticoresearch < Formula
   #   (`<boost/process.hpp>` now pulls Process v2 where `environment` is a namespace)
   #   TODO: Remove in the next release.
   # - sortergroup: drop redundant `using` that GCC rejects as private
+  # - searchdssl: support OpenSSL 4
   patch :DATA
 
   deny_network_access!
@@ -102,7 +104,7 @@ class Manticoresearch < Formula
 
     ENV["ICU_ROOT"] = deps.find { |dep| dep.name.match?(/^icu4c(@\d+)?$/) }
                           .to_formula.opt_prefix.to_s
-    ENV["OPENSSL_ROOT_DIR"] = formula_opt_prefix("openssl@3").to_s
+    ENV["OPENSSL_ROOT_DIR"] = formula_opt_prefix("openssl@4").to_s
     ENV["PostgreSQL_ROOT"] = formula_opt_prefix("libpq").to_s
 
     args = %W[
@@ -179,3 +181,20 @@ index 13c4feb..d1f91ad 100644
  
  	using CSphMatchQueueTraits::m_iSize;
  	using CSphMatchQueueTraits::m_dData;
+diff --git a/src/searchdssl.cpp b/src/searchdssl.cpp
+index 5d947f949..7a270d97d 100644
+--- a/src/searchdssl.cpp
++++ b/src/searchdssl.cpp
+@@ -261,9 +261,11 @@ static bool GenerateInMemorySslKeys ( CSphString & sSslCert, CSphString & sSslKe
+ 	X509_set_pubkey ( pCert.get(), pKey.get() );
+ 
+ 	// subject and issuer name (self-signed)
+-	X509_NAME * pName = X509_get_subject_name ( pCert.get() );
++	X509_NAME * pName = X509_NAME_new();
+ 	X509_NAME_add_entry_by_txt ( pName, "CN", MBSTRING_ASC, (const BYTE *)"ManticoreSoftwareLTD", -1, -1, 0);
++	X509_set_subject_name ( pCert.get(), pName );
+ 	X509_set_issuer_name ( pCert.get(), pName );
++	X509_NAME_free ( pName );
+ 
+ 	// extensions for TLS server certificate
+ 	if ( !AddCertExtension ( pCert.get(), NID_subject_alt_name, "IP:127.0.0.1,DNS:localhost" ) || !AddCertExtension ( pCert.get(), NID_basic_constraints, "critical,CA:FALSE" ) || !AddCertExtension ( pCert.get(), NID_key_usage, "critical,digitalSignature,keyEncipherment" ) )
