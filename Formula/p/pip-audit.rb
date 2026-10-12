@@ -10,11 +10,12 @@ class PipAudit < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0aaaff5c31e8206c6f673562eaae8af27511e195ab7535659bec9cd2fe94fd69"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3becf4de2b9eba77593e903ea6454ba3e2df7c5d2130c8e17a0b599f61a772a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9b2d90a102fb3cc73a3cc0ad6cbd325395d446578b41ae0d1e13163a7c23446f"
-    sha256 cellar: :any,                 arm64_linux:       "b037aa7836ed952a4792c28a319554504ebca46078a191c52c933ac6e28a445c"
-    sha256 cellar: :any,                 x86_64_linux:      "e9a7d0ce84e6413ca9d4450459f0577095af9092707e490c3464137661d250d1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a497cf4c178012198d1af39a27a11c0f3589ebb2b552b97591a78ebd47c12125"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7b85ca7cbf1ca7a6caacd0ef772691d8eaeb857609562cf50615b0d2852c9f02"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5e0c6ff3fd92838872978eb760188e3121eeb264a4f916015fc1600117230c76"
+    sha256 cellar: :any,                 arm64_linux:       "0207b1e125a3038e79ec2921abc60619048ab2490d425a0f5be5c3185eff9700"
+    sha256 cellar: :any,                 x86_64_linux:      "687905bb06944040e1bc083a5e3bbe3e66d2291ecc1a08f4e8fa4016da6df4c3"
   end
 
   depends_on "rust" => :build
