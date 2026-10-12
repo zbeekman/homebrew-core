@@ -25,7 +25,7 @@ class Flye < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "926fdce4a0f64674434d766708ced9310e058ce8ba8f55f7ec2ff2e772b455b1"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "samtools"
 
   on_linux do
