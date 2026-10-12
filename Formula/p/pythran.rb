@@ -22,7 +22,7 @@ class Pythran < Formula
   depends_on "boost" => :no_linkage
   depends_on "numpy"
   depends_on "openblas" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "xsimd" => :no_linkage
 
   pypi_packages exclude_packages: "numpy"
