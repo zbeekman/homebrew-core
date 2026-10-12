@@ -1,16 +1,16 @@
 class Monolith < Formula
   desc "CLI tool for saving complete web pages as a single HTML file"
   homepage "https://github.com/Y2Z/monolith"
-  url "https://github.com/Y2Z/monolith/archive/refs/tags/v2.11.4.tar.gz"
-  sha256 "1d62676eff2172bce00addd725ba1a74a74a01c594f5ed9a616b67a7124e8fba"
+  url "https://github.com/Y2Z/monolith/archive/refs/tags/v2.11.5.tar.gz"
+  sha256 "dde7ee013e7361a791eae42d8bd0a82045d6396355c5170c79bfc830130a9427"
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66f9c591f02352cd4e8353986cb697e846fe63423f86c3893f274e19424e0f44"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e22a4ac15b56215bf9d74ac18870ee56a6edd49d744c45d6737e49be2cabed04"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9dad5207f5770651b5074870d9c560d2a0c515b072d05e6b7b3a1db21c9acf06"
-    sha256 cellar: :any,                 arm64_linux:       "69c7f76fdc80345f9fcae3d1e251ee14bc2079fff23e5668218dcbaf1ef91925"
-    sha256 cellar: :any,                 x86_64_linux:      "570a62f1db0c71f3edab05e4d98442c4bccf6e92d8a2f0f4d7586a3ebe60fd01"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d51635c9861ccd6336c0c77e762d3bf3387d8b740eaab81b869d7bed34282a5f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "95304b6a43ab7728cce9ffcc9bb0f8cdd43e19a663e15f70026b07402539341c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1c8a53562522848e361f0a268d51b4467446ab5bafc6dc4006117e30f13320e0"
+    sha256 cellar: :any,                 arm64_linux:       "161a2612fb4a9745b75a599ffd4fbedd3b7b7eca28451602f52aafcbfa05c918"
+    sha256 cellar: :any,                 x86_64_linux:      "94a704905ffe16934d25526ef79a63b36af2d41283ec35cdcbd62431032d85fa"
   end
 
   depends_on "pkgconf" => :build
