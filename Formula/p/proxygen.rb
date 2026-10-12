@@ -1,10 +1,9 @@
 class Proxygen < Formula
   desc "Collection of C++ HTTP libraries"
   homepage "https://github.com/facebook/proxygen"
-  url "https://github.com/facebook/proxygen/releases/download/v2026.10.05.00/proxygen-v2026.10.05.00.tar.gz"
-  sha256 "53315c7dfbb805baaf1f8eafc7b9830f7c7dddad29f4f4f7dd748313aa54d635"
+  url "https://github.com/facebook/proxygen/releases/download/v2026.10.12.00/proxygen-v2026.10.12.00.tar.gz"
+  sha256 "45b5630f5b5b18606a1b7ca9f5334180f85d1bcccef705a5baeca4f57ce1e707"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/facebook/proxygen.git", branch: "main"
 
   livecheck do
@@ -41,15 +40,6 @@ class Proxygen < Formula
   end
 
   conflicts_with "hq", because: "both install `hq` binaries"
-
-  # Fix c-ares 1.34.8 compatibility.
-  # TODO: Remove when https://github.com/facebook/proxygen/pull/650 is released.
-  patch do
-    url "https://github.com/facebook/proxygen/commit/61d1f695cb3b095980b0d307dc3b9bb08dc58e4b.patch?full_index=1"
-    sha256 "35e427ef211b9fd1fcfe3f1a523505a1fde9eb548a434f7fc48f0650c468a671"
-    type :unofficial
-    resolves "https://github.com/facebook/proxygen/issues/649"
-  end
 
   allow_network_access! :test
 
