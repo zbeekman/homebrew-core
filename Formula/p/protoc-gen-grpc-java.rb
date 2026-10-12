@@ -6,11 +6,11 @@ class ProtocGenGrpcJava < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "36228c3169207894359a9cb4efd30614511c122017b9f107ef59c2794c73e3bc"
-    sha256 cellar: :any, arm64_tahoe:       "995c1cbe25ccb50811f17b528840da59f9abdf2f6731784e3cf775f2c70e5864"
-    sha256 cellar: :any, arm64_sequoia:     "4853f8d5f3bc130fbbc63df1bfe1f40e2027d4be161fd26a74688fdcf255cfd3"
-    sha256 cellar: :any, arm64_linux:       "3f9dd9ed27910d3b8b73c0bc8074793f95b119ed6cc6254cb857a6a1f6d23ee3"
-    sha256 cellar: :any, x86_64_linux:      "a4366a4116b008a93fea90accb569a133f34a875726287b1936ac3f574c3529f"
+    sha256 cellar: :any, arm64_golden_gate: "434bc5e0f6a3dc03e8d39d6177d60dab98b23c78546b41e6926bf9ed92b878bf"
+    sha256 cellar: :any, arm64_tahoe:       "4434e0183b349282dde025585e360f6642fdf9441325f82690ec6a460f982184"
+    sha256 cellar: :any, arm64_sequoia:     "ece9d22fd8a9b0bf78d049f89c904e4520ba2c1fb021bcbb564101227abaa91b"
+    sha256 cellar: :any, arm64_linux:       "2c09bed579210c5e615b130dc16f38933edadba4e7435bf98c77c16d03ac1777"
+    sha256 cellar: :any, x86_64_linux:      "a57ee4c0a38f696354105486ed39797dcecba8a12ef786f0cef71ee266ff45e2"
   end
 
   depends_on "gradle@8" => :build
