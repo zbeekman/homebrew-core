@@ -13,11 +13,11 @@ class Dnsdist < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "29d94f308abaac9605be874ed3836ffd37da55db51a8a47ed8da301d58875135"
-    sha256 arm64_tahoe:       "ce14693985419ffad1ed1f66c912092ad48f1f99d4f2787209fb1578c1fc57c5"
-    sha256 arm64_sequoia:     "1f26f4d091834e062e03beece794ee5049168d222f15d8071588b93d01735d66"
-    sha256 arm64_linux:       "5893c54cfd7afb7c01f2ec2a7b0e1719cf3c90265fc4f1ad6658b54b2156ed48"
-    sha256 x86_64_linux:      "64590505cff41d67f133e8e0a1c02d716429d4f486643b9f9776c91dc063b754"
+    sha256 arm64_golden_gate: "8ec01506fe21d155b3a93583fce041548fdd0a5f7e11f8b77b4cc468c5c00f7a"
+    sha256 arm64_tahoe:       "e6a4274e091d9a3078604e01b77a22ce1a363f6d816c48c98766c814535ef951"
+    sha256 arm64_sequoia:     "b95ce0d07446bdb830c0d9b872be838c7cbef132fb8023c81fdc319d3428e252"
+    sha256 arm64_linux:       "a7d8a17a86333cbf27357b1cc358d543f3c18917f665a48a37c89478b94fc625"
+    sha256 x86_64_linux:      "f27dd0d8e2da5d7d51229e64c47d91e296e226b5914b43f3a8b3a16e729adbbf"
   end
 
   depends_on "boost" => :build
