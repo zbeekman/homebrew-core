@@ -13,7 +13,7 @@ class Fierce < Formula
     sha256 cellar: :any_skip_relocation, all: "96b093b0e668c92c6bb46ff8603f42460146ae4cd195978e8cbd502e7ce183f5"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "dnspython" do
     url "https://files.pythonhosted.org/packages/ec/c5/14bcd63cb6d06092a004793399ec395405edf97c2301dfdc146dfbd5beed/dnspython-1.16.0.zip"
