@@ -18,7 +18,7 @@ class Pipdeptree < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "rust" => :build
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "meson",
                 extra_packages:   "meson-python"
