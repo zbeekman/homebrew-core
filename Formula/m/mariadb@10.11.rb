@@ -4,6 +4,7 @@ class MariadbAT1011 < Formula
   url "https://archive.mariadb.org/mariadb-10.11.19/source/mariadb-10.11.19.tar.gz"
   sha256 "b8e543ee69d380fb1cfd563226f49e0fe96e4d67e7b7a9045ee514a168ed2066"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url "https://downloads.mariadb.org/rest-api/mariadb/all-releases/?olderReleases=false"
@@ -42,7 +43,7 @@ class MariadbAT1011 < Formula
   depends_on "groonga"
   depends_on "lz4"
   depends_on "lzo"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
   depends_on "xz"
   depends_on "zstd"
@@ -57,6 +58,16 @@ class MariadbAT1011 < Formula
   on_linux do
     depends_on "linux-pam"
     depends_on "zlib-ng-compat"
+  end
+
+  # Apply open PR to fix issue when using OpenSSL 4. This has been applied by
+  # Debian Forky / Ubuntu Stonking since Aug/Sep 2026. MariaDB may end up merging
+  # https://github.com/MariaDB/server/pull/5652 instead but it doesn't cleanly apply.
+  patch do
+    url "https://github.com/MariaDB/server/commit/5ca4ab639ad5f99d74f794b54ba1b4d6182ec2a9.patch?full_index=1"
+    sha256 "a0cc83631f63368457f8880626a18bb791409dfe02a672989b94b205c2cefaef"
+    type :unofficial
+    resolves "https://github.com/MariaDB/server/pull/5029"
   end
 
   allow_network_access! :test
