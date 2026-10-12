@@ -21,7 +21,7 @@ class S3cmd < Formula
   end
 
   depends_on "libmagic" => :no_linkage # for python-magic
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
