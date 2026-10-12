@@ -1,11 +1,12 @@
 class Cppman < Formula
   include Language::Python::Virtualenv
 
-  desc "C++ 98/11/14/17/20 manual pages from cplusplus.com and cppreference.com"
+  desc "C++ manual pages from cplusplus.com and cppreference.com"
   homepage "https://github.com/aitjcize/cppman"
   url "https://files.pythonhosted.org/packages/a2/97/b0c1de5b35cc4e66eb32accffd261c22d511aba964a7aed3b210a85851b7/cppman-0.6.3.tar.gz"
   sha256 "16a782b87b0848c5202b61965402258f8fc8260cbf0867cb876992eb3d046eb0"
   license "GPL-3.0-or-later"
+  head "https://github.com/aitjcize/cppman.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e737fea372a1f0124c4b859a2a2318448e487bedc8e4a62f6555d8bf02848a05"
@@ -17,7 +18,7 @@ class Cppman < Formula
     sha256 cellar: :any,                 x86_64_linux:      "034c523db100f91bb40ee895189e07a12a0fa5370aa4a6e5d8f0a4f79fc82459"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"
@@ -73,8 +74,8 @@ class Cppman < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/76/ad/cd3e3465232ec2416ae9b983f27b9e94dc8171d56ac99b345319a9475967/typing_extensions-4.13.1.tar.gz"
-    sha256 "98795af00fb9640edec5b8e31fc647597b4691f099ad75f469a2616be1a76dff"
+    url "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
+    sha256 "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
   end
 
   resource "webencodings" do
