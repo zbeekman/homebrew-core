@@ -1,8 +1,8 @@
 class GnomePapers < Formula
   desc "Document viewer for PDF and other document formats aimed at the GNOME desktop"
   homepage "https://apps.gnome.org/Papers/"
-  url "https://download.gnome.org/sources/papers/51/papers-51.0.tar.xz"
-  sha256 "4b8caf527d85f7eabc63ebe9d2320e0490653c2e138b88fbf42e6f41dd3e451c"
+  url "https://download.gnome.org/sources/papers/51/papers-51.1.tar.xz"
+  sha256 "ac0db229883b3d2aacbbda1700dc12aa69716664df201120926096f066e4796b"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -13,6 +13,7 @@ class GnomePapers < Formula
     sha256 x86_64_linux:      "63205c6e810ab0bce2e116ae6ce493f4c9320b878b622447fd6fa4ee6cfc89b3"
   end
 
+  depends_on "appstream" => :build
   depends_on "blueprint-compiler" => :build
   depends_on "desktop-file-utils" => :build
   depends_on "gettext" => :build # for msgfmt
