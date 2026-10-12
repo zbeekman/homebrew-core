@@ -19,7 +19,7 @@ class Bittensor < Formula
 
   depends_on "openssl@4"
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "btcli", "btpd", because: "both install `btcli` binaries"
 
@@ -163,6 +163,9 @@ class Bittensor < Formula
   def install
     ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
     ENV["OPENSSL_NO_VENDOR"] = "1"
+
+    # Allow Python 3.15
+    inreplace "pyproject.toml", 'requires-python = ">=3.10,<3.15"', 'requires-python = ">=3.10,<3.16"'
 
     virtualenv_install_with_resources
 
