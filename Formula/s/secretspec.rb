@@ -29,6 +29,7 @@ class Secretspec < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "secretspec")
+    generate_completions_from_executable(bin/"secretspec", "completions")
   end
 
   test do
