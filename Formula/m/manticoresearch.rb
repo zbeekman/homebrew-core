@@ -36,12 +36,11 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_golden_gate: "b4d2c707b3bac8580073a52ef3c9935b33739e0448f5755803ecfecd83febacc"
-    sha256 arm64_tahoe:       "5f243308e1c8e196e54c7f5b56aed3d105f71085f35625a56651d012affe8e95"
-    sha256 arm64_sequoia:     "2a74feafe1230e7dda0f136d85efdc1bba78926a6669419323a35010dbfac174"
-    sha256 arm64_linux:       "367fc7fbc92d9f5cdc1849199ba07a8c478fb6739e7de5b0522e10bd86d4b654"
-    sha256 x86_64_linux:      "0b414d42405f1927ed56b5c190454fd29304bc35d9270bf85ba4cd24b36edb96"
+    sha256 arm64_golden_gate: "8957be3eb317823094153d99f04cec46756e8028db6d6391246421b3eda362eb"
+    sha256 arm64_tahoe:       "9332a7b2f9e52cdf29f8ed88fb32b838aa62bc431b03cd97b4da3b1e89deaa8b"
+    sha256 arm64_sequoia:     "927f847be4df469635b0809939192ab77e24f60d8aa5b2cab9352248753e3193"
+    sha256 arm64_linux:       "c1813501584264575c8bfb7c41e20b7c7d70b95d78f15c7ff138a021d1a07eab"
+    sha256 x86_64_linux:      "b232300588a0ddbc5686935b066f220c3904a4374875d70bf6bee123ee34688a"
   end
 
   depends_on "cmake" => :build
