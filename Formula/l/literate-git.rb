@@ -19,7 +19,7 @@ class LiterateGit < Formula
 
   depends_on "pkgconf" => :build
   depends_on "pygit2" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libffi"
 
