@@ -11,13 +11,12 @@ class Animdl < Formula
   head "https://github.com/justfoolingaround/animdl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "d2c5a8585e682a5feace610fe1dd687ef93aa70d358eae70a57ad374db5d551b"
-    sha256 cellar: :any,                 arm64_tahoe:       "3d92591b9a04b3eccf1bb6a39f69dbca90dfe9cea18e501a9abc0e4934733a0b"
-    sha256 cellar: :any,                 arm64_sequoia:     "93cda577648348cb1c68bb5989c9b6be9a7e4d9c497be1f8ffffaaa9ad3e6888"
-    sha256 cellar: :any,                 arm64_sonoma:      "4a2f4aaa5f1277902516d0876de00d540683a7ba010b14aefbdc705ffc78c104"
-    sha256 cellar: :any,                 sonoma:            "e56fb23954d05f5cfd3fa0d21dd4506cb2c026a65722230ce583e6dbf9a65821"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "371caf026f9957346ffe17afbee52560f68d9e2fd9ff59b17f493cfca0ef25d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8ebb633e0f672d698a29678b8dde3f7e0119195e410528f163eff55232f6bb0e"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "bf36eed3bcedf3c138f265c904214bd94ec03e5caefad1e6fb3f57df9e38c2ac"
+    sha256 cellar: :any, arm64_tahoe:       "1464716e132b361ec911d03da71a5d134bc7feb3d5f4e89d2fc4a2cdb536e89e"
+    sha256 cellar: :any, arm64_sequoia:     "02b9d736595715cdd28bf3b3a0b178ccdcd48f359b5542fb061cff13e872cacd"
+    sha256 cellar: :any, arm64_linux:       "e6a54eefebe21bee85a3559e86fbd44329e034b62080b7e68d170860146ed4ea"
+    sha256 cellar: :any, x86_64_linux:      "dfaa1760b144a23e534635eb3e4c1099ee5845612fa30216322d31b308fe4882"
   end
 
   deprecate! date: "2026-04-27", because: :unmaintained
