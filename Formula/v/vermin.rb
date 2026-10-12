@@ -12,7 +12,7 @@ class Vermin < Formula
     sha256 cellar: :any_skip_relocation, all: "0ec82df48d8d1c8e0793fd34b3217b2d11a572c624ab770b4c2adaa7e1d6e5a4"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   def install
     virtualenv_install_with_resources
