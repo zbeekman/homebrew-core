@@ -4,7 +4,7 @@ class Pinocchio < Formula
   url "https://github.com/stack-of-tasks/pinocchio/releases/download/v4.1.0/pinocchio-4.1.0.tar.gz"
   sha256 "b2ac9575bd4f38e0584e0d61586a95de1aeaa17c6877e31e99f1d4b913d602d8"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
   head "https://github.com/stack-of-tasks/pinocchio.git", branch: "devel"
 
   livecheck do
@@ -32,7 +32,7 @@ class Pinocchio < Formula
   depends_on "console_bridge"
   depends_on "eigen"
   depends_on "eigenpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "urdfdom"
 
   on_macos do
