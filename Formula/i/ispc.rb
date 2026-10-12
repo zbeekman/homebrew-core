@@ -27,13 +27,27 @@ class Ispc < Formula
   depends_on "bison" => :build
   depends_on "cmake" => :build
   depends_on "flex" => :build
-  depends_on "llvm@22"
+  depends_on "llvm"
 
   uses_from_macos "python" => :build
 
   on_linux do
     depends_on "tbb"
   end
+
+  # Backport LLVM 24 devel support which allows building with LLVM 23.1.x stable release
+  patch do
+    url "https://github.com/ispc/ispc/commit/32217788b98b6e8d532799d7b10792fb7c1c732c.patch?full_index=1"
+    sha256 "896666bba85daa114276eeae95701ff7a9190dae27927fc225b17dc57eec0532"
+    type :backport
+  end
+  patch do
+    url "https://github.com/ispc/ispc/commit/bc5136ff9a5f5acb52fede66333a1e4879328fc1.patch?full_index=1"
+    sha256 "e5e13f1937190d3996ffcfb66b5eae0df28d7866cc9945f52ec1b7c0cfabfe4e"
+    type :backport
+  end
+
+  deny_network_access!
 
   def llvm
     deps.map(&:to_formula).find { |f| f.name.match? "^llvm" }
