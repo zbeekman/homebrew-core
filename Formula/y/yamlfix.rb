@@ -9,7 +9,12 @@ class Yamlfix < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "728862200b8fe2196cc30a23f77b7ef0cf68a435364136c7e970872266f129f6"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "932398d2bb2cd749ad3ce648bb274bfaefc2a9cc447fa6f66f9d118a16cfbe14"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "932398d2bb2cd749ad3ce648bb274bfaefc2a9cc447fa6f66f9d118a16cfbe14"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "932398d2bb2cd749ad3ce648bb274bfaefc2a9cc447fa6f66f9d118a16cfbe14"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "62d43f63ec330c60050d95608fbe3b078e9968940f493f96db373536fa1b72a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "62d43f63ec330c60050d95608fbe3b078e9968940f493f96db373536fa1b72a6"
   end
 
   depends_on "pydantic" => :no_linkage
