@@ -8,13 +8,12 @@ class Robotcode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d27accbff9f5d1f35e4438acc594745a90b8745350d9c19eb017ec4586647874"
-    sha256 cellar: :any, arm64_tahoe:       "dc02d922264811178c04dbfd08b9392eac51531704dfa4239dd5f6bb606ad145"
-    sha256 cellar: :any, arm64_sequoia:     "72d4063f3a2822a6cd6a717e64265afc7394132c9beb58cb7d91ecd64c31a805"
-    sha256 cellar: :any, arm64_sonoma:      "53c2166d27e0edcd855340e74850db31d37a10a41ec932066cf482c76d7aea73"
-    sha256 cellar: :any, sonoma:            "2c2397817576f74f14584d570bc467917fd04d51c9cffceea861e6ceb3bcb687"
-    sha256 cellar: :any, arm64_linux:       "ff091dc169596b248548510f29d0f161f945d09dae9576d6c90c8468d6ab7986"
-    sha256 cellar: :any, x86_64_linux:      "5df9e93a9ea8ec9c5cac1ae6acbf5dca1079db2981a63c8f31de5726c561b3a3"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "3982cffd2bad7ace4dad33e7b136d7ecdf5939f565634101bc988641ed14af1c"
+    sha256 cellar: :any, arm64_tahoe:       "02c68863ec2f5ff93504e1fdf7f2af4b78f2924489d7d793b02aaa756d01348b"
+    sha256 cellar: :any, arm64_sequoia:     "c61a3b4caad9b151297eedb4ade6d47c1c2bdbbf638e9511d3cf1be8ebbe8522"
+    sha256 cellar: :any, arm64_linux:       "4a0b7ae1db899b2f7f822472ae6b9fa377f44dcd6d13a3f686be4edb6143288c"
+    sha256 cellar: :any, x86_64_linux:      "c6718fff0640e8c10277b189796346faffb26289f4b5a01b659f654db646db75"
   end
 
   depends_on "libyaml"
