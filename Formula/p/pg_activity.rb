@@ -8,11 +8,12 @@ class PgActivity < Formula
   license "PostgreSQL"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "289f4f1f16282e4ff6f09e350a54d6286d024ac2f2028d06a057885b0820b010"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7646e66ac9dbbd38f7212f3106e7fb7d187c3b61417824d5a19bd8711d60ec6a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3f79f652bd6e82e8f88fde8d13461537aba4431ebc41dcc25ac15d94d96a2839"
-    sha256 cellar: :any,                 arm64_linux:       "757175c1ced4195b65181cda57e07399ab8911a21f56d21e3a1dcfb7e7e401d5"
-    sha256 cellar: :any,                 x86_64_linux:      "d1af4cfa54a4d9027b568696df077883439125ae53087d52f18a260267779807"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fbc86bbcf4f8d597da51680be64538106333f5526aed945f09f2b62263ceed02"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "39b1c3a579e0ad780c13140b9f1a5a66a552cfb0a04565f204a37cb9d74c6a3c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7225c666d8a8d43ac5c9afae5221195922cb3babb09fdc09b1f61e9c4a461a2b"
+    sha256 cellar: :any,                 arm64_linux:       "99cadc23243fb39c356648fa45effaff5ef1a1bc981a3482cc42b9537a5ae1a0"
+    sha256 cellar: :any,                 x86_64_linux:      "302a9ac85e09851f953bfe571a18202ecb6e7a00d96f91152a5d79b1fecad26f"
   end
 
   depends_on "libpq"
