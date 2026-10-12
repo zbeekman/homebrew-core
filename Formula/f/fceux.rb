@@ -12,13 +12,11 @@ class Fceux < Formula
   head "https://github.com/TASEmulators/fceux.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aba31d5f2283baa9df7785d9ef47e63898ee8c0d4be96c46877c631bac43b5af"
-    sha256 cellar: :any, arm64_tahoe:       "09ce9e2a81d5d7600c1921921d3e402f50c809855b411669c91613b0a8978bef"
-    sha256 cellar: :any, arm64_sequoia:     "4741d14865c94f98a5f461304b7e73c725c36aae675c6345b8b36636f12100e8"
-    sha256 cellar: :any, arm64_sonoma:      "b8fae46121fd239d11c29ede067bd8747b2df42c832561d1e71b766c70cd58e2"
-    sha256               sonoma:            "8fe999ab9e68257e6cfb9c49bd98063f712361c4d15df40e2f907dfe1c045b21"
-    sha256 cellar: :any, arm64_linux:       "975c645737c4eab968780d8a9f499ade39d8080dcb4c461c55df98f46f5005b8"
-    sha256 cellar: :any, x86_64_linux:      "fc93c9a70f6d5e50ca69fa68d7513a156360eb2b6e4990c96bcc48115c525647"
+    sha256 cellar: :any, arm64_golden_gate: "7fa07490642ef50f0ce1c61e4e7ee2fb520432cabb06ec225153b5700e131e5b"
+    sha256 cellar: :any, arm64_tahoe:       "434227872e81c93b79deb5819af139d244bb50d3342fd62a3bad56a616d6880b"
+    sha256 cellar: :any, arm64_sequoia:     "c0521f7ce98b252748fa7914071ccf2bc18adfa3963c40d2a915139802a5b37b"
+    sha256 cellar: :any, arm64_linux:       "aa28e120a9db3dcb3a14763a773ea33e51387546d87150b22d70c902c6044ca8"
+    sha256 cellar: :any, x86_64_linux:      "a4ae0367e9933d888cafe50f5fa293c7976e1c366b1b0be8d1119ebf87f397e2"
   end
 
   depends_on "cmake" => :build
