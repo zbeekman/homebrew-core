@@ -12,7 +12,7 @@ class Urlscan < Formula
     sha256 cellar: :any_skip_relocation, all: "e7fc22a1945eddfbb9d59a4c9905e8cc6f66590496f41e63d226815660f876f1"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "typing-extensions" do
     url "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
@@ -20,13 +20,13 @@ class Urlscan < Formula
   end
 
   resource "urwid" do
-    url "https://files.pythonhosted.org/packages/79/ea/0a61a054016f6592ac9a430723bdbcedbbca9630a2781e70d2df189afe84/urwid-4.0.9.tar.gz"
-    sha256 "99bad59b4c7b5bf87bd86196be4554ef93a031947f2a84f0fb090d8162b6ffc5"
+    url "https://files.pythonhosted.org/packages/3a/df/eb5dcbdf1638c38618096382b4a30b0423ed7d2aac97fd9469b51d6de43f/urwid-4.2.5.tar.gz"
+    sha256 "a1fea3a551953fae4e6b727536334233bbb8b88c45230bc91d9751b402a8c16d"
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/34/74/c6428f875774288bec1396f5bfcbc2d925700a4dad61727fd5f2b12f249d/wcwidth-0.8.2.tar.gz"
-    sha256 "91fbef97204b96a3d4d421609b80340b760cf33e26da123ff243d76b1fda8dda"
+    url "https://files.pythonhosted.org/packages/f0/b4/7830542634bb2d3e62aa3b586a72d5b3b6c91c3168929e7000ef3fed041d/wcwidth-0.9.2.tar.gz"
+    sha256 "ae0ef90b90f6af38b54f1fe6d58662ec33b3cb4b8391958a62416d654231727b"
   end
 
   def install
