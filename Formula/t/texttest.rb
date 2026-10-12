@@ -20,11 +20,19 @@ class Texttest < Formula
   depends_on "adwaita-icon-theme"
   depends_on "gtk+3"
   depends_on "pygobject3"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "psutil" do
     url "https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz"
     sha256 "0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372"
+  end
+
+  # Fix import on Python 3.15
+  patch do
+    url "https://github.com/texttest/texttest/commit/f1ccd0a9dd5086f1e1e32587250aeef59e8db3b3.patch?full_index=1"
+    sha256 "d7395ab06ea5ebf86bbd4c8ea0d1eaabf4f821df52116c409ae7088387978749"
+    type :unofficial
+    resolves "https://github.com/texttest/texttest/pull/160"
   end
 
   def install
