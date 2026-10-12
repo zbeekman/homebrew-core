@@ -12,7 +12,7 @@ class Sip < Formula
     sha256 cellar: :any_skip_relocation, all: "d2f0227fe33089192cf38b9da407854501794a1105cd04e11d3209f41b505e17"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
