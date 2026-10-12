@@ -353,7 +353,7 @@ jobs:
 
           if [ -z "${LARGE_RUNNER}" ] || [ "${LARGE_RUNNER}" == "false" ]
           then
-            sudo install -o "$(id -u)" -d "$(id -g)" /mnt/homebrew
+            sudo install -o "$(id -u)" -g "$(id -g)" -d /mnt/homebrew
             export HOMEBREW_CACHE=/mnt/homebrew/cache
             export HOMEBREW_TEMP=/mnt/homebrew/temp
           fi
