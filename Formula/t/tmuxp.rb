@@ -18,7 +18,7 @@ class Tmuxp < Formula
   end
 
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "tmux"
 
   resource "libtmux" do
@@ -29,6 +29,13 @@ class Tmuxp < Formula
   resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
     sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+  end
+
+  # Fix help formatter shadowing `argparse.HelpFormatter._theme` on Python 3.15
+  patch do
+    url "https://github.com/daeho-ro/tmuxp/commit/d952c0b952c9b60767305d650e3c27be02861dc0.patch?full_index=1"
+    sha256 "850b251caa765f7fe6771ce1a1c713c8fffecbedb66ac1368bd8c5ddde5ac50e"
+    type :unofficial
   end
 
   def install
