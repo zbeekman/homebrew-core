@@ -15,7 +15,7 @@ class AdbEnhanced < Formula
     sha256 cellar: :any,                 x86_64_linux:      "1e345062061e2a5fbd25003d8b727709e208aa12ccb62c722722ba8e597c4106"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "docopt" do
     url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
