@@ -4,8 +4,8 @@ class Envoy < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/envoyproxy/envoy/archive/refs/tags/v1.39.3.tar.gz"
-    sha256 "e005538cdb416a3008be83b0829d4e98cf40f71c80a14c9db6cbd42e00c3eaa5"
+    url "https://github.com/envoyproxy/envoy/archive/refs/tags/v1.39.4.tar.gz"
+    sha256 "d70c16f78cd4326717c124d520a3aadfa0ccd67dc2bd470d5dad95f3ca1397ac"
 
     depends_on "llvm@18" => :build
 
