@@ -13,11 +13,6 @@ on:
         description: Pull request number
         type: number
         required: true
-      large_runner:
-        description: "Run the upload job on a large runner? (default: false)"
-        type: boolean
-        required: false
-        default: false
       autosquash:
         description: "Squash pull request commits according to Homebrew style? (default: false)"
         type: boolean
@@ -275,7 +270,7 @@ jobs:
       !fromJson(needs.check.outputs.replace)
     outputs:
       portable_ruby: ${{ steps.portable-ruby.outputs.fire }}
-    runs-on: ${{inputs.large_runner && 'homebrew-large-bottle-upload' || 'ubuntu-latest'}}
+    runs-on: ubuntu-latest
     container:
       image: ghcr.io/homebrew/brew:main
       volumes:
@@ -334,7 +329,6 @@ jobs:
           HOMEBREW_GIT_COMMITTER_NAME: BrewTestBot
           HOMEBREW_GIT_COMMITTER_EMAIL: 1589480+BrewTestBot@users.noreply.github.com
           EXPECTED_SHA: ${{needs.check.outputs.head_sha}}
-          LARGE_RUNNER: ${{inputs.large_runner}}
           WARN_ON_UPLOAD_FAILURE_FLAG: ${{inputs.warn_on_upload_failure && '--warn-on-upload-failure' || ''}}
           MESSAGE: ${{inputs.message}}
         run: |
@@ -351,12 +345,9 @@ jobs:
             exit 1
           fi
 
-          if [ -z "${LARGE_RUNNER}" ] || [ "${LARGE_RUNNER}" == "false" ]
-          then
-            sudo install -o "$(id -u)" -g "$(id -g)" -d /mnt/homebrew
-            export HOMEBREW_CACHE=/mnt/homebrew/cache
-            export HOMEBREW_TEMP=/mnt/homebrew/temp
-          fi
+          sudo install -o "$(id -u)" -g "$(id -g)" -d /mnt/homebrew
+          export HOMEBREW_CACHE=/mnt/homebrew/cache
+          export HOMEBREW_TEMP=/mnt/homebrew/temp
 
           # Don't quote arguments that might be empty; this causes errors.
           brew pr-pull \
