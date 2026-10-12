@@ -20,7 +20,7 @@ class Proselint < Formula
 
   depends_on "pybind11" => :build # for `google-re2`
   depends_on "rust" => :build # for `google-re2-stubs`
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "re2" # for `google-re2`
 
   resource "google-re2" do
