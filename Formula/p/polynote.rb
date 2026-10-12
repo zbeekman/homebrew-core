@@ -39,7 +39,7 @@ class Polynote < Formula
   depends_on "python-setuptools" => :build # to detect numpy (and avoid building numpy when we use jep >= 4.3)
   depends_on "numpy" # used by `jep` for Java primitive arrays
   depends_on "openjdk"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "jep" do
     url "https://files.pythonhosted.org/packages/52/43/34d397902b3e7c9b667f855e4be41eb8ba5e62df999b563095f713d03cfa/jep-4.2.1.tar.gz"
