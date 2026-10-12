@@ -10,8 +10,8 @@ class Mkvtomp4 < Formula
   head "https://github.com/gavinbeatty/mkvtomp4.git", branch: "main"
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any_skip_relocation, all: "98cced752f99a3ba028fbdf8d52ef1dc156b9f06d03b5b99f1db8ac601cb7657"
+    rebuild 7
+    sha256 cellar: :any_skip_relocation, all: "8ae15173f78696b1cfa868d2f548773f626de60ccb8696b42e92b19af477c19f"
   end
 
   depends_on "ffmpeg"
