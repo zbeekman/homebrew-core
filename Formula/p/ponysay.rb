@@ -31,7 +31,7 @@ class Ponysay < Formula
 
   depends_on "gzip" => :build
   depends_on "coreutils"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "texinfo" => :build
