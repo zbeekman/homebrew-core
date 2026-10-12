@@ -1,8 +1,8 @@
 class Libxls < Formula
   desc "Read binary Excel files from C/C++"
   homepage "https://github.com/libxls/libxls"
-  url "https://github.com/libxls/libxls/releases/download/v1.6.3/libxls-1.6.3.tar.gz"
-  sha256 "b2fb836ea0b5253a352fb5ca55742e29f06f94f9421c5b8eeccef2e5d43f622c"
+  url "https://github.com/libxls/libxls/releases/download/v1.6.4/libxls-1.6.4.tar.gz"
+  sha256 "064ee1da6cf3d481d8af4a936e0e0ce0190114e468fb7dfef5a81610746081e0"
   license "BSD-2-Clause"
 
   bottle do
