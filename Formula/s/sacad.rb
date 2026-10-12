@@ -10,11 +10,12 @@ class Sacad < Formula
   head "https://github.com/desbma/sacad.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5484f27886f311788e2a9d676606433650b02ca292e33fe6cd0c2618e79165ed"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d5d754a8c2efde108a3e544739dced7ed72669c7ce19c6ec478ba243d4c325ac"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f1253b39559b58df7430244196f1dc7273fe7f3ea4ac07c43392564f17ca431b"
-    sha256 cellar: :any,                 arm64_linux:       "283162d99b33959f493c468625c480bf6c796a2ca811c615d677bcef0bc25f33"
-    sha256 cellar: :any,                 x86_64_linux:      "baa3647c3b311ea541bb8008f76d52f9b4ca0bcbebbe994a59534b6d6e54fb46"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f130e55956cbb35bb06979709048aa5bd01b3ba6afa1793d084230c4eedbe8b6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "eb4165db1738e3d5f9c9881ae5311d6a8322c8f9f2c7a30f3e28a6347aa5bfc9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a6e604177f4cfd0f698cf05dfad53dff586cf730a9e564ed44d359f3c8855996"
+    sha256 cellar: :any,                 arm64_linux:       "d4573de9dc0c95e17b65adfbbc11f19dd22623a9e20ee31492de08adec0e8c5f"
+    sha256 cellar: :any,                 x86_64_linux:      "6561ae070b0c437f8210110d72f888f988f74c11892033d5db42dbc46b6f0eca"
   end
 
   depends_on "pillow" => :no_linkage
