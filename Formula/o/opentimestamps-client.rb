@@ -10,11 +10,12 @@ class OpentimestampsClient < Formula
   head "https://github.com/opentimestamps/opentimestamps-client.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "28c85d35628d92d7415141906b5b42d53e8bae5abe7e6a1f526492b32c3c93ec"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d33f4c0f1df2b73635d9c34e33847f3a43728834b9669c82d89b4615481a9aa3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "faa80cd680b1a5f228df87c945d0a75da10e731f74c8cc3a3d2b71bf17432676"
-    sha256 cellar: :any,                 arm64_linux:       "9f00c23f58ef47f64f83218360f2419a6b365e1c07cbc2bcf5386a802d5f6809"
-    sha256 cellar: :any,                 x86_64_linux:      "e432a8e5b3c9e216629e2aab2cffe505869dbd96d6dc2701be23d89038ac7112"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cd9f9a3f9933051e2b82c35de8bcdb649e9ae15750f3d2d5ddadd18b4257c6fd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0e708e46d6dea89f5c9fb6a150dfcc07a8bd7de38072c8eab0c42d833fee4ce"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3958e1c2d79128425341b1307b408faf0d45eaa724c1ea3d5cbcea2fd4094857"
+    sha256 cellar: :any,                 arm64_linux:       "4476ebdb5c994a004d7339acb03d92c62e4d12b36741933567b8dfae90c2f780"
+    sha256 cellar: :any,                 x86_64_linux:      "9e4c0691e341e9c756eeb1a65c30f11dd501f52a89a607ca0ac152ef47eea778"
   end
 
   depends_on "certifi" => :no_linkage
