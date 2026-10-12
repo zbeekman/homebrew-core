@@ -1,8 +1,8 @@
 class Sdrmm < Formula
   desc "Modular, client-server software-defined radio"
   homepage "https://github.com/Newspicel/sdrminusminus"
-  url "https://github.com/Newspicel/sdrminusminus/releases/download/v2.2.0/sdrmm-2.2.0-src.tar.gz"
-  sha256 "38cf739c95cf078f194b829ba1c77d0c096ab69e25adc165608abb7e933de50f"
+  url "https://github.com/Newspicel/sdrminusminus/releases/download/v2.2.1/sdrmm-2.2.1-src.tar.gz"
+  sha256 "e1bc52a6cdd882667cda78532f73ac29228cbb87e672fab7454e45b7efbe18b7"
   license "AGPL-3.0-or-later"
 
   bottle do
