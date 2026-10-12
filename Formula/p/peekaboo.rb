@@ -7,6 +7,12 @@ class Peekaboo < Formula
   license "MIT"
   head "https://github.com/openclaw/Peekaboo.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e1696ee9c981b7a9e153f432103904e0066198f5c73bc84cf37346dc22cd0b16"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d43771c1c0e946230d010ef65b52db516322e7fb5318032817b0c827a69e42dc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5dbf1b3e86c80088518c55175f8096be04b7f04208c4dba2321395c1fe6716b3"
+  end
+
   depends_on xcode: ["26.0", :build]
   depends_on macos: :sequoia
 
