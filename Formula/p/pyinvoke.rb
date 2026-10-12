@@ -12,7 +12,7 @@ class Pyinvoke < Formula
     sha256 cellar: :any_skip_relocation, all: "f46e5217b0e3117c9baea206c276c7b87fb6b1f02ce17940cd3c4789b0f3d54b"
   end
 
-  depends_on "python@3.14" # Do not remove runtime dependency https://github.com/Homebrew/homebrew-core/issues/151248
+  depends_on "python@3.15" # Do not remove runtime dependency https://github.com/Homebrew/homebrew-core/issues/151248
 
   def install
     virtualenv_install_with_resources
