@@ -39,7 +39,7 @@ class Macvim < Formula
   depends_on "cscope"
   depends_on "lua"
   depends_on :macos
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "ruby"
 
   conflicts_with "ex-vi", because: "both install `vi` and `view` binaries"
@@ -107,7 +107,7 @@ class Macvim < Formula
     assert_match "+sodium", output
 
     # Simple test to check if MacVim was linked to Homebrew's Python 3
-    py3_exec_prefix = shell_output("#{formula_opt_libexec("python@3.14")}/bin/python-config --exec-prefix")
+    py3_exec_prefix = shell_output("#{python3}-config --exec-prefix")
     assert_match py3_exec_prefix.chomp, output
     (testpath/"commands.vim").write <<~VIM
       :python3 import vim; vim.current.buffer[0] = 'hello python3'
