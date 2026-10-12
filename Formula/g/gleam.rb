@@ -1,8 +1,8 @@
 class Gleam < Formula
   desc "Statically typed language for the Erlang VM"
   homepage "https://gleam.run"
-  url "https://github.com/gleam-lang/gleam/archive/refs/tags/v1.19.1.tar.gz"
-  sha256 "5a717b4013d5599d73a99b3a1a4bb9168e62bfc18afff2f5bbab43244f860df0"
+  url "https://github.com/gleam-lang/gleam/archive/refs/tags/v1.19.2.tar.gz"
+  sha256 "d8796325dad02802dccc91568a90a00e43247cad1d87ddbd9779a99d3c435d61"
   license "Apache-2.0"
   head "https://github.com/gleam-lang/gleam.git", branch: "main"
 
@@ -23,6 +23,12 @@ class Gleam < Formula
   depends_on "rust" => :build
   depends_on "erlang"
   depends_on "rebar3"
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     system "cargo", "install", *std_cargo_args(path: "gleam-bin")
