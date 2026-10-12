@@ -6,11 +6,11 @@ class Monolith < Formula
   license "CC0-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ae29d77c77f845f4bbad865611aafc1a8f9b025318daa924b1dd0709c980c730"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6b1e7dfd94e12cf6a64ea02a6d7e2a1cebb5eb4d13be9257fb99d5f53c947967"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f884054114f0a333cdc8e9b92a29515df2e79b6f21ecc0dff442dd6ca7558399"
-    sha256 cellar: :any,                 arm64_linux:       "dd73bf03e24ad688ab8dc0e1b5e7205b0f4d31b8f898da1f336bc44e3200cb98"
-    sha256 cellar: :any,                 x86_64_linux:      "a5d99102fb2dab01c6028b5564d0f4e3f67844474750f3894625e70c9ecce174"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "66f9c591f02352cd4e8353986cb697e846fe63423f86c3893f274e19424e0f44"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e22a4ac15b56215bf9d74ac18870ee56a6edd49d744c45d6737e49be2cabed04"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9dad5207f5770651b5074870d9c560d2a0c515b072d05e6b7b3a1db21c9acf06"
+    sha256 cellar: :any,                 arm64_linux:       "69c7f76fdc80345f9fcae3d1e251ee14bc2079fff23e5668218dcbaf1ef91925"
+    sha256 cellar: :any,                 x86_64_linux:      "570a62f1db0c71f3edab05e4d98442c4bccf6e92d8a2f0f4d7586a3ebe60fd01"
   end
 
   depends_on "pkgconf" => :build
