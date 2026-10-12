@@ -18,7 +18,7 @@ class Cutadapt < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "65d6ebdce3764e07bb923ed83763443dd031c48e7eed780a4d683069361e0ef5"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_intel do
     depends_on "nasm" => :build
@@ -29,19 +29,9 @@ class Cutadapt < Formula
     sha256 "a7570311f29e8b3c1ea39a60f57b7baf8dad8f2508595c58d4278c5571463166"
   end
 
-  resource "isal" do
-    url "https://files.pythonhosted.org/packages/9c/35/40ff3eabd401036f792cf55ba9cd19dcd5e3cb79aa5798332885ab0ff1b9/isal-1.8.0.tar.gz"
-    sha256 "124233e9a31a62030a07aafd48c26689561926f4e10417ed3ea46c211218f2b4"
-  end
-
   resource "xopen" do
-    url "https://files.pythonhosted.org/packages/47/01/0abf3e42bb1bf15ce24e4b235b1274e0c3c9ba8e3bbf2300b6323e6f50c1/xopen-2.0.2.tar.gz"
-    sha256 "f19d83de470f5a81725df0140180ec71d198311a1d7dad48f5467b4ad5df6154"
-  end
-
-  resource "zlib-ng" do
-    url "https://files.pythonhosted.org/packages/46/7d/901c6e333fb031b5bfbd1532099200cf859f12aa83689be494eade6685ec/zlib_ng-1.0.0.tar.gz"
-    sha256 "c753cea73f9e803c246e9bf01a59eb652897ed8a19334ada0f968394c7f61650"
+    url "https://files.pythonhosted.org/packages/77/bb/74a5222fc975fccb9f8bfb62613ca42a5a28008362c598df09806ecd12c1/xopen-2.1.0.tar.gz"
+    sha256 "06584821588f813563863b63d5e02568a4328661b7507ea38c432f24c69ea4b7"
   end
 
   def install
