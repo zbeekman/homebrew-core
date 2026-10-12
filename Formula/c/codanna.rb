@@ -4,6 +4,7 @@ class Codanna < Formula
   url "https://github.com/bartolli/codanna/archive/refs/tags/v0.17.1.tar.gz"
   sha256 "ea3cbe407e92395f670f990bd4be875685791e768a65eba1895dfd41f35b28b2"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "89b79cd16991f36a49f6aaa33c9016f9fcf07f6796f5593c3f256f48b88302dd"
@@ -15,13 +16,19 @@ class Codanna < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "onnxruntime"
 
-  on_linux do
-    depends_on "zlib-ng-compat"
+  deny_network_access!
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
+    ENV["ORT_LIB_LOCATION"] = formula_opt_lib("onnxruntime")
+    ENV["ORT_PREFER_DYNAMIC_LINK"] = "1"
+    ENV.append_to_rustflags "-C link-args=-Wl,-rpath,#{rpath(target: formula_opt_lib("onnxruntime"))}"
+
     system "cargo", "install", *std_cargo_args, "--all-features"
   end
 
