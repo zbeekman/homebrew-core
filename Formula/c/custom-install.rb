@@ -17,7 +17,7 @@ class CustomInstall < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "a37d6e1c136e15b4627953afc2c8baa93736bb7f170df4a6ba56255e9b9f8eeb"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "save3ds_fuse"
 
   resource "events" do
