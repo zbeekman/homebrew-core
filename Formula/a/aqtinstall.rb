@@ -10,11 +10,12 @@ class Aqtinstall < Formula
   head "https://github.com/miurahr/aqtinstall.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "08c7b8e1e921c6b075faf23b293e6ed147050aaba07ce29063f51990a9b43aaf"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "090f3bc9c91ed193da10c56e18398ededa8b3d1041bac3f95e4a8d32c36ecc36"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "efc2cbecfce86b53eda668de743f574f23e7905a166f53158b428fba0f0ee3b3"
-    sha256 cellar: :any,                 arm64_linux:       "84f33803769046cd58d2438e392fe72129cc01f4a8135aa0a2ea9c374c883ce1"
-    sha256 cellar: :any,                 x86_64_linux:      "9ba2556561238ee2196ea4d020ee14210a2f5b401643986e9f9633ec53547c80"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "53418836da9a4176fc20b73a6760df98ed45fdbb6f3d7ad09e68b4a9a556a07e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "982736dfac32f2ff981fd213f7512f07714aea6e612185182209b7d26367bd81"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d3e84f3680a5142a6be898c89de85936fb2a311183e48165b98ee54206fc7d02"
+    sha256 cellar: :any,                 arm64_linux:       "78eb403bb257ce465b67cf2bc99de984572d9d86bc139996aa8e480183c2b306"
+    sha256 cellar: :any,                 x86_64_linux:      "1e22894ffe36e2a71e9511971d1d8dace2edac0cd1150a88034e07c6f3ad0797"
   end
 
   depends_on "certifi" => :no_linkage
