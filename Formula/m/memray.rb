@@ -8,13 +8,12 @@ class Memray < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3f06b28e6441a372db197cb53951ab89feeaa34d0f8fe78f618bb54b52f6c9a2"
-    sha256 cellar: :any, arm64_tahoe:       "931a06d3b9bc7a10bc91908c9fc29b0c26a1a7979af85c05b7731f54fa5fcc02"
-    sha256 cellar: :any, arm64_sequoia:     "af4a425d98494847be17734de83b9b71babe4d5c3702e1186fe3178e5ce1a385"
-    sha256 cellar: :any, arm64_sonoma:      "ed0cfb730baf4cd99c24824f24e1fea3d1a38bb257b35d9670b0293c7562461d"
-    sha256 cellar: :any, sonoma:            "834b12c893a578fab68fd2e1c41e23a2f6cb8484db98d7e93a96ed523b42b1e8"
-    sha256 cellar: :any, arm64_linux:       "199b0f1382e5374c85fee2a943766049bb47f84ad9d9e6d47836aa08707554c8"
-    sha256 cellar: :any, x86_64_linux:      "7f1a0f9d7aead5e974a449d68a26926b8bcc50e7047b87249ca609382484546d"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "9d5ad6d244d087d7be54b5a3d3e7c9a34727eced75c38338f85e239d35ceabca"
+    sha256 cellar: :any, arm64_tahoe:       "d62562682513908aa5340b837faf7de2bb57cc7640d30002bdba91a949c98f02"
+    sha256 cellar: :any, arm64_sequoia:     "b5b6e0fe8991439b8d7cf74ff1232e402622566f11645b44af5a0db72245ae1a"
+    sha256 cellar: :any, arm64_linux:       "5798952644c594aa5191563a33e27a88654ab25edb70f9b4de45aa6d24cff237"
+    sha256 cellar: :any, x86_64_linux:      "f5d9a10cc367b4dbdeeb77d6ec684829eb6fe32f6b89dfca7898a549af3d137a"
   end
 
   depends_on "cmake" => :build
