@@ -43,7 +43,7 @@ class PhpAT81 < Formula
   depends_on "libzip"
   depends_on "oniguruma"
   depends_on "openldap"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pcre2"
   depends_on "sqlite"
   depends_on "tidy-html5"
@@ -65,6 +65,13 @@ class PhpAT81 < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
+  end
+
+  # Backport support for OpenSSL 4 from PHP 8.2 branch removing NEWS file
+  # https://github.com/php/php-src/commit/19255f4b784cedf6dd4bb21e97def348d335dd69
+  patch do
+    file "Patches/php/openssl4-8.1.34.diff"
+    type :backport
   end
 
   allow_network_access! :test
@@ -227,7 +234,7 @@ class PhpAT81 < Formula
     orig_ext_dir = File.basename(extension_dir)
     inreplace bin/"php-config", lib/"php", prefix/"pecl"
 
-    openssl = Formula["openssl@3"]
+    openssl = Formula["openssl@4"]
     %w[development production].each do |mode|
       inreplace "php.ini-#{mode}" do |s|
         # Allow pecl to install outside of Cellar
