@@ -9,11 +9,12 @@ class Pelican < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1e2ca8a073f5874a010bd2da0b0e387c930aec192886c8d6beb47365107f41c4"
-    sha256 cellar: :any, arm64_tahoe:       "fbc9af939d03e778a437a70f00d61f377d20037b8abcb6ff6b760c47bc052709"
-    sha256 cellar: :any, arm64_sequoia:     "52e5fc285c1db3a054b49116a6229173da5b24277c7fdbfc2845ef143145a4df"
-    sha256 cellar: :any, arm64_linux:       "d968303228488e84dd0061e2f9264955d769a1ee3e706fa4177f49cb7fcb6582"
-    sha256 cellar: :any, x86_64_linux:      "2498e4c3d3ac131a525c4895a7573875c28fb1e1c548aff1c2ea55f8abdf8cc5"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "e4d4b234a114e63ac7918f18c23c817c9a6061f3ed342b4ff162e68ecdc23d5b"
+    sha256 cellar: :any, arm64_tahoe:       "2b256eeecbffe79c2402b59de863d0fc6aea32c53e4aa3b24e9ef9dbce3a7d04"
+    sha256 cellar: :any, arm64_sequoia:     "d68daee02086b1576fd7c06e5638dd420109def37f5fba8817e153251c9dcaca"
+    sha256 cellar: :any, arm64_linux:       "0a6e032b84fa365d5879ab943feef2c9cbf7b3be8c52403e77abc199f6a810da"
+    sha256 cellar: :any, x86_64_linux:      "94079716f3a461d29022ffecd7c44458897709d21290d5527b216b88d04c0905"
   end
 
   depends_on "rust" => :build # for `watchfiles`
