@@ -19,7 +19,7 @@ class NicotinePlus < Formula
   depends_on "libadwaita"
   depends_on "py3cairo" => :no_linkage
   depends_on "pygobject3" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "gettext" => :build # for `msgfmt`
