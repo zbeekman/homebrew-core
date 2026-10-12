@@ -30,6 +30,9 @@ class Xml2rfc < Formula
 
   pypi_packages exclude_packages: "certifi"
 
+  # Keep none-any.whl for `google-i18n-address`,
+  # if not then there will be an ModuleNotFoundError: No module named 'i18naddress'
+
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/33/1c/f41d4e74c28ab327ff3acd36053f7ea506c55872d7a90b0fa71aa3ab0c89/charset_normalizer-3.5.2.tar.gz"
     sha256 "39de2a259fc954455c57274dc94c79d5842774e1247a016aff30bc0efed0f4ef"
@@ -40,8 +43,6 @@ class Xml2rfc < Formula
     sha256 "22a417f4d7b00149f0af82ef7c491f8ecc4b1d5454633fd319b386f5eb806f92"
   end
 
-  # Keep none-any.whl for `google-i18n-address`,
-  # if not then there will be an ModuleNotFoundError: No module named 'i18naddress'
   resource "google-i18n-address" do
     url "https://files.pythonhosted.org/packages/37/75/c4dadb4845c8c930b94c8ff9d2dfa9855c0a005366af539fee8095e30765/google_i18n_address-3.1.1-py2.py3-none-any.whl"
     sha256 "f66f4fd2b75d1cd371fc0a7678a1d656da4aa3b32932279e78dd6cae776fc23d"
