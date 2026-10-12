@@ -1,8 +1,8 @@
 class Nfpm < Formula
   desc "Simple deb and rpm packager"
   homepage "https://nfpm.goreleaser.com/"
-  url "https://github.com/goreleaser/nfpm/archive/refs/tags/v2.47.0.tar.gz"
-  sha256 "906b8dde0c5626376779f3ebddea3554b0eb6e1b8450a09bdc746cba92ef5dea"
+  url "https://github.com/goreleaser/nfpm/archive/refs/tags/v2.48.0.tar.gz"
+  sha256 "878dab9c3e02549f981a227957fd73c042ab5316bd12d201a0db94445284df1b"
   license "MIT"
   head "https://github.com/goreleaser/nfpm.git", branch: "main"
 
