@@ -1,8 +1,8 @@
 class Seal < Formula
   desc "Easy-to-use homomorphic encryption library"
   homepage "https://github.com/microsoft/SEAL"
-  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.6.1.tar.gz"
-  sha256 "42f38fdeca6fa0f24dcb031b6366db0bf407c2bbf659acdd72f47318a528dff3"
+  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.6.2.tar.gz"
+  sha256 "98e382852faf336808959c3dee0bbfff9148dbad1dab4e70dc39004cc94e93f6"
   license "MIT"
 
   bottle do
@@ -33,9 +33,6 @@ class Seal < Formula
   deny_network_access!
 
   def install
-    # Support Microsoft GSL 5.x, which upstream has not widened its version request to yet
-    inreplace "CMakeLists.txt", "Microsoft.GSL 4 CONFIG", "Microsoft.GSL 5 CONFIG"
-
     if Hardware::CPU.intel?
       resource("hexl").stage do
         hexl_args = %w[
