@@ -14,7 +14,7 @@ class McpProxy < Formula
   depends_on "certifi" => :no_linkage
   depends_on "cryptography" => :no_linkage
   depends_on "pydantic" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rpds-py" => :no_linkage
 
   # TODO: Remove the MCP 1.x pin when upstream supports MCP 2.x: https://github.com/sparfenyuk/mcp-proxy/issues/235
