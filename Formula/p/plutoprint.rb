@@ -21,7 +21,7 @@ class Plutoprint < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "plutobook"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1499
