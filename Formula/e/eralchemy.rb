@@ -9,12 +9,12 @@ class Eralchemy < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "12c93a3c5749cbacdaed82b29d31d1858f5e0a117638c06b45b9c9f8b259523b"
-    sha256 cellar: :any, arm64_tahoe:       "5257e0349e7f67325f7d5bb21c96d92991870f365ed09b54255c52192fd3fd67"
-    sha256 cellar: :any, arm64_sequoia:     "9bb68943f8fac357629a343914628c41ee84ebb86db9e1822eb37d6250cfec80"
-    sha256 cellar: :any, arm64_sonoma:      "0954018789a1495a2e1f79de19ccb793421857a939089243704193335204109e"
-    sha256 cellar: :any, arm64_linux:       "40da2e37d5a1b40f8426d3a9cc0050f949be7ca4fdfeca2736772a96503853cc"
-    sha256 cellar: :any, x86_64_linux:      "8fdc3fa45428de10c02bcd34ee699096dc9ca59119bae95074274865442852c4"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "4394105ed86de197b8dc0eeb9089fa7f2bd60870263963e8c9671e4ba72c51af"
+    sha256 cellar: :any, arm64_tahoe:       "73c2f4d4258c3e8d0f6099eaa6afaeeca4c21e8b542d067e63df8b21376cf832"
+    sha256 cellar: :any, arm64_sequoia:     "333dbe99f334ed3ed6b24a15404229373391655538a85c8b40df56c4bb0f8317"
+    sha256 cellar: :any, arm64_linux:       "18f99852c7b6fcde3d12990676947365f4ef15d120fb04a9574af1d217b9f158"
+    sha256 cellar: :any, x86_64_linux:      "7b7fe10ce569dbd49c19b1ed8bf3def54ed793668c63aca457fe929a157a07a5"
   end
 
   depends_on "pkgconf" => :build
