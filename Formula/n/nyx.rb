@@ -17,7 +17,7 @@ class Nyx < Formula
   deprecate! date: "2026-03-29", because: :repo_archived
   disable! date: "2027-03-29", because: :repo_archived
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "stem" do
     url "https://files.pythonhosted.org/packages/94/c6/b2258155546f966744e78b9862f62bd2b8671b422bb9951a1330e4c8fd73/stem-1.8.2.tar.gz"
