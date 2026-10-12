@@ -16,7 +16,7 @@ class Fonttools < Formula
     sha256 cellar: :any,                 x86_64_linux:      "dd2f767fba0d21cbd294546f1deefb14a6e2ae126a5b3bfa6370866e25bfcc25"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
