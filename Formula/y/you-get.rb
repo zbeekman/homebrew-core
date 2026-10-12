@@ -19,12 +19,12 @@ class YouGet < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "64940795ad6349d12f2b11f1f7657b10bc9471573f4858eb57f5dc9759392387"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "rtmpdump"
 
   resource "dukpy" do
-    url "https://files.pythonhosted.org/packages/dd/fe/8cef39f269aed53e940c238bf9ceb3ca0f80d7f5be6df2c00a84d87ac5d8/dukpy-0.5.0.tar.gz"
-    sha256 "079fe2d65ac5e24df56806c6b4e1a26f92bb7f13dc764f4fb230a6746744c1ad"
+    url "https://files.pythonhosted.org/packages/85/f5/0d731f71f68a784e9637c74bfd93ee36666f303da1ad32fed5dc26a54bed/dukpy-0.6.0.tar.gz"
+    sha256 "f8b1d1f75c6a5be9b525dc80f05b6c869a671481be689da146b2c6937b3450ee"
   end
 
   def install
