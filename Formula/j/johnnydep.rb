@@ -9,11 +9,12 @@ class Johnnydep < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bd06c692e3446939a37dff8ef6435894617798fd5d9e7c2cdb303a5091141c59"
-    sha256 cellar: :any, arm64_tahoe:       "57d07a082d4cdce674f21518a7a01d7b0c14f1ad40252a062667599320d73e73"
-    sha256 cellar: :any, arm64_sequoia:     "20515ceccdd2de9ed5dc68cd9bf88a6bdfa444eb55030e2ee90ec3bc39cc5cb8"
-    sha256 cellar: :any, arm64_linux:       "98a0f9f38ffe440b3998728eacf3104bbbc9e0ef4fb5ac5cd0164e4356831552"
-    sha256 cellar: :any, x86_64_linux:      "dafb0b33e7186e6c5134e2850e0607621b88a24402485bf89ea5775be5c8dda4"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "8d58b5f31b5d8090645c35d6882244a4307d9a0f90cddbd771e0f2d989e593f1"
+    sha256 cellar: :any, arm64_tahoe:       "63a1bda000933e76dd8424076988b2462e8096127e6bc74afba41436d03ea26a"
+    sha256 cellar: :any, arm64_sequoia:     "3fa359391f7b7dc52bf26ca8a7e15a8c26e13e0bb1f41f7864efcfbb7136b39c"
+    sha256 cellar: :any, arm64_linux:       "1baa83fcfae79a4bf0d8d057a3239fcd0b91c6d2e33dff0c30767cf3a2ca0675"
+    sha256 cellar: :any, x86_64_linux:      "75861dd3b6240c5d7a51750304f62ddfa024dee9b82b360075a76a6eb2bc9b5a"
   end
 
   depends_on "certifi" => :no_linkage
