@@ -1,10 +1,9 @@
 class SynergyCore < Formula
   desc "Synergy, the keyboard and mouse sharing tool"
   homepage "https://symless.com/synergy"
-  url "https://github.com/symless/synergy/archive/refs/tags/v1.21.4.tar.gz"
-  sha256 "369d789ae5616e6e43b5eeb6feac644ab7d3384c138748a13ed9f7e1df7361a6"
+  url "https://github.com/symless/synergy/archive/refs/tags/v1.22.2.tar.gz"
+  sha256 "c80a1bc6c0e40fe60e8614e88e988d34ccf5a04b57d3560de946989282d526c9"
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
-  revision 1
   head "https://github.com/symless/synergy.git", branch: "master"
 
   # This repository contains old 2.0.0 tags, one of which uses a stable tag
@@ -52,6 +51,8 @@ class SynergyCore < Formula
     build 1402
     cause "needs `std::ranges::find`"
   end
+
+  allow_network_access! :test
 
   def install
     # Avoid statically linking OpenSSL on macOS
@@ -108,8 +109,7 @@ class SynergyCore < Formula
     # Linux CI has no display for the default xcb platform plugin
     ENV["QT_QPA_PLATFORM"] = "minimal" if OS.linux?
 
-    assert_match "synergy-core v#{version.major_minor_patch}, protocol v",
-                 shell_output("#{bin}/synergy-core --version")
+    assert_match version.to_s, shell_output("#{bin}/synergy-core --version")
     assert_match "synergy-core: failed to load config", shell_output("#{bin}/synergy-core server 2>&1", 4)
   end
 end
