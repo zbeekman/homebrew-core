@@ -7,11 +7,11 @@ class Gabo < Formula
   head "https://github.com/ashishb/gabo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "03cabfe15d90df7cbe980e1591c83ba91054574e1bd657e6978b6c7c6d494cc1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "03cabfe15d90df7cbe980e1591c83ba91054574e1bd657e6978b6c7c6d494cc1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "03cabfe15d90df7cbe980e1591c83ba91054574e1bd657e6978b6c7c6d494cc1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f8811c142ace79c7356d768d9cb4bcb57d7e7a0f0bcfedd847394a5979d77eb8"
-    sha256 cellar: :any,                 x86_64_linux:      "db04e7481ce58671c5250a21a4e5a7be2c66430bc3cc40388c3bc140292d018f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7714f675b5d15895ebf5f4f7b0e5c44cb21d955d0079f3f1b50bafd4f69c3cc7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7714f675b5d15895ebf5f4f7b0e5c44cb21d955d0079f3f1b50bafd4f69c3cc7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7714f675b5d15895ebf5f4f7b0e5c44cb21d955d0079f3f1b50bafd4f69c3cc7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c9a13672b6d308c3a3d4a6056ebd8068f02b864679f029abee14b3f7d1b45785"
+    sha256 cellar: :any,                 x86_64_linux:      "28055d25342e199b0e9d6ffa71200b44fbdd10abc5560e41b9f9bc2cb2bbdf96"
   end
 
   depends_on "go" => :build
