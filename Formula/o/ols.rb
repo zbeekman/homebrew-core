@@ -1,8 +1,8 @@
 class Ols < Formula
   desc "Language server for The Odin Programming Language"
   homepage "https://github.com/DanielGavin/ols"
-  url "https://github.com/DanielGavin/ols/archive/refs/tags/dev-2026-08.tar.gz"
-  sha256 "e8d368f35b6833efa7e840753881d01f76607f3c0872c614e536f2b7e939f800"
+  url "https://github.com/DanielGavin/ols/archive/refs/tags/dev-2026-10.tar.gz"
+  sha256 "49ce783760429421645f6b4125dda374154148fdfbcb66fce61f772dbfaba851"
   license "MIT"
 
   bottle do
@@ -15,14 +15,6 @@ class Ols < Formula
   end
 
   depends_on "odin" => :build
-
-  # Backport build fix for odin 2026-09, which replaced `ast.Inline_Asm_Expr` with `ast.Asm_Template`
-  patch do
-    url "https://github.com/DanielGavin/ols/commit/5f1b4d773b05d98dc9533521490096cf1a06a6d3.patch?full_index=1"
-    sha256 "e76914e29a26bca835d115111c1017ec0e6f7d51edc93a8c0e1f9a1fbd7c6368"
-    type :backport
-    resolves "https://github.com/DanielGavin/ols/pull/1653"
-  end
 
   def install
     args = %W[
