@@ -1,31 +1,15 @@
 class Fceux < Formula
   desc "All-in-one NES/Famicom Emulator"
   homepage "https://fceux.com/"
+  url "https://github.com/TASEmulators/fceux.git",
+      tag:      "fceux-2.7.0",
+      revision: "a6d03e7968bd77a8156a7c9b628a673753f2f4c6"
   license all_of: [
     "GPL-2.0-or-later",
     "LGPL-2.1-or-later", # src/drivers/common/{hq2x.cpp,nes_ntsc*}
     "MIT", # src/emufile*, src/drivers/Qt/TasEditor/, src/lua/
   ]
-  revision 12
   head "https://github.com/TASEmulators/fceux.git", branch: "master"
-
-  stable do
-    url "https://github.com/TASEmulators/fceux.git",
-        tag:      "v2.6.6",
-        revision: "34eb7601c415b81901fd02afbd5cfdc84b5047ac"
-
-    # patch for `New timeStamp.cpp file renders fceux x86-only` issue
-    patch do
-      file "Patches/fceux/2.6.6-arm.patch"
-    end
-
-    # Fix builds with FFmpeg 9.
-    patch do
-      file "Patches/fceux/2.6.6-ffmpeg9.patch"
-      type :unofficial
-      resolves "https://github.com/TASEmulators/fceux/pull/850"
-    end
-  end
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "aba31d5f2283baa9df7785d9ef47e63898ee8c0d4be96c46877c631bac43b5af"
@@ -54,11 +38,9 @@ class Fceux < Formula
     depends_on "zlib-ng-compat"
   end
 
-  def install
-    # Workaround until upstream handles newer minizip 1.3.2 cflags after
-    # https://github.com/madler/zlib/commit/7e6f0784cc0c33e8d5fcb368248168c6656f73c8
-    ENV.append_to_cflags "-I#{formula_opt_include("minizip")}/minizip"
+  deny_network_access!
 
+  def install
     args = ["-DQT6=ON"]
     args << "-DPUBLIC_RELEASE=1" if build.stable?
     system "cmake", "-S", ".", "-B", ".", *args, *std_cmake_args
