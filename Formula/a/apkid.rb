@@ -16,7 +16,7 @@ class Apkid < Formula
     sha256 x86_64_linux:      "e131cdc6cac6ab22968c6ccf08ca3e6d222f99e217dedc64662df45ff353b882"
   end
 
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "yara"
 
   # `yara-python-dex` has no recent sdist; link `yara-python` to Homebrew's `yara`, which enables DEX
