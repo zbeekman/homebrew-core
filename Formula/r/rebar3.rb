@@ -11,11 +11,11 @@ class Rebar3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fc98d9413efe323c177637a770293182f65151244634373b8dd1d77b32da3bdd"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c444b4c7cf52dd62efed60a0f82b7e27eb2935d7ab4e29102b45cc0a478e2442"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b2a4f723453d34ed26ea453cddab72888a6aa20d46a0618f452306f68cd78ac6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6fd3b3f35d7ac9710ed414754d219606f3b74010378467813d2656b2caee6d42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ff48dad25d6b0d6498a7a9afbbf7b7edb6a8e4b87fa6578e943032af0d1a44d7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8531240aedd9f75007567a6f28cce599989cf2a4b18869527662dc088507bb5c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "15add3d5e6092c811cb3fddcbf6989eb2557942e96e06199bdabb77fe6bf8943"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9bb99e852544b29ea76670cbe55ef75fd984da743cbfa115c96adddd5df75140"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c540cfce6246b25969271b23653152389032e519c05870bf66684cd40cd29510"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d961587229f0c42b97401a80facbaf43cd36df5704c60c04df19a2a36a8a46d7"
   end
 
   depends_on "erlang@27" => [:build, :test]
