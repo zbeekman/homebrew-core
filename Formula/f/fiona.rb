@@ -20,7 +20,7 @@ class Fiona < Formula
 
   depends_on "certifi" => :no_linkage
   depends_on "gdal"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   conflicts_with "fio", because: "both install `fio` binaries"
 
