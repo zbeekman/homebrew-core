@@ -5,6 +5,7 @@ class Rdkit < Formula
   url "https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_09_1.tar.gz"
   sha256 "86711e340759a3a0678a2e62f54f26f7ff564c3a02de0460f60b1ce89ac1bfe9"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/rdkit/rdkit.git", branch: "master"
 
   livecheck do
@@ -38,7 +39,7 @@ class Rdkit < Formula
   depends_on "maeparser"
   depends_on "numpy"
   depends_on "py3cairo" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "expat", since: :sequoia # minimum macOS due to python
 
