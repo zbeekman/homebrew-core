@@ -34,8 +34,6 @@ class Anyzig < Formula
     depends_on maximum_macos: [:sequoia, :build] # TODO: remove with Zig 0.15+
   end
 
-  conflicts_with "zig", because: "both install `zig` binaries"
-
   def install
     args = %W[-Dforce-version=v#{version.to_s.tr(".", "_")}]
     system "zig", "build", *args, *std_zig_args
