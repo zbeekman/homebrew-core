@@ -1,8 +1,8 @@
 class PkgConfigWrapper < Formula
   desc "Easier way to include C code in your Go program"
   homepage "https://github.com/influxdata/pkg-config"
-  url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "769deabe12733224eaebbfff3b5a9d69491b0158bdf58bbbbc7089326d33a9c8"
+  url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "11776c4f44b4d338619723cba1a6ef716573e80a358b0943ff2e2a86129ca8d5"
   license "MIT"
   head "https://github.com/influxdata/pkg-config.git", branch: "master"
 
