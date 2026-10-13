@@ -3,8 +3,8 @@ class Copier < Formula
 
   desc "Utility for rendering projects templates"
   homepage "https://copier.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/f9/60/2fe1777b27f489450ed8ac5c75390caf91a175d647be05b4284bf515b413/copier-9.18.2.tar.gz"
-  sha256 "0f97902fee79374551c9391fb1132f5a038079f3b497f4dad673295489fc032e"
+  url "https://files.pythonhosted.org/packages/80/17/169a7c1ac85014a77aeade65d53e950fa131521e51310ed6733cd8bf3c0e/copier-9.19.0.tar.gz"
+  sha256 "9b39865d5605f03984f2acda9367cf21652e0a0215bf4ac6a60fdb70272a2970"
   license "MIT"
 
   bottle do
@@ -63,8 +63,8 @@ class Copier < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/90/a1/d5f9002a70298c64a789779077d8dd90c10aa1f47fe40c86802df874f2a6/platformdirs-4.12.4.tar.gz"
-    sha256 "63743c02414e755de4e31b8f68125c1407495b86c5a006e203c01ff8b9924250"
+    url "https://files.pythonhosted.org/packages/80/a8/66d45abadff219e36e2a824181b8f6a67e7ed4572934d6252c71c29d5731/platformdirs-4.13.0.tar.gz"
+    sha256 "1aa0b0d3f224c1f07c295121e312a5a24a180d6ae5a8425ea1784b3e3863e9c0"
   end
 
   resource "plumbum" do
