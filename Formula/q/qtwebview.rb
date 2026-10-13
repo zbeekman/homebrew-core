@@ -17,12 +17,11 @@ class Qtwebview < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c8673882004045b44eccfbf14b9d01c6b3d6c175c0ced43eb348d7ff61889fbc"
-    sha256 cellar: :any, arm64_tahoe:       "885ca728bade5ac4ff77e16214702710304b2633d925aa39df8baa50a15b9563"
-    sha256 cellar: :any, arm64_sequoia:     "92180c71643e8d69a2f03d42bc7a538652abbdb1bf37efdcf5c0924d66b19e48"
-    sha256 cellar: :any, arm64_sonoma:      "3dcb03116185af260b362bd89beb2e6754af8f1afe90e43de432ff0f293a0278"
-    sha256 cellar: :any, arm64_linux:       "65f470201641db39394ccc2c4504fe249784feb92cbe56b04be883bac739bbfd"
-    sha256 cellar: :any, x86_64_linux:      "1013154bf62a2c0f087a0a2e0b2d49466fb10530fab623460dfbaa573980fa44"
+    sha256 cellar: :any, arm64_golden_gate: "e02f36790976cef4b0bdce2b5cfdc6148eef017f39ea3772cd3f74be59b76714"
+    sha256 cellar: :any, arm64_tahoe:       "98d5b9c98f8ae934e853dde839ba82bace112b7a34739d84bcdfa5a7214f498e"
+    sha256 cellar: :any, arm64_sequoia:     "58732ceb9551bc274913054077d573df0d98ebea8a0a2cf2323ffe93c02c7214"
+    sha256 cellar: :any, arm64_linux:       "0669bce5224977445c2908e1ba4cbd225fb06ef623726b4e267968ae2cd06f01"
+    sha256 cellar: :any, x86_64_linux:      "bec172c549909782a5176cbc1b853c3433fae0eea08b59b4d96da2c74950fafc"
   end
 
   depends_on "cmake" => :build
