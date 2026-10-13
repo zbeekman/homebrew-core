@@ -20,7 +20,7 @@ class VimClassic < Formula
   # so we don't try building in Ruby interpreter support.
   depends_on "gettext" => :build
   depends_on "lua" => [:build, :test]
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
 
   uses_from_macos "perl" => [:build, :test]
   uses_from_macos "ncurses"
@@ -40,7 +40,7 @@ class VimClassic < Formula
   def extra_deps = deps.select { |dep| dep.build? && dep.test? }
 
   def install
-    ENV.prepend_path "PATH", formula_opt_libexec("python@3.14")/"bin"
+    ENV.prepend_path "PATH", python3.dirname
 
     # Allow dynamically loading formulae libraries when not linked
     extra_deps.each do |dep|
