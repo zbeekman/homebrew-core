@@ -10,6 +10,14 @@ class OpensslAT36 < Formula
     regex(/href=.*?openssl[._-]v?(3\.6(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_golden_gate: "9b26d88fbeef0006bea7ff1dce2cd18b77924d199607135092dbb6af1bf4df80"
+    sha256 arm64_tahoe:       "af714c3eca585a0a9b2ab707a9cc9d54966ed34d6db09eefca0e1ffe4bfd092e"
+    sha256 arm64_sequoia:     "815c8d6a5ebdf26cab2d7f5f7a7e5a1ec5916f34cc9afe29ebf04aa7c7c97053"
+    sha256 arm64_linux:       "74b8e7df20d8069b957e9754d0affb207be9e56924b40734e32e60ce68284318"
+    sha256 x86_64_linux:      "cd4ad11e241dbb2b9c38964e97b3c8321366f5e59358bdc8d5523a99c3ad9c87"
+  end
+
   keg_only :versioned_formula
 
   # https://openssl-library.org/roadmap/index.html#:~:text=08%20Apr%202030-,3.6,-Non%2DLTS
