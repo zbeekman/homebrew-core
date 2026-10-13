@@ -33,15 +33,15 @@ class AstrometryNet < Formula
   depends_on "libpng"
   depends_on "netpbm"
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "wcslib"
 
   pypi_packages exclude_packages: "numpy",
                 extra_packages:   "fitsio"
 
   resource "fitsio" do
-    url "https://github.com/esheldon/fitsio/archive/refs/tags/1.2.7.tar.gz"
-    sha256 "356a425ce1c5c64e42685e1196f1d5fb43ec8fefb7f800232f756360e1a2a38a"
+    url "https://files.pythonhosted.org/packages/3b/fd/53bfe8986f7b242fb5b66ddc9344fe67614102f44438415b0a8b32cf7f0a/fitsio-1.4.2.tar.gz"
+    sha256 "92a02f0e63d539d85ca5a185ae0cc8d40029270858275964ee2539ee0136f0c3"
   end
 
   def install
