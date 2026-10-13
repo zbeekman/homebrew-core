@@ -6,7 +6,7 @@ class Notmuch < Formula
   url "https://notmuchmail.org/releases/notmuch-0.40.tar.xz"
   sha256 "4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://git.notmuchmail.org/git/notmuch", using: :git, branch: "master"
 
@@ -35,7 +35,7 @@ class Notmuch < Formula
   depends_on "cffi"
   depends_on "glib"
   depends_on "gmime"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "sfsexp"
   depends_on "talloc"
   depends_on "xapian"
