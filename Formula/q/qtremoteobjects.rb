@@ -18,12 +18,11 @@ class Qtremoteobjects < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "10c65fa4348e86cebe025b05d2b89fd73d25cbab69bf3b4ef6c383a0ba24a285"
-    sha256 cellar: :any, arm64_tahoe:       "3fcdd058b6f8e52664c2bdca3a21afabcdf62ac036d0aaa42177757df72ed0ec"
-    sha256 cellar: :any, arm64_sequoia:     "d9a0ecef48fb4c76fd8a0bb25855f898a184804e6a96a5dd0529fa1dbbc7d719"
-    sha256 cellar: :any, arm64_sonoma:      "fec40f51c4062962b2abfc79ab8e693adaad24676dc65de08c3326ffe109eb12"
-    sha256 cellar: :any, arm64_linux:       "b8c8be2aea7984c57f213b0df1e3631527103eb104706f24dccb72a4fa3048a6"
-    sha256 cellar: :any, x86_64_linux:      "1f0f7e176a94adda23db422c5572230fa259ce209b0952befae706b3078aaff4"
+    sha256 cellar: :any, arm64_golden_gate: "891979ee24943ff35bb3fd5a6436c6d72504f19fe021c3ddb34bed29282be8c6"
+    sha256 cellar: :any, arm64_tahoe:       "55f1cb322389aa3ce8430046a82caa1189e541ee4a4e150b401a62459b62de06"
+    sha256 cellar: :any, arm64_sequoia:     "f56b15511d28117f3aec3a5d8022ef134a95a22723293956f1a5be8c3e74c945"
+    sha256 cellar: :any, arm64_linux:       "984e67ed28403a17229e82f1b64fcaf6434059fe6345081d98df8879d8b9d9ba"
+    sha256 cellar: :any, x86_64_linux:      "b787a164b78324d03874c15505604d35d1d87cca152d8e0fb114d215b18e59e8"
   end
 
   depends_on "cmake" => [:build, :test]
