@@ -1,8 +1,8 @@
 class KosliCli < Formula
   desc "CLI for managing Kosli"
   homepage "https://docs.kosli.com"
-  url "https://github.com/kosli-dev/cli/archive/refs/tags/v2.47.0.tar.gz"
-  sha256 "1c034054a26e7d4746593c9a2f233224b92661fcdf8b2bc1a5e6a1be23011bab"
+  url "https://github.com/kosli-dev/cli/archive/refs/tags/v2.47.1.tar.gz"
+  sha256 "4478be52d1763132d1250e08e65df1419897d0521b9ecfc54994ec36af4a5f42"
   license "MIT"
   head "https://github.com/kosli-dev/cli.git", branch: "main"
 
@@ -12,11 +12,11 @@ class KosliCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b72042bab65d141cb64e280b66d2b756e05ee4365e530a1d97cd698944fd3ed5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "43b6f23944344dd0d4cf7f063cfc60d4dc5f94191ff8150d5079cd7bdade4309"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ce058dea1a1211883c771ce936e897e521c98e52fd237996385a73fdb59d0d2c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3828d6320a84e5fa0e86948bb18c6ec1140db8ab5476371acd58206ba03438a9"
-    sha256 cellar: :any,                 x86_64_linux:      "c6d9727893fde3f062ac861d79b6e8a4dc9be39e2e2bb48059c1da89173aa702"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "580b4a63cdba5e7943aa7e94a028786e5c63dfbc5b5a432c09c8ee0e6613ac61"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d04d2131325bf715fd74a0d43fa4da7b9e9c631cb69ec12920a1995410993e7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "82328e3755d940a41af93acfb030ea3adb34eed88d7416f9a2196a071c9690df"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a5033845baf597b640e2c73dde343d6f1ff4aebc73a82dca0f6d342d4993bf2f"
+    sha256 cellar: :any,                 x86_64_linux:      "ebdfbac8b2565906c1e89fb02ae6f8f29f3449cca0bfeb102a80f881dd6bb13d"
   end
 
   depends_on "go" => :build
