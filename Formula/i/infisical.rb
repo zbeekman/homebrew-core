@@ -1,17 +1,17 @@
 class Infisical < Formula
   desc "CLI for Infisical"
   homepage "https://infisical.com/docs/cli/overview"
-  url "https://github.com/Infisical/cli/archive/refs/tags/v0.43.143.tar.gz"
-  sha256 "871a6de0de483c394a3a9859cf4bab2898434ab443beb501ad1b045b3f0e4c40"
+  url "https://github.com/Infisical/cli/archive/refs/tags/v0.43.144.tar.gz"
+  sha256 "09dfcf59e9f9057e7c538b818a9756b3ab15c32bbb720fe24bce92300254a1c7"
   license "MIT"
   head "https://github.com/Infisical/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2e99ce07d66a7853f889c8c0ac1b1fb3247962f1c4afc67cd7361d8c1ad37a75"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2e99ce07d66a7853f889c8c0ac1b1fb3247962f1c4afc67cd7361d8c1ad37a75"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2e99ce07d66a7853f889c8c0ac1b1fb3247962f1c4afc67cd7361d8c1ad37a75"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a4a96699818c326dcfebf7b2a5905148bc6a12e62e20e1fedec682641bd8b940"
-    sha256 cellar: :any,                 x86_64_linux:      "a8df28d6cc57f24417290b17870e832c0e857887cacd619b3be302dedae178bf"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e68a945c42740f38a5628ae2f290c9f4fbb0369ed358b18225e505cdbd0b80e3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e68a945c42740f38a5628ae2f290c9f4fbb0369ed358b18225e505cdbd0b80e3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e68a945c42740f38a5628ae2f290c9f4fbb0369ed358b18225e505cdbd0b80e3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "501f838f9f74b25f6d8ef1a57910e2a8e28422acfafa3d6e055f27e218420656"
+    sha256 cellar: :any,                 x86_64_linux:      "5b00300b5dd751060aeb868795b8c928f1bdedc4db7e43b373215c7d87e347d9"
   end
 
   depends_on "go" => :build
