@@ -1,8 +1,8 @@
 class Tele < Formula
   desc "Keyboard-first Telegram client for the terminal, written in Go"
   homepage "https://github.com/sorokin-vladimir/tele"
-  url "https://github.com/sorokin-vladimir/tele/archive/refs/tags/v1.11.12.tar.gz"
-  sha256 "80b418c22e6f34edcc16b22eb8a8b14b25b81c0dd2ddc00aa708d4bd32510aa1"
+  url "https://github.com/sorokin-vladimir/tele/archive/refs/tags/v1.11.13.tar.gz"
+  sha256 "6cce73db52e0a25b4f0f5d76d8151e1105d67f02309e359b908007f4af50dcdc"
   license "GPL-3.0-only"
 
   bottle do
