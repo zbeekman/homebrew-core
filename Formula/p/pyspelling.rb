@@ -3,18 +3,16 @@ class Pyspelling < Formula
 
   desc "Spell checker automation tool"
   homepage "https://facelessuser.github.io/pyspelling/"
-  url "https://files.pythonhosted.org/packages/fe/ed/3fe00b8a3f8a74a993e1e08931d674cde7bd718c1af44ef415ff1f6b000b/pyspelling-2.12.1.tar.gz"
-  sha256 "9108981dc174d6400a7ed4917cf4af91daf3eb83578d4570c0726b92c2a32e7a"
+  url "https://files.pythonhosted.org/packages/1d/49/4a80f24e1188286e65c2c5005415ddac0d64a8c2cc975f00b5758ca51db1/pyspelling-2.13.tar.gz"
+  sha256 "6464afb9da9d3fd35b11a47d0297b67f4f1e3ba73a98d948326b34a85deb4ab1"
   license "MIT"
-  revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f0553796dad723e226d8cf23d9f62285d25f3b898a379ae54e1343432a85f758"
-    sha256 cellar: :any, arm64_tahoe:       "5f7474ff878e472ef84fdf8388a413d31b706658d1851d24ce26b59bea73ed9b"
-    sha256 cellar: :any, arm64_sequoia:     "0d590fc23f6417844bf4a6cded584beccdf0f2de75c76c192f1fcbcd912010d5"
-    sha256 cellar: :any, arm64_linux:       "2383af51d4eb17bd5588268fdd490f838b1d952666a733c8682debac9d79d31b"
-    sha256 cellar: :any, x86_64_linux:      "a80a78e335a4a1c7e48e33361a38c3ca3da89c55bab54c463a0074bc2fb1b5ca"
+    sha256 cellar: :any, arm64_golden_gate: "12db2ce810e6f3cfa64f7c94718cc5bdbdb58fa91c2d43685f4e3536e9b45b5d"
+    sha256 cellar: :any, arm64_tahoe:       "78cf99aae0a98c0c26b423c69380a78bfac87a39bd2226d2b5a223bef8935cbf"
+    sha256 cellar: :any, arm64_sequoia:     "cb295663ea2da4d52f066d9fbca89c68dd5d2cd8866bedec74bbe293e6d398b6"
+    sha256 cellar: :any, arm64_linux:       "4dccbc6e828b64a291a46f7f755df4c53114945ae23736afcbfb77cedafa73b7"
+    sha256 cellar: :any, x86_64_linux:      "f95c38dfd655841039efbf35c9b04a96f976a2a68aacecfc6ec4ea667543506f"
   end
 
   depends_on "aspell" => :test
@@ -68,8 +66,8 @@ class Pyspelling < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/71/c3/1b817965ac12dc002d7c9cd7dfffdd7d4fbf9b45763ef2ffe7b86ee94670/soupsieve-2.10.tar.gz"
-    sha256 "49e9380d7d2905463583bafe285e818c7366a9ed7b3aee221c1ac79c905d8bc0"
+    url "https://files.pythonhosted.org/packages/e2/28/d05a6e0818f302952dc80fb1054a1e617ec6cba9dd8f9cba75df445f3be8/soupsieve-3.0.2.tar.gz"
+    sha256 "841ce01c8e80b3bf95c2f2657f191b024be1cdd9d6c0d24a663af247da81911a"
   end
 
   resource "typing-extensions" do
