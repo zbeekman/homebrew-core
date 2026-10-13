@@ -17,12 +17,11 @@ class Qtserialport < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1a103aebcbf228ddbbcc4b2118958249353080147264c4323ec4bc7f3fac4384"
-    sha256 cellar: :any, arm64_tahoe:       "a1748cf5658971cda06dbb4006622334a5b4e44f3ebbc53ad498607ff840d39f"
-    sha256 cellar: :any, arm64_sequoia:     "ec458a0310d2c542c2801c9c9997397568ba51098ab49972304f6f390bb8eebf"
-    sha256 cellar: :any, arm64_sonoma:      "f06e16c104ce0c86303ed8202d9cc801d07b4349bab84296f015b46ee6c964cc"
-    sha256 cellar: :any, arm64_linux:       "c2e2d415225cfbb98e511a8b5988bcadc2f28696af1a9df5fb6539b83eebbedc"
-    sha256 cellar: :any, x86_64_linux:      "8758b1c4d8c33a559210b65dd1f02d14f9dfe5bb7d5170ed08f3764fec395b28"
+    sha256 cellar: :any, arm64_golden_gate: "88380548ee0932994ce17d314d306d9acc18ad3092d1bbc527ce7706a7b4e3ae"
+    sha256 cellar: :any, arm64_tahoe:       "e57a8afb5c96109a67043eb0b982c8ceae877be82a9c84382fe1f7103e53baca"
+    sha256 cellar: :any, arm64_sequoia:     "2250d641dbaae7132f1ca809b4c54d18bd32c9b46580870c5b85aa85746b3dc1"
+    sha256 cellar: :any, arm64_linux:       "8a476746535006e8191802c04ac15b9bcd3236816b6ff0453f3beb8472a6be00"
+    sha256 cellar: :any, x86_64_linux:      "10c9f19b02cc972d884c3849cf7b139d193d4d5a4dd123f13ebc15261b6a2c23"
   end
 
   depends_on "cmake" => [:build, :test]
