@@ -4,8 +4,8 @@ class MetaPackageManager < Formula
 
   desc "Wrapper around all package managers with a unifying CLI"
   homepage "https://kdeldycke.github.io/meta-package-manager/"
-  url "https://files.pythonhosted.org/packages/46/af/1189bce69fc2f194b24098990bcc11355ecc87a593dfd24980b7595ac2c4/meta_package_manager-8.1.1.tar.gz"
-  sha256 "dd892a4eeb42ff229821b2b8f5cfac9532dbbdf9d6d83ccb6514088e74b314c8"
+  url "https://files.pythonhosted.org/packages/26/09/a168bda8ef7bb8d66e13fbeecc3f9fdc09f6bb55f6b216b474780b90247b/meta_package_manager-8.1.2.tar.gz"
+  sha256 "ceeb12d493e50101a46cfed6c999f3c8aff690b727b12b111f8a57d74cabd795"
   license "GPL-2.0-or-later"
   head "https://github.com/kdeldycke/meta-package-manager.git", branch: "main"
 
@@ -36,8 +36,8 @@ class MetaPackageManager < Formula
   end
 
   resource "bracex" do
-    url "https://files.pythonhosted.org/packages/ac/01/5f394b8bcd6e5b92f73130990960423bbb19711f906bd9fe9ea5557c667c/bracex-3.0.1.tar.gz"
-    sha256 "4e38e32392e4a4780fe15d644bfc7c8514057cfc3861e060b11814ce829c25e4"
+    url "https://files.pythonhosted.org/packages/e1/60/e2a6409041cb3f8ce7ac3d6917b5b30c39f81a0a5b2d414ec30f36fd96bf/bracex-3.1.tar.gz"
+    sha256 "35c69fc105f08d77c02722e8ae707c656ff298dd4d26c89bcb3c98fca8bc3614"
   end
 
   resource "click" do
@@ -61,8 +61,8 @@ class MetaPackageManager < Formula
   end
 
   resource "extra-platforms" do
-    url "https://files.pythonhosted.org/packages/ee/e9/805ffa0a5d7bbb2eee2297a2fe1c22e41b2900daa2f1144d335e827e2a1b/extra_platforms-13.11.0.tar.gz"
-    sha256 "79bd4a79df48a873c6cd46e2c7318a7604f3d07c7a14b405b22f63b1368eef11"
+    url "https://files.pythonhosted.org/packages/2b/7e/b92eb5fe6c14b00c1469357622ee32e8b96ba8247b90b9da4cba3743ab32/extra_platforms-13.12.0.tar.gz"
+    sha256 "883feefe546402e1ccfe6f53b3f248dbaee3cd72d82e137549769db452c4712c"
   end
 
   resource "packageurl-python" do
