@@ -16,6 +16,13 @@ class Gauge < Formula
 
   depends_on "go" => :build
 
+  # Test installs a gauge plugin
+  allow_network_access! :test
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     system "go", "run", "build/make.go"
     system "go", "run", "build/make.go", "--install", "--prefix", prefix
