@@ -1,8 +1,8 @@
 class GtkGnutella < Formula
   desc "Share files in a peer-to-peer (P2P) network"
   homepage "https://gtk-gnutella.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/1.3.1/gtk-gnutella-1.3.1.tar.xz"
-  sha256 "9631c82b8c975485b9927a8fa48ef10172d1224e7b3b2049462d37ca33d71f08"
+  url "https://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/1.3.2/gtk-gnutella-1.3.2.tar.xz"
+  sha256 "897d856e5f7dea35df6783372a6ae0d83306a9054f8cde25d6006e4f15e44dc4"
   license "GPL-2.0-or-later"
 
   # Track updates while deprecated. Remove if undeprecated.
