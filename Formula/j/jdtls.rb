@@ -21,7 +21,7 @@ class Jdtls < Formula
   end
 
   depends_on "openjdk"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   def install
     libexec.install buildpath.glob("*") - buildpath.glob("config*win*")
