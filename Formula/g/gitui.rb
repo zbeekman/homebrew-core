@@ -9,13 +9,12 @@ class Gitui < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "94363557c9932aa35e878d3fa2f8ff41d727e4bad9bf0d3df17dd22b538fa53d"
-    sha256 cellar: :any,                 arm64_tahoe:       "8d680002eec562dc3e551b65df13870ed7c76f12137a47bd797b50bdcd2487d1"
-    sha256 cellar: :any,                 arm64_sequoia:     "7cecc7faf77b0a9eb8263cf9bcbc9ac6c9066eafb065b4c6e43188572b9c3061"
-    sha256 cellar: :any,                 arm64_sonoma:      "e4370bb36e12fd616f29ccd1159abe412e3196b3e8d758fdd1b6c04069d63cdd"
-    sha256 cellar: :any,                 sonoma:            "a257d6363277574277a79ac33ec5ce1c9d97531b5137d4ef00d3fac4dd7793f9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b81e6514a38501028d2e54c7d245ac376f2f5f6039e0f1b96ca1bafd5cc9fc01"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c3776e0418c6233796021596efb33de72343bfd36f67c562c347642598d52253"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "ff655d56ccaba70f91c1f39cb9d9f6079996a1a1662dca8e9c3a15001d23b301"
+    sha256 cellar: :any, arm64_tahoe:       "03b806fe1fb1cdbcf4c4c48336c4c9ee42a2730c1704b4d301d14798d9f2d0f8"
+    sha256 cellar: :any, arm64_sequoia:     "bd0885766dec6b2e63098b1792bd1a534a29e955f1c0305ee14cb72a164897f6"
+    sha256 cellar: :any, arm64_linux:       "f7ba6917232ad2e0751491b7d409c59d46407f5acb0d7f7ad57d7a3998a126db"
+    sha256 cellar: :any, x86_64_linux:      "04114993bd07bb6a696c3f3e145935398a29eb398ef7fd42e64db60ad147152f"
   end
 
   depends_on "pkgconf" => :build
