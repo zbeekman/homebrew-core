@@ -18,7 +18,7 @@ class Badread < Formula
   end
 
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "scipy" => :no_linkage
 
   pypi_packages exclude_packages: ["numpy", "scipy"]
