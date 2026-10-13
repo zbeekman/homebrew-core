@@ -14,7 +14,7 @@ class Sby < Formula
   end
 
   depends_on "yices2" => :test
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "yosys"
 
   def install
