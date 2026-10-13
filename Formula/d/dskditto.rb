@@ -1,8 +1,8 @@
 class Dskditto < Formula
   desc "Ultra-fast duplicate file finder TUI/GUI"
   homepage "https://github.com/jdefrancesco/dskDitto"
-  url "https://github.com/jdefrancesco/dskDitto/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "5202c2f0482b0496e272ced4ccd820ff47bbac73ed2237acad501091a79ec259"
+  url "https://github.com/jdefrancesco/dskDitto/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "bb017dea15bcd2a4b5877b33945b299afbfec903e07e75f8f3f0ec43112a0efa"
   license "Apache-2.0"
 
   bottle do
