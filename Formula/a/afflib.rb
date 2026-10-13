@@ -21,7 +21,7 @@ class Afflib < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
+  depends_on "python@3.15" => [:build, :test] # for bindings, avoid runtime dependency due to `expat`
   depends_on "openssl@4"
 
   uses_from_macos "curl"
