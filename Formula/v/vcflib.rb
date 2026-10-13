@@ -19,7 +19,7 @@ class Vcflib < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "pybind11" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "htslib"
   depends_on "wfa2-lib"
   depends_on "xz"
