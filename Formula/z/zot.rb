@@ -7,11 +7,11 @@ class Zot < Formula
   head "https://github.com/patriceckhart/zot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3cc75f5d4cafdaddbb71d09e80a884312746d4696dd54ed573bc4c0a6d7b48b1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3cc75f5d4cafdaddbb71d09e80a884312746d4696dd54ed573bc4c0a6d7b48b1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3cc75f5d4cafdaddbb71d09e80a884312746d4696dd54ed573bc4c0a6d7b48b1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "52f10b34cabd3f425fcf35fc9c4947ded4d8d797a6584536911c1747146d77f5"
-    sha256 cellar: :any,                 x86_64_linux:      "a4e493135e90a89ed35b3f2032a77fac6eb59028c7b9131f69744ec241b5a47c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2ab11ef91033f151b36b49e9ab55b94f33692009cd2453bd34fff3090dea3804"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2ab11ef91033f151b36b49e9ab55b94f33692009cd2453bd34fff3090dea3804"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2ab11ef91033f151b36b49e9ab55b94f33692009cd2453bd34fff3090dea3804"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "fcbee355ec8d9a2cb51117b604cc5defd737f4643cc6eec386aac520a2562d90"
+    sha256 cellar: :any,                 x86_64_linux:      "502308082ef81987c0bcec721a34fb8cff7f7c6ba082ee68825104c5adee6ab6"
   end
 
   depends_on "go" => :build
