@@ -1,8 +1,8 @@
 class Noodle < Formula
   desc "Terminal REST client with file-based collections"
   homepage "https://noodlerest.dev"
-  url "https://github.com/wilfredinni/noodle/archive/refs/tags/v0.9.8.tar.gz"
-  sha256 "b1678e5807c4368b3c502002b6f75f61dc7a16eb9c370db10493c8e171674347"
+  url "https://github.com/wilfredinni/noodle/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "71778afecc1efdac23a822b7330c9703d85d47b9d95f20b4f2856ad3df6a34ef"
   license "Apache-2.0"
 
   bottle do
@@ -25,6 +25,13 @@ class Noodle < Formula
   resource "opentui" do
     url "https://github.com/anomalyco/opentui/archive/refs/tags/v0.5.14.tar.gz"
     sha256 "0e092b7405934c3a30f6eca2cb6e35eb00d9d8948d15daa69af2371e1e641a6e"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/wilfredinni/noodle/refs/tags/v#{LATEST_VERSION}/package.json"
+      strategy :json do |json|
+        json.dig("dependencies", "@opentui/core")
+      end
+    end
   end
 
   deny_network_access!
