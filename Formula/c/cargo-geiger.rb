@@ -1,8 +1,8 @@
 class CargoGeiger < Formula
   desc "Detects usage of unsafe Rust in a Rust crate and its dependencies"
   homepage "https://github.com/geiger-rs/cargo-geiger"
-  url "https://github.com/geiger-rs/cargo-geiger/archive/refs/tags/cargo-geiger-0.13.0.tar.gz"
-  sha256 "02a3999b58e45527932cc9fa60503b3197f011778dc1954909fb5fe9dd168f72"
+  url "https://github.com/geiger-rs/cargo-geiger/archive/refs/tags/geiger-0.14.0.tar.gz"
+  sha256 "60bc6aa6e0169aa9be755188fd42f496b92cf8fb3b6c9e9c1c10be48fe2ea82c"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/geiger-rs/cargo-geiger.git", branch: "master"
 
@@ -24,12 +24,6 @@ class CargoGeiger < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
-  end
-
-  # Backport OpenSSL 4 support to the 0.13.0 release source.
-  patch do
-    file "Patches/cargo-geiger/openssl4-0.13.0.patch"
-    type :backport
   end
 
   allow_network_access! :test
