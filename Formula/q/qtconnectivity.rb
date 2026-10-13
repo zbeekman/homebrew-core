@@ -17,12 +17,11 @@ class Qtconnectivity < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3ca2c4fc3d80702338d11b713a5739a10de3ab442cf3c9cb99772a3b2ae259b1"
-    sha256 cellar: :any, arm64_tahoe:       "30a11a821995dbe0d86f02feda17229851928920279a13b19efc54a8a300192e"
-    sha256 cellar: :any, arm64_sequoia:     "3a0565746066d6c582e7cb36805542fae1b6ba2c4887f829452960b485b4bbc6"
-    sha256 cellar: :any, arm64_sonoma:      "350074e2dd05d4b97f7e38d66835fd40bcdb39ff532b9a060023a66857973e7c"
-    sha256 cellar: :any, arm64_linux:       "fcdb01cacc4fb6ad1f1bb02051f6801a81bc4a59e4be2de8f8eee0c3ef4c0989"
-    sha256 cellar: :any, x86_64_linux:      "96466c09f50057b7324e683cf3de0960ad4b14733c9dea49bc7309d1529dfe90"
+    sha256 cellar: :any, arm64_golden_gate: "05bcea18fb3770c4c2818a35ac06d9e92f48e597a39dc9ca098d446e60e4bddd"
+    sha256 cellar: :any, arm64_tahoe:       "6b8e1893d4c9e40a8f9b93192b0e97d39b061992bd991540cc332177bc3a9df8"
+    sha256 cellar: :any, arm64_sequoia:     "8e36c2b4c7ffc4323a866a63f7bd4bd2361cf276ee6acdf1cd9176ef4ccc9278"
+    sha256 cellar: :any, arm64_linux:       "5174abe989d1e1aab261349fcf38c6fc68e5e960dbfd8ba037d78e45e65b7416"
+    sha256 cellar: :any, x86_64_linux:      "e50251fd12eaffb5a99a561fb321ebcc51b7b53c4984e265b1f66057790a4909"
   end
 
   depends_on "cmake" => [:build, :test]
