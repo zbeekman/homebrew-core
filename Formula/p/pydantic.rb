@@ -10,11 +10,11 @@ class Pydantic < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "0a79643e5657b2ec54352b7010eabb3d5945077138a152c9609bf5ff9c036001"
-    sha256 cellar: :any, arm64_tahoe:       "f298c16202057efa68e39e4a5d3421edd4a5c1088f18821716c8901cd8dea67e"
-    sha256 cellar: :any, arm64_sequoia:     "0bc97dac3b376f3f3448104206494966a49c64fd10bc4f209133f34f4284fa80"
-    sha256 cellar: :any, arm64_linux:       "6a9f8f56a01a5eefd8b5adc4f719cd94b794402280b09103aefad548e9281a3f"
-    sha256 cellar: :any, x86_64_linux:      "138b274aa39f47f9d859139f290100c99baf672a79b1d1ef5ada98b2be791762"
+    sha256 cellar: :any, arm64_golden_gate: "2c2f0cddc55f80ce650282db79c4e5f540abd6518fb7c7d97dfd826b2fa83ef1"
+    sha256 cellar: :any, arm64_tahoe:       "004c996ed485a2965d841af3fbc432ec89276b2b663bf4dcec8aeaa8a77d24d3"
+    sha256 cellar: :any, arm64_sequoia:     "c8ed4119dd8f86c41abbf466174c0a293c3e1be601d6e912f73e6c27f34c8d53"
+    sha256 cellar: :any, arm64_linux:       "36ea152e4ce2e99f38c0440d646a602bf3002ef226cdda4df1e0216dfd7f67b3"
+    sha256 cellar: :any, x86_64_linux:      "a469052795a8cd7506a6991da892b3d247c0088ea335fff60dced2c082140023"
   end
 
   depends_on "maturin" => :build
