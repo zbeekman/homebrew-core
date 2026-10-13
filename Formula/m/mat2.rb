@@ -21,7 +21,7 @@ class Mat2 < Formula
   depends_on "poppler"
   depends_on "py3cairo" => :no_linkage
   depends_on "pygobject3" => :no_linkage
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "pygobject"
 
