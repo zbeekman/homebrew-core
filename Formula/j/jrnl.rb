@@ -20,7 +20,7 @@ class Jrnl < Formula
 
   depends_on "cryptography" => :no_linkage
   depends_on "libyaml"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages exclude_packages: "cryptography",
                 extra_packages:   %w[jeepney secretstorage]
@@ -121,6 +121,9 @@ class Jrnl < Formula
   end
 
   def install
+    # Allow Python 3.15
+    inreplace "pyproject.toml", "requires-python = '>=3.11.0,<3.15'", "requires-python = '>=3.11.0'"
+
     without = %w[jeepney secretstorage] unless OS.linux?
     virtualenv_install_with_resources(without:)
   end
