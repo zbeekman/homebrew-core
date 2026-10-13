@@ -9,11 +9,11 @@ class PythonMatplotlib < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "83debd71f3bd86005e87a71f90cc050afd6ea13c9c84b8a32e684ebfa598a3bd"
-    sha256 cellar: :any, arm64_tahoe:       "cb261af4bfdf8736adb53d77a7115badc37e6bdd1e52196c883d9f83de64cf8b"
-    sha256 cellar: :any, arm64_sequoia:     "277c0161f440ac2c0f6312800c30a2dac778abef10e4eea4de06597b27dff031"
-    sha256 cellar: :any, arm64_linux:       "21e087c295071d099aaed896d0a26cb80e2a400253a8d738b3c628f59f422eb6"
-    sha256 cellar: :any, x86_64_linux:      "81c0d4bd7372776834a958812de7b19899fbcc7769e9cda5950146304841a3ed"
+    sha256 cellar: :any, arm64_golden_gate: "480528f7169b0eeb01798199b15b5fc7178b76bbb553fdc7b96ab88640140d9a"
+    sha256 cellar: :any, arm64_tahoe:       "07c9a09123943be9ffd92154047b12500d2c4ad5098a026b4dcca6cf7dd3f74a"
+    sha256 cellar: :any, arm64_sequoia:     "4c89d10cfc820d7c307fe398f29840dc0174e6b11385f121c287a9b354d29107"
+    sha256 cellar: :any, arm64_linux:       "c1cebfa7d0da66c810fc7255ab8fca987f12bddbaeea1ee5077cdc1d6468a88a"
+    sha256 cellar: :any, x86_64_linux:      "182d1654b4d1806a07b05742c027bd22ff2431e5b698c85e7d49425cc5b64a76"
   end
 
   depends_on "cmake" => :build # for contourpy
