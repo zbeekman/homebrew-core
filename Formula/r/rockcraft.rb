@@ -17,11 +17,12 @@ class Rockcraft < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8b29fe8171049d9c51e97448e31d22db97612cdb0bbad10e2f8ee8bd0dcf8f39"
-    sha256 cellar: :any, arm64_tahoe:       "cae12ec13664f3744dea5f638327ba5ad5c25d3ce9e6f0afb3083d492860f78f"
-    sha256 cellar: :any, arm64_sequoia:     "21876bfeeab332d7d7f1e977857a7e04f222b4962e5f1c96320a2300953ec565"
-    sha256 cellar: :any, arm64_linux:       "80df5882239c6f60033b3e2a04574fb95b83999d0d584d2861112e7767cd772a"
-    sha256 cellar: :any, x86_64_linux:      "9ff8bcfd640fe457d5a453d9304cc143f1ecc9d98d1bf2bffa8f2b9ef6c87105"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "7033d6ef407a53ab6601ab4439ca23fca420031678e9645f8834c34e835ab7e4"
+    sha256 cellar: :any, arm64_tahoe:       "30fe4669fa21f8de219583cf491af149a453a907416785506956d1ee59b1ea58"
+    sha256 cellar: :any, arm64_sequoia:     "54cb565f0f49838008d6e8a32d6198fd99e97b8f7b6ffdd7cb186a17ec29288c"
+    sha256 cellar: :any, arm64_linux:       "63a7dfe88396a6e174c785a81a3542b41e4f2988e9fa34fba157227c16cc9849"
+    sha256 cellar: :any, x86_64_linux:      "0d1f26b5f504a2487af254dc0a4cceacc40182316653be058a7e2f3e95726d43"
   end
 
   depends_on "certifi" => :no_linkage
