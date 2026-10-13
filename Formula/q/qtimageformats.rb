@@ -17,12 +17,11 @@ class Qtimageformats < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "59152b29f08c34534caea89417c7917eae18f025c7c5c5be4f9cb33c0b654d10"
-    sha256 cellar: :any, arm64_tahoe:       "a02105982f1256b050dc4efa5d34d788ba44d2fcf764e617c0f26c5295ce3099"
-    sha256 cellar: :any, arm64_sequoia:     "7f3940e679dd2d382564496f36ae0ec1eac8d7e91c1cbc55bf7bbd24895a140a"
-    sha256 cellar: :any, arm64_sonoma:      "6739d65d475052a8c77781efd3329fd0c0d956196252306c397b6ace0c475033"
-    sha256 cellar: :any, arm64_linux:       "b87f2769f8fcef5287df77b39ea6d6cc6234598cd4a20a4a2d1bcb7e942d1fe3"
-    sha256 cellar: :any, x86_64_linux:      "80cf10a9cf640df6ca95df4ec096383d7711a0a34c5bcacfbaf7aeb93ba9f618"
+    sha256 cellar: :any, arm64_golden_gate: "c3bb1fbcb22b84c98229a39ba7e3db6d98bdb21a084a93a31c1d225ef49ffe3c"
+    sha256 cellar: :any, arm64_tahoe:       "bd485b9e112bbc4fde980efc51dac679db1c773ece989b3a881eb0d1c1b1360b"
+    sha256 cellar: :any, arm64_sequoia:     "6aa5b957ba3d1e64b4954774cd66178d620236244bc24727232c6f5fd61c66c0"
+    sha256 cellar: :any, arm64_linux:       "94883e48923a8aa726f3089788528457264d7732d3010bba9aa345ab2b33e3c2"
+    sha256 cellar: :any, x86_64_linux:      "7aecd067380bece0fecd3afcf062f571c63e05777b12c2971079fe6a1814a1d9"
   end
 
   depends_on "cmake" => [:build, :test]
