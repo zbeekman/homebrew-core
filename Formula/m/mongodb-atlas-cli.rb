@@ -12,11 +12,11 @@ class MongodbAtlasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d9808569fb12ff427153b03fcd62e40a3943d9a6908cfdfd23f5260abe618094"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f9a9ebfa59743f865324fe6f69789a48f18f90325525856c2dc59838e1148df7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5b4be6a7f9168bb7ec9109baa7b144d7f71fb8eafd474e40e9d9993a6bdce33f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "db9ce623b8d7cafb13bb4af03ee84597d667968536758b93fe6f45c143049441"
-    sha256 cellar: :any,                 x86_64_linux:      "6814a71d86da09ab6d06e9e5a093113fa3246b09000e54913a0369b174b2eac2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ab25d1b979e993a745caf97d06d0cac6553c1ab9a778c1186e4afd46e112fefa"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ffdd992bf5d362cab96af1b2e6828697b383fcaa0ac9824cf7990c5b6ef5a7af"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8ce9851ce73849f0a0a2c6eebc94525968562cb8fc618b63c60e665151c0e433"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "54a71067c0eac48b64326033d6b4987c13986c81f4ee4d03d8d64cd60287c6b0"
+    sha256 cellar: :any,                 x86_64_linux:      "f941129ad681a759e53f35e5e361550fe1c687033cd3d2bdd9fd4e9bd9456ba8"
   end
 
   depends_on "go" => :build
