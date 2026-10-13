@@ -8,9 +8,9 @@ class Peekaboo < Formula
   head "https://github.com/openclaw/Peekaboo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e1696ee9c981b7a9e153f432103904e0066198f5c73bc84cf37346dc22cd0b16"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d43771c1c0e946230d010ef65b52db516322e7fb5318032817b0c827a69e42dc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5dbf1b3e86c80088518c55175f8096be04b7f04208c4dba2321395c1fe6716b3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ca91c26aadcee720cd830bb62f6f52c341922c0a00cc8154ddfb75e651e8925b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "232ee8d71c2b5297a468a908062c65935a90e3e06de191d400182d0598fb860c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "456ab161666902b81abdac83d571785880c84f033ca60306e7adefab958065e3"
   end
 
   depends_on xcode: ["26.0", :build]
