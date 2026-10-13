@@ -22,9 +22,16 @@ class Sentencepiece < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "abseil"
+  depends_on "protobuf"
+
+  deny_network_access!
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DSPM_PROTOBUF_PROVIDER=package",
+                    "-DSPM_ABSL_PROVIDER=package",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
