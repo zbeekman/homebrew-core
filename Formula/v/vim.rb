@@ -35,7 +35,7 @@ class Vim < Formula
 
   depends_on "gettext" => :build
   depends_on "lua" => [:build, :test]
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "ruby" => [:build, :test]
   depends_on "libsodium"
   depends_on "ncurses"
@@ -59,7 +59,7 @@ class Vim < Formula
   deny_network_access!
 
   def install
-    ENV.prepend_path "PATH", formula_opt_libexec("python@3.14")/"bin"
+    ENV.prepend_path "PATH", python3.dirname
 
     # Allow dynamically loading formulae libraries when not linked
     extra_deps.each do |dep|
