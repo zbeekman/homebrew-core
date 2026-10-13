@@ -19,7 +19,7 @@ class Keystone < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
 
   deny_network_access!
 
