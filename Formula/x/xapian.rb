@@ -4,6 +4,7 @@ class Xapian < Formula
   url "https://oligarchy.co.uk/xapian/2.1.0/xapian-core-2.1.0.tar.xz"
   sha256 "8e1259586d342e3d12b5e1f772e9185a10f2ba16e541566b5c3c239f71b8aacc"
   license "GPL-2.0-or-later"
+  revision 1
   version_scheme 1
   compatibility_version 1
 
@@ -22,7 +23,7 @@ class Xapian < Formula
     sha256 cellar: :any, x86_64_linux:      "e59b982d200537bda5d76b279bf5ef73af38fc34fec7defd8a3b90f596803aa2"
   end
 
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "sphinx-doc" => :build
 
   on_linux do
@@ -49,6 +50,14 @@ class Xapian < Formula
     system "make", "install"
 
     resource("bindings").stage do
+      # TODO: Remove when the release wrapper is regenerated with SWIG 4.4+ (xapian/xapian@64c7de24cb)
+      # SWIG 4.3.0 swapped the mutex unlock/destroy calls, aborting Python 3.15 at exit:
+      # https://github.com/swig/swig/commit/892be2b8024d391dbc78028a2e99b7800db2ea99
+      inreplace "python3/xapian_wrap.cc" do |s|
+        s.sub! "~Mutex() {\n           PyThread_release_lock", "~Mutex() {\n           PyThread_free_lock"
+        s.sub! "Unlock() {\n           PyThread_free_lock", "Unlock() {\n           PyThread_release_lock"
+      end
+
       ENV["XAPIAN_CONFIG"] = bin/"xapian-config"
       ENV.delete "PYTHONDONTWRITEBYTECODE" # makefile relies on install .pyc files
 
