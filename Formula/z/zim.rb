@@ -20,7 +20,7 @@ class Zim < Formula
   depends_on "gtk+3"
   depends_on "gtksourceview4"
   depends_on "pygobject3"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   pypi_packages package_name:   "",
                 extra_packages: "pyxdg"
