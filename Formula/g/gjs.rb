@@ -1,10 +1,18 @@
 class Gjs < Formula
   desc "JavaScript Bindings for GNOME"
   homepage "https://gitlab.gnome.org/GNOME/gjs/wikis/Home"
-  url "https://download.gnome.org/sources/gjs/1.88/gjs-1.88.1.tar.xz"
-  sha256 "767bab80e665d672cb00563c25f0b392a9ec8c2996ed1d4454c698b4c2f0a3d9"
+  url "https://download.gnome.org/sources/gjs/1.90/gjs-1.90.1.tar.xz"
+  sha256 "05ceaa80f48e3782e5c44938572fad863e02b8c4a6c55657a99aa81db8ce9efa"
   license all_of: ["LGPL-2.0-or-later", "MIT"]
   head "https://gitlab.gnome.org/GNOME/gjs.git", branch: "master"
+
+  # This regex is intended to avoid the `Gnome` strategy's version filtering
+  # logic while maintaining the "even-numbered minor is stable" behavior, as
+  # minor versions >= 90 are still stable in this case.
+  livecheck do
+    url :stable
+    regex(/gjs[._-]v?(\d+\.\d*[02468](?:\.\d+)*)\.t/i)
+  end
 
   bottle do
     sha256 arm64_golden_gate: "cf63e6713f148bad3d212680822fb95cfacc221f8c7816818531988ad28ce4e7"
@@ -32,6 +40,8 @@ class Gjs < Formula
   on_macos do
     depends_on "gettext"
   end
+
+  deny_network_access!
 
   def install
     # ensure that we don't run the meson post install script
