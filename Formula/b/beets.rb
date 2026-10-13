@@ -9,11 +9,12 @@ class Beets < Formula
   head "https://github.com/beetbox/beets.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c6855c76b0a980219852f6968e35ef09f0ede09cb4b56e7f6e9e3f8bf88610d4"
-    sha256 cellar: :any, arm64_tahoe:       "29c0f8221048bc797ab30dead5a163c8728eb5094df2fdc08828aa6df812d352"
-    sha256 cellar: :any, arm64_sequoia:     "fdc41fa296ed2ea8b62dfd4145e17b75b098b56008f7c7f8fa9f8a1d65b68e81"
-    sha256 cellar: :any, arm64_linux:       "ef9adcf249ec403ae6c062a5fcb377559ab119574ce8db381eca93a732c96fab"
-    sha256 cellar: :any, x86_64_linux:      "3ba6d305c69e1b232f4519cb84d9ca19f62b6d4cf782209e7ddf57e776d4522c"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "a4cc5e3c46f4e3543baa14023dadee80beb67d1e097a81de17f7c5f5921a158a"
+    sha256 cellar: :any, arm64_tahoe:       "3c1713c9bf78c79d738adad1d4518e38783775143022d9b2cd86c7fcb20e11d2"
+    sha256 cellar: :any, arm64_sequoia:     "1d9ebce6310a960ca48ac9543a3b1d219d70c2fb91b6747523cc04a566499bed"
+    sha256 cellar: :any, arm64_linux:       "4b9566fa7646da01dd59e06860e4a3fe673bd1b4093c5a19f307e04eb9403f16"
+    sha256 cellar: :any, x86_64_linux:      "72a2c56784dc19a32cafbc4bb6e05a952aaee388e65582657dc2bf0532ff9490"
   end
 
   depends_on "cython" => :build
