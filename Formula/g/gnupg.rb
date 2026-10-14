@@ -19,11 +19,11 @@ class Gnupg < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6c1d6a8fec9e054a01dfb57856160a37898dd68405c0ae1b4b713cde423d7679"
-    sha256 arm64_tahoe:       "641983de8774502eef7572de8c3cfc7dd8300b3829e6847b7c358ca23faf6334"
-    sha256 arm64_sequoia:     "c6a15fa0be01a9acd2d3a9df7aa3e555678fabcdd05a21530c92766d4ca5de29"
-    sha256 arm64_linux:       "9ba01e836fe6c6512cbf298b2c625ebd4d3d8be777b8829adc652de5202a0d0e"
-    sha256 x86_64_linux:      "51c561be0e77f45960591590f65fdf1b7d9396e73a97e7529193bcee5a0dd2f5"
+    sha256 arm64_golden_gate: "1cbc3ab22b562d1bef04ca0d00b0917195870a80b6a7de1051d07c1b44ac75c0"
+    sha256 arm64_tahoe:       "16b53990074dfe23dbe2342a548e8b72a91a5697c522d1eef3410fe8be5c1e0a"
+    sha256 arm64_sequoia:     "91163072d2759706aa41c014bc865019900eaa815ab5bd017263ab059694addf"
+    sha256 arm64_linux:       "12e8cda7299a624bd92f45f63284ac527ff07bcbcf7d7107e76a5ff77cefa7f2"
+    sha256 x86_64_linux:      "3f5c7667ecc9b2d6342eab1a69b4e8f16faace4e536d3f60c5653b939cd5c5c6"
   end
 
   depends_on "pkgconf" => :build
