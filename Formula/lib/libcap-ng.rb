@@ -4,6 +4,7 @@ class LibcapNg < Formula
   url "https://github.com/stevegrubb/libcap-ng/archive/refs/tags/v0.9.6.tar.gz"
   sha256 "399040138e0ca62fa2bcabd63da9af4431a246ef7a654561a0ca3cb00010a539"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
   head "https://github.com/stevegrubb/libcap-ng.git", branch: "master"
 
   bottle do
@@ -17,7 +18,7 @@ class LibcapNg < Formula
   depends_on "m4" => :build
   depends_on "pkgconf" => :build
   depends_on "python-setuptools" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "swig" => :build
   depends_on :linux
 
