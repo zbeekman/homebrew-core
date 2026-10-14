@@ -8,12 +8,11 @@ class GitDeleteMergedBranches < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0cfc06a6fecaa00f349cf31b83231877d93cfa4ea549b392c5dd76ef877e5dd0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "830cce405a9df04de0821a02689529e0a34f861cd27ad8efecae00652543ce1a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6b26448707ef0b0089a5d8730bae3bb7fffa531c653d49656098e22a63fd5160"
-    sha256 cellar: :any,                 arm64_linux:       "0a1d152a9ae57ed3917ce1fd017299f6e334fd36aa1d3e887edfc5667a09d506"
-    sha256 cellar: :any,                 x86_64_linux:      "11ccbe0f7e7ea10f3e7fb6de6d0845105b124316a553aa440713255dfe862c55"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3be33f56aa1a810e2acd2af9f167bc45ccace4de9d82be49ef9d56ed9c68c8ba"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e49484beb977c01039ede0acfe52b41e52f7070d57b741a570761beee76dd030"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f8cbdd496861d1800b00353183ba20a6c63f6e66ac7249051ca82f25c455128f"
+    sha256 cellar: :any,                 arm64_linux:       "e5c25528cf9709f16b1db8b63589a27285f577c9c99cff96e26c4f4edf03c2ea"
+    sha256 cellar: :any,                 x86_64_linux:      "d7d2941dd363f3a33722424a67aa60c747fd38c7b33c993a999761016b088540"
   end
 
   depends_on "python@3.15"
