@@ -30,7 +30,7 @@ class Profanity < Formula
   depends_on "libstrophe"
   depends_on "libx11"
   depends_on "libxscrnsaver"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "qrencode"
   depends_on "readline"
   depends_on "sqlite"
