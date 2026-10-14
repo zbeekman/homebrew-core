@@ -1,10 +1,10 @@
 class Multitail < Formula
   desc "Tail multiple files in one terminal simultaneously"
   homepage "https://vanheusden.com/multitail/"
-  url "https://github.com/folkertvanheusden/multitail/archive/refs/tags/7.1.5.tar.gz"
-  sha256 "b0c92bf5f504b39591bf3e2e30a1902925c11556e14b89a07cfa7533f9bd171b"
+  url "https://github.com/folkertvanheusden/multitail/archive/refs/tags/7.1.6.tar.gz"
+  sha256 "bf614c53c212238bccc86bb7ab220b6b11f3997c1900a5767df4b1a79885f421"
   license "MIT"
-  head "https://github.com/folkertvanheusden/multitail.git", head: "master"
+  head "https://github.com/folkertvanheusden/multitail.git", branch: "master"
 
   livecheck do
     url :stable
@@ -28,7 +28,19 @@ class Multitail < Formula
   depends_on "pkgconf" => :build
   depends_on "ncurses"
 
+  deny_network_access!
+
   def install
+    odie "Check if `inreplace` can be removed" if version > "7.1.6"
+    inreplace "version" do |s|
+      s.change_make_var! "VERSION", version.to_s
+    end
+    if OS.linux?
+      inreplace "makefile.macosx" do |s|
+        cflags = s.get_make_var("CFLAGS") + " -D_LARGEFILE64_SOURCE"
+        s.change_make_var! "CFLAGS", cflags
+      end
+    end
     system "make", "-f", "makefile.macosx", "multitail", "DESTDIR=#{HOMEBREW_PREFIX}"
 
     bin.install "multitail"
