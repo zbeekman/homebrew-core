@@ -1,9 +1,9 @@
 class Opendetex < Formula
   desc "Tool to strip TeX or LaTeX commands from documents"
   homepage "https://github.com/pkubowicz/opendetex"
-  url "https://github.com/pkubowicz/opendetex/releases/download/v2.8.11/opendetex-2.8.11.tar.bz2"
-  sha256 "f5771afc607134f65d502d733552cbc79ef06eee44601ae8077b79d852daa05f"
-  license "BSD-3-Clause"
+  url "https://github.com/pkubowicz/opendetex/releases/download/v2.8.12/opendetex-2.8.12.tar.bz2"
+  sha256 "d1fcffe7290c6fff2db77e9074b896979b8ce72b3c2fc47de3341bb6652da02a"
+  license "NCSA"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0bfdde030817ab0db23931258cf83fd468ab571f85d62e19b9b448cc44f3453e"
@@ -22,6 +22,8 @@ class Opendetex < Formula
   uses_from_macos "flex" => :build
 
   conflicts_with "texlive", because: "both install `detex` binaries"
+
+  deny_network_access!
 
   def install
     system "make"
