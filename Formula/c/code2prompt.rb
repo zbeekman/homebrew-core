@@ -7,14 +7,12 @@ class Code2prompt < Formula
   head "https://github.com/mufeedvh/code2prompt.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "441b8a6c936cb89ff361792add840d2dc77b149c48301187fd917caab76e0c53"
-    sha256 cellar: :any,                 arm64_tahoe:       "14aa4f7a6f013ffc948306bbe0210b951ccc0523d78ebd1b1c5ef0a36c08f1c2"
-    sha256 cellar: :any,                 arm64_sequoia:     "e7bdea92a684ab0483bad093e9aa554d2df195d77eb2676f1f469b71c524a7ed"
-    sha256 cellar: :any,                 arm64_sonoma:      "d25ee8e05d2016985e5ebcf1befe31d2ddbd9b67fc482ed9d00a39f0e61ff04b"
-    sha256 cellar: :any,                 sonoma:            "48fb47f8ece13be5215c64d39b3b641498fe3f9e46c901dedaa2123adddd9361"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8133b94fe8d8ff29a3b14dfadfd7c333b40f811193d0a0cc8fa81805e8851133"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "901f372469f56db97e43cb4ad0beff306ed34532bb7728be03d71cfd19ca8fa1"
+    rebuild 2
+    sha256 cellar: :any, arm64_golden_gate: "b090851dfcd0dc2583c7c377ed6b59cdf2d830efe521362c56d59eb4f434eeea"
+    sha256 cellar: :any, arm64_tahoe:       "2be0d24fdbc8bfb222bcff99065ba5867b8559642ad7b78083751f35f1ad7632"
+    sha256 cellar: :any, arm64_sequoia:     "1047431409b54042918926912d428ca67dc8dbb956a41c07109de3504b36599a"
+    sha256 cellar: :any, arm64_linux:       "ae335c12d5b34b8a069e377d9e2c0c770f967b0f94ed416961d606db997869a7"
+    sha256 cellar: :any, x86_64_linux:      "540c490ca2c252c350d64c30e4cc95c5c213c2006127e23a9113508dbc32f171"
   end
 
   depends_on "pkgconf" => :build
