@@ -1,8 +1,8 @@
 class Packetq < Formula
   desc "SQL-like frontend to PCAP files"
   homepage "https://www.dns-oarc.net/tools/packetq"
-  url "https://www.dns-oarc.net/files/packetq/packetq-1.7.4.tar.gz"
-  sha256 "9e2e72a37db9449aa0cae997b35ba7b80e4c1a88fc646e2299fd823769824929"
+  url "https://www.dns-oarc.net/files/packetq/packetq-1.8.0.tar.gz"
+  sha256 "d89be327a505a86af0a76c3e41529998b75ebee10bd86e0c0b7f907666f9c741"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -18,9 +18,17 @@ class Packetq < Formula
     sha256 cellar: :any,                 x86_64_linux:      "6c61f563c1972dadd5ea06d75434c43d9d892f37a35d9fd80b4d59ce7c8c5ea3"
   end
 
+  depends_on "pkgconf" => :build
+  depends_on "dnswire"
+  depends_on "libmaxminddb"
+  depends_on "protobuf-c"
+  depends_on "tinyframe"
+
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  deny_network_access!
 
   def install
     system "./configure", *std_configure_args
