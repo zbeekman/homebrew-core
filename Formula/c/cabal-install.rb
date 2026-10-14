@@ -1,8 +1,8 @@
 class CabalInstall < Formula
   desc "Command-line interface for Cabal and Hackage"
   homepage "https://www.haskell.org/cabal/"
-  url "https://hackage.haskell.org/package/cabal-install-3.18.1.0/cabal-install-3.18.1.0.tar.gz"
-  sha256 "7e5c3f5e53f7c91f9ff8f0fb075574e772562d0eeb400c402c7d9277558f0821"
+  url "https://hackage.haskell.org/package/cabal-install-3.18.2.0/cabal-install-3.18.2.0.tar.gz"
+  sha256 "1d55fea99bf82b2f4a2ae51bd47313167048ba05aac6290a30752d91cd5f7cb8"
   license "BSD-3-Clause"
   head "https://github.com/haskell/cabal.git", branch: "master"
 
