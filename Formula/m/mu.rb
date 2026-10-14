@@ -4,8 +4,8 @@
 class Mu < Formula
   desc "Tool for searching e-mail messages stored in the maildir-format"
   homepage "https://www.djcbsoftware.nl/code/mu/"
-  url "https://github.com/djcb/mu/releases/download/v1.14.3/mu-1.14.3.tar.xz"
-  sha256 "edea1a4e6be390a2bf5260e0156813f9b473c2d91da934b219dbb38229b0930a"
+  url "https://github.com/djcb/mu/releases/download/v1.14.4/mu-1.14.4.tar.xz"
+  sha256 "3714ea0d1e4811bd2c160cc2e222dc00723485df9756e2d90f2bb66e90f894f7"
   license "GPL-3.0-or-later"
   head "https://github.com/djcb/mu.git", branch: "master"
 
@@ -28,6 +28,7 @@ class Mu < Formula
   end
 
   depends_on "cli11" => :build
+  depends_on "cmake" => :build
   depends_on "emacs" => :build
   depends_on "libgpg-error" => :build
   depends_on "libtool" => :build
@@ -39,6 +40,7 @@ class Mu < Formula
   depends_on "glib"
   depends_on "gmime"
   depends_on "guile"
+  depends_on "tl-expected"
   depends_on "xapian"
 
   on_macos do
