@@ -4,6 +4,7 @@ class LibvirtPython < Formula
   url "https://download.libvirt.org/python/libvirt_python-12.8.0.tar.gz"
   sha256 "ab24a102ebf99b913ddc3459031aa71a48b0b1cdbb0f423b4ea278052791ac8a"
   license "LGPL-2.1-or-later"
+  revision 1
 
   livecheck do
     url "https://download.libvirt.org/python/"
@@ -19,8 +20,10 @@ class LibvirtPython < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "python-setuptools" => :build
+  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "libvirt"
-  depends_on "python@3.14"
 
   def pythons
     deps.map(&:to_formula)
@@ -30,20 +33,21 @@ class LibvirtPython < Formula
 
   def install
     pythons.each do |python|
-      system python, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
+      system python, "-m", "pip", "install", *std_pip_args, "."
     end
   end
 
   test do
-    pythons.each do |python|
-      system python, "-c",
-             <<~PYTHON
-               import libvirt
+    (testpath/"test.py").write <<~PYTHON
+      import libvirt
 
-               with libvirt.open('test:///default') as conn:
-                   if libvirt.virGetLastError() is not None:
-                       raise SystemError("Failed to open a test connection")
-             PYTHON
+      with libvirt.open('test:///default') as conn:
+        if libvirt.virGetLastError() is not None:
+          raise SystemError("Failed to open a test connection")
+    PYTHON
+
+    pythons.each do |python|
+      system python, "test.py"
     end
   end
 end
