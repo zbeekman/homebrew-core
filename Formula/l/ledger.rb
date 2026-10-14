@@ -5,7 +5,7 @@ class Ledger < Formula
   sha256 "1cf012cdc8445cab0efc445064ef9b2d3f46ed0165dae803c40fe3d2b23fdaad"
   license "BSD-3-Clause"
   revision 2
-  head "https://github.com/ledger/ledger.git", branch: "master"
+  head "https://github.com/ledger/ledger.git", branch: "main"
 
   livecheck do
     url :stable
@@ -30,7 +30,7 @@ class Ledger < Formula
   depends_on "gpgme"
   depends_on "gpgmepp"
   depends_on "mpfr"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "mandoc" => :build
   uses_from_macos "libedit"
@@ -40,8 +40,11 @@ class Ledger < Formula
   end
 
   deny_network_access!
+
+  def python = deps.map(&:name).find { |d| d.match?(/^python(@\d+(\.\d+)*)?$/) }
+
   def install
-    ENV.prepend_path "PATH", formula_opt_libexec("python@3.14")/"bin"
+    ENV.prepend_path "PATH", formula_opt_libexec(python)/"bin"
 
     args = %W[
       --jobs=#{ENV.make_jobs}
