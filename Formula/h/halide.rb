@@ -2,7 +2,7 @@ class Halide < Formula
   desc "Language for fast, portable data-parallel computation"
   homepage "https://halide-lang.org"
   license "MIT"
-  revision 2
+  revision 3
   head "https://github.com/halide/Halide.git", branch: "main"
 
   stable do
@@ -50,7 +50,7 @@ class Halide < Formula
   depends_on "cmake" => :build
   depends_on "flatbuffers" => :build
   depends_on "pybind11" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "lld@21"
   depends_on "llvm@21"
   depends_on "wabt" => :no_linkage
