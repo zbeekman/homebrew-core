@@ -5,6 +5,7 @@ class LlvmAT21 < Formula
   sha256 "4633a23617fa31a3ea51242586ea7fb1da7140e426bd62fc164261fe036aa142"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -27,7 +28,7 @@ class LlvmAT21 < Formula
   # https://llvm.org/docs/GettingStarted.html#requirement
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "zstd"
 
   uses_from_macos "libedit"
