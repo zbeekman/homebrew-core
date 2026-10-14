@@ -1,8 +1,8 @@
 class Portless < Formula
   desc "Replace port numbers with stable, named local URLs for humans and agents"
   homepage "https://portless.sh"
-  url "https://registry.npmjs.org/portless/-/portless-0.15.7.tgz"
-  sha256 "8217c7f7576378191c324e6f1a2d39f31a9c787a34ef68372b6e68f956c9a8fc"
+  url "https://registry.npmjs.org/portless/-/portless-0.15.8.tgz"
+  sha256 "c165f8577d1d9e57b04a93f2200432ad0a1343a032027a5f38e608a092c0f443"
   license "Apache-2.0"
 
   bottle do
