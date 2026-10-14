@@ -25,7 +25,7 @@ class Nest < Formula
   depends_on "gsl"
   depends_on "libtool"
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "readline"
 
   uses_from_macos "ncurses"
@@ -55,10 +55,10 @@ class Nest < Formula
 
   def caveats
     <<~EOS
-      The PyNEST bindings and its dependencies are installed with the python@3.14 formula.
+      The PyNEST bindings and its dependencies are installed with the python@#{Language::Python.major_minor_version python3} formula.
       If you want to use PyNEST, use the Python interpreter from this path:
 
-          #{Formula["python@3.14"].bin}
+          #{python3.dirname}
 
       You may want to add this to your PATH.
     EOS
