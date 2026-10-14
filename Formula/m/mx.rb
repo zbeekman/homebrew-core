@@ -15,7 +15,7 @@ class Mx < Formula
   end
 
   depends_on "openjdk" => [:build, :test]
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   resource "homebrew-testdata", :test do
     url "https://github.com/oracle/graal/archive/refs/tags/vm-25.0.2.tar.gz"
@@ -24,7 +24,7 @@ class Mx < Formula
 
   def install
     libexec.install Dir["*"]
-    (bin/"mx").write_env_script libexec/"mx", MX_PYTHON: "#{formula_opt_libexec("python@3.14")}/bin/python"
+    (bin/"mx").write_env_script libexec/"mx", MX_PYTHON: python3
     bash_completion.install libexec/"bash_completion/mx" => "mx"
 
     # Run a simple `mx` command to create required directories inside libexec
