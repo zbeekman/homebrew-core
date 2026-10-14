@@ -3,10 +3,9 @@ class AnsibleBuilder < Formula
 
   desc "CLI tool for building Ansible Execution Environments (Containers)"
   homepage "https://ansible-builder.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/fe/6b/0525894e5dd510c3a67da0b8819209333ca939cfa94b7f0d3ef041a628ec/ansible_builder-3.1.1.tar.gz"
-  sha256 "9d88bc15acc7d31056d0c51914a6102dac8e5ad73f9f2d35ba98378c89714ed2"
+  url "https://files.pythonhosted.org/packages/b0/87/999145b4dadcde9916990ca8462d78564fbcbe754e8256d9037537ffa663/ansible_builder-3.2.0.tar.gz"
+  sha256 "8cd8639011127aaa5046fd60e56ae753eb599061bf493eca2c6b75c54cfc6212"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     rebuild 1
