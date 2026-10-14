@@ -19,7 +19,7 @@ class Spot < Formula
     sha256 cellar: :any, x86_64_linux:      "d0e8428cda3ae1e2683b14afacc618ea321c522b45011000a6721b0c5d5ad65a"
   end
 
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
 
   def install
     system "./configure", "--disable-silent-rules", *std_configure_args
