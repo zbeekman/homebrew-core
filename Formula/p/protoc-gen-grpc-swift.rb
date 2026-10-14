@@ -13,11 +13,11 @@ class ProtocGenGrpcSwift < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2cdf44bca526cd50184c204fd5366959b6b4b1e91919e79c2cf623fde20722c8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b8c3a6c8fd5e886b9591ff14ace6550d3528aacdf8efed0c007d2cca48b0ee76"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e1d39336fb77fe9f1629c6366e913e622d5abab95f4ba21f1fbc880fc1c45253"
-    sha256 cellar: :any,                 arm64_linux:       "11dda0c6f5cbc0b3dabe608102e67608743d769d0115a9c2cf93d3cfba845d39"
-    sha256 cellar: :any,                 x86_64_linux:      "832640c9a2330cd61e4c385ae2a1eaa29646d71dee3d97c22f526ec4bc0fb919"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21d30314c4fac094a6ecb6911dc8718d334878f930a0e7f362096f8d4f1878c0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "196b5a47be2e46144ea958a7c46230845ebe66fb5706370f4a882d72b15fdba4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1669300e51c9bab8195b7ff0ee8ae07847e0cc62f07d2c0d479fc1a5ac6e3e42"
+    sha256 cellar: :any,                 arm64_linux:       "9049ddd123e27830c9cea04ec90560a868a39739999ae72067ac7ef66cb5abf2"
+    sha256 cellar: :any,                 x86_64_linux:      "b7b96a3579f31c69eab6df2011d67d7cf74b1cfb799220e9ce220e179226d16f"
   end
 
   depends_on "protobuf"
