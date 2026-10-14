@@ -1,8 +1,8 @@
 class Rammap < Formula
   desc "Extensible and performant aligner and read mapper"
   homepage "https://github.com/jwanglab/rammap"
-  url "https://github.com/jwanglab/rammap/archive/refs/tags/v1.1.3.tar.gz"
-  sha256 "39b9e74da0b39546d39c992f8e8c91ce9da97a7ac0f0045d541c44e0106eb17b"
+  url "https://github.com/jwanglab/rammap/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "66d96ba52cd4ed6f1365aa3f1b1e736aeccbbcab71b8b590d3b7cc997b1a7fbd"
   license "MIT"
   head "https://github.com/jwanglab/rammap.git", branch: "main"
 
