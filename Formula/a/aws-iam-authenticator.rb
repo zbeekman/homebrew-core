@@ -16,13 +16,11 @@ class AwsIamAuthenticator < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "54742613c08da7cb42a890536f8e543e97e083ec79b740fd1b749119f368bec8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b893ece9c6cda87b2e3088bd6283e6db784d362927dfed2782218d857797d3d2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2b5625fbf3bb9585a1d21bf8cd3d5be092f8988deba2d6661516ba546b369f17"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "b553e85f451d667e68ad5cd2d7f302bbc0f11fe6b7e61de7db3a537c7810cb14"
-    sha256 cellar: :any_skip_relocation, sonoma:            "4733bb833f781143eefe015aecf234ced788c616907be416dd46b97031241bcf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "caa4a9e900ae0a7fc017be1630068e8b5d3be8dc4e75243df2fe33143bdf1c93"
-    sha256 cellar: :any,                 x86_64_linux:      "4625f2eabdbd0db65a9af0018cf06db7c4e52243aafa5f014479e7a5fbe40142"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "38418f19aaeac44ac9e6cfe7490568690f188de1cc8fc8d588aa7948c906908a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "28cfcf513bc06f0e69e43f841fbd3e05f6e89e4ed646100f98ef21c14e1c2e4d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3209be7ca4f97e9ab37bdf5a4910cb7313ea5f0842875f4bf546074fc72c9047"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "374efd2ca3973ab6883c069bef574700c36e0cdfe685200179ac9e776f745279"
+    sha256 cellar: :any,                 x86_64_linux:      "2e676d74c28909591382f97d76065199c93923bfa8273cae4b3c79cd3ac63e68"
   end
 
   depends_on "go" => :build
