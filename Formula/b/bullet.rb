@@ -7,14 +7,12 @@ class Bullet < Formula
   head "https://github.com/bulletphysics/bullet3.git", branch: "master"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any,                 arm64_golden_gate: "d490a9ad2ac4b30de8359bede2e3c1d756274ea2a12fdbbc60cf837318d2fe23"
-    sha256 cellar: :any,                 arm64_tahoe:       "87c1a6671e6825d2886bd6025091c80f3633033cb1f61bfb343512e7aacfd346"
-    sha256 cellar: :any,                 arm64_sequoia:     "16117f81a0c3c9e22cbdc21ebf7926bb39d29ad29bde9d84fbfad0b3b3cb1d68"
-    sha256 cellar: :any,                 arm64_sonoma:      "290642f55b724eecb80aadd93a11a3faec1f6768db05412c4b6f21b5fc274cd3"
-    sha256 cellar: :any,                 sonoma:            "354ff9e050f7c14b6f25ee2aaa865a2949538da6fc017c5f0e688639fa46f9e4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1fba99fe645c8290925e3a0dc6bdb8059e799b045de00c67cc0e67563bbdc33e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3c9c0d8ab57375f2ffedb24fdfb000e4d52c96d3e948a4c5ebd986ad32e7ed70"
+    rebuild 5
+    sha256 cellar: :any, arm64_golden_gate: "c461c2ded66ee288ea1df87192f23570211f92e72cd4f80124194a27c446b3f7"
+    sha256 cellar: :any, arm64_tahoe:       "405a0fc527245d26e417c75a10b70056497436c62c5607e56368272c702dae45"
+    sha256 cellar: :any, arm64_sequoia:     "288b77ba8d42262bcdf224d709577e225717a4a6930874fe84009f98314d64a1"
+    sha256 cellar: :any, arm64_linux:       "e679ad6f9ef75949490c7ac9597cd778c3e85712bcb31eb7f5ade137bd65c488"
+    sha256 cellar: :any, x86_64_linux:      "32e84f29da00c6ce2e625f7e49a88faf2c858fba56d714b337a8449507f10a6e"
   end
 
   depends_on "cmake" => :build
