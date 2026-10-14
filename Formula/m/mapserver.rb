@@ -21,6 +21,7 @@ class Mapserver < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
+  depends_on "python-setuptools" => :build
   depends_on "swig" => :build
   depends_on "cairo"
   depends_on "fcgi"
@@ -35,9 +36,11 @@ class Mapserver < Formula
   depends_on "pcre2"
   depends_on "proj"
   depends_on "protobuf-c"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "curl"
+
+  deny_network_access!
 
   def install
     if OS.mac?
@@ -47,29 +50,31 @@ class Mapserver < Formula
                                                        "-Wl,-undefined,dynamic_lookup,-rpath,#{mapscript_rpath}"
     end
 
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    "-DWITH_CLIENT_WFS=ON",
-                    "-DWITH_CLIENT_WMS=ON",
-                    "-DWITH_CURL=ON",
-                    "-DWITH_FCGI=ON",
-                    "-DWITH_FRIBIDI=OFF",
-                    "-DWITH_GDAL=ON",
-                    "-DWITH_GEOS=ON",
-                    "-DWITH_HARFBUZZ=OFF",
-                    "-DWITH_KML=ON",
-                    "-DWITH_OGR=ON",
-                    "-DWITH_POSTGIS=ON",
-                    "-DWITH_PYTHON=ON",
-                    "-DWITH_SOS=ON",
-                    "-DWITH_WFS=ON",
-                    "-DPython_EXECUTABLE=#{python3}",
-                    "-DPHP_EXTENSION_DIR=#{lib}/php/extensions",
-                    *std_cmake_args
+    args = %W[
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DWITH_CLIENT_WFS=ON
+      -DWITH_CLIENT_WMS=ON
+      -DWITH_CURL=ON
+      -DWITH_FCGI=ON
+      -DWITH_FRIBIDI=OFF
+      -DWITH_GDAL=ON
+      -DWITH_GEOS=ON
+      -DWITH_HARFBUZZ=OFF
+      -DWITH_KML=ON
+      -DWITH_OGR=ON
+      -DWITH_POSTGIS=ON
+      -DWITH_PYTHON=ON
+      -DWITH_SOS=ON
+      -DWITH_WFS=ON
+      -DPython_EXECUTABLE=#{python3}
+      -DPHP_EXTENSION_DIR=#{lib}/php/extensions
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "./build/src/mapscript/python"
+    system python3, "-m", "pip", "install", *std_pip_args, "./build/src/mapscript/python"
   end
 
   test do
