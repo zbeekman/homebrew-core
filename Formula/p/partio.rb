@@ -18,7 +18,7 @@ class Partio < Formula
 
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "freeglut"
