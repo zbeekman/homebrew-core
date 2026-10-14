@@ -19,7 +19,7 @@ class Genometools < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "cairo"
   depends_on "glib"
   depends_on "pango"
