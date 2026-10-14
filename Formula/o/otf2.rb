@@ -22,7 +22,7 @@ class Otf2 < Formula
 
   depends_on "sphinx-doc" => :build
   depends_on "open-mpi"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
