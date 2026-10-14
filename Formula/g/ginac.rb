@@ -22,8 +22,11 @@ class Ginac < Formula
 
   depends_on "pkgconf" => :build
   depends_on "cln"
-  depends_on "python@3.14"
   depends_on "readline"
+
+  uses_from_macos "python" => :build
+
+  deny_network_access!
 
   def install
     system "./configure", *std_configure_args
