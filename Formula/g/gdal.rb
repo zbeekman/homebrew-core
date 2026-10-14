@@ -64,7 +64,7 @@ class Gdal < Formula
   depends_on "pcre2"
   depends_on "poppler"
   depends_on "proj"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "qhull"
   depends_on "sfcgal"
   depends_on "sqlite"
