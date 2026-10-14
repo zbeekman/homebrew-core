@@ -24,7 +24,7 @@ class Shamrock < Formula
   depends_on "pybind11" => :build
   depends_on "adaptivecpp"
   depends_on "open-mpi"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_macos do
     depends_on "libomp"
