@@ -22,7 +22,7 @@ class Udis86 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "4799d288d7a86e2b63f0a9c55d7b50e21bae0770b6a728542e09a1fbcd62c96b"
   end
 
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
