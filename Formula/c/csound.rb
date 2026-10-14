@@ -68,7 +68,7 @@ class Csound < Formula
   depends_on "openssl@4"
   depends_on "portaudio"
   depends_on "portmidi"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "stk"
   depends_on "wiiuse"
 
