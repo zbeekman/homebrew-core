@@ -19,7 +19,7 @@ class Uftrace < Formula
   depends_on :linux
   depends_on "luajit"
   depends_on "ncurses"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "xz"
 
   def install
