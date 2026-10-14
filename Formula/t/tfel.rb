@@ -19,7 +19,7 @@ class Tfel < Formula
   depends_on "cmake" => :build
   depends_on "gcc" => :build # for gfortran
   depends_on "pybind11" => :build
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   deny_network_access!
 
