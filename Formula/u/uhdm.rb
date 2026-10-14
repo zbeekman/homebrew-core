@@ -19,7 +19,7 @@ class Uhdm < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "pkgconf" => :test
   depends_on "capnp"
 
