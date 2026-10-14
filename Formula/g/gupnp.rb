@@ -6,6 +6,7 @@ class Gupnp < Formula
   url "https://download.gnome.org/sources/gupnp/1.6/gupnp-1.6.10.tar.xz"
   sha256 "a1ee07b7b12673c32d7fc73ca158a50c1a4dc69ab35b65e94d24d38ac875345e"
   license "LGPL-2.0-or-later"
+  head "https://gitlab.gnome.org/GNOME/gupnp.git", branch: "master"
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "442008a658a9d8b5fdcc3058cca7e1713f7adec99dcebd1ef84163b0e8ad890c"
@@ -27,7 +28,8 @@ class Gupnp < Formula
   depends_on "gssdp"
   depends_on "libsoup"
   depends_on "libxml2"
-  depends_on "python@3.14"
+
+  uses_from_macos "python"
 
   def install
     ENV.prepend_path "XDG_DATA_DIRS", HOMEBREW_PREFIX/"share"
@@ -36,7 +38,7 @@ class Gupnp < Formula
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
-    rewrite_shebang detected_python_shebang, *bin.children
+    rewrite_shebang detected_python_shebang(use_python_from_path: true), *bin.children
   end
 
   test do
