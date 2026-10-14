@@ -4,7 +4,7 @@ class Gpgmepy < Formula
   url "https://gnupg.org/ftp/gcrypt/gpgmepy/gpgmepy-2.0.0.tar.bz2"
   sha256 "07e1265648ff51da238c9af7a18b3f1dc7b0c66b4f21a72f27c74b396cd3336d"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/gpgmepy/"
@@ -22,7 +22,7 @@ class Gpgmepy < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "python-setuptools" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "swig" => :build
   depends_on "gpgme"
   depends_on "libgpg-error"
