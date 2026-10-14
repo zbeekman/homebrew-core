@@ -1,10 +1,9 @@
 class Pypy311 < Formula
   desc "Implementation of Python 3 in Python"
   homepage "https://pypy.org/"
-  url "https://downloads.python.org/pypy/pypy3.11-v8.0.0-src.tar.gz"
-  sha256 "829cef413d84383563488f0234b3cc537a8034e43fda13e0530500dad2d5dc3b"
+  url "https://downloads.python.org/pypy/pypy3.11-v8.0.1-src.tar.gz"
+  sha256 "7e5f2801ee87d52fb4de096fb650bca4d5605cd8b5fe278dba5500019fa3739e"
   license "MIT"
-  revision 1
 
   livecheck do
     url "https://downloads.python.org/pypy/"
