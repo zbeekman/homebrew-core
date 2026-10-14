@@ -58,7 +58,7 @@ class Singular < Formula
   depends_on "gmp"
   depends_on "mpfr"
   depends_on "ntl"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "readline"
 
   def install
