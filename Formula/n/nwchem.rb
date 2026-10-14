@@ -31,7 +31,7 @@ class Nwchem < Formula
   depends_on "open-mpi"
   depends_on "openblas"
   depends_on "pkgconf"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "scalapack"
 
   uses_from_macos "libxcrypt"
