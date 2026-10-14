@@ -1,8 +1,8 @@
 class Pypy312 < Formula
   desc "Implementation of Python 3 in Python"
   homepage "https://pypy.org/"
-  url "https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz"
-  sha256 "eb406334e413828901034544d0033d67452c3cf2f11f77fd2daae0cd4fbb0a7b"
+  url "https://downloads.python.org/pypy/pypy3.12-v8.0.1-src.tar.gz"
+  sha256 "9d5c82d39d590dc04677f4721738b21d670570cdc9824c003836bafd38556cda"
   license "MIT"
 
   livecheck do
