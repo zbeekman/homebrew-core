@@ -4,7 +4,7 @@ class Fontforge < Formula
   url "https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz"
   sha256 "69046500185a5581b58139dfad30c0b3d8128f00ebbfddc31f2fcf877e329e52"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/fontforge/fontforge.git", branch: "master"
 
@@ -36,7 +36,7 @@ class Fontforge < Formula
   depends_on "libtool"
   depends_on "libuninameslist"
   depends_on "pango"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "readline"
   depends_on "woff2"
 
