@@ -1,10 +1,9 @@
 class ShairportSync < Formula
   desc "AirTunes emulator that adds multi-room capability"
   homepage "https://github.com/mikebrady/shairport-sync"
-  url "https://github.com/mikebrady/shairport-sync/archive/refs/tags/5.5.2.tar.gz"
-  sha256 "abcdb59674b6eedb4f3f6228f3c702e65d2cdc037231b0c48617fd90891b49e9"
+  url "https://github.com/mikebrady/shairport-sync/archive/refs/tags/5.6.tar.gz"
+  sha256 "20271e220e859b8f60a707597187564d3bda7dbf69dd61aa1357ec1656285246"
   license "MIT"
-  revision 1
   head "https://github.com/mikebrady/shairport-sync.git", branch: "master"
 
   livecheck do
@@ -23,6 +22,7 @@ class ShairportSync < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkgconf" => :build
+  depends_on "ffmpeg"
   depends_on "libao"
   depends_on "libconfig"
   depends_on "libdaemon"
@@ -30,6 +30,8 @@ class ShairportSync < Formula
   depends_on "openssl@4"
   depends_on "popt"
   depends_on "pulseaudio"
+
+  deny_network_access!
 
   def install
     system "autoreconf", "--force", "--install", "--verbose"
