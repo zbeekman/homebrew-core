@@ -1,8 +1,8 @@
 class LettaCode < Formula
   desc "Memory-first coding agent"
   homepage "https://docs.letta.com/letta-code"
-  url "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-0.34.12.tgz"
-  sha256 "26838e309752162e4aa83693e82aea3651fb20aa77d067393f7dfd0930ccd027"
+  url "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-0.34.13.tgz"
+  sha256 "9d3107d512cd163775cdd1814b061b80be6431cd9ba15bbe3f59e7bccd744e4c"
   license "Apache-2.0"
 
   bottle do
