@@ -1,8 +1,8 @@
 class Ghcitty < Formula
   desc "Fast, friendly GHCi"
   homepage "https://github.com/mattlianje/ghcitty"
-  url "https://github.com/mattlianje/ghcitty/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "d38c1c030351f18f4d35e6ccf2be2d8e9ba388501b5f4f6de8b7f2574a254c58"
+  url "https://github.com/mattlianje/ghcitty/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "13c26d741630d4c5d4dab0c7acc92ff6d9fa2382f25b83b0a4b261e20925a9b2"
   license "Apache-2.0"
 
   bottle do
