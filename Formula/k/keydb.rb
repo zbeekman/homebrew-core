@@ -4,6 +4,7 @@ class Keydb < Formula
   url "https://github.com/Snapchat/KeyDB/archive/refs/tags/v6.3.4.tar.gz"
   sha256 "229190b251f921e05aff7b0d2f04b5676c198131e2abbec1e2cfb2e61215e2f3"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_golden_gate: "da1860f1b861d2195bd848928da4a57aa0a5f4b426b565325800dbf5de69c9db"
@@ -25,7 +26,7 @@ class Keydb < Formula
   disable! date: "2027-04-04", because: :unmaintained
 
   depends_on "pkgconf" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "curl"
 
@@ -47,6 +48,11 @@ class Keydb < Formula
     resolves "https://github.com/Snapchat/KeyDB/pull/801"
   end
 
+  # Allow building with OpenSSL 4
+  patch :DATA
+
+  deny_network_access!
+
   def install
     system "make", "install", "PREFIX=#{prefix}"
   end
@@ -56,3 +62,18 @@ class Keydb < Formula
     assert_match "Your memory passed this test", output
   end
 end
+
+__END__
+diff --git a/src/tls.cpp b/src/tls.cpp
+index 8a8a97a95..fefc84df0 100644
+--- a/src/tls.cpp
++++ b/src/tls.cpp
+@@ -578,7 +578,7 @@ bool tlsCheckCertificateAgainstAllowlist(tls_connection* conn, std::set<sdsstrin
+     TCleanup certClen([cert]{X509_free(cert);});
+ 
+     /* Check the common name (CN) of the certificate first */
+-    X509_NAME_ENTRY * ne = X509_NAME_get_entry(X509_get_subject_name(cert), X509_NAME_get_index_by_NID(X509_get_subject_name(cert), NID_commonName, -1));
++    const X509_NAME_ENTRY * ne = X509_NAME_get_entry(X509_get_subject_name(cert), X509_NAME_get_index_by_NID(X509_get_subject_name(cert), NID_commonName, -1));
+     *commonName = reinterpret_cast<const char*>(ASN1_STRING_get0_data(X509_NAME_ENTRY_get_data(ne)));
+ 
+     tlsSetCertificateFingerprint(conn, cert);
