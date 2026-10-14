@@ -21,7 +21,7 @@ class Mgis < Formula
 
   depends_on "gcc" # for gfortran
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "tbb"
 
   def install
@@ -38,7 +38,6 @@ class Mgis < Formula
       "-Denable-enable-static=OFF",
       "-Ddisable_python_library_linking=ON",
       "-DCMAKE_INSTALL_RPATH=#{rpath}",
-      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
       "-DPython_ADDITIONAL_VERSIONS=#{Language::Python.major_minor_version python3}",
     ]
 
