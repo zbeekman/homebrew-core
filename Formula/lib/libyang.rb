@@ -1,8 +1,8 @@
 class Libyang < Formula
   desc "YANG data modeling language library"
   homepage "https://github.com/CESNET/libyang"
-  url "https://github.com/CESNET/libyang/archive/refs/tags/v5.8.6.tar.gz"
-  sha256 "6906b0f26c1d4494c5c2464313b16169ec92ccd07b45ecf3a1e9eb9cd7a55c0b"
+  url "https://github.com/CESNET/libyang/archive/refs/tags/v6.4.13.tar.gz"
+  sha256 "bf78a437225027ce9e20d2c449b7853204d7fd450bb00fb01e83339145561a86"
   license "BSD-3-Clause"
 
   bottle do
