@@ -12,11 +12,11 @@ class Fastfetch < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "f04813a4392632b5196d7b0ebd35f887555c2c0fad13b085744867da4bc2931c"
-    sha256 arm64_tahoe:       "932f519f9eae54ef60d47881e4d528b9381117299eee04d93e3bb4bf3541c3c3"
-    sha256 arm64_sequoia:     "4a741bfaa50f253c1589ae9cedea662132fd4096c590630cf8c9f68db5843e0e"
-    sha256 arm64_linux:       "21e7ff92f7b70a493c2c60c37569ec9c8bc5758e73b4c4ac744a66cb450e0b08"
-    sha256 x86_64_linux:      "549311d6caabdaaf665783ab257e67afb8c3fa826956236e12313993412ccbd5"
+    sha256 arm64_golden_gate: "c09cd073b267882ee4d0a341e59b5847756f7d3f31f3761a0c8408d2ed3b5e44"
+    sha256 arm64_tahoe:       "3edc27580bfe7452f5dc08c7efea35d9deff5ea5de5f507a0f577ec6bf1a91f6"
+    sha256 arm64_sequoia:     "465aeda5c879b0cbdb6c4f56160ab9fb02bdc3689941bba055452560e0f24697"
+    sha256 arm64_linux:       "1d12b6d99fd5776bce3ace7c4be255a8eb6c4e659cc6c3f81854c2b0a94b7b88"
+    sha256 x86_64_linux:      "b0ae5c43ce19a4436eb64d352d722cef55a67956dd7546ccd9c62394032cbe91"
   end
 
   depends_on "chafa" => :build
