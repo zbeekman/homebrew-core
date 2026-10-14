@@ -1,8 +1,8 @@
 class Ctx7 < Formula
   desc "Manage AI coding skills and documentation context"
   homepage "https://context7.com"
-  url "https://registry.npmjs.org/ctx7/-/ctx7-0.6.0.tgz"
-  sha256 "c515df1f913acb20667a569415875e7456e7833e1ee146c55ad3d266f06d3c74"
+  url "https://registry.npmjs.org/ctx7/-/ctx7-0.6.1.tgz"
+  sha256 "9716fd758cbe4d6b9b182764c8caebb2beadcd27b63f90d304b6cbef91baf7fc"
   license "MIT"
 
   bottle do
