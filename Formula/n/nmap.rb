@@ -28,7 +28,7 @@ class Nmap < Formula
   depends_on "lua"
   depends_on "openssl@4"
   depends_on "pcre2"
-  depends_on "python@3.14" # for ndiff
+  depends_on "python@3.15" # for ndiff
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
@@ -50,11 +50,7 @@ class Nmap < Formula
 
     ENV.deparallelize
 
-    libpcap_path = if OS.mac?
-      MacOS.sdk_path/"usr/"
-    else
-      formula_opt_prefix("libpcap")
-    end
+    libpcap_path = OS.mac? ? MacOS.sdk_path/"usr/" : formula_opt_prefix("libpcap")
 
     args = %W[
       --with-liblua=#{formula_opt_prefix("lua")}
@@ -72,7 +68,7 @@ class Nmap < Formula
     system "make", "install"
 
     # Install `ndiff` separately so that we can use `pip` and `setuptools`.
-    system "python3", "-m", "pip", "install", *std_pip_args, "./ndiff"
+    system python3, "-m", "pip", "install", *std_pip_args, "./ndiff"
     bin.glob("uninstall_*").map(&:unlink) # Users should use brew uninstall.
   end
 
