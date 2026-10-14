@@ -6,6 +6,7 @@ class Cryptominisat < Formula
   # Everything that's needed to run/build/install/link the system is MIT licensed. This allows
   # easy distribution and running of the system everywhere.
   license "MIT"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -23,7 +24,7 @@ class Cryptominisat < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "gmp"
 
   on_linux do
