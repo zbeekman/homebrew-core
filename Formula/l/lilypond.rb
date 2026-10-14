@@ -13,6 +13,7 @@ class Lilypond < Formula
     "AGPL-3.0-only",
     "LPPL-1.3c",
   ]
+  revision 1
 
   livecheck do
     url "https://lilypond.org/source.html"
@@ -51,7 +52,7 @@ class Lilypond < Formula
   depends_on "guile"
   depends_on "libpng"
   depends_on "pango"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "flex" => :build
   uses_from_macos "perl" => :build
