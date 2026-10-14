@@ -10,10 +10,10 @@ class Iconsur < Formula
   license "MIT"
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c8092c4a573094e89a8370d965d103a32d6c8884f7ff9a6437d12d8bc3404819"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d498225ce7ab40121942e4b3358464704680d67ab13acf6d7940acddd4aeca2d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8f7e4d6cf6f6a7208f43c28faf77088949eb4adf41a73b7cb9239dcafaf4625a"
+    rebuild 7
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4f60c044dafbbb7f75a1e0a9b55efc3d429749961044d245da05b4b96fc8187c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1f2cbd7f353be756075437e67072e0a3b57c89aea19e9b625c92d79f563f4be2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0abdcb49c8b930bb913ccfd43096e4b08899c0f97a3860f32ab7ca8c260beb7e"
   end
 
   deprecate! date: "2026-08-01", because: :repo_archived
