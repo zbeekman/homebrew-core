@@ -21,7 +21,7 @@ class Proxsuite < Formula
   depends_on "pkgconf" => :build
   depends_on "eigen"
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "scipy" => :no_linkage
   depends_on "simde"
 
