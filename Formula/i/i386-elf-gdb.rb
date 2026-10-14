@@ -24,7 +24,7 @@ class I386ElfGdb < Formula
   depends_on "gmp"
   depends_on "mpfr"
   depends_on "ncurses" # https://github.com/Homebrew/homebrew-core/issues/224294
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "readline"
   depends_on "xz" # required for lzma support
   depends_on "zstd"
@@ -80,7 +80,8 @@ class I386ElfGdb < Formula
     (testpath/"test.c").write "void _start(void) {}"
     system formula_opt_bin("i686-elf-gcc")/"i686-elf-gcc", "-g", "-nostdlib", "test.c"
 
-    output = shell_output("#{bin}/i386-elf-gdb -batch -ex 'info address _start' a.out")
+    # `--cd` sets gdb's working directory without `getcwd`, which the Linux sandbox denies
+    output = shell_output("#{bin}/i386-elf-gdb -batch --cd=#{testpath} -ex 'info address _start' a.out")
     assert_match "Symbol \"_start\" is a function at address 0x", output
   end
 end
