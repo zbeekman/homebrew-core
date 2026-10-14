@@ -24,6 +24,7 @@ class Treemd < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+    generate_completions_from_executable(bin/"treemd", shell_parameter_format: :clap)
   end
 
   test do
