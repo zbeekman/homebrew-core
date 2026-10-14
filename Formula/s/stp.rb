@@ -4,7 +4,7 @@ class Stp < Formula
   url "https://github.com/stp/stp/archive/refs/tags/2.4.1.tar.gz"
   sha256 "6f8bca3612e3d61868450dbf7771897b2a909f446e8de460bdf31f13a6cd0318"
   license "MIT"
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/stp/stp.git", branch: "master"
 
@@ -31,7 +31,7 @@ class Stp < Formula
   depends_on "cryptominisat"
   depends_on "gmp"
   depends_on "minisat"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   uses_from_macos "perl"
 
