@@ -1,6 +1,6 @@
 class Bullet < Formula
   desc "Physics SDK"
-  homepage "https://pybullet.org/wordpress/"
+  homepage "https://pybullet.org/"
   url "https://github.com/bulletphysics/bullet3/archive/refs/tags/3.25.tar.gz"
   sha256 "c45afb6399e3f68036ddb641c6bf6f552bf332d5ab6be62f7e6c54eda05ceb77"
   license "Zlib"
@@ -20,7 +20,7 @@ class Bullet < Formula
   depends_on "cmake" => :build
   depends_on "numpy" => [:build, :test]
   depends_on "pkgconf" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
 
   deny_network_access!
 
