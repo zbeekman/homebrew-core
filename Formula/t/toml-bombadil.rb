@@ -19,11 +19,17 @@ class TomlBombadil < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "libgit2"
+  depends_on "libssh2"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  # Update to openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  # Issue ref: https://github.com/oknozor/toml-bombadil/issues/480
+  patch :DATA
 
   deny_network_access!
 
@@ -32,6 +38,9 @@ class TomlBombadil < Formula
   end
 
   def install
+    ENV["LIBGIT2_NO_VENDOR"] = "1"
+    ENV["LIBSSH2_SYS_USE_PKG_CONFIG"] = "1"
+
     system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin/"bombadil", "generate-completions")
@@ -56,3 +65,21 @@ class TomlBombadil < Formula
     assert_match(/"os":\s*".+"/, output)
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 43f1552..b6eee41 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1817,9 +1817,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.107"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8288979acd84749c744a9014b4382d42b8f7b2592847b5afb2ed29e5d16ede07"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
