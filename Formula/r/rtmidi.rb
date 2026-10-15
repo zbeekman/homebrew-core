@@ -1,10 +1,10 @@
 class Rtmidi < Formula
   desc "API for realtime MIDI input/output"
   homepage "https://github.com/thestk/rtmidi"
-  url "https://github.com/thestk/rtmidi/archive/refs/tags/6.0.0.tar.gz"
-  sha256 "ef7bcda27fee6936b651c29ebe9544c74959d0b1583b716ce80a1c6fea7617f0"
+  url "https://github.com/thestk/rtmidi/archive/refs/tags/6.1.0.tar.gz"
+  sha256 "809ce56bfa67b80afcfa566927ce242a60b6f4c1bacc7e89486fbcf5624c5721"
   license "MIT"
-  revision 1
+  compatibility_version 1
   head "https://github.com/thestk/rtmidi.git", branch: "master"
 
   bottle do
