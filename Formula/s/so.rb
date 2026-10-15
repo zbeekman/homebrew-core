@@ -23,33 +23,70 @@ class So < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   conflicts_with "solod", because: "both install `so` binaries"
+
+  # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     system "cargo", "install", *std_cargo_args
   end
 
   test do
-    # try a query
-    opts = "--search-engine stackexchange --limit 1 --lucky"
-    query = "how do I exit Vim"
-    env_vars = "LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8 TERM=xterm"
-    input, _, wait_thr = Open3.popen2 "script -q /dev/null"
-    input.puts "stty rows 80 cols 130"
-    input.puts "env #{env_vars} #{bin}/so #{opts} #{query} 2>&1 > output"
-    sleep 3
+    require "pty"
 
-    # quit
-    input.puts "q"
-    sleep 2
-    input.close
-
-    # make sure it's the correct answer
-    assert_match ":wq", File.read("output")
-  ensure
-    Process.kill("TERM", wait_thr.pid)
+    env_vars = { "LC_CTYPE" => "en_US.UTF-8", "LANG" => "en_US.UTF-8", "TERM" => "xterm" }
+    opts = %w[--search-engine stackexchange --limit 1 --lucky]
+    output_log = testpath/"output.log"
+    PTY.spawn(env_vars, bin/"so", *opts, "how do I exit Vim", [:out, :err] => output_log.to_s) do |r, w, pid|
+      r.winsize = [80, 130]
+      sleep 3
+      w.puts "q"
+      sleep 2
+    ensure
+      r.close
+      w.close
+      Process.wait(pid)
+    end
+    assert_match ":wq", output_log.read
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index a9d4dbc..e0c5824 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1567,9 +1567,9 @@ checksum = "b410bbe7e14ab526a0e86877eb47c6996a2bd7746f027ba551028c925390e4e9"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.66"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "9529f4786b70a3e8c61e11179af17ab6188ad8d0ded78c5529441ed39d4bd9c1"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags 2.6.0",
+  "cfg-if",
+@@ -1599,9 +1599,9 @@ checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.103"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "7f9e8deee91df40a943c71b917e5874b951d32a802526c85721ce3b776c929d6"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
