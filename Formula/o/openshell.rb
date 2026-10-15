@@ -4,6 +4,7 @@ class Openshell < Formula
   url "https://github.com/NVIDIA/OpenShell/archive/refs/tags/v0.1.4.tar.gz"
   sha256 "e7b80d636456eac7fea05494894f018b170d4c7b3bf89aa769e3f909554013e9"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :stable
