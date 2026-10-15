@@ -7,17 +7,11 @@ class Keydb < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "da1860f1b861d2195bd848928da4a57aa0a5f4b426b565325800dbf5de69c9db"
-    sha256 cellar: :any,                 arm64_tahoe:       "25bf74a3cd05a239a9669273f30390c270c43671284060048f01361c7c008a35"
-    sha256 cellar: :any,                 arm64_sequoia:     "40b960924a1ec659a01d19cdbc55a99b1f9f25c12920394f4406f602bf364544"
-    sha256 cellar: :any,                 arm64_sonoma:      "38437979dd3b609815380178028c57880e4e7c4e743aadd5da7721aef2502d3a"
-    sha256 cellar: :any,                 arm64_ventura:     "010db9d77cfd61aa2195db11eb21e7e30be2b565a2b92c837c69c82bd325a237"
-    sha256 cellar: :any,                 arm64_monterey:    "eefed6df2c14cfbab28ac8ce65f888d011bed8a1edec7095b891ba2b418ea733"
-    sha256 cellar: :any,                 sonoma:            "9c96a66a65ad45e31aded15e6a4306d1fc4c97d707a060a3c31bba357310449c"
-    sha256 cellar: :any,                 ventura:           "0b94cbbcf2ba980719309b3545c5b63fa7328f3067d66dc8686e6db64a13a745"
-    sha256 cellar: :any,                 monterey:          "ca35b258a5ae50f171e31795616d4fb569a40ae72c12566b511b4442ff91de8a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a30afa2a2f443a1ca41ce65f95f7b5e0db62d12c8048f200dbfbe58324a554f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "66f4992328aeaa000bb75107076cb9d05eb8b3ce229e94a51262d33d853af1b7"
+    sha256 cellar: :any, arm64_golden_gate: "dbd7a7d4d5dd931fb2fa335d9ffe8ac973599524b3035138cfeed494ba8f0737"
+    sha256 cellar: :any, arm64_tahoe:       "76057a065995260cf2e4d9e6fd9b6d7e133920f0d996e700028b718c0cddf02d"
+    sha256 cellar: :any, arm64_sequoia:     "5de0dcfd335e9541513acc7e34ebff337877cdc7b6bff9c31728550d227f7028"
+    sha256 cellar: :any, arm64_linux:       "92811aa9754106ca67d3d9788523205d858b5e31b99e48b6d4a3a1e08b06cc16"
+    sha256 cellar: :any, x86_64_linux:      "ea3a83d006ebfbf56149cfcb5b78ec59b4cec3e4a1c9c239ecb1490992ccc52c"
   end
 
   # Last release on 2023-10-30 and last activity on 2024-04-04.
