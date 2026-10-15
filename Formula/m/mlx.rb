@@ -18,9 +18,9 @@ class Mlx < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "ff61d3f2794860355e1d9316ca61b227feb4f0a8a5a947a46c45f61504c8addb"
-    sha256 cellar: :any, arm64_tahoe:       "03fd34f25a4f94239579087cf7857fe68c3efa80f3e4389116cd7c6f59ae32e3"
-    sha256 cellar: :any, arm64_sequoia:     "2c339dc778676bb6fe85706cdba5fbd795de1f68d3eb849a157c05b0809e032e"
+    sha256 cellar: :any, arm64_golden_gate: "33535dc013f285ef6fbea2e9ddd6be2a6f3f71b48ae642e9d6253da55daaa669"
+    sha256 cellar: :any, arm64_tahoe:       "ffa4d6ec493da3452637f438860f42cbbf1fc689cea0c5f358a0d3053ba1d4fb"
+    sha256 cellar: :any, arm64_sequoia:     "6539ae6fa0ca10467bf410c065083646d143584fd2f7ab750054488a7a6ff4e4"
   end
 
   depends_on "cmake" => :build
