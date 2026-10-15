@@ -33,7 +33,7 @@ class Watchman < Formula
   depends_on "folly"
   depends_on "glog"
   depends_on "pcre2"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "boost"
