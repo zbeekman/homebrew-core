@@ -1,8 +1,8 @@
 class Polkit < Formula
   desc "Toolkit for defining and handling authorizations"
   homepage "https://github.com/polkit-org/polkit"
-  url "https://github.com/polkit-org/polkit/archive/refs/tags/127.tar.gz"
-  sha256 "9b7bc16f086479dcc626c575976568ba4a85d34297a750d8ab3d2e57f6d8b988"
+  url "https://github.com/polkit-org/polkit/archive/refs/tags/128.tar.gz"
+  sha256 "6edb06bf1448e49e428f9597a97af6a05d62146dd0b58f86eeaebcee3f5ecfaa"
   license "LGPL-2.0-or-later"
 
   bottle do
@@ -33,16 +33,11 @@ class Polkit < Formula
     depends_on "systemd"
   end
 
-  # Backport macOS build fix (merged upstream via PR #629); remove once released
-  patch do
-    url "https://github.com/polkit-org/polkit/commit/066b55bf2e2b82c4d9b75306aaada9416296e9e9.patch?full_index=1"
-    sha256 "5aad9b8df059fcc99d2f3eb8918e0d0aceaee366c41089e0c66db11d31adac7a"
-    type :backport
-    resolves "https://github.com/polkit-org/polkit/pull/629"
-  end
-
   def install
+    # Avoid installing into the systemd keg (paths taken from systemd.pc) or /usr/lib
     inreplace "meson.build" do |s|
+      s.gsub!("systemd_dep.get_variable(pkgconfig : 'sysusers_dir')", "'#{etc}/sysusers.d'")
+      s.gsub!("systemd_dep.get_variable(pkgconfig : 'tmpfiles_dir')", "'#{etc}/tmpfiles.d'")
       s.gsub!("sysusers_dir = '/usr/lib/sysusers.d'", "sysusers_dir = '#{etc}/sysusers.d'")
       s.gsub!("tmpfiles_dir = '/usr/lib/tmpfiles.d'", "tmpfiles_dir = '#{etc}/tmpfiles.d'")
     end
