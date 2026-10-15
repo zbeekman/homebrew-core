@@ -20,8 +20,11 @@ class LanguagetoolRust < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
+
+  # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
 
   allow_network_access! :test
 
@@ -45,3 +48,33 @@ class LanguagetoolRust < Formula
     assert_match "error[MORFOLOGIK_RULE_EN_US]: Possible spelling mistake found", output
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index f270356..602bba8 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1365,9 +1365,9 @@ checksum = "d6790f58c7ff633d8771f42965289203411a5e5c68388703c06e14f24770b41e"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.74"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "24ad14dd45412269e1a30f52ad8f0664f0f4f4a89ee8fe28c3b3527021ebb654"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags",
+  "cfg-if",
+@@ -1406,9 +1406,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.110"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "0a9f0075ba3c21b09f8e8b2026584b1d18d49388648f2fbbf3c97ea8deced8e2"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
