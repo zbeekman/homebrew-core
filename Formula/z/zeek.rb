@@ -13,11 +13,12 @@ class Zeek < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "473fde6a5cce85127b85fc403a865654074f1be4c70008c1e642a8057b1aceb8"
-    sha256 arm64_tahoe:       "4a0cbe8679e5f8d9cd0e0a4827f508f26df95ce521c4da0aaab6cc1f78f61974"
-    sha256 arm64_sequoia:     "9ec0196cf822a9df676a8136d322bffd65cf871f62b5a50ad5e20cc5c4934eab"
-    sha256 arm64_linux:       "d3d5d8e79ce06229ef36fb0708ed2bc23bca7db861f901af4daae39229e7d602"
-    sha256 x86_64_linux:      "04716524bd3e6d40e8b938dfba9f6a3c654e173e83cedcb5ad49352a70792d67"
+    rebuild 1
+    sha256 arm64_golden_gate: "e5557054d7fc5c09d832ac778e4d7dedc99980189929ac0147faf01a60adcc1e"
+    sha256 arm64_tahoe:       "8b27db4adceaa47f0c20d3a80014fbd29325c5132a2661a7c206cdc5bf750be1"
+    sha256 arm64_sequoia:     "458dd2eacad5d49d57115832c972718a95b20bd61c73fe3f284cb6bc5f4ef1b4"
+    sha256 arm64_linux:       "8671fcfe5f1299076536aef45ecf8124db777b80ab14720697b5ade12e44cef0"
+    sha256 x86_64_linux:      "79f7d35ee5ad907c291c308246a30d8ffdaf75eb4dbef9a4f9ec46a1a5d0ba5e"
   end
 
   depends_on "bison" => :build
