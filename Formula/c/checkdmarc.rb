@@ -9,8 +9,7 @@ class Checkdmarc < Formula
   head "https://github.com/domainaware/checkdmarc.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "972d5aec940559682ae122549ec50ecbb06e6c809aa56c0c0dece814c2df77e6"
+    sha256 cellar: :any_skip_relocation, all: "a75ce57fcc79ffa1f79a59420add6b6a6c688173bdce2cf1e3390df5396e11a2"
   end
 
   depends_on "rust" => :build # for dnspython > uv_build > maturin
