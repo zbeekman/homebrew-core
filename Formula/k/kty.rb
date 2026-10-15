@@ -7,15 +7,12 @@ class Kty < Formula
   head "https://github.com/grampelberg/kty.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "76c1cde1598e0913741158e01e340c9d910605eb858b611f90e2733eb270db14"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "41ffc85a1afa73590d563262abbe3c3037cd0ea6ce1b2a4e315b789de481c709"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bb4ba6e5d3a1002a498075b31b9ffc694425ba048333ecf2ee662db7f08d1d64"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "4a01a6547caa11fd487eb9470ed8552bd699731eb3011eabc38c4ce1fe9bc07d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:     "773957f43cf0e1a552700e177d52a0c4dc9a16738e6d33fad6fc1b3981f33e0f"
-    sha256 cellar: :any_skip_relocation, sonoma:            "d5dbd72cf1840b254b2ac815e8dad173883c8cb83140634976e29a14fcf8b65d"
-    sha256 cellar: :any_skip_relocation, ventura:           "844450842762cb450a2885857744a5ea3a095d781db143312f3ff4607ec7b890"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "12eaaeecb6106661c66894aca09a5f73eb77d9be2ba51419f1d78eed9872aed0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "bdd2bbe08fcd0a77a2402d91f009d13d4c9ddd5b51d533d4810e26aee40fccb9"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "88593e7982a8fc2929ac521ba89f57271b9b2daed351b307b331f0d5d1ea2886"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "794ce6ac8ca031f30ca1a065287c1819cbbdb0535880ec775eaf45151ef903a2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9ce2b07cbf056aa2e8ce27717228a7dff0698a1c76bdf8063f5f0a0ef18aada5"
+    sha256 cellar: :any,                 arm64_linux:       "ff917a6e4e85ea8e646a03be5b192c6ebfbcd92bb57e3cb235084c329aeeb443"
+    sha256 cellar: :any,                 x86_64_linux:      "154d8132959707a364b2b27fb2ece9676ec0713ae372870998f8374d28c3d1c7"
   end
 
   # Last release on 2024-09-16, last activity 2024-10-03
