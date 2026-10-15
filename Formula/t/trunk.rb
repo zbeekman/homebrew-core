@@ -1,10 +1,17 @@
 class Trunk < Formula
   desc "Build, bundle & ship your Rust WASM application to the web"
   homepage "https://trunk-rs.github.io/trunk"
-  url "https://github.com/trunk-rs/trunk/archive/refs/tags/v0.21.14.tar.gz"
-  sha256 "8687bcf96bdc4decee88458745bbb760ad31dfd109e955cf455c2b64caeeae2f"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/trunk-rs/trunk.git", branch: "main"
+
+  stable do
+    url "https://github.com/trunk-rs/trunk/archive/refs/tags/v0.21.14.tar.gz"
+    sha256 "8687bcf96bdc4decee88458745bbb760ad31dfd109e955cf455c2b64caeeae2f"
+
+    # Backport only the openssl and openssl-sys version updates from
+    # https://github.com/trunk-rs/trunk/commit/84105e44e2dc0d4ee6a218c0be0030c4bd1e6860
+    patch :DATA
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8caf44575088962f9fc0ecb827ffa76b02d7d2039ea5549ea3e19a685c3395f0"
@@ -20,7 +27,7 @@ class Trunk < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "bzip2"
 
@@ -32,9 +39,10 @@ class Trunk < Formula
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
-    system "cargo", "install", *std_cargo_args
+    # For features, we disable update_check and replace rustls with native-tls
+    system "cargo", "install", "--no-default-features", *std_cargo_args(features: "native-tls")
   end
 
   test do
@@ -52,3 +60,39 @@ class Trunk < Formula
     assert_match version.to_s, shell_output("#{bin}/trunk --version")
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index a0a353e..ce6fc55 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -2445,15 +2445,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.72"
++version = "0.10.81"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "fedfea7d58a1f73118430a55da6a286e7b044961736ce96a16a17068ea25e5da"
++checksum = "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45"
+ dependencies = [
+  "bitflags 2.9.0",
+  "cfg-if",
+  "foreign-types",
+  "libc",
+- "once_cell",
+  "openssl-macros",
+  "openssl-sys",
+ ]
+@@ -2486,9 +2485,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.107"
++version = "0.9.117"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8288979acd84749c744a9014b4382d42b8f7b2592847b5afb2ed29e5d16ede07"
++checksum = "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695"
+ dependencies = [
+  "cc",
+  "libc",
