@@ -7,11 +7,11 @@ class Zero < Formula
   head "https://github.com/Gitlawb/zero.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c813340e91edd724a9abe7054e8d5b02a0612988be95d5c2173be0d20ea91c25"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c813340e91edd724a9abe7054e8d5b02a0612988be95d5c2173be0d20ea91c25"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c813340e91edd724a9abe7054e8d5b02a0612988be95d5c2173be0d20ea91c25"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "efeff823c809818f5bc96c41f4e1bb60d1effb895fb2aec4d2040283ac98ec7e"
-    sha256 cellar: :any,                 x86_64_linux:      "a5f69045c131c71f4b1a65068b92f0a720a36d2f795c75c76a8e90c93747cad3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4ac81658d12065320947d0f7149ef8236d96dba5fd01a253b7102948dd897872"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4ac81658d12065320947d0f7149ef8236d96dba5fd01a253b7102948dd897872"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ac81658d12065320947d0f7149ef8236d96dba5fd01a253b7102948dd897872"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "474e1b187ba2261d54baae682aabbee41fcae77319f3d6f8c912ab3dadfa351a"
+    sha256 cellar: :any,                 x86_64_linux:      "974678a3ed90422888d1b9094666f0b97f4a3188a3c88e449666de82685ff173"
   end
 
   depends_on "go" => :build
