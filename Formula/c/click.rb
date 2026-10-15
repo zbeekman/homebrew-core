@@ -1,10 +1,20 @@
 class Click < Formula
   desc "Command-line interactive controller for Kubernetes"
   homepage "https://github.com/databricks/click"
-  url "https://github.com/databricks/click/archive/refs/tags/v0.6.3.tar.gz"
-  sha256 "da64d1d205b6136f318dea967eec4e9d67569be8f332875afcc6b31c9a0ef1b7"
   license "Apache-2.0"
   head "https://github.com/databricks/click.git", branch: "master"
+
+  stable do
+    url "https://github.com/databricks/click/archive/refs/tags/v0.6.3.tar.gz"
+    sha256 "da64d1d205b6136f318dea967eec4e9d67569be8f332875afcc6b31c9a0ef1b7"
+
+    # Backport Cargo.lock updates
+    patch do
+      url "https://github.com/databricks/click/commit/b3bf1ab6faccf0693dc134500c826f9a8b647ec7.patch?full_index=1"
+      sha256 "756a8c2f41786778d040e552bc03177609ab81b0fe807ba838db785e9fb9eece"
+      type :backport
+    end
+  end
 
   livecheck do
     url :stable
@@ -29,8 +39,11 @@ class Click < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
+
+  # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
 
   deny_network_access!
 
@@ -83,3 +96,33 @@ class Click < Formula
     assert_equal "[\e[38;5;9m\e[1mnone\e[0m] [\e[38;5;10m\e[1mnone\e[0m] [\e[38;5;3mnone\e[39m] > ", output
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 5bb9043..81a81b8 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1168,9 +1168,9 @@ checksum = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.73"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8505734d46c8ab1e19a1dce3aef597ad87dcb4c37e7188231769bd6bd51cebf8"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags 2.9.3",
+  "cfg-if",
+@@ -1200,9 +1200,9 @@ checksum = "d05e27ee213611ffe7d6348b942e8f942b37114c00cc03cec254295a4a17852e"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.109"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "90096e2e47630d78b7d1c20952dc621f957103f8bc2c8359ec81290d75238571"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
