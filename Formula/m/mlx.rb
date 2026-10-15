@@ -3,21 +3,14 @@ class Mlx < Formula
 
   desc "Array framework for Apple silicon"
   homepage "https://ml-explore.github.io/mlx/build/html/index.html"
+  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.32.4.tar.gz"
+  sha256 "0276db8d7bf1af8db6d4ae25c7c550abea4d5b3b6a16207610a5d4a0c19fe1a0"
   license all_of: [
     "MIT", # main license
     "Apache-2.0", # metal-cpp resource
   ]
-  compatibility_version 6
+  compatibility_version 7
   head "https://github.com/ml-explore/mlx.git", branch: "main"
-
-  stable do
-    url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.32.3.tar.gz"
-    sha256 "4129039ddcb36cb860982b616c975a5b9b8e6d8fa97efa86335b4427c29c4b4b"
-
-    # TODO: Remove when a release includes the macOS 27 fix in upstream PR #4594.
-    # Adapted for this release's kernel layout: https://github.com/ml-explore/mlx/pull/4594
-    patch :DATA
-  end
 
   livecheck do
     url :stable
@@ -39,7 +32,7 @@ class Mlx < Formula
   depends_on xcode: ["15.0", :build] # for metal
   depends_on arch: :arm64
   depends_on macos: :sonoma
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   # https://github.com/ml-explore/mlx/blob/v#{version}/CMakeLists.txt
   # Included in not_a_binary_url_prefix_allowlist.json
@@ -117,40 +110,3 @@ class Mlx < Formula
     system python3, "test.py"
   end
 end
-
-__END__
---- a/mlx/backend/metal/kernels/gated_delta_update_nax.h
-+++ b/mlx/backend/metal/kernels/gated_delta_update_nax.h
-@@ -127,8 +127,8 @@
-       gemm_op
-           .template get_right_input_cooperative_tensor<AType, BType, CType>();
-   auto ct_c = gemm_op.template get_destination_cooperative_tensor<
--      decltype(ct_a),
--      decltype(ct_b),
-+      metal::remove_addrspace_t<decltype(ct_a)>,
-+      metal::remove_addrspace_t<decltype(ct_b)>,
-       CType>();
-
-   STEEL_PRAGMA_UNROLL
-@@ -173,8 +173,8 @@
-       gemm_op
-           .template get_right_input_cooperative_tensor<AType, BType, CType>();
-   auto ct_c = gemm_op.template get_destination_cooperative_tensor<
--      decltype(ct_a),
--      decltype(ct_b),
-+      metal::remove_addrspace_t<decltype(ct_a)>,
-+      metal::remove_addrspace_t<decltype(ct_b)>,
-       CType>();
-
-   STEEL_PRAGMA_UNROLL
-@@ -226,8 +226,8 @@
-
-   // Create matmul output in register
-   auto ct_c = gemm_op.template get_destination_cooperative_tensor<
--      decltype(ct_a),
--      decltype(ct_b),
-+      metal::remove_addrspace_t<decltype(ct_a)>,
-+      metal::remove_addrspace_t<decltype(ct_b)>,
-       CType>();
-
-   // Load A in to left operand registers
