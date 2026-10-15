@@ -7,12 +7,11 @@ class Profanity < Formula
   head "https://github.com/profanity-im/profanity.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "eb904149c89e86e2b5d917ad75f018e73f46a2c99a13b1161ecf882c76e08ee3"
-    sha256 arm64_tahoe:       "0182b0cf01532bd56387a01661a39d939d6b89ab961962713452a68011dbdd36"
-    sha256 arm64_sequoia:     "5f31183e7b7cdd078eb8356838a7cf283a1f40c745ffbefc8f4e65f69d4d7450"
-    sha256 arm64_linux:       "55bcb058aa241607fff75fe87c62be2ef1de5961ca00d8aa7814f5d46893630b"
-    sha256 x86_64_linux:      "76f694ca9b9d86f8ce53fc18126d1efe32549c3089a56706972315457c266708"
+    sha256 arm64_golden_gate: "e8f73582a912a2325a042ccc35cae563528d1585a68ccc03c6967799e9c861e0"
+    sha256 arm64_tahoe:       "1cb182a6a25209e7c7e5c5aa0f22698ae5d4d38c8b298f7eace2808dfdad37b9"
+    sha256 arm64_sequoia:     "a949cabe1b7e4a600e16f4e02991b4a16d941aaac20249c32eb227a7da0652c9"
+    sha256 arm64_linux:       "3b68547440e6ee4cb5fd934752ff4b6663c257078a9329bf8dd99669cfa41dda"
+    sha256 x86_64_linux:      "98bf38f2693f545cac295d6ef9d07893b136a9871d640a161c6f6119917ed430"
   end
 
   depends_on "meson" => :build
