@@ -7,12 +7,12 @@ class AsmLsp < Formula
   head "https://github.com/bergercookie/asm-lsp.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "841ae55df666f63a6f4ce786a3b71662fbf8b210106660e3c45168bca170ccbe"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "722840f4af9b43c029e2ab914dd73f67f886f00391aa6eacb67f1df04f601b32"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f63aa59b47fd257e14d99b8f3fc12d0d91a81fe46a43e3ee234720d961d3830d"
-    sha256 cellar: :any,                 arm64_linux:       "b2b03ad5c7245ecbd0ee4091decc8ef08f0c39c51f1108c8c44f54599caccaea"
-    sha256 cellar: :any,                 x86_64_linux:      "8cb43f74b4528cb5b8c320754cb9099be7e1762c1a324406ac84e387ef6de444"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4c2955de377dd27c4226e64d2701f0e14086a85dce4d43635dbcbc84ac4e4f35"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4429273d74303faa38c6fbb7b2074db7c922da25dd9d347624b6a263d21e4ba6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cc076b8590b27a9df2f227487ff8c19e6b13e084d236a572c074431ba9faf7a3"
+    sha256 cellar: :any,                 arm64_linux:       "c51bd28c18b4202f1090fb19001f73eee16696fd957944001fc021edfaeb0735"
+    sha256 cellar: :any,                 x86_64_linux:      "a89c93ae414c3f676164659e470b5c750850b570ac540e7899075dd6a02899b3"
   end
 
   depends_on "pkgconf" => :build
