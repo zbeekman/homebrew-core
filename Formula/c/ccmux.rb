@@ -6,11 +6,11 @@ class Ccmux < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_golden_gate: "00ba4e7df5a201744ec9c46b67fb5fce03941d2cba3c2e45ee1b23276fc3fba8"
-    sha256 arm64_tahoe:       "9ee85e3813db85f4d1d2f37121fc165fd0e34177c69f256bc706887b667d0bb6"
-    sha256 arm64_sequoia:     "28cf77633b9908847bf777a51addbc302e95b5cb9faad8332fa0b3351ab52dc2"
-    sha256 arm64_linux:       "a9e6cc9a03e58f640210134ed94d33ff2a1d6c2cbdf6ed9d1cd4fa473bc7d98e"
-    sha256 x86_64_linux:      "02509f99d4f8807225fa2d50bf1ee085aaf6bea57654e1aa06f40eb110c22fbf"
+    sha256 arm64_golden_gate: "791c90401483b733786967f5c491864286d9c9a489d4357b80cadf4961a1e531"
+    sha256 arm64_tahoe:       "eb0522fcbe954cb9725461684dd09f0099106421c75e96acbca037741d4a2235"
+    sha256 arm64_sequoia:     "04b3214b9909afddeb0ff6c978313a3c14a6d1061da09b62a452700c72b058f1"
+    sha256 arm64_linux:       "80f9995d444daa1d9b4b5dad45dc7de013ef6d382a862ab8a2c2dcf421a36108"
+    sha256 x86_64_linux:      "2f5ee925fa7272ab10b4a7afc62232edeeb403e7f827eb59386063658f19ec54"
   end
 
   depends_on "bun" => :build
