@@ -19,13 +19,25 @@ class GitTrim < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "libssh2"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
+  # Update to openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
+
   def install
+    # TODO: ENV["LIBGIT2_NO_VENDOR"] = "1"
+    ENV["LIBSSH2_SYS_USE_PKG_CONFIG"] = "1"
     system "cargo", "install", *std_cargo_args
     man1.install "docs/git-trim.man" => "git-trim.1"
   end
@@ -37,3 +49,23 @@ class GitTrim < Formula
     assert_match "brew-test", shell_output("git trim")
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 6cc4c66..2ed2e87 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1489,11 +1489,10 @@ checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.78"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "07d5c8cb6e57b3a3612064d7b18b117912b4ce70955c2504d4b741c9e244b132"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+- "autocfg",
+  "cc",
+  "libc",
+  "pkg-config",
