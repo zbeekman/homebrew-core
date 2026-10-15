@@ -14,14 +14,11 @@ class CargoClone < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "a8baf46e66fe2c4179b8dab2332d987e6ab00fce13d07d1560d26bbd427a9e2c"
-    sha256 cellar: :any,                 arm64_tahoe:       "c4b544b37b9b657f7f9e9b5f50c8abea0644c9fd5df85cfb10fef27737b3c9df"
-    sha256 cellar: :any,                 arm64_sequoia:     "2dcb5c906b3dd8b3b1d47c1a45c6c9ab40b6629de4990ede4c4b2c449e0f1a4a"
-    sha256 cellar: :any,                 arm64_sonoma:      "7ef9e538a557821c7115fe2c2f086f6100ffad8926e8d5b152f536fba835cfa3"
-    sha256 cellar: :any,                 sonoma:            "ac4cdb2157e0900e10ae7654549ea3e94563bd2fad05e73306044418ba16ee98"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4f91abbdb2155fc427a28a51d9fc630fcc3fadb4aa75f3f2ce28f56c802679a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "43fe9543e5d0f96866f232b945c9524e4d516c41ef049f1aa39ffb6fe1ae8bfc"
+    sha256 cellar: :any, arm64_golden_gate: "4656087b15aae68a6771c3ce4c1782fda2d5e7c7b6f01108e1b38b974c2c6698"
+    sha256 cellar: :any, arm64_tahoe:       "e60d4bc33ebf7b22b8a9bd79b8cc2fe0369ef3c5c2d2c6da9f2ad584b5b5eaae"
+    sha256 cellar: :any, arm64_sequoia:     "d9aab0bcd25722d20597ae86a349c57013ba81f13deb238b39abf068a151d6bb"
+    sha256 cellar: :any, arm64_linux:       "46e04b52c9bc55dc6d5c0d4a0a78712c05cda3a2285e2643a391d11a04f12995"
+    sha256 cellar: :any, x86_64_linux:      "3f3e7b1397224bbcaa9071aaa6dc105f6b98c40e15fd3b8bf1d0e10fe09e57df"
   end
 
   depends_on "pkgconf" => :build
