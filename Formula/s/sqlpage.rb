@@ -1,8 +1,8 @@
 class Sqlpage < Formula
   desc "Web app builder using SQL queries to create dynamic webapps quickly"
   homepage "https://sql-page.com/"
-  url "https://github.com/sqlpage/SQLpage/archive/refs/tags/v0.46.3.tar.gz"
-  sha256 "5c9d394beb5354ee1a7e598876b4f55c5765c170035883e9ea5223cff886d211"
+  url "https://github.com/sqlpage/SQLpage/archive/refs/tags/v0.47.0.tar.gz"
+  sha256 "cb5db9c6589999d9d07f19e4cd49383a59a7625bfe5ed1a7a4b2bef21afccd76"
   license "MIT"
   head "https://github.com/sqlpage/SQLpage.git", branch: "main"
 
@@ -14,10 +14,19 @@ class Sqlpage < Formula
     sha256 cellar: :any, x86_64_linux:      "9e6afebe1ca3471926e3855708efbb3a9028e0e19af016adc59d79ec0fc40165"
   end
 
+  depends_on "node" => :build
   depends_on "rust" => :build
   depends_on "unixodbc"
 
+  allow_network_access! :test
+
+  def fetch
+    system "npm", "ci", *std_npm_args(prefix: false)
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
+
   def install
+    system "npm", "run", "build"
     system "cargo", "install", *std_cargo_args
   end
 
