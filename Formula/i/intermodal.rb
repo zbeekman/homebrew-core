@@ -16,12 +16,12 @@ class Intermodal < Formula
   end
 
   depends_on "help2man" => :build
+  depends_on "openssl@4" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
-  on_linux do
-    depends_on "openssl@3"
-  end
+  # Update to openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
 
   deny_network_access!
 
@@ -42,3 +42,21 @@ class Intermodal < Formula
     system bin/"imdl", "torrent", "verify", "--content", test_fixtures("test.flac"), "--input", "test.torrent"
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 0cc8c5c..c1e74d4 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1256,9 +1256,9 @@ checksum = "d05e27ee213611ffe7d6348b942e8f942b37114c00cc03cec254295a4a17852e"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.112"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "57d55af3b3e226502be1526dfdba67ab0e9c96fc293004e79576b2b9edb0dbdb"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
