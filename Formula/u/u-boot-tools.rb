@@ -1,14 +1,10 @@
 class UBootTools < Formula
   desc "Universal boot loader"
-  homepage "https://www.denx.de/wiki/U-Boot/"
-  url "https://ftp.denx.de/pub/u-boot/u-boot-2026.07.tar.bz2"
-  sha256 "78e8bfc382fe388f9b55aa1daf8c563522a037779b5d4c349d1415e381f1243e"
+  homepage "https://u-boot-project.org/"
+  url "https://git.u-boot-project.org/u-boot/u-boot/-/releases/v2026.10/downloads/u-boot-2026.10.tar.bz2"
+  sha256 "3f856da3cbbc93af51ff95fde18588a348b4a26723b01d9841e999d988481015"
   license all_of: ["GPL-2.0-only", "GPL-2.0-or-later", "BSD-3-Clause"]
-
-  livecheck do
-    url "https://ftp.denx.de/pub/u-boot/"
-    regex(/href=.*?u-boot[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
+  head "https://git.u-boot-project.org/u-boot/u-boot.git", branch: "main"
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "a7c9ee5f7f04b6fc1d2d006bd1faa06dd9f65684e1ec222918886b5402485eb7"
@@ -21,24 +17,23 @@ class UBootTools < Formula
   end
 
   depends_on "coreutils" => :build # Makefile needs $(gdate)
-  depends_on "openssl@3"
+  depends_on "openssl@3" # https://lists.u-boot-project.org/pipermail/u-boot/2026-April/616722.html
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
 
-  def install
-    # Replace keyword not present in make 3.81
-    inreplace "Makefile", "undefine MK_ARCH", "unexport MK_ARCH"
+  on_macos do
+    depends_on "make" => :build
+  end
 
+  def install
     # Disable mkeficapsule
     inreplace "configs/tools-only_defconfig", "CONFIG_TOOLS_MKEFICAPSULE=y", "CONFIG_TOOLS_MKEFICAPSULE=n"
 
-    system "make", "tools-only_defconfig"
-    system "make", "tools-only", "NO_SDL=1"
-    bin.install "tools/mkimage"
-    bin.install "tools/dumpimage"
-    bin.install "tools/mkenvimage"
-    man1.install "doc/mkimage.1"
+    system "gmake", "tools-only_defconfig"
+    system "gmake", "tools-only", "NO_SDL=1"
+    bin.install "tools/mkimage", "tools/dumpimage", "tools/mkenvimage"
+    man1.install "doc/mkimage.1", "doc/dumpimage.1"
   end
 
   test do
