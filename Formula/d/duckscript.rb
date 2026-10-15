@@ -24,7 +24,7 @@ class Duckscript < Formula
   uses_from_macos "bzip2"
 
   on_linux do
-    depends_on "openssl@3" # Uses Secure Transport on macOS
+    depends_on "openssl@4" # Uses Secure Transport on macOS
   end
 
   conflicts_with "duck", because: "both install `duck` binaries"
@@ -32,11 +32,21 @@ class Duckscript < Formula
   deny_network_access!
 
   def fetch
+    # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+    if build.stable?
+      openssl_sys_version = File.read("Cargo.lock")[/name = "openssl-sys"\nversion = "(\d+(?:\.\d+)+)/i, 1]
+      odie "Remove `cargo update` workaround!" if Version.new("0.9.114") <= openssl_sys_version
+    end
+    system "cargo", "update", "openssl-sys", "--precise", "0.9.114"
+    system "cargo", "update", "openssl", "--precise", "0.10.78"
+
     system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "duckscript_cli", features: "tls-native")
+    # Replace tls-rustls with tls-native
+    features = "tls-native"
+    system "cargo", "install", "--no-default-features", *std_cargo_args(path: "duckscript_cli", features:)
   end
 
   test do
