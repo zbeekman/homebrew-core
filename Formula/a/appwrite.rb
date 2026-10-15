@@ -1,8 +1,8 @@
 class Appwrite < Formula
   desc "Command-line tool for Appwrite"
   homepage "https://appwrite.io"
-  url "https://github.com/appwrite/sdk-for-cli/archive/refs/tags/28.5.0.tar.gz"
-  sha256 "0c027fee9db8259028e06f28019079226ba16848288475fab981506fb9257060"
+  url "https://github.com/appwrite/sdk-for-cli/archive/refs/tags/28.6.0.tar.gz"
+  sha256 "1ba20b7c200c7d6754476a98dd8c9eb8c3b7c6d552ce3cd4ed0ddeec4eb712b3"
   license "BSD-3-Clause"
 
   bottle do
