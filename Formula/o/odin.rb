@@ -6,6 +6,7 @@ class Odin < Formula
       revision: "84bc3fc2100b0f7880a3af37f71bccdcda41c6f9"
   version "2026-10"
   license "Zlib"
+  revision 1
   head "https://github.com/odin-lang/Odin.git", branch: "master"
 
   bottle do
@@ -70,8 +71,13 @@ class Odin < Formula
     end
 
     ln_s raylib.lib/"libraylib.a", vendor/raylib_dir/"libraylib.a"
-    ln_s raylib.lib/shared_library("libraylib", "6.0.0"),
-         vendor/raylib_dir/shared_library("libraylib", "600")
+    ln_s raylib.lib/shared_library("libraylib"), vendor/raylib_dir/shared_library("libraylib", "600")
+
+    # raylib 6.2's bundled glfw references `CAMetalLayer`, so static links need QuartzCore
+    if OS.mac?
+      inreplace vendor/"raylib.odin", "\"system:Cocoa.framework\",",
+                "\\0\n\t\t\"system:QuartzCore.framework\","
+    end
 
     raygui_dir = vendor/(OS.mac? ? "macos" : "linux")
     raygui_name = (OS.mac? && Hardware::CPU.arm?) ? "libraygui-arm64" : "libraygui"
