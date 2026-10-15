@@ -15,14 +15,12 @@ class Fw < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "525ee6a09b97e9131f568cbc3ac80bea9c9e4167e6234280523f837007735712"
-    sha256 cellar: :any,                 arm64_tahoe:       "7780f59e32df0457b9148d55505e274053393a4545cf61fcf790cb0b23dfe19e"
-    sha256 cellar: :any,                 arm64_sequoia:     "29432219c0916cdca047dd8cccd1cd207dbc68411f0e65d2118a574f977d923b"
-    sha256 cellar: :any,                 arm64_sonoma:      "93b69db1251551a66d1a24f4a9940562d2a04672ef4b19e4b39fde432365a174"
-    sha256 cellar: :any,                 sonoma:            "40916ca263737c78e58fd02c91d7aa82e738fad567031cd62c0a67d7e8c4ac6b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0c60ab562c31623fcb540d57810708e49c38f652430c85a239b46210b5fdab21"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d3ebff57c1fc6a7739a8486817e893a075902406d6c00ef329818f5bbbf46ad2"
+    rebuild 2
+    sha256 cellar: :any, arm64_golden_gate: "dc4c1ec645f55270517cdf132ff267beb18bc35a156b91b3e9690e17e6bb227a"
+    sha256 cellar: :any, arm64_tahoe:       "1fb2b437ff237ac4fa943a4d9adb5cc7f05e61f1edb233e7b2bafedf386c5c23"
+    sha256 cellar: :any, arm64_sequoia:     "d7f33f20be35a9b61b687cbb6473d10b1273f03a384f2b37953843689a935f4d"
+    sha256 cellar: :any, arm64_linux:       "0bf676395e4e6334aac5d4953a303cac406c728ae261e471b9ec59e38f7c59ea"
+    sha256 cellar: :any, x86_64_linux:      "6a5c1d47ac5c682c646770e836aca13973ffd07e2720f7051da523abe82dc28a"
   end
 
   depends_on "pkgconf" => :build
