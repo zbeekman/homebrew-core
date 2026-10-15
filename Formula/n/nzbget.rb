@@ -1,10 +1,17 @@
 class Nzbget < Formula
   desc "Binary newsgrabber for nzb files"
   homepage "https://nzbget.com"
-  url "https://github.com/nzbgetcom/nzbget/archive/refs/tags/v26.3.tar.gz"
-  sha256 "3a6a2a7c8bf5e7156dacb563e76d65df4aa53390e24040115c4406771ec3a19b"
   license "GPL-2.0-or-later"
   head "https://github.com/nzbgetcom/nzbget.git", branch: "develop"
+
+  stable do
+    url "https://github.com/nzbgetcom/nzbget/archive/refs/tags/v26.3.tar.gz"
+    sha256 "3a6a2a7c8bf5e7156dacb563e76d65df4aa53390e24040115c4406771ec3a19b"
+
+    # Backport const-correctness changes from
+    # https://github.com/nzbgetcom/nzbget/commit/f81d3f4de58fbfae9e0657a7eb3041ff6ab5adfd
+    patch :DATA
+  end
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "31b75d474ef6ff7cb1357bc70976260d89633247fb34976700d57e291f672b0e"
@@ -18,7 +25,7 @@ class Nzbget < Formula
 
   depends_on "cmake" => :build
   depends_on "boost"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "sevenzip"
 
   uses_from_macos "libxml2"
@@ -66,3 +73,23 @@ class Nzbget < Formula
     system bin/"nzbget", "-Q", "-c", etc/"nzbget.conf"
   end
 end
+
+__END__
+diff --git a/daemon/connect/TlsSocket.cpp b/daemon/connect/TlsSocket.cpp
+index 686032984..241832ddd 100644
+--- a/daemon/connect/TlsSocket.cpp
++++ b/daemon/connect/TlsSocket.cpp
+@@ -258,11 +258,11 @@ bool TlsSocket::ValidateCert()
+ 		if (common_name_loc >= 0)
+ 		{
+ 			// Extract the CN field
+-			X509_NAME_ENTRY* common_name_entry = X509_NAME_get_entry(X509_get_subject_name(cert.get()), common_name_loc);
++			const X509_NAME_ENTRY* common_name_entry = X509_NAME_get_entry(X509_get_subject_name(cert.get()), common_name_loc);
+ 			if (common_name_entry != nullptr)
+ 			{
+ 				// Convert the CN field to a C string
+-				ASN1_STRING* common_name_asn1 = X509_NAME_ENTRY_get_data(common_name_entry);
++				const ASN1_STRING* common_name_asn1 = X509_NAME_ENTRY_get_data(common_name_entry);
+ 				if (common_name_asn1 != nullptr)
+ 				{
+ 					certHost = ASN1_STRING_get0_data(common_name_asn1);
