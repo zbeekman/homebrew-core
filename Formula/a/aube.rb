@@ -5,6 +5,11 @@ class Aube < Formula
   sha256 "fbe4cc7097b0374ee73fa1fa32f229a8a8ba48e6b9792661857e9499a1e20e1d"
   license "MIT"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e98bcc1de17ea06abf9ca0854320bfc14313de9f2e16fc59563446ad40e864f2"
     sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2696e89a1f6659ab938c9ba5f062eb2df87bae10cd30636a8c6b4f9f834aaf01"
