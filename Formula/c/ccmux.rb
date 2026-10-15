@@ -1,8 +1,8 @@
 class Ccmux < Formula
   desc "Run all your AI coding agents in tmux"
   homepage "https://github.com/epilande/ccmux"
-  url "https://github.com/epilande/ccmux/archive/refs/tags/v1.4.3.tar.gz"
-  sha256 "04187dd24c73cfc86d34029f6f70b9329df1ce556de316acf4bf4cc34e3d1ac2"
+  url "https://github.com/epilande/ccmux/archive/refs/tags/v1.4.4.tar.gz"
+  sha256 "e5e44bc18eab59ee68ffa33a398c6a254e11831b52a9c649201f36faaf3ee80b"
   license "MIT"
 
   bottle do
