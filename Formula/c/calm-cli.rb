@@ -6,11 +6,11 @@ class CalmCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d24430763106f74fb3f32c2dad9a935fe73496a93254561209da85f0b86a8adc"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d24430763106f74fb3f32c2dad9a935fe73496a93254561209da85f0b86a8adc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d24430763106f74fb3f32c2dad9a935fe73496a93254561209da85f0b86a8adc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a15f274f91121750abeb06acdc2b0a1c71fe4482b29a4b3ed35922dc5df2d906"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6c7de8c07579e4718b8afc2870d3855b3713423ad63fe57af6e90f7e779068f6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5fe1178faee7d4852cc2ddb24ca9e357ac584c76f689d42fa982ebb30654d548"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5fe1178faee7d4852cc2ddb24ca9e357ac584c76f689d42fa982ebb30654d548"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5fe1178faee7d4852cc2ddb24ca9e357ac584c76f689d42fa982ebb30654d548"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "76e6a90235e05835fda53f74484ef737c0cf25c4e91208063e1f775553a143cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "00374d7afb297de790a1ca7e01607baa01f60b5ad6e49925400f1f1d651e9f2a"
   end
 
   depends_on "node"
