@@ -7,11 +7,12 @@ class Gittype < Formula
   head "https://github.com/unhappychoice/gittype.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6106a00bd2c68edf9a7ed508e65aac5e761066ea98b409fa053648de05682c71"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "daf35c11a015224e02ffa675665a61c41121c92a1aa172bdcb7019456d894f63"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cad5bf09fb5f416be3fdf2d08f41e065ed8524f61ae874a94a2e19422d5e9efe"
-    sha256 cellar: :any,                 arm64_linux:       "51890981b8ad6b55207e1874784c6b98ff065207ac5ddbca56fea88cbf907942"
-    sha256 cellar: :any,                 x86_64_linux:      "ec17919046a57032bcfe142b88a9a8b8e4b04aaac5c2fb3d094d377abe778c90"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "122447327d07cc327fbdc1a1a65759d7cfb75c4558d692294f6c001281afbe38"
+    sha256 cellar: :any, arm64_tahoe:       "f89a171940d97deefdc9e419e680d517bef0c0639bd0e32e7f5bb473d37bc0ac"
+    sha256 cellar: :any, arm64_sequoia:     "f5d43b31ca93b2671a26963ebf5f14c3aede6657d04cfe8f4553c7514a25cc2f"
+    sha256 cellar: :any, arm64_linux:       "659e7ce53d7a96d7f17e2944ac34820e35b50a42f433e7ed0c2a38b33c2f7238"
+    sha256 cellar: :any, x86_64_linux:      "36a12d7085ae171a3130b5790fb243bcf20becb439f9a3119f7c24c299c0d75b"
   end
 
   depends_on "openssl@4" => :build
