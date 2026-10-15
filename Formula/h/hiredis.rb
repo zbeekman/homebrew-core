@@ -1,11 +1,10 @@
 class Hiredis < Formula
   desc "Minimalistic client for Redis"
   homepage "https://github.com/redis/hiredis"
-  url "https://github.com/redis/hiredis/archive/refs/tags/v1.4.1.tar.gz"
-  sha256 "ca3180359a8b1275838a45415851f8cd5c411e27bdbf18f4823012e45507d2e4"
+  url "https://github.com/redis/hiredis/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "eec7ef8641d221e144a58d5ef8d733c8c75c7fd487097a233aacb4fa33981cfb"
   license "BSD-3-Clause"
-  revision 1
-  compatibility_version 2
+  compatibility_version 3
   head "https://github.com/redis/hiredis.git", branch: "master"
 
   bottle do
@@ -17,6 +16,8 @@ class Hiredis < Formula
   end
 
   depends_on "openssl@4"
+
+  deny_network_access!
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "USE_SSL=1"
