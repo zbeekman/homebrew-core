@@ -1,8 +1,8 @@
 class Arcadedb < Formula
   desc "Multi-Model DBMS: Graph, Document, Key/Value, Search, Time Series, Vector"
   homepage "https://arcadedb.com"
-  url "https://github.com/ArcadeData/arcadedb/releases/download/26.10.1/arcadedb-26.10.1.tar.gz"
-  sha256 "5ca1e7ffe2e239e080095eeb6e97531f3ff85ca58fbabe4f44bdcb630da156b4"
+  url "https://github.com/ArcadeData/arcadedb/releases/download/26.10.2/arcadedb-26.10.2.tar.gz"
+  sha256 "55620c3c17b44e4943edb8e96f2356a339b7c6a2bd63197d260aa0418b60f3b0"
   license "Apache-2.0"
 
   livecheck do
