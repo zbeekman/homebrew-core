@@ -1,8 +1,8 @@
 class Opencode < Formula
   desc "AI coding agent, built for the terminal"
   homepage "https://opencode.ai"
-  url "https://github.com/anomalyco/opencode/archive/refs/tags/v2.0.25.tar.gz"
-  sha256 "24160ee799773101e97899bb1321c1d63c0b9d33be559ffc182464c9bcb8deb0"
+  url "https://github.com/anomalyco/opencode/archive/refs/tags/v2.0.29.tar.gz"
+  sha256 "3d88f662bce9bee4b0af1cf7528f752039dceb4062811c5eae046649ce1dec2d"
   license "MIT"
 
   livecheck do
@@ -20,7 +20,7 @@ class Opencode < Formula
   end
 
   depends_on "bun" => :build
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "rust" => :build
   depends_on "zig@0.16" => :build
   depends_on "ripgrep"
