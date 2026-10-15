@@ -14,15 +14,12 @@ class Trunk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8caf44575088962f9fc0ecb827ffa76b02d7d2039ea5549ea3e19a685c3395f0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "93022640040f9f21249a52ac60776e812e0aed4a02b9e0b61676eb8b51ac6f96"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f29f737a25367f9d601004ab3c69d5af49388d105dbbf4de4342e9b26bb19235"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "6e353a529700001a2d583d8b5c7b64fd33437b62cb06df847d87be200750a7d1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:     "f527d08ece51ec56bc8f5cab717340954024b412c948739ae4dba0f5aa5c203e"
-    sha256 cellar: :any_skip_relocation, sonoma:            "327a4675ef5bbe597bb701f9bf8fae1f5c0a5158a9b6e6b995e0beadd480adf6"
-    sha256 cellar: :any_skip_relocation, ventura:           "1a95cdffa128c65c96942b7d28b0037c230ee87f89c426253665068717bfed7e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4f03d00804c927fda2616c5ac7ad5a145bf84e361d6b36369a6fc4383562006d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "75d36fb9a7d305547ce7580004d3da051ddd6089a8338fff63e2a033efb17578"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "e95ad475c49fbb5322fbbf9549f355f97607f428281812926ce6faffb3821999"
+    sha256 cellar: :any, arm64_tahoe:       "cf27a8172e41b8e9ea3f63ce101410665baee65b32ca846854978d21c2f5b5f0"
+    sha256 cellar: :any, arm64_sequoia:     "09f4a6c46d1eb6becd97ec0c154116e8b7df5df4006536f5e3ce6ddcb649597e"
+    sha256 cellar: :any, arm64_linux:       "9e8758050043ef587c8389de3f576acbe8e4ae023b1a2856bbae469416aebe4b"
+    sha256 cellar: :any, x86_64_linux:      "03ed23f22eb0b77134230c94b7ab48df3a76342b70965b508d25f6ccf9b7c07a"
   end
 
   depends_on "pkgconf" => :build
