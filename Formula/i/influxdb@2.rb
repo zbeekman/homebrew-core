@@ -2,8 +2,8 @@ class InfluxdbAT2 < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
   url "https://github.com/influxdata/influxdb.git",
-      tag:      "v2.9.1",
-      revision: "d4fa1941fd4adb29a556e774de426dfbab72f346"
+      tag:      "v2.10.0",
+      revision: "01c64e96a87f0912f2550dd7e72745e70ef5a4fe"
   license "MIT"
 
   livecheck do
@@ -32,8 +32,8 @@ class InfluxdbAT2 < Formula
   # NOTE: The version here is specified in the go.mod of influxdb.
   # If you're upgrading to a newer influxdb version, check to see if this needs upgraded too.
   resource "pkg-config-wrapper" do
-    url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.3.0.tar.gz"
-    sha256 "769deabe12733224eaebbfff3b5a9d69491b0158bdf58bbbbc7089326d33a9c8"
+    url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.3.1.tar.gz"
+    sha256 "11776c4f44b4d338619723cba1a6ef716573e80a358b0943ff2e2a86129ca8d5"
 
     livecheck do
       url "https://raw.githubusercontent.com/influxdata/influxdb/v#{LATEST_VERSION}/go.mod"
@@ -44,8 +44,8 @@ class InfluxdbAT2 < Formula
   # NOTE: The version/URL here is specified in scripts/fetch-ui-assets.sh in influxdb.
   # If you're upgrading to a newer influxdb version, check to see if this needs upgraded too.
   resource "ui-assets" do
-    url "https://github.com/influxdata/ui/releases/download/OSS-v2.9.0/build.tar.gz"
-    sha256 "9cb2df818f1f5badc23e051f51eef7e8b143540233947606eadad309f395bb0e"
+    url "https://github.com/influxdata/ui/releases/download/OSS-v2.10.0/build.tar.gz"
+    sha256 "5f713c66800ff818a15ab450b0004ae0c74e170c638d9001916e8324d57d17a9"
 
     livecheck do
       url "https://raw.githubusercontent.com/influxdata/influxdb/v#{LATEST_VERSION}/scripts/fetch-ui-assets.sh"
