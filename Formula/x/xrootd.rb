@@ -4,7 +4,7 @@ class Xrootd < Formula
   url "https://github.com/xrootd/xrootd/releases/download/v6.2.0/xrootd-6.2.0.tar.gz"
   sha256 "cf41ba9f56b3baceb4860dfafad50e2f4724062650e125a59b9dbc5ebd6861e0"
   license "LGPL-3.0-or-later"
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/xrootd/xrootd.git", branch: "master"
 
@@ -19,7 +19,7 @@ class Xrootd < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "python-setuptools" => :build
-  depends_on "python@3.14" => [:build, :test]
+  depends_on "python@3.15" => [:build, :test]
   depends_on "davix"
   depends_on "krb5"
   depends_on "libzip"
