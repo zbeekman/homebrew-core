@@ -32,8 +32,22 @@ class Spotifyd < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "dbus"
-    depends_on "openssl@3"
+    depends_on "openssl@4"
     depends_on "pulseaudio"
+  end
+
+  # Apply dependabot PR to support OpenSSL 4
+  patch do
+    url "https://github.com/Spotifyd/spotifyd/commit/f6e60439a1c55d21e8889218f357c184de8b4362.patch?full_index=1"
+    sha256 "b7833b0de5182694cf1f5473eed4d0af6d20cf0951bef95ffae750eef6ebcb4b"
+    type :unofficial
+    resolves "https://github.com/Spotifyd/spotifyd/pull/1417"
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
@@ -47,7 +61,8 @@ class Spotifyd < Formula
   end
 
   service do
-    run [opt_bin/"spotifyd", "--no-daemon", "--backend", OS.mac? ? "portaudio" : "pulseaudio"]
+    # Backend should be specified in officially documented config file
+    run [opt_bin/"spotifyd", "--no-daemon"]
     keep_alive true
   end
 
