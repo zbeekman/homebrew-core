@@ -1,8 +1,8 @@
 class Kumactl < Formula
   desc "Kuma control plane command-line utility"
   homepage "https://kuma.io/"
-  url "https://github.com/kumahq/kuma/archive/refs/tags/v2.14.6.tar.gz"
-  sha256 "7bfacaf7831033702ad7537bc3dbbd5b1d2c63b258158b2f3f36efb5dd19a776"
+  url "https://github.com/kumahq/kuma/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "cb28582f3da98c26588c54a6439b86228191a2a4439f533ac3387c39820d6a08"
   license "Apache-2.0"
   head "https://github.com/kumahq/kuma.git", branch: "master"
 
@@ -29,9 +29,9 @@ class Kumactl < Formula
 
   def install
     ldflags = %W[
-      -X github.com/kumahq/kuma/v2/pkg/version.version=#{version}
-      -X github.com/kumahq/kuma/v2/pkg/version.gitTag=#{version}
-      -X github.com/kumahq/kuma/v2/pkg/version.buildDate=#{time.strftime("%F")}
+      -X github.com/kumahq/kuma/v#{version.major}/pkg/version.version=#{version}
+      -X github.com/kumahq/kuma/v#{version.major}/pkg/version.gitTag=#{version}
+      -X github.com/kumahq/kuma/v#{version.major}/pkg/version.buildDate=#{time.strftime("%F")}
     ]
 
     system "go", "build", *std_go_args(ldflags:), "./app/kumactl"
