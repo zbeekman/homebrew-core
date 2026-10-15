@@ -14,13 +14,12 @@ class ScryerProlog < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "499a332647aa0fdda2e8a040d40d3ad0c6248f55255a3b9a4277527c92d14074"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d48c0a73df9bf67c54bc855ed865155ad79f41a4561591ed3f7359c3e9d2022d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "da512766a1a27fe22eb01c1ae6a7c89dd934425d2388d1d482512689fedebd6e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "b08c3101dbe3c77c75ab5025e9a4d2fc49c2ed1f17a9839d7357d6972db614db"
-    sha256 cellar: :any_skip_relocation, sonoma:            "ff71107fc21ebf2fad8c3be28b9801f65fba480207d8300af56b8df3975f5c1e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5e3d6f8f168ef2b0bdd2c27755d68f1d6a8133fe9740e52d4914c509fca6e5fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "549989dbd09c1d6885e73357b5f2ba49e762bcbd3eaa0d35110832b0719db02e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "03a549dd3dd395d7c845aad18d98cbfffd8d6dbff3de623b0f7d8641d0c5e901"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "320510eca9a7076273b0bfaaa37d9abedd3311b1a6d9eced04ed9b86281d81a4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9e8defaace467ed908b1fbdcb22fe77ff53d4ecb427f9120f30a15c12a467af8"
+    sha256 cellar: :any,                 arm64_linux:       "3a142e1a37da2ca2d611a9d22123bb596b7a1488bab3906bf9bee4a8e8051b13"
+    sha256 cellar: :any,                 x86_64_linux:      "e26d3f80db41a0bebedf2cc8c9dcf00fd4d75461c54ebf2ad246f2567c88121c"
   end
 
   depends_on "pkgconf" => :build
