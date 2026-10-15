@@ -3,13 +3,12 @@ class Vsview < Formula
 
   desc "Next-generation VapourSynth previewer"
   homepage "https://jaded-encoding-thaumaturgy.github.io/vs-view/"
-  url "https://files.pythonhosted.org/packages/e4/1c/e1eac58c9a8df00de8a91235e00921dbbd6116a0c68c50e4949c9e0d9081/vsview-0.12.1.tar.gz"
-  sha256 "0c00a25539488fd059786c762ffec022c9e3c8dbf9ec5d1a1afac912b6963afc"
+  url "https://files.pythonhosted.org/packages/7e/db/f8ad9ae29983fac6d318e254b63d44279574bdd0adea91dbdac2b222662c/vsview-0.13.0.tar.gz"
+  sha256 "8487eb9f74e96d797e705395dba46c462627ddb5f8bb2ec34d3e128f06d8e534"
   license all_of: [
     "EUPL-1.2",
     all_of: ["MIT", "Apache-2.0", "ISC", "OFL-1.1"], # src/vsview/assets/
   ]
-  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "9ec4b97ea581a784bf6df22a6a19cee18eab4f47b7307f2da68cff49e0949879"
@@ -123,8 +122,8 @@ class Vsview < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/de/1d/f4da6f02cdffe04d6362210b807146a26044c88d839208aec273bb0d9184/more_itertools-11.1.0.tar.gz"
-    sha256 "48e8f4d9e7e5878571ecf6f2b4e57634f93cd474cc8cfbd2376f2d11b396e30d"
+    url "https://files.pythonhosted.org/packages/55/e5/8735dc589d9e3571e76cd684e7763dc0fcc940b811f71640410458749689/more_itertools-11.2.0.tar.gz"
+    sha256 "59960f488835254863a857eb501f69e4ec92fdc8822f098c0f48dba530afd487"
   end
 
   resource "niquests" do
