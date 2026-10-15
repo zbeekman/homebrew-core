@@ -1,7 +1,7 @@
 class OpenshiftCli < Formula
   desc "OpenShift command-line interface tools"
   homepage "https://www.openshift.com/"
-  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.22.17/openshift-client-src.tar.gz"
+  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.22.18/openshift-client-src.tar.gz"
   # This project employs synchronized versioning so the sha256 may not change on version bumps
   sha256 "7c28591a2ea76c4564fcca1d90be073feff1bd3084ec5093d94cd79a2bea85e2"
   license "Apache-2.0"
