@@ -1,8 +1,8 @@
 class Magics < Formula
   desc "ECMWF's meteorological plotting software"
   homepage "https://confluence.ecmwf.int/display/MAGP/Magics"
-  url "https://confluence.ecmwf.int/download/attachments/3473464/Magics-4.16.0-Source.tar.gz"
-  sha256 "b5cf365e10e43abbb2e0b14db8e8d8db90486031f6c0de24b0b01c17a0197cf5"
+  url "https://confluence.ecmwf.int/download/attachments/3473464/Magics-4.17.1-Source.tar.gz"
+  sha256 "a0119c54c812b34a7b190ebf39c546bf523ede6c985e85ff3d41074b11f35598"
   license "Apache-2.0"
 
   livecheck do
