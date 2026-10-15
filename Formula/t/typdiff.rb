@@ -1,8 +1,8 @@
 class Typdiff < Formula
   desc "Diff tool that generates Typst documents highlighting differences between inputs"
   homepage "https://github.com/sou1118/typdiff"
-  url "https://github.com/sou1118/typdiff/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "ed9b0415a318df8d824cc01e145e22b16b3ce5f4ffa7435947fd37e8273603da"
+  url "https://github.com/sou1118/typdiff/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "d7739a28bd42d674491ea4149fce6f8046a2ad7873f24efc3a809b621fb4508d"
   license "Apache-2.0"
   head "https://github.com/sou1118/typdiff.git", branch: "main"
 
