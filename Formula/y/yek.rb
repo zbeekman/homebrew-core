@@ -23,12 +23,15 @@ class Yek < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-
-  depends_on "openssl@3"
+  depends_on "libssh2"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  # `cargo update --precise 0.9.114 openssl-sys` for minimum needed to use OpenSSL 4
+  patch :DATA
 
   deny_network_access!
 
@@ -37,7 +40,9 @@ class Yek < Formula
   end
 
   def install
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    # TODO: ENV["LIBGIT2_NO_VENDOR"] = "1"
+    ENV["LIBSSH2_SYS_USE_PKG_CONFIG"] = "1"
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
     system "cargo", "install", *std_cargo_args
   end
@@ -58,3 +63,21 @@ class Yek < Formula
     assert_match ">>>> main.c", expected_file
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 509c30b..f64f229 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1525,9 +1525,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.109"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "90096e2e47630d78b7d1c20952dc621f957103f8bc2c8359ec81290d75238571"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
