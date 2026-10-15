@@ -7,13 +7,12 @@ class River < Formula
   head "https://github.com/memorysafety/river.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "b896b62e95e6f88c62316934c0da8103750b83c555292d183356ecbc660db4c4"
-    sha256 cellar: :any, arm64_tahoe:       "65ca2b30775f9a010cd7a2fc8408581a596295de3ebc12a5060451a949f6499f"
-    sha256 cellar: :any, arm64_sequoia:     "390f6ec9178f51e8b0998a05676eec457da45c894c1175c16f98fdac88c979ce"
-    sha256 cellar: :any, arm64_sonoma:      "e034913a46c445d4c1e63c34b5479ac4601e37dc4af3ac2931ffe226f597fac0"
-    sha256 cellar: :any, arm64_linux:       "1d166f0942c670c915542ce1dd7ccb17ec6fff21a61caed0825cecbc94bfaa2a"
-    sha256 cellar: :any, x86_64_linux:      "7f89656a962554f6248a9ae9850b8ebb6ae87209b20e2b5e563c268efc76d439"
+    rebuild 2
+    sha256 cellar: :any, arm64_golden_gate: "ae1e3320e450302e6beb74cdb0e318341c2a7951a11f3a4795ccef36407ecfe6"
+    sha256 cellar: :any, arm64_tahoe:       "ddb809719d4724d1456b74877c9a54aabf7f62facb52872b92233326133a41e1"
+    sha256 cellar: :any, arm64_sequoia:     "c4816a178a1648664702bb58d7c0dedc738eb0c2029fa23e39409e4d7f073d59"
+    sha256 cellar: :any, arm64_linux:       "51d48149065e9379799a7bd55a3be05fc8d60362128011a4ceee584ece0ac342"
+    sha256 cellar: :any, x86_64_linux:      "edc1e10ce97a4de7c702ebceff1be80d3cfdbbebf650e3d5ecdf1bb2d76d5574"
   end
 
   depends_on "cmake" => :build
