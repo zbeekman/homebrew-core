@@ -17,15 +17,12 @@ class Tiny < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6e4bd30577800f34eb19cb911b8874ab5537839644dd63a41a196e873399c685"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f39273bea2d44c1f991cb568d3bb3caeec238629895d7332f93cc3fd8cb8a8c2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b6362dac49c5a0b79b04dc91ded217ab137a122398a14dce062179667802278e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "670eea450b4070a2eb2984d25773a284faf38671fbb333ad4d131cecaf23be18"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:     "56f21368dff225e7fae151b96ded515ab2c858c6a4cbd8bb5f124c6964937d98"
-    sha256 cellar: :any_skip_relocation, sonoma:            "d9c036c42cf375368d2668c63e52da17ffd3432f96729c41b685bcc0cfaeee87"
-    sha256 cellar: :any_skip_relocation, ventura:           "7028b5c3c765572cf316d00e7fe552a37794e518e8cb0acaeb63c95eb8e90cf5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5d245db5944104a25d7623ca20f447ae4a0960ad0ad085351efadb8f7cc4a51a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "82dba4c308ec8fd1b7185f7a92427f69dae4ca52a2c503088e8d284dd3746e1a"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1bbced67ee76780d5bcd0d08348b1e8b16c87d2f77ed3d2008a788616a621172"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "409cf746d200608b66065da0c9258866c93931b4cbd257d9e1e8dfdf5906d863"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "54b3020e74188e882e7f7909636752940895082a00de6fa37ced26a77636fd81"
+    sha256 cellar: :any,                 arm64_linux:       "68dae22b8ae2fccd982753cdd6cc6786ac6e59943328fc1ced598c6bfa03cc52"
+    sha256 cellar: :any,                 x86_64_linux:      "c9b7948f34fbd53cd9e9b6a6c67d2b1f711b8225064429b650dba520af878b75"
   end
 
   depends_on "pkgconf" => :build
