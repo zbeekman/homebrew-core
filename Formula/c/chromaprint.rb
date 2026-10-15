@@ -1,10 +1,9 @@
 class Chromaprint < Formula
   desc "Core component of the AcoustID project (Audio fingerprinting)"
   homepage "https://acoustid.org/chromaprint"
-  url "https://github.com/acoustid/chromaprint/releases/download/v1.6.1/chromaprint-1.6.1.tar.gz"
-  sha256 "3368805af0ee47b9df74df10b5001a44569e01df2844dab520031720dde9ad23"
+  url "https://github.com/acoustid/chromaprint/releases/download/v1.6.2/chromaprint-1.6.2.tar.gz"
+  sha256 "d54ada62c16b2db396d3251ec54fc7a58909c163131a1cfcf7fa6407dbc14360"
   license "LGPL-2.1-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "92612578c19f57c424c187506c40bde94a16d36d7cb9f20de2b93748a710c552"
