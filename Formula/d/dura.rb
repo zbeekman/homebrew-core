@@ -18,11 +18,15 @@ class Dura < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "libssh2"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  # Update to openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
 
   deny_network_access!
 
@@ -33,6 +37,7 @@ class Dura < Formula
   end
 
   def install
+    ENV["LIBSSH2_SYS_USE_PKG_CONFIG"] = "1"
     system "cargo", "install", *std_cargo_args
   end
 
@@ -54,3 +59,23 @@ class Dura < Formula
     assert_match(/commit_hash:\s+\h{40}/, shell_output("#{bin}/dura capture ."))
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index ced8285..e8862f3 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -670,11 +670,10 @@ checksum = "28988d872ab76095a6e6ac88d99b54fd267702734fd7ffe610ca27f533ddb95a"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.72"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "7e46109c383602735fa0a2e48dd2b7c892b048e1bf69e5c3b1d804b7d9c203cb"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+- "autocfg",
+  "cc",
+  "libc",
+  "pkg-config",
