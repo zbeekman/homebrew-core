@@ -1,8 +1,8 @@
 class DrawThingsCli < Formula
   desc "Local inference and LoRA training CLI for Draw Things"
   homepage "https://github.com/drawthingsai/draw-things-community"
-  url "https://github.com/drawthingsai/draw-things-community/archive/refs/tags/v26.1011.0.tar.gz"
-  sha256 "6b17e209f7fc789a0443df92c0812bf8e5ecee72aa41c9f068b9e3a2f080ca0e"
+  url "https://github.com/drawthingsai/draw-things-community/archive/refs/tags/v26.1014.0.tar.gz"
+  sha256 "5d53f33c8662ce5e1a0e8ffb131d921b565a8010057e2c450bd101f2e9292fb9"
   license "GPL-3.0-or-later"
 
   bottle do
