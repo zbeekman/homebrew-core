@@ -6,6 +6,7 @@ class MlxLm < Formula
   url "https://files.pythonhosted.org/packages/96/6f/c87a4e092194c77b39e65de7979147314e4486d9451e873b4124ba2d6dcd/mlx_lm-0.32.0.tar.gz"
   sha256 "035ca44b08c3476630a205d2c9bdea26825a6a8359f974944d4985230e41859f"
   license "MIT"
+  revision 1
   head "https://github.com/ml-explore/mlx-lm.git", branch: "main"
 
   bottle do
@@ -24,7 +25,7 @@ class MlxLm < Formula
   depends_on "mlx"
   depends_on "numpy"
   depends_on "protobuf"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "sentencepiece"
 
   pypi_packages exclude_packages: %w[certifi mlx numpy]
