@@ -14,13 +14,12 @@ class Nzbget < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "31b75d474ef6ff7cb1357bc70976260d89633247fb34976700d57e291f672b0e"
-    sha256 cellar: :any, arm64_tahoe:       "6fc002036c997b87969be114ff9d4907b51d3724f49da1b4330300f2279bc0b4"
-    sha256 cellar: :any, arm64_sequoia:     "41b13ca08f2e65a80d0438772b44a60c0f324af04c6d3ba1e186606f97a028ac"
-    sha256 cellar: :any, arm64_sonoma:      "e315d728749006e01b59eba7496f985a87b9e6bdd810880cb9353ace32fa8c33"
-    sha256               sonoma:            "d8c21a11f9028f519801a9faba068902662f9494a8e7b926914b0e6f94caf437"
-    sha256 cellar: :any, arm64_linux:       "f80497814b8e97d8c5488ffa4d91152f12d58ed0b44a6aa617670b205c585157"
-    sha256 cellar: :any, x86_64_linux:      "fdde4ce747047610e991505459bbc268878af68e38e01846705d8dda367faf6a"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "d6cd2be80c4eed77d5eedaaa2749fadca1255e924def4ac12507e0664b1ecf94"
+    sha256 cellar: :any, arm64_tahoe:       "928e9f4486cf45d1806ef6dee8a99d6de7f38c656217c5c9b51ed7ca8e3b8d3a"
+    sha256 cellar: :any, arm64_sequoia:     "2e962f0bf0eefbcf4dd5e914b14a38f884cee57fa283903276e4310c6cea12f9"
+    sha256 cellar: :any, arm64_linux:       "635e164164e9a637190c8ccec96ce07d7c603c724355451edf5abe2e71ee31fa"
+    sha256 cellar: :any, x86_64_linux:      "e6e92c83062f465de2123529aecac0e28c691b15310d262a31e514994cefac32"
   end
 
   depends_on "cmake" => :build
