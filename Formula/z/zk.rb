@@ -1,10 +1,10 @@
 class Zk < Formula
   desc "Plain text note-taking assistant"
   homepage "https://zk-org.github.io/zk/"
-  url "https://github.com/zk-org/zk/archive/refs/tags/v0.15.6.tar.gz"
-  sha256 "ac4e1744655bc5c42caf132ca667e0d882dda2e05ba08762f9f49dd784bec115"
+  url "https://github.com/zk-org/zk/archive/refs/tags/v0.15.7.tar.gz"
+  sha256 "69a9f72a0b18d89b2a7ec080aa3c2fbca0e5cfb31bfa89bf47e64c3f8a2d1ad0"
   license "GPL-3.0-only"
-  head "https://github.com/zk-org/zk.git", branch: "dev"
+  head "https://github.com/zk-org/zk.git", branch: "main"
 
   livecheck do
     url :stable
