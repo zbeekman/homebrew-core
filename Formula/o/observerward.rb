@@ -6,13 +6,12 @@ class Observerward < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ecdf96da815ab98c47599168466d59e5081da9a9843da3a8e9a749c3d3ef318c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b9825575a78113abeabf89a51985bf1bcfe20c792940efd3dd1bbd44a35a530c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e02a422bfd0ab15902bb0e08590c767f8219c927f2c5404befe10d6f44501b08"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "edb1ae3285315a6cf70a59bde39a7ed8cad4d3764cf72dcb1053d71ba3da91f5"
-    sha256 cellar: :any_skip_relocation, sonoma:            "512245263439b46fb241e130e59340d82c2d8ef119e64c81b68ed4fff0d8ea5e"
-    sha256 cellar: :any,                 arm64_linux:       "5092d36a7d056ea3b7267e9ef56e33f1e202d6a2a9fbda72ebff340a4bc9f62c"
-    sha256 cellar: :any,                 x86_64_linux:      "f7a31d6341359b76dfac2fc38e2f0fad5d2ca65c790af656614aec7044a31d27"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a255b83b1a397d744c0f2173f88abdf9d1c7be97a4b7c175b761f8e03ac6fcf3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7401b12b1c42742f2682484d7ff4320059a11d3b212521ca8623e3a718563e56"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0a35d6f9814f5e6123e93ba43438dcf16f1272689f00aad092a068ed35a30e65"
+    sha256 cellar: :any,                 arm64_linux:       "eb30c91e5c827c040d6a933130f74c2278cc931cbf9105205837d5e6865d85fa"
+    sha256 cellar: :any,                 x86_64_linux:      "04ff30946786bd3ff96d8799606ef46361cef1f9a9a91940fa05a16d138dce23"
   end
 
   depends_on "pkgconf" => :build
