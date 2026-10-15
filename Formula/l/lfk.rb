@@ -6,11 +6,11 @@ class Lfk < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "330f7701e7e50db45c68b45934e4eba26c59477acad31087692037cf5319296e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "330f7701e7e50db45c68b45934e4eba26c59477acad31087692037cf5319296e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "330f7701e7e50db45c68b45934e4eba26c59477acad31087692037cf5319296e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8dc42fe56ab8347b0c210e7fd3df249c9dc92eb881c41f9da28ed04ab33efd0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "825d2aef57949c1cff63c06ff911599f586511b4594420444c89d7655814fb30"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "47c8954836f884c3bb53b94c0f86185dc62a32765fb0f376ce96c236b9bbdf93"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "47c8954836f884c3bb53b94c0f86185dc62a32765fb0f376ce96c236b9bbdf93"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "47c8954836f884c3bb53b94c0f86185dc62a32765fb0f376ce96c236b9bbdf93"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a17e656c0cd86fefd7ab35a8f31069c577bdc3e40b60ef169fe857fb07b42650"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1939787722cf9b94553d8469affb841e8883ded876af8b6edd59199594be13b7"
   end
 
   depends_on "go" => :build
