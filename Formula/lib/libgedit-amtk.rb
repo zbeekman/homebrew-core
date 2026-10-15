@@ -1,8 +1,8 @@
 class LibgeditAmtk < Formula
   desc "Actions, Menus and Toolbars Kit for GTK applications"
   homepage "https://gedit-technology.net"
-  url "https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/archive/5.10.0/libgedit-amtk-5.10.0.tar.bz2"
-  sha256 "7ee3d0cce3b21f3cc6a51ba644901b467da3b3c3e0b0adf74bd56c9e0e456140"
+  url "https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/archive/5.11.0/libgedit-amtk-5.11.0.tar.bz2"
+  sha256 "eda52600fc2e8b49f98fe974397a75e0286d744e09446b13e631202e99ca536e"
   license "LGPL-3.0-or-later"
   compatibility_version 1
   head "https://gitlab.gnome.org/World/gedit/libgedit-amtk.git", branch: "main"
