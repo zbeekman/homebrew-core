@@ -1,8 +1,8 @@
 class Openlist < Formula
   desc "New AList fork addressing anti-trust issues"
   homepage "https://doc.oplist.org/"
-  url "https://github.com/OpenListTeam/OpenList/archive/refs/tags/v4.2.6.tar.gz"
-  sha256 "028694b14ba7368429774f33c1b7eb584b2bf6235fb7d72df371e528a5c6b04c"
+  url "https://github.com/OpenListTeam/OpenList/archive/refs/tags/v4.2.7.tar.gz"
+  sha256 "5d2201596a81e85146eb8aec4028f66aacff65945fef5936193cbd41fc7e68b5"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -28,8 +28,8 @@ class Openlist < Formula
   end
 
   resource "frontend" do
-    url "https://github.com/OpenListTeam/OpenList-Frontend/archive/refs/tags/v4.2.6.tar.gz"
-    sha256 "fa613bd495cd7708c22a3c511145e5a517c920eb6067513c74762ca15dfa0f3a"
+    url "https://github.com/OpenListTeam/OpenList-Frontend/archive/refs/tags/v4.2.7.tar.gz"
+    sha256 "f3d7618aba5af38709b61f59ae5e98594527734575ae6dd5bee9d5fc8db79e29"
 
     livecheck do
       formula :parent
@@ -37,8 +37,8 @@ class Openlist < Formula
   end
 
   resource "i18n" do
-    url "https://github.com/OpenListTeam/OpenList-Frontend/releases/download/v4.2.6/i18n.tar.gz"
-    sha256 "de3160d4a784666002ff632e77c1653bbff32358a81377a1c964e6a29e306556"
+    url "https://github.com/OpenListTeam/OpenList-Frontend/releases/download/v4.2.7/i18n.tar.gz"
+    sha256 "cb8c996b8fb3109025cb4d4cd78d105741b8e76b4362c19bb3c10a5ce4a63109"
 
     livecheck do
       formula :parent
