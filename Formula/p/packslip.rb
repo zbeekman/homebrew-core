@@ -1,8 +1,8 @@
 class Packslip < Formula
   desc "Signed release manifest for vendor binaries"
   homepage "https://packslip.dev"
-  url "https://github.com/jdx/packslip/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "93541f7f0313372bdd269e8163cf4388253a2199a14464d0a61469a7d932a1f6"
+  url "https://github.com/jdx/packslip/archive/refs/tags/v1.8.0.tar.gz"
+  sha256 "0d56b1059dc7167b12c3d33169a9a61861561ef436fa068e0ea333023f41750f"
   license "MIT"
   head "https://github.com/jdx/packslip.git", branch: "main"
 
