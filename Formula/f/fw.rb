@@ -25,12 +25,11 @@ class Fw < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "d3ebff57c1fc6a7739a8486817e893a075902406d6c00ef329818f5bbbf46ad2"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
-
-  on_linux do
-    depends_on "zlib-ng-compat"
-  end
+  depends_on "libgit2"
+  depends_on "libssh2"
+  depends_on "openssl@4"
 
   resource "fw.1" do
     url "https://github.com/brocode/fw/releases/download/v2.21.0/fw.1"
@@ -41,6 +40,9 @@ class Fw < Formula
     end
   end
 
+  # Backport https://github.com/brocode/fw/commit/de58a9ec7ecef5d1c5dbb0112a948222d4984732
+  patch :DATA
+
   deny_network_access!
 
   def fetch
@@ -48,8 +50,10 @@ class Fw < Formula
   end
 
   def install
+    ENV["LIBGIT2_NO_VENDOR"] = "1"
+    ENV["LIBSSH2_SYS_USE_PKG_CONFIG"] = "1"
     # Ensure that the `openssl` crate picks up the intended library.
-    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3")
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
     system "cargo", "install", *std_cargo_args
     man1.install resource("fw.1")
@@ -60,3 +64,33 @@ class Fw < Formula
     assert_match "fw #{version}", shell_output("#{bin}/fw --version")
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 6997124..930ebe1 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -958,9 +958,9 @@ checksum = "a4895175b425cb1f87721b59f0f286c2092bd4af812243672510e1ac53e2e0ad"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.72"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "fedfea7d58a1f73118430a55da6a286e7b044961736ce96a16a17068ea25e5da"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags",
+  "cfg-if",
+@@ -999,9 +999,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.108"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "e145e1651e858e820e4860f7b9c5e169bc1d8ce1c86043be79fa7b7634821847"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
