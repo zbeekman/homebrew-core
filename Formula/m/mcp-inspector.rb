@@ -1,8 +1,8 @@
 class McpInspector < Formula
   desc "Visual testing tool for MCP servers"
   homepage "https://modelcontextprotocol.io/docs/tools/inspector"
-  url "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-2.10.1.tgz"
-  sha256 "1786803aaf058445aaf647973e848f7a5c17391b99bd6e17ddb01b63d4ae7c96"
+  url "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-2.11.0.tgz"
+  sha256 "f316f4e4cb25f8ea052c733cad14b530c6eb6e89f6f9b9370d7022e49ab8b757"
   license "MIT"
 
   bottle do
@@ -21,8 +21,8 @@ class McpInspector < Formula
   end
 
   resource "rolldown" do
-    url "https://github.com/rolldown/rolldown/archive/refs/tags/v1.2.1.tar.gz"
-    sha256 "05615e3dd0991fe24070626ed80e18bb95a253faa865d45e5b86e65057672d73"
+    url "https://github.com/rolldown/rolldown/archive/refs/tags/v1.2.13.tar.gz"
+    sha256 "f22d36d1dc3fc068274149b5e699058657a3f7da1802aee42e7e667f3a31cf04"
 
     livecheck do
       url "https://raw.githubusercontent.com/modelcontextprotocol/inspector/#{LATEST_VERSION}/package-lock.json"
@@ -34,8 +34,8 @@ class McpInspector < Formula
   end
 
   resource "keyring" do
-    url "https://github.com/Brooooooklyn/keyring-node/archive/refs/tags/v1.3.0.tar.gz"
-    sha256 "349be987e7582e6aa26763b2de96c4cbbd0d3cfba2417d9733524589fdbc275f"
+    url "https://github.com/Brooooooklyn/keyring-node/archive/refs/tags/v2.1.1.tar.gz"
+    sha256 "b1f4847eb61306e8c4f1a0418bf9e47231e8fdbc41a88631777d5cfa515eaaaf"
 
     livecheck do
       url "https://raw.githubusercontent.com/modelcontextprotocol/inspector/#{LATEST_VERSION}/package-lock.json"
