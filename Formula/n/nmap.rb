@@ -1,10 +1,9 @@
 class Nmap < Formula
   desc "Port scanning utility for large networks"
   homepage "https://nmap.org/"
-  url "https://nmap.org/dist/nmap-7.991.tar.bz2"
-  sha256 "a5d507f29437bef3bedd4771ff9aaa8fc1c2a109ddba1f5b1cf12027456929be"
+  url "https://nmap.org/dist/nmap-7.992.tar.bz2"
+  sha256 "0c12660eddbf7eabeff6996cb0c044a4eadf2bb0c6fbcb340d6cf72b1caee402"
   license :cannot_represent
-  revision 1
   compatibility_version 1
   head "https://svn.nmap.org/nmap/"
 
