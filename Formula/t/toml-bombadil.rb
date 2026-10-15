@@ -7,14 +7,12 @@ class TomlBombadil < Formula
   head "https://github.com/oknozor/toml-bombadil.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_golden_gate: "2146b114b7d92d87c7194e1d22de60a7fd31f748d3b427a812aca0ce23c193e9"
-    sha256 cellar: :any,                 arm64_tahoe:       "a5312af9bf7cb58f95099a46733121f61259c40bef05749b57ce1a3be7f8192d"
-    sha256 cellar: :any,                 arm64_sequoia:     "a6ed8b993f4cbaf76727c36a1f27996f8f0713ebe3e2a902ad3e8fdfa953c8bb"
-    sha256 cellar: :any,                 arm64_sonoma:      "21429cf57a08fa53ff0b75b4e54d3e64d3cb1ce642c87e3885358e31ccd91495"
-    sha256 cellar: :any,                 sonoma:            "bf60b11d72eeb4e799e2b096f72593d76ddc9b7c2f240140d1e47ef2205cc691"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "8066d1d03de5d940d4782c63f8e060a8e325efef99de59c057c956be6d809287"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "dbfc4c1f304f6a32a8106a2a57164220133f4266ef87d0955fc26e154124f4c6"
+    rebuild 3
+    sha256 cellar: :any, arm64_golden_gate: "bf34e466f3b5087d06b02a43b7cf13584c1ea2376e1ecf8dae4ef57b7c987e62"
+    sha256 cellar: :any, arm64_tahoe:       "03489419a8f4267bafc143414f5653c534f59d197379f817cf836120782b665f"
+    sha256 cellar: :any, arm64_sequoia:     "fde0bbe597b847280f1c825edda6c47aa889ce7fd83a093cb2a6793693f7079a"
+    sha256 cellar: :any, arm64_linux:       "c0ba6177aa7c0714130906191f7ef9f6a5069ce5f5bea48ead7d5f2e98434728"
+    sha256 cellar: :any, x86_64_linux:      "b81e05150ecc567f86d57179c177b89f6bfa0fe9d051ec34110766d6d90cd567"
   end
 
   depends_on "pkgconf" => :build
