@@ -13,8 +13,13 @@ class Dynein < Formula
     uses_from_macos "bzip2"
 
     on_linux do
-      depends_on "openssl@3" # need to build `openssl-sys`
+      depends_on "openssl@4" # need to build `openssl-sys`
     end
+
+    # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+    # Can be removed in next release which no longer uses OpenSSL
+    # https://github.com/awslabs/dynein/commit/59d5cf50edbec344a793957dfd881a680e758461
+    patch :DATA
   end
 
   bottle do
@@ -57,3 +62,33 @@ class Dynein < Formula
     assert_match version.to_s, shell_output("#{bin}/dy --version")
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index bdd3b21..3b9e56c 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1750,9 +1750,9 @@ checksum = "3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.64"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "95a0481286a310808298130d22dd1fef0fa571e05a8f44ec801801e84b216b1f"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags 2.5.0",
+  "cfg-if",
+@@ -1782,9 +1782,9 @@ checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.102"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "c597637d56fbc83893a35eb0dd04b2b8e7a50c91e64e9493e398b5df4fb45fa2"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
