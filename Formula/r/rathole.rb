@@ -24,7 +24,7 @@ class Rathole < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   # rust 1.80 build patch
@@ -32,6 +32,16 @@ class Rathole < Formula
     file "Patches/rathole/rust-1.80.patch"
     type :unofficial
     resolves "https://github.com/rathole-org/rathole/issues/380"
+  end
+
+  # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  # Issue ref: https://github.com/rathole-org/rathole/issues/475
+  patch :DATA
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
@@ -70,3 +80,33 @@ class Rathole < Formula
     assert_match(/Build Version:\s*#{version}/, shell_output("#{bin}/rathole --version"))
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 95fb8ac..099eb9d 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1294,9 +1294,9 @@ checksum = "624a8340c38c1b80fd549087862da4ba43e08858af025b236e509b6649fc13d5"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.57"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "bac25ee399abb46215765b1cb35bc0212377e58a061560d8b29b024fd0430e7c"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags 2.4.0",
+  "cfg-if",
+@@ -1335,9 +1335,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.93"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "db4d56a4c0478783083cfafcc42493dd4a981d41669da64b4572a2a089b51b1d"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
