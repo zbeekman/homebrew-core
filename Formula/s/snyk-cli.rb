@@ -6,11 +6,11 @@ class SnykCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "79fa877203ef6c7799e82494a73eb0af6b2d8ccb638fbfeb5518becbd16dbdba"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "79fa877203ef6c7799e82494a73eb0af6b2d8ccb638fbfeb5518becbd16dbdba"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "79fa877203ef6c7799e82494a73eb0af6b2d8ccb638fbfeb5518becbd16dbdba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "3221cc09f04cb2702d4d27455cb91f68c93959d056aeccb80973080b8729251a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6c96cd523bbaebd67f2ea4b01586d09d6770d9d3c872dea2ee591afda5f3d12e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9257496f44e5c15fe3f77711292a8b27def9499bc9e77000bd8f80cfc929f5b9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9257496f44e5c15fe3f77711292a8b27def9499bc9e77000bd8f80cfc929f5b9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "9257496f44e5c15fe3f77711292a8b27def9499bc9e77000bd8f80cfc929f5b9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6f8aaf0ceb97f05d46ffb401b37a6cb679b0495301453fc5f37b6db918485b20"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "240252717f7fb9970dee29e8d42e3233d96d6a0f8476da7ed55210e794c8c48d"
   end
 
   depends_on "node"
