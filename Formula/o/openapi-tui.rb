@@ -22,7 +22,16 @@ class OpenapiTui < Formula
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
+  end
+
+  # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
@@ -51,3 +60,33 @@ class OpenapiTui < Formula
     end
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 12b1273..7e1f00b 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -2261,9 +2261,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.71"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "5e14130c6a98cd258fdcb0fb6d744152343ff729cbfcb28c656a9d12b999fbcd"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags 2.11.0",
+  "cfg-if",
+@@ -2302,9 +2302,9 @@ dependencies = [
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.106"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8bb61ea9811cc39e3c2069f40b8b8e2e70d8569b361f879786cc7ed48b777cdd"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
