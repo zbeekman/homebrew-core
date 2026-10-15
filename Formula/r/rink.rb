@@ -19,10 +19,15 @@ class Rink < Formula
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
+  uses_from_macos "curl"
+
   on_linux do
-    depends_on "openssl@3"
-    depends_on "zlib-ng-compat"
+    depends_on "openssl@4" => :build
+    depends_on "zlib-ng-compat" => :build
   end
+
+  # Update to openssl 0.10.78 and openssl-sys 0.9.114 for minimum needed to use OpenSSL 4
+  patch :DATA
 
   deny_network_access!
 
@@ -49,3 +54,33 @@ class Rink < Formula
     assert_match "2.54 centi meter (length)", output
   end
 end
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index e73c79b..6396e0f 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1425,9 +1425,9 @@ checksum = "3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92"
+ 
+ [[package]]
+ name = "openssl"
+-version = "0.10.73"
++version = "0.10.78"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8505734d46c8ab1e19a1dce3aef597ad87dcb4c37e7188231769bd6bd51cebf8"
++checksum = "f38c4372413cdaaf3cc79dd92d29d7d9f5ab09b51b10dded508fb90bb70b9222"
+ dependencies = [
+  "bitflags 2.5.0",
+  "cfg-if 1.0.0",
+@@ -1457,9 +1457,9 @@ checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
+ 
+ [[package]]
+ name = "openssl-sys"
+-version = "0.9.109"
++version = "0.9.114"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "90096e2e47630d78b7d1c20952dc621f957103f8bc2c8359ec81290d75238571"
++checksum = "13ce1245cd07fcc4cfdb438f7507b0c7e4f3849a69fd84d52374c66d83741bb6"
+ dependencies = [
+  "cc",
+  "libc",
