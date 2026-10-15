@@ -29,7 +29,7 @@ class Zeek < Formula
   depends_on "libuv"
   depends_on "node@24"
   depends_on "openssl@4"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "zeromq"
 
   uses_from_macos "krb5"
@@ -52,21 +52,23 @@ class Zeek < Formula
     # Avoid references to the Homebrew shims directory
     inreplace "auxil/spicy/hilti/toolchain/src/config.cc.in", "${CMAKE_CXX_COMPILER}", ENV.cxx
 
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DBROKER_DISABLE_TESTS=on",
-                    "-DINSTALL_AUX_TOOLS=on",
-                    "-DINSTALL_ZEEKCTL=on",
-                    "-DUSE_GEOIP=on",
-                    "-DCARES_ROOT_DIR=#{formula_opt_prefix("c-ares")}",
-                    "-DCARES_LIBRARIES=#{formula_opt_lib("c-ares")/shared_library("libcares")}",
-                    "-DLibMMDB_LIBRARY=#{formula_opt_lib("libmaxminddb")/shared_library("libmaxminddb")}",
-                    "-DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}",
-                    "-DPYTHON_EXECUTABLE=#{python3}",
-                    "-DZEEK_ETC_INSTALL_DIR=#{etc}",
-                    "-DZEEK_LOCAL_STATE_DIR=#{var}",
-                    "-DDISABLE_JAVASCRIPT=off",
-                    "-DNODEJS_ROOT_DIR=#{formula_opt_prefix("node@24")}",
-                    *std_cmake_args
+    args = %W[
+      -DBROKER_DISABLE_TESTS=on
+      -DINSTALL_AUX_TOOLS=on
+      -DINSTALL_ZEEKCTL=on
+      -DUSE_GEOIP=on
+      -DCARES_ROOT_DIR=#{formula_opt_prefix("c-ares")}
+      -DCARES_LIBRARIES=#{formula_opt_lib("c-ares")/shared_library("libcares")}
+      -DLibMMDB_LIBRARY=#{formula_opt_lib("libmaxminddb")/shared_library("libmaxminddb")}
+      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}
+      -DPYTHON_EXECUTABLE=#{python3}
+      -DZEEK_ETC_INSTALL_DIR=#{etc}
+      -DZEEK_LOCAL_STATE_DIR=#{var}
+      -DDISABLE_JAVASCRIPT=off
+      -DNODEJS_ROOT_DIR=#{formula_opt_prefix("node@24")}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
