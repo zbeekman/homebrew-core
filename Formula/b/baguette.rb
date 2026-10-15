@@ -1,8 +1,8 @@
 class Baguette < Formula
   desc "Headless iOS Simulator manager and host-side input injection for iOS 26"
   homepage "https://tddworks.github.io/baguette/"
-  url "https://github.com/tddworks/baguette/archive/refs/tags/v0.2.6.tar.gz"
-  sha256 "151910026c37a07bafae0626da48aaa2134f2cdb234ed4916e5017a5577adbbd"
+  url "https://github.com/tddworks/baguette/archive/refs/tags/v0.2.7.tar.gz"
+  sha256 "145cb8e7eb197e20241ea95f839890a3647c1b822d2b698e488fc426c003e58d"
   license "Apache-2.0"
   head "https://github.com/tddworks/baguette.git", branch: "main"
 
@@ -65,7 +65,7 @@ class Baguette < Formula
     libexec.install ".build/release/Baguette_Baguette.bundle"
     bin.install_symlink libexec/"baguette"
 
-    deuniversalize_machos libexec/"Baguette_Baguette.bundle/Contents/Resources/HingeControl/HingeControl"
+    deuniversalize_machos
   end
 
   test do
