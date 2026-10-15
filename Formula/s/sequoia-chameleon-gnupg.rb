@@ -14,13 +14,12 @@ class SequoiaChameleonGnupg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "9b9bbe3336d6885d747b193ae71ee2d177de99e41e3e89439b893bf4c20ca593"
-    sha256 cellar: :any,                 arm64_tahoe:       "61d7aec3f79054bece9da5f074cd523f76a5eae6a833d571d297c9a8cec830a0"
-    sha256 cellar: :any,                 arm64_sequoia:     "2311543687172f7d8344999c541536ac205311176819910b598ee9cd8d84431b"
-    sha256 cellar: :any,                 arm64_sonoma:      "de741debb4bea7b839d94e20a92332db0320c2b8bfe8a6492a0908313a7db371"
-    sha256 cellar: :any,                 sonoma:            "01d2c0ab94f7fc524efe45f550dc9a8dfdc639885a215ac7b5a22b46397469ee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c52d89c0162ecd6f5d998088684dc5279db8aaacf023dc2f2f92747a90abb832"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ebf8923298bf97bc5e41aae618e275eb9b5b34fc3669411659d26f7f7513567e"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "93af757aac95cca95f5a042304150b5e612136ec9b40792ea0c266f7bc8142a6"
+    sha256 cellar: :any, arm64_tahoe:       "c403c015707526a39bdc30b276e39b3f43e529cfbd2331666d2cb0dcb5af5577"
+    sha256 cellar: :any, arm64_sequoia:     "903fe6979be7521f9a3fc85fc09826112f6dce38f17bf0e2d5daf9d1eea0725d"
+    sha256 cellar: :any, arm64_linux:       "fe69399f6b62619ea10b49c548fbce34e02d1431f688a819e35ae35e5fbd1a3f"
+    sha256 cellar: :any, x86_64_linux:      "3979ab2c848f1acfe583bc76f213a5139f6857a453f9fd7ddd18da1ceb1a1280"
   end
 
   head do
