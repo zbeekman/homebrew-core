@@ -7,13 +7,11 @@ class UBootTools < Formula
   head "https://git.u-boot-project.org/u-boot/u-boot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a7c9ee5f7f04b6fc1d2d006bd1faa06dd9f65684e1ec222918886b5402485eb7"
-    sha256 cellar: :any, arm64_tahoe:       "ea87d08776a7558bc088e0980bd4ffa5a909f32a8b87a02c3f0abce5169d6a01"
-    sha256 cellar: :any, arm64_sequoia:     "489b685038756e004ae0c3fa37b7c39f1e2a3746d1cbe33f9c200182b913f190"
-    sha256 cellar: :any, arm64_sonoma:      "a9bda8ec3ce0a54fe3f2e88ae1d24bb19763ce9f600cead8852d0a0333430724"
-    sha256 cellar: :any, sonoma:            "d8c740f96f87129cb241298427efbc2a424b31b4ee529cf02b65ba11c78296df"
-    sha256 cellar: :any, arm64_linux:       "477a60d03ccb7634e37dba8dea6ff001cdae5492bfdc3beafc6642e44bbb700f"
-    sha256 cellar: :any, x86_64_linux:      "04c316e3bf4ed2cf6dd25300418022eb7485902eb8b99a8497d1b951a2acb158"
+    sha256 cellar: :any, arm64_golden_gate: "44227749415024779958ece965c1f4d57002a27fe4c13eebfb495173ee84b76c"
+    sha256 cellar: :any, arm64_tahoe:       "43425048d4b74664ee9f14a37383edbe1b38fd57747246e4a81deb074c133899"
+    sha256 cellar: :any, arm64_sequoia:     "200480d90561d05d5879efb4c30c3157b7d18a232c2fa2bec85c2d932c61f0e6"
+    sha256 cellar: :any, arm64_linux:       "454681adb5858f6f09063bf4af640c1976267c9c8b8e6d0a6c3dd1537fd6ba09"
+    sha256 cellar: :any, x86_64_linux:      "04525b2ec07704fcde97bd10861e2f38e57e17b5c74b02743eeed53de33cfb85"
   end
 
   depends_on "coreutils" => :build # Makefile needs $(gdate)
