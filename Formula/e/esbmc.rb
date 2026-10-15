@@ -4,6 +4,7 @@ class Esbmc < Formula
   url "https://github.com/esbmc/esbmc/archive/refs/tags/v8.6.tar.gz"
   sha256 "a691bbf63a51da753a24b59027dd603c91bc2e90fcdd1abc042e241453164f5a"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/esbmc/esbmc.git", branch: "master"
 
   livecheck do
@@ -30,7 +31,7 @@ class Esbmc < Formula
   depends_on "fmt"
   depends_on "gmp"
   depends_on "llvm@22"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "yaml-cpp"
   depends_on "z3"
 
@@ -39,10 +40,14 @@ class Esbmc < Formula
   # Avoid std::atomic<double> arithmetic, which needs libc++ 18 or newer.
   patch :DATA
 
+  def python = deps.map(&:name).find { |d| d.match?(/^python(@\d+(\.\d+)*)?$/) }
+
+  def llvm = deps.map(&:name).find { |d| d.match?(/^llvm(@\d+(\.\d+)*)?$/) }
+
   def install
     args = %W[
-      -DLLVM_DIR=#{formula_opt_lib("llvm@22")}/cmake/llvm
-      -DClang_DIR=#{formula_opt_lib("llvm@22")}/cmake/clang
+      -DLLVM_DIR=#{formula_opt_lib(llvm)}/cmake/llvm
+      -DClang_DIR=#{formula_opt_lib(llvm)}/cmake/clang
       -DPython3_EXECUTABLE=#{python3}
       -DBitwuzla_DIR=#{formula_opt_prefix("bitwuzla")}
       -DENABLE_PYTHON_FRONTEND=ON
@@ -59,7 +64,7 @@ class Esbmc < Formula
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    bin.env_script_all_files libexec/"bin", PATH: "#{formula_opt_libexec("python@3.14")}/bin:$PATH"
+    bin.env_script_all_files libexec/"bin", PATH: "#{formula_opt_libexec(python)}/bin:$PATH"
   end
 
   test do
