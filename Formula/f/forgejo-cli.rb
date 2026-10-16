@@ -1,20 +1,10 @@
 class ForgejoCli < Formula
   desc "CLI tool for interacting with Forgejo"
   homepage "https://codeberg.org/forgejo-contrib/forgejo-cli"
+  url "https://static.crates.io/crates/forgejo-cli/forgejo-cli-0.7.0.crate"
+  sha256 "a5c2eb931ed0c208ee432601850968158fbb1963a57313192db881e082060c46"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://codeberg.org/forgejo-contrib/forgejo-cli.git", branch: "main"
-
-  stable do
-    url "https://static.crates.io/crates/forgejo-cli/forgejo-cli-0.6.0.crate"
-    sha256 "4d56acd6ab5caab2870d6e301cd6e42741ca98761fc1d5890dad09b21b44780e"
-
-    # Fix issue with shell completions.
-    # Remove with `stable` block with next release.
-    patch do
-      url "https://codeberg.org/forgejo-contrib/forgejo-cli/commit/42136622787b3a289b80565d2756263394dda855.patch"
-      sha256 "f1ac36eb47411b1c11b1200de1750040a94f456b26655eeab1971c3767b28bec"
-    end
-  end
 
   bottle do
     rebuild 2
@@ -32,6 +22,12 @@ class ForgejoCli < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
   end
 
   def install
