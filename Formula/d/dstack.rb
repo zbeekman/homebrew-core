@@ -9,12 +9,11 @@ class Dstack < Formula
   head "https://github.com/dstackai/dstack.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "ecb9ce41b70023dc531a50dfd8be37a936310b361ef0df2a43f9893b7255a59f"
-    sha256 cellar: :any, arm64_tahoe:       "23d8c7bad350d702d3a6789e32d374ad4c214451fedf609afb5a9f4c80cdba9a"
-    sha256 cellar: :any, arm64_sequoia:     "5d2f702d5888ea5f07bf35a03916bba1ebdb852e367824f9a581962e29fa89e8"
-    sha256 cellar: :any, arm64_linux:       "e08cf5d872c698f27693110036e95567147295f6266ccac887e59e177dbd285d"
-    sha256 cellar: :any, x86_64_linux:      "8d68d144d00701f8cbc136381eae9382f49f1f6d382773ca0a808bc10dd641c7"
+    sha256 cellar: :any, arm64_golden_gate: "6589b513b47a58e4e54a36debb8bd858c177a8b55fe1da1e07a03a9771fb9bd5"
+    sha256 cellar: :any, arm64_tahoe:       "342743801641b0e86e7efcf1d6b535840638e9a570dad08bbc54bf041aa9c7f1"
+    sha256 cellar: :any, arm64_sequoia:     "05eb0c31aff4d1338e1fd92a18b01f95d5daf836ecdcc9a20433545aa3468d6c"
+    sha256 cellar: :any, arm64_linux:       "3f36396852cc8685efb0a42c76b5e88d750bf5a4d16002828e005ef7e597afd3"
+    sha256 cellar: :any, x86_64_linux:      "7a066e4074383bfe089f467a08875b2ac3f81bdccb73fdbd1f23dc92d5610035"
   end
 
   # `pkgconf` and `rust` are for bcrypt
