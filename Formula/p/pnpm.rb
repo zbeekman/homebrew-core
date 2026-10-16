@@ -1,8 +1,8 @@
 class Pnpm < Formula
   desc "Fast, disk space efficient package manager"
   homepage "https://pnpm.io/"
-  url "https://github.com/pnpm/pnpm/archive/refs/tags/v12.11.2.tar.gz"
-  sha256 "47497b2279792a6f26a47f4e696e4eff4069dd3ee73a33b7e35e148bb368ac2c"
+  url "https://github.com/pnpm/pnpm/archive/refs/tags/v12.14.0.tar.gz"
+  sha256 "493c61b27f55435962a2e9c6602eba16aad544e488760540ff8d4967831b7f86"
   license "MIT"
   compatibility_version 1
   head "https://github.com/pnpm/pnpm.git", branch: "main"
