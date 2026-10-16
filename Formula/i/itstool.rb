@@ -4,7 +4,7 @@ class Itstool < Formula
   url "https://files.itstool.org/itstool/itstool-2.0.7.tar.bz2"
   sha256 "6b9a7cd29a12bb95598f5750e8763cee78836a1a207f85b74d8b3275b27e87ca"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://itstool.org/download.html"
@@ -32,7 +32,7 @@ class Itstool < Formula
   depends_on "pkgconf" => :build # for libxml2 python bindings
   depends_on "python-setuptools" => :build # for libxml2 python bindings
   depends_on "libxml2"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   # Need deprecated libxml2 python bindings. May switch to lxml in future:
   # Ref: https://github.com/itstool/itstool/pull/57
