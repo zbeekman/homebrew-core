@@ -33,7 +33,6 @@ class Libx11 < Formula
       --enable-unix-transport
       --enable-tcp-transport
       --enable-ipv6
-      --enable-loadable-i18n
       --enable-xthreads
       --enable-specs=no
     ]
@@ -46,8 +45,13 @@ class Libx11 < Formula
   test do
     (testpath/"test.c").write <<~C
       #include <X11/Xlib.h>
+      #include <locale.h>
       #include <stdio.h>
+
       int main() {
+        setlocale(LC_ALL, "");
+        printf("XSupportsLocale=%d", XSupportsLocale());
+
         Display* disp = XOpenDisplay(NULL);
         if (disp == NULL)
         {
@@ -76,6 +80,6 @@ class Libx11 < Formula
       }
     C
     system ENV.cc, "test.c", "-L#{lib}", "-lX11", "-o", "test", "-I#{include}"
-    system "./test"
+    assert_match "XSupportsLocale=1", shell_output("./test")
   end
 end
