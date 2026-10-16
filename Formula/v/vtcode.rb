@@ -11,11 +11,11 @@ class Vtcode < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c200687923777eddb6958b72064cf67f43e9720925ba8dbbc44cf6e79d2b68de"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f396e157dfdc712806816faff73c3541aea14686bf10e54454e325582ebfca98"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c1ed0dfd65003b8c726f9a5fd4d4740f2545a07a22a6c2c8496d20678c399334"
-    sha256 cellar: :any,                 arm64_linux:       "67892f8ac26cdb457a84a9f708b4a667b62449741e6bd707194f47222cd1d823"
-    sha256 cellar: :any,                 x86_64_linux:      "df8084abde8a59f0ee27a782edbfdce9e54e88d7541841755587d7b5d25ab3fd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f1e308912006ba60c09c1a971f0a0eaacf3a09ac416156d8c12f43636ba34b7b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e73a55be2451600ba2781cc1e2585b9b3c1bb409f5be3dd5700c3537fd36ad34"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5c2557764cac039ead6c0bef3f5a5c825fc4802b4abcbe0628006079c3324991"
+    sha256 cellar: :any,                 arm64_linux:       "ccb39a6aa33fbf0f770bf7ddbcc5ac6c57ed67da9379d5bbcd25a89190c6fa75"
+    sha256 cellar: :any,                 x86_64_linux:      "b4e377b2acab2a75ad0062b447ad2770b5dfaa35f6f952bc701fe549b56a1fb3"
   end
 
   depends_on "pkgconf" => :build
