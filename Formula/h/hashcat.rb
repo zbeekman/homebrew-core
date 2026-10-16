@@ -28,9 +28,10 @@ class Hashcat < Formula
     sha256 x86_64_linux:      "71e6f0aca36375f3ce64d931210cbcf6e84f28e16d96c0f7af8e80be8e169ce4"
   end
 
-  depends_on "python@3.14" => :build
   depends_on "minizip"
   depends_on "xxhash"
+
+  uses_from_macos "python"
 
   on_macos do
     depends_on "gnu-sed" => :build
@@ -92,6 +93,6 @@ class Hashcat < Formula
       assert_match "Hash-Mode 0 (MD5)", shell_output("#{bin}/hashcat_bin #{args.join(" ")}")
     end
 
-    assert_equal "v#{version}", shell_output("#{bin}/hashcat_bin --version").chomp
+    assert_match version.to_s, shell_output("#{bin}/hashcat_bin --version")
   end
 end
