@@ -28,7 +28,7 @@ class Zeek < Formula
   depends_on "c-ares"
   depends_on "libmaxminddb"
   depends_on "libuv"
-  depends_on "node@24"
+  depends_on "node"
   depends_on "openssl@4"
   depends_on "python@3.15"
   depends_on "zeromq"
@@ -66,7 +66,7 @@ class Zeek < Formula
       -DZEEK_ETC_INSTALL_DIR=#{etc}
       -DZEEK_LOCAL_STATE_DIR=#{var}
       -DDISABLE_JAVASCRIPT=off
-      -DNODEJS_ROOT_DIR=#{formula_opt_prefix("node@24")}
+      -DNODEJS_ROOT_DIR=#{formula_opt_prefix("node")}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
