@@ -1,8 +1,8 @@
 class Librefang < Formula
   desc "Self-hostable operating system for autonomous AI agents"
   homepage "https://librefang.ai"
-  url "https://github.com/librefang/librefang/archive/refs/tags/v2026.9.19.tar.gz"
-  sha256 "e8d6ab93e0db775e05b936303f376a1b50c2e62ea46a7b83a85fda19af86de12"
+  url "https://github.com/librefang/librefang/archive/refs/tags/v2026.10.16.tar.gz"
+  sha256 "513c4310967d66f7e3346384323ab3a26ec191cf9e3c75ad7cac44003fae3f74"
   license "MIT"
   head "https://github.com/librefang/librefang.git", branch: "main"
 
@@ -22,6 +22,14 @@ class Librefang < Formula
     depends_on "dbus"
   end
 
+  # Support Rust 1.99+
+  patch do
+    url "https://github.com/librefang/librefang/commit/2d0e85b0d6755aa928f552116ac9680c4eb16d26.patch?full_index=1"
+    sha256 "2c6aaad8951e2f8adfc4293f147c15ebb4bf7dd1a0acaa97ccbda1c5303ec0df"
+    type :unofficial
+    resolves "https://github.com/librefang/librefang/pull/8635"
+  end
+
   deny_network_access!
 
   def fetch
@@ -29,6 +37,11 @@ class Librefang < Formula
   end
 
   def install
+    # Fat LTO exceeds the memory available on hosted Linux ARM64 builders.
+    github_arm64_linux = OS.linux? && Hardware::CPU.arm? &&
+                         ENV["HOMEBREW_GITHUB_ACTIONS"].present? &&
+                         ENV["GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED"].blank?
+    ENV["CARGO_PROFILE_RELEASE_LTO"] = "thin" if github_arm64_linux
     ENV.deparallelize if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
     system "cargo", "install", *std_cargo_args(path: "crates/librefang-cli")
   end
