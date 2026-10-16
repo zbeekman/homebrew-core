@@ -1,10 +1,9 @@
 class Fricas < Formula
   desc "Advanced computer algebra system"
   homepage "https://fricas.github.io"
-  url "https://github.com/fricas/fricas/releases/download/1.3.13/fricas-1.3.13-full.tar.bz2"
-  sha256 "dd4d5e06db0ba4a43a5bfb64e94f6c8d4b10e68ac65a77556891a6b24af148a2"
+  url "https://github.com/fricas/fricas/releases/download/1.4.0/fricas-1.4.0-full.tar.bz2"
+  sha256 "e113c721aaba673226d0806076a12ec82c07562c2954479443047d4264172514"
   license "BSD-3-Clause"
-  revision 8
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "809eb24e91c8433eb6523a4bdb93aa36068ed663f6c5b8e8fbb182761dc5124f"
