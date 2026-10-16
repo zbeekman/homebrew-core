@@ -22,21 +22,16 @@ class Pkcs11Tools < Formula
 
   depends_on "pkgconf" => :build
   depends_on "softhsm" => :test
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
 
-  # Fix Linux build error using gnulib upstream commit.
-  # ../gl/string.h:965:1: error: expected ',' or ';' before '_GL_ATTRIBUTE_MALLOC'
-  # Remove when the gnulib submodule is updated and available in a release
-  patch :p2 do
-    on_linux do
-      url "https://git.savannah.gnu.org/cgit/gnulib.git/patch/lib?id=cc91160a1ea5e18fcb2ccadb32e857d365581f53"
-      directory "gl"
-      type :backport
-      resolves "https://github.com/Mastercard/pkcs11-tools/issues/37"
-    end
+  # Apply patch to replace direct access with accessor functions
+  patch do
+    file "Patches/pkcs11-tools/openssl-4.diff"
+    type :unofficial
+    resolves "https://github.com/Mastercard/pkcs11-tools/issues/103"
   end
 
   def install
