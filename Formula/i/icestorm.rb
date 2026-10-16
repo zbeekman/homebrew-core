@@ -4,6 +4,7 @@ class Icestorm < Formula
   url "https://github.com/YosysHQ/icestorm/archive/refs/tags/v1.1.tar.gz"
   sha256 "928dd541d15540a796a3d320122794d8d76acff90783de8c5747f613e474652f"
   license "ISC"
+  revision 1
   head "https://github.com/YosysHQ/icestorm.git", branch: "main"
 
   bottle do
@@ -19,7 +20,7 @@ class Icestorm < Formula
   depends_on "pkgconf" => :build
   depends_on "libftdi"
   depends_on "libusb"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
