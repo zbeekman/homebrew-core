@@ -6,7 +6,7 @@ class Flamebearer < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4a8717204ca6eb054fe336dfdb73fe918fc432cee32ce50cb07f1a6b05e17310"
+    sha256 cellar: :any_skip_relocation, all: "6e47f059d69e35fa11b6995c304ed1f3251bbc65d1f98e28265292c7eacfa307"
   end
 
   depends_on "node"
