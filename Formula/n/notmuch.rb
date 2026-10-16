@@ -16,13 +16,11 @@ class Notmuch < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "300565e4bc03b02cc706c3bd96dc9465a3c30b2fea430eab0be85cf8cdcd8ca1"
-    sha256 cellar: :any,                 arm64_tahoe:       "eae24f49c3b10abfde979af48095a1a57930ed5bdcbc6812ccc54a19bad10860"
-    sha256 cellar: :any,                 arm64_sequoia:     "421174ec9e5af1051572972811fa7062bd3d6e680d5881c8a11e4f538b42505f"
-    sha256 cellar: :any,                 arm64_sonoma:      "15d1e06cdc2fee25afe4812f6482d3775cf4302c5a3f66b60935322cbf9fbf1c"
-    sha256 cellar: :any,                 sonoma:            "2b990b337a8c0ed0e2e086703ae947ee5b1fbfcb3131404855faf319032c0693"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1c55b7b11e0bbe8128902da95371f0ddf2c4f25b248f54aaca9ddbdb1c12b74f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e9f8bd8f09dc8ccf7665e5adaba42916d2023ddc4c3420d4d5472ef1c1a784d6"
+    sha256 cellar: :any, arm64_golden_gate: "2e1708161869373851540083096abd8e9b1c5368090bd723305a5a69f33bb546"
+    sha256 cellar: :any, arm64_tahoe:       "961f7f1a9ccbc6e2366dcfb9151a0d583cc93b684c6f075a44a4f4391795e9f4"
+    sha256 cellar: :any, arm64_sequoia:     "ddc2f6bf7fcfc4ee641bf56cb740f8d95c7bc45682dbf705edb8d774c34511fb"
+    sha256 cellar: :any, arm64_linux:       "e5276268db067b50074ab07691a08a4184c7928c8b6d13920c0a551f3179fd51"
+    sha256 cellar: :any, x86_64_linux:      "34c81be86029b5b45f58da85b42c834a236243d8788d1423a308fe5682916711"
   end
 
   depends_on "doxygen" => :build
