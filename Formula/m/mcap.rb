@@ -1,8 +1,8 @@
 class Mcap < Formula
   desc "Serialization-agnostic container file format for pub/sub messages"
   homepage "https://mcap.dev"
-  url "https://github.com/foxglove/mcap/archive/refs/tags/releases/mcap-cli/v0.3.0.tar.gz"
-  sha256 "9a6dbbd938dbd3bdd4c1bc9fb5541b43c644c6e238c9143c256fc54d45e964c0"
+  url "https://github.com/foxglove/mcap/archive/refs/tags/releases/mcap-cli/v0.4.0.tar.gz"
+  sha256 "f3f91a632195ca996829717d0cad480db14376e7c8534d9ac0d03d58d24299aa"
   license "MIT"
   head "https://github.com/foxglove/mcap.git", branch: "main"
 
@@ -55,7 +55,7 @@ class Mcap < Formula
 
     resource("homebrew-testdata-OneMessage").stage do
       assert_equal "2 example [Example] [1 2 3]",
-      shell_output("#{bin}/mcap cat OneMessage-ch-chx-mx-pad-rch-rsh-st-sum.mcap").strip
+      shell_output("#{bin}/mcap cat --time-format=nanoseconds OneMessage-ch-chx-mx-pad-rch-rsh-st-sum.mcap").strip
     end
     resource("homebrew-testdata-OneAttachment").stage do
       assert_equal "\x01\x02\x03",
