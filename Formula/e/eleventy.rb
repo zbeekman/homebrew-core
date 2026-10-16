@@ -1,8 +1,8 @@
 class Eleventy < Formula
   desc "Simpler static site generator"
   homepage "https://www.11ty.dev"
-  url "https://registry.npmjs.org/@11ty/eleventy/-/eleventy-3.1.6.tgz"
-  sha256 "326f9e03a76665722c723be64e1021353143f6941fe1f53dd9d700405fd539a3"
+  url "https://registry.npmjs.org/@11ty/eleventy/-/eleventy-3.1.7.tgz"
+  sha256 "71a54c83855a9eec0171321d9aded12de5d8635cbbf06dd8edfbc92d9cb3ef58"
   license "MIT"
   head "https://github.com/11ty/eleventy.git", branch: "main"
 
@@ -20,7 +20,6 @@ class Eleventy < Formula
 
   def install
     system "npm", "install", *std_npm_args
-    deuniversalize_machos libexec/"lib/node_modules/@11ty/eleventy/node_modules/fsevents/fsevents.node" if OS.mac?
     bin.install_symlink libexec.glob("bin/*")
   end
 
