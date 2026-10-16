@@ -15,7 +15,7 @@ class DoviConvert < Formula
   depends_on "ffmpeg"
   depends_on "media-info"
   depends_on "mkvtoolnix"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   def install
     rewrite_shebang detected_python_shebang, "dovi_convert.py"
