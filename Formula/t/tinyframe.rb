@@ -1,8 +1,8 @@
 class Tinyframe < Formula
   desc "Minimalistic library for reading and writing the Frame Streams protocol"
   homepage "https://codeberg.org/DNS-OARC/tinyframe"
-  url "https://www.dns-oarc.net/files/tinyframe/tinyframe-0.1.1.tar.gz"
-  sha256 "f3e3aeb9d19360252eff7832978fc0beac5d7a8f99e04677d3cba145861cff0a"
+  url "https://www.dns-oarc.net/files/tinyframe/tinyframe-0.1.2.tar.gz"
+  sha256 "181e18bf3e8067b5415f0179d1b35286bf1d379ba71bb89c8e6cc2a73c3cec8d"
   license "GPL-3.0-or-later"
 
   bottle do
