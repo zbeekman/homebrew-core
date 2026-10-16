@@ -6,11 +6,11 @@ class Fricas < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "809eb24e91c8433eb6523a4bdb93aa36068ed663f6c5b8e8fbb182761dc5124f"
-    sha256 cellar: :any, arm64_tahoe:       "f0941105fef3ef61b6a21aa146cd61975455e46d030be614452ef47d28496afa"
-    sha256 cellar: :any, arm64_sequoia:     "81fad5ecfce5fe1ffb6d0f7e3c33f2f0f4de244814a77cc1334b3c58e07aaa57"
-    sha256 cellar: :any, arm64_linux:       "a33911c14828611d258ddb7b57b632479a06148e18c59d84aab70aa56c3e7526"
-    sha256 cellar: :any, x86_64_linux:      "ba5f3ae7eeaeb8a66891846ab48426cfad745a40bdddf0f64f31a5ec9db9cb92"
+    sha256 cellar: :any, arm64_golden_gate: "e456dde0e8d3c3499d13ad15f6c9d07e609744d1e3fea29c48018ca609939e06"
+    sha256 cellar: :any, arm64_tahoe:       "0640dae52ae26122b806c5216208d84f6ec8d999c40a7e45b519f0ad7a004b7e"
+    sha256 cellar: :any, arm64_sequoia:     "00569be634dff84d65f0887e8a439af7b8ed0a9bd47929c774c22ecb013f6185"
+    sha256 cellar: :any, arm64_linux:       "92ab0b0f852d615a56d657a4f7a2524602e7afd1aa575840cb38211ddb0192ee"
+    sha256 cellar: :any, x86_64_linux:      "a4b33fc89353ac231d2868efd6e8943867c04f9e3850e0fc7e26cffa71044747"
   end
 
   depends_on "gmp"
