@@ -2,8 +2,8 @@ class Peekaboo < Formula
   desc "macOS screen capture, accessibility inspection and UI automation"
   homepage "https://peekaboo.sh/"
   url "https://github.com/openclaw/Peekaboo.git",
-      tag:      "v4.9.3",
-      revision: "dcb8570efad33c9992241203aff71cc78c1ea376"
+      tag:      "v4.9.4",
+      revision: "f793855df9a35a4a697a78d26d8305d057e15c2e"
   license "MIT"
   head "https://github.com/openclaw/Peekaboo.git", branch: "main"
 
