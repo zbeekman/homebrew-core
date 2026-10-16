@@ -12,12 +12,11 @@ class CdogsSdl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "dff76b16434ead5e0adebf824341004f7e6a69930152a5a3238929b601c1485e"
-    sha256 arm64_tahoe:       "ac02662d502c57e6e87beb2dc63120c9ebaa4b279bbf399f9c4837f9e1e85dec"
-    sha256 arm64_sequoia:     "5886fcaae95ae725cc3ec544ac63b891861774a0543fcc164611437f5a662f35"
-    sha256 arm64_linux:       "0899a6b9e98c7e4add872b4e28b9198c4ecafe622890a8faf10dee71a841eafd"
-    sha256 x86_64_linux:      "a279da5a90a930604f6aff7290404095a441b73292f320ec5f24bd3db0e15f51"
+    sha256 arm64_golden_gate: "29ac580f02f3d0e16d6dcf9d6c2ef37b46355fa3ccfa893e19deef6bc3b7e56f"
+    sha256 arm64_tahoe:       "d1fc8dd530aba51aa4e0742a693d2db6f23316bbf20b0b4a24f52610c33fe7a5"
+    sha256 arm64_sequoia:     "81a7827460102dafa2184473f7ffbeb1354792d2e8dd52d5d577864c7f2ca065"
+    sha256 arm64_linux:       "b65116fa72e04c5e8cd953f0174ba8c114f810968abf36f9fe3b3637dec48728"
+    sha256 x86_64_linux:      "8b4807dde80c7d4e6d30882cb98dde9ce52b71d3bde183af765e0f179910f3f7"
   end
 
   depends_on "cmake" => :build
