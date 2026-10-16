@@ -1,8 +1,8 @@
 class Dnswire < Formula
   desc "Library for encoding/decoding different DNS encapsulations"
   homepage "https://codeberg.org/DNS-OARC/dnswire"
-  url "https://www.dns-oarc.net/files/dnswire/dnswire-0.5.0.tar.gz"
-  sha256 "7db89f8118ea42b116fc211b05bc4253d105c86054c2dbce58f8ead80c8f3aad"
+  url "https://www.dns-oarc.net/files/dnswire/dnswire-0.5.1.tar.gz"
+  sha256 "b0b52b95e20eda768256794097080b5f5725d9fe841ef03568c51987b02673b4"
   license "GPL-3.0-or-later"
 
   bottle do
