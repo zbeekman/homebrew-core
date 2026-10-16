@@ -7,11 +7,11 @@ class Ntfy < Formula
   head "https://github.com/binwiederhier/ntfy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "10686be23d759b6a1d2094c483eb06b3750bd296299ffaf2d616e1a028867eab"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "10686be23d759b6a1d2094c483eb06b3750bd296299ffaf2d616e1a028867eab"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "10686be23d759b6a1d2094c483eb06b3750bd296299ffaf2d616e1a028867eab"
-    sha256 cellar: :any,                 arm64_linux:       "631b3408b88edb5c11be0f5a8f0f05ceefda9d6ba3d288de12bc83bb8ba4e3b9"
-    sha256 cellar: :any,                 x86_64_linux:      "f453734e009efacb9bfc2516b31e2bb737012d1cb8938d8a626b1bf29ae4184d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b39ddf7c2b53404f3c463db0b604e119753dec8a7f357160536be02a280371ff"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b39ddf7c2b53404f3c463db0b604e119753dec8a7f357160536be02a280371ff"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b39ddf7c2b53404f3c463db0b604e119753dec8a7f357160536be02a280371ff"
+    sha256 cellar: :any,                 arm64_linux:       "3376a819cb78080627d42566c1f5c8dfbe634de41b5509519aff4bbd04975db0"
+    sha256 cellar: :any,                 x86_64_linux:      "5c872ca978072a5436364301fb372c87b5e20704d648f875ccbefa7eefdfa4bb"
   end
 
   depends_on "go" => :build
