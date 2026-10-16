@@ -1,8 +1,8 @@
 class Wmbusmeters < Formula
   desc "Read wired or wireless mbus protocol to acquire utility meter readings"
   homepage "https://github.com/wmbusmeters/wmbusmeters"
-  url "https://github.com/wmbusmeters/wmbusmeters/archive/refs/tags/3.0.0.tar.gz"
-  sha256 "d1bfc90db81e0340b806151f6c05337e9a0be3d5418c625e18bb137f45fb6ed7"
+  url "https://github.com/wmbusmeters/wmbusmeters/archive/refs/tags/3.1.0.tar.gz"
+  sha256 "bb4f739551093167fb22dd65b618536d62b99fb7b7fe5335edbfeb382d391a28"
   license "GPL-3.0-or-later"
   head "https://github.com/wmbusmeters/wmbusmeters.git", branch: "master"
 
@@ -19,7 +19,10 @@ class Wmbusmeters < Formula
   depends_on "pkgconf" => :build
   depends_on "librtlsdr"
   depends_on "libusb"
+
   uses_from_macos "libxml2"
+
+  deny_network_access!
 
   def install
     system "./configure", *std_configure_args
