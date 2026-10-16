@@ -3,8 +3,8 @@ class Trino < Formula
 
   desc "Distributed SQL query engine for big data"
   homepage "https://trino.io"
-  url "https://github.com/trinodb/trino/releases/download/483/trino-server-483.tar.gz"
-  sha256 "4f3978428f26f36398c94b85a3e03b5301394919c8a4271b497b0fcd1698d0cb"
+  url "https://github.com/trinodb/trino/releases/download/484/trino-server-484.tar.gz"
+  sha256 "4b2d05f2e52fcc156b2f137cabc886353e5dde782d12bf71e290ffc13463b81a"
   license "Apache-2.0"
 
   bottle do
@@ -20,8 +20,8 @@ class Trino < Formula
   depends_on "openjdk@25"
 
   resource "trino-src" do
-    url "https://github.com/trinodb/trino/archive/refs/tags/483.tar.gz"
-    sha256 "3f0df83eb2621e30e76146cb5be0408a0d02db3e22d718d5d33009ef2e602d39"
+    url "https://github.com/trinodb/trino/archive/refs/tags/484.tar.gz"
+    sha256 "265ffc9b88c4ca55c9b3704855aa69f5c65522bb51eec36bed8c4aab06d71f38"
 
     livecheck do
       formula :parent
@@ -29,8 +29,8 @@ class Trino < Formula
   end
 
   resource "trino-cli" do
-    url "https://github.com/trinodb/trino/releases/download/483/trino-cli-483"
-    sha256 "182a1daca97bd14e7aa9b25cb62c6d0fd96fa80313e5431ac91da3184cebb601"
+    url "https://github.com/trinodb/trino/releases/download/484/trino-cli-484"
+    sha256 "9a4dc15cf68af58e05165cbf0b5de20fbeb8af0f5280cb43568ac9001aef9b4e"
 
     livecheck do
       formula :parent
@@ -41,8 +41,8 @@ class Trino < Formula
   # getting airbase version at https://github.com/trinodb/trino/blob/#{version}/pom.xml#L8 and then
   # dep.launcher.version at https://github.com/airlift/airbase/blob/<airbase-version>/airbase/pom.xml#L225
   resource "launcher" do
-    url "https://github.com/airlift/launcher/archive/refs/tags/318.tar.gz"
-    sha256 "b9293b91a04578caa67018dfb8eba6c6fd52f709e3a765e9d74a7e9027c90afd"
+    url "https://github.com/airlift/launcher/archive/refs/tags/321.tar.gz"
+    sha256 "53102119b3aaf09f74c8c1078ed41a0c22742f62dae0fef9d4c1f61231cb8c92"
 
     livecheck do
       url "https://raw.githubusercontent.com/trinodb/trino/refs/tags/#{LATEST_VERSION}/pom.xml"
@@ -99,6 +99,8 @@ class Trino < Formula
       (libexec/"etc").install Dir["core/docker/default/etc/*"]
       inreplace libexec/"etc/node.properties", "docker", tap.user.downcase
       inreplace libexec/"etc/node.properties", "/data/trino", var/"trino/data"
+      # Docker-only default since 484; `HOSTNAME` is not exported to services, so let Trino generate one
+      inreplace libexec/"etc/node.properties", /^node\.id=.*\n/, ""
       inreplace libexec/"etc/jvm.config", %r{^-agentpath:/usr/lib/trino/bin/libjvmkill.so$\n}, ""
     end
 
