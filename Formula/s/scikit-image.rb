@@ -23,7 +23,7 @@ class ScikitImage < Formula
   depends_on "pkgconf" => :build
   depends_on "numpy"
   depends_on "pillow"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "scipy"
 
   on_linux do
