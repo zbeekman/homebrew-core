@@ -1,8 +1,8 @@
 class HdrhistogramC < Formula
   desc "C port of the HdrHistogram"
   homepage "https://github.com/HdrHistogram/HdrHistogram_c"
-  url "https://github.com/HdrHistogram/HdrHistogram_c/archive/refs/tags/0.12.0.tar.gz"
-  sha256 "6bc54427b2e5c3639f08f13517a38deb242f8b97b44964d584834d44f02a0be1"
+  url "https://github.com/HdrHistogram/HdrHistogram_c/archive/refs/tags/0.12.1.tar.gz"
+  sha256 "b2cff564b49f900e7f951c95428100a4aed36561703237ffc5e41b4843d804ce"
   license any_of: ["CC0-1.0", "BSD-2-Clause"]
   compatibility_version 1
 
