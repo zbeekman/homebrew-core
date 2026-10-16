@@ -1,10 +1,9 @@
 class Edbrowse < Formula
   desc "Command-line editor and web browser"
   homepage "https://edbrowse.org"
-  url "https://github.com/edbrowse/edbrowse/archive/refs/tags/v3.8.18.tar.gz"
-  sha256 "fde2fceceeb08befa23289e76f6e8a22a7ba87b77dca79b165adfb4170a98629"
+  url "https://github.com/edbrowse/edbrowse/archive/refs/tags/v3.8.19.tar.gz"
+  sha256 "8ebfd92b5200e8b2190e104b9ce4edd6e3c38276449716cfc69705bf71c891a3"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/edbrowse/edbrowse.git", branch: "master"
 
   bottle do
@@ -16,10 +15,10 @@ class Edbrowse < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "quickjs" => :build
   depends_on "curl"
   depends_on "openssl@4"
   depends_on "pcre2"
+  depends_on "quickjs-ng"
   depends_on "readline"
   depends_on "unixodbc"
 
@@ -27,13 +26,13 @@ class Edbrowse < Formula
     # :: is a GNU make operator, but BSD make doesn't support it
     inreplace "src/makefile", "::=", ":="
 
-    ENV.append_to_cflags "-DQ_NG=0"
+    # `malloc_size` is declared in <malloc/malloc.h> on macOS
+    inreplace "src/jseng-quick.c", "#include <malloc.h>", "#include <malloc/malloc.h>" if OS.mac?
 
     cd "src" do
       make_args = [
-        "QUICKJS_INCLUDE=#{formula_opt_include("quickjs")}/quickjs",
-        "QUICKJS_LIB=#{formula_opt_lib("quickjs")}/quickjs",
-        "QUICKJS_LIB_NAME=quickjs",
+        "QUICKJS_INCLUDE=#{formula_opt_include("quickjs-ng")}",
+        "QUICKJS_LIB=#{formula_opt_lib("quickjs-ng")}",
       ]
 
       system "make", *make_args
