@@ -1,8 +1,8 @@
 class KubectlRadar < Formula
   desc "Missing open-source Kubernetes UI with a built-in MCP server for AI agents"
   homepage "https://radarhq.io"
-  url "https://github.com/skyhook-io/radar/archive/refs/tags/v1.16.0.tar.gz"
-  sha256 "c96b1e15b8dba678180094372e56446e564438faea030a06913800320010d88d"
+  url "https://github.com/skyhook-io/radar/archive/refs/tags/v1.17.0.tar.gz"
+  sha256 "f520c414baf092cabe6ce63569d87652c1710f47d85c17c497280884bb708afd"
   license "Apache-2.0"
 
   livecheck do
@@ -20,6 +20,13 @@ class KubectlRadar < Formula
 
   depends_on "go" => :build
   depends_on "node" => :build
+
+  deny_network_access!
+
+  def fetch
+    system "npm", "ci", *std_npm_args(prefix: false)
+    system "go", "mod", "download"
+  end
 
   def install
     system "make", "build", "-j1", "VERSION=#{version}"
