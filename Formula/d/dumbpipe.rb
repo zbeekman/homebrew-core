@@ -1,8 +1,8 @@
 class Dumbpipe < Formula
   desc "Unix pipes between devices"
   homepage "https://dumbpipe.dev"
-  url "https://github.com/n0-computer/dumbpipe/archive/refs/tags/v0.39.0.tar.gz"
-  sha256 "89d01b0b6d25fc8baf06ab791fd0a2b35b24ac51d0bd01b64d36c35750aaf3e9"
+  url "https://github.com/n0-computer/dumbpipe/archive/refs/tags/v0.40.0.tar.gz"
+  sha256 "04717f503fadd0ee86747036b232f89432c9d5ac2083b626019095f3f08266ef"
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
