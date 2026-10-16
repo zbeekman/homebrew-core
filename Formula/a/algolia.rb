@@ -1,8 +1,8 @@
 class Algolia < Formula
   desc "Command-line tool to manage Algolia applications, accounts, and search resources"
   homepage "https://www.algolia.com/doc/tools/cli/get-started"
-  url "https://github.com/algolia/cli/archive/refs/tags/v1.17.1.tar.gz"
-  sha256 "e6e3474376bbe82a171a33d996a6df8f413dc75ee9225fe6a53eed83fb8f78cc"
+  url "https://github.com/algolia/cli/archive/refs/tags/v1.18.0.tar.gz"
+  sha256 "aaf4870c8b64e4c3a3fbbd3a6650424924e5dac2b3a9900ce7b96f89905a751b"
   license "MIT"
   head "https://github.com/algolia/cli.git", branch: "main"
 
