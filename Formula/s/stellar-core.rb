@@ -2,8 +2,8 @@ class StellarCore < Formula
   desc "Backbone of the Stellar (XLM) network"
   homepage "https://www.stellar.org/"
   url "https://github.com/stellar/stellar-core.git",
-      tag:      "v29.0.0",
-      revision: "a9d72b0cac3a89ebbcf926af449ac73089e0f8f7"
+      tag:      "v30.0.0",
+      revision: "0e49751aa9ddf892302cca02cea7f3f5d97df9f1"
   license "Apache-2.0"
   head "https://github.com/stellar/stellar-core.git", branch: "master"
 
@@ -56,7 +56,7 @@ class StellarCore < Formula
     system "./autogen.sh"
     system "./configure", "--disable-silent-rules",
                           "--enable-postgres",
-                          *std_configure_args
+                          *std_configure_args.reject { |s| s["--disable-debug"] }
 
     # The p21-p26 soroban host submodules lock `ethnum` 1.5.0, which fails on
     # current Rust: it transmutes `()` into the now-non-zero-sized
