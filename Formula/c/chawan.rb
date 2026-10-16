@@ -1,10 +1,9 @@
 class Chawan < Formula
   desc "TUI web browser with CSS, inline image and JavaScript support"
   homepage "https://sr.ht/~bptato/chawan/"
-  url "https://git.sr.ht/~bptato/chawan/archive/v0.4.4.tar.gz"
-  sha256 "e0a06e1504e10a51c6009751d79b798c98d8274e559fe195d4b4b7ddadf91bb8"
+  url "https://git.sr.ht/~bptato/chawan/archive/v0.5.0.tar.gz"
+  sha256 "031d1ef809e1e94f16815c543a450f62a3577a7b7240ac02160dd8c78512f588"
   license "Unlicense"
-  revision 1
   head "https://git.sr.ht/~bptato/chawan", branch: "master"
 
   bottle do
