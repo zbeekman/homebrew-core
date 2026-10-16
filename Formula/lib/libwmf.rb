@@ -33,6 +33,8 @@ class Libwmf < Formula
     sha256 "a0d9829692eebfa3bdb23d62f474d58cc4ea2489c07c6fcb63338eb3fb2c14d2"
   end
 
+  deny_network_access!
+
   def install
     system "./configure", "--disable-silent-rules",
                           "--with-gsfontdir=#{HOMEBREW_PREFIX}/share/ghostscript/fonts",
