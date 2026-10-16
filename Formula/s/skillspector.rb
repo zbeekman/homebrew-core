@@ -3,10 +3,9 @@ class Skillspector < Formula
 
   desc "Security scanner for AI agent skills"
   homepage "https://github.com/NVIDIA/SkillSpector"
-  url "https://github.com/NVIDIA/SkillSpector/archive/refs/tags/v2.12.0.tar.gz"
-  sha256 "c8c473512283a0025d74798ee300d96e570645fe2af2754284774352c9738953"
+  url "https://github.com/NVIDIA/SkillSpector/archive/refs/tags/v2.13.0.tar.gz"
+  sha256 "eb61b4631ec33d41300404b527ec75262bde52d55ac7ae43f9abb52722dc62ee"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     rebuild 1
