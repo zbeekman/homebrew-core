@@ -44,6 +44,8 @@ class Yaz < Formula
     depends_on "readline" # Possible opportunistic linkage. TODO: Check if this can be removed.
   end
 
+  deny_network_access!
+
   def install
     if build.head?
       ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
