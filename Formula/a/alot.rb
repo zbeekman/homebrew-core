@@ -11,13 +11,11 @@ class Alot < Formula
   head "https://github.com/pazz/alot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3dec6bfa203fa482ab3dae1adea43de14b8677e012c7faa1f93c045df6fa03c8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4c0dfbfe3647e134f91767e72b908a3e1b24ab994c91d10c53dc8b36087792d6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e01192444286d89e9341ca9782cb36d9ae3bd0a6fb8cf6ff4fbc5f134a6f063a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "1acb758067096184a9b2ce4a5b022f920201ce72aedbb76549dea947026a3553"
-    sha256 cellar: :any_skip_relocation, sonoma:            "3d994fa5d8eb76029ca9c537e16b55a54a2981b0ac6b4b963de9a3056891a0f2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "6fa30cc144494600df5d1c416d84151fced2eb6924a733bc567388c0bd8c1316"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "368c652bd63705c5c9a1644524c00e476a826a22870d56119c70efe4b3b3b5b2"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "d5fe67b91d2ae31393ef57e24accf66529f585675e0e5586141f5de0f3aeeaac"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1293a542497a8886747637df81c82f1f1c0622efd2a37e55f5ef6170fa994932"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7a7de9a12c130b5cdf16c84a82abb2367b48f7ad20d6bab032b5ee771789d97e"
+    sha256 cellar: :any,                 arm64_linux:       "d2e0907e2d687d90c307199bd105d0da7bb67490b75cc3c8dd4b4f622c2179f5"
+    sha256 cellar: :any,                 x86_64_linux:      "2f3f6e9cd7ead4fc5ba3063c15226918cb306c4c29abe89351870353870d4dff"
   end
 
   depends_on "sphinx-doc" => :build
