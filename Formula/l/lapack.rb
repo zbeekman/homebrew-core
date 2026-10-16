@@ -42,6 +42,7 @@ class Lapack < Formula
 
     args = %W[
       -DBUILD_SHARED_LIBS=ON
+      -DCBLAS=ON
       -DLAPACKE=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
