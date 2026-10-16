@@ -7,7 +7,7 @@ class YelpTools < Formula
   url "https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.1.tar.xz"
   sha256 "3e496a4020d4145b99fd508a25fa09336a503a4e8900028421e72c6a4b11f905"
   license "GPL-2.0-or-later"
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any,                 arm64_golden_gate: "cf1f178117fd252a7aa56d03e4579b315e300824ec2cfb7fcb4ddd1e106e06a7"
@@ -24,7 +24,7 @@ class YelpTools < Formula
   depends_on "pkgconf" => :build
   depends_on "itstool"
   depends_on "libxml2"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "yelp-xsl" => :no_linkage
 
   uses_from_macos "libxslt"
@@ -33,8 +33,8 @@ class YelpTools < Formula
                 extra_packages: "lxml"
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/28/30/9abc9e34c657c33834eaf6cd02124c61bdf5944d802aa48e69be8da3585d/lxml-6.1.0.tar.gz"
-    sha256 "bfd57d8008c4965709a919c3e9a98f76c2c7cb319086b3d26858250620023b13"
+    url "https://files.pythonhosted.org/packages/23/ad/28ecd7cb894d172f3c9c80a075eeeb2017ac62e3632cee05a5f9493547eb/lxml-6.1.3.tar.gz"
+    sha256 "45222d94ddd511536f3b2f7d9deae3b2339b4ce0f075f1ca25703b07cad9dd21"
   end
 
   resource "mallard-rng" do
