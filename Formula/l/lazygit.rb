@@ -27,6 +27,8 @@ class Lazygit < Formula
     ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = "-X main.version=#{version} -X main.buildSource=#{tap.user}"
     system "go", "build", "-mod=vendor", *std_go_args(ldflags:)
+
+    generate_completions_from_executable(bin/"lazygit", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
