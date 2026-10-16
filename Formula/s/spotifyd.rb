@@ -12,14 +12,12 @@ class Spotifyd < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "9dd8df2b23c7252c367d9b4fbcb87dff12734c10cf6bcda1d234abb351b0bfc4"
-    sha256 cellar: :any,                 arm64_tahoe:       "7a96191a408faceec7796bbfba1d97ee2942bca55eb8d7ac0ff6ab9787d416b3"
-    sha256 cellar: :any,                 arm64_sequoia:     "33c617c8539e24bb3a7c45be7c0692bef970a404e83be5184d23d4823c1cfabf"
-    sha256 cellar: :any,                 arm64_sonoma:      "610bd336a831d480602b36f001c677b0a552007197e881ee9ce5aadcf30908ef"
-    sha256 cellar: :any,                 sonoma:            "52d368c18164c7dc72aa2ae105a950d004d455766ccb911c4307d8c6b39f8934"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b28a83b3436945a5dfa81133c01f7c223f9ce435e761266bda7d473fcb804a90"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e9f561aafae2034b26dbb892fd0be032d0f704f1fcdf815a4207ad005c72db00"
+    rebuild 2
+    sha256 cellar: :any, arm64_golden_gate: "9ea10c41fa0b39188f05fb4c520d94bbfc32e368ff879efb68591da32782ab2d"
+    sha256 cellar: :any, arm64_tahoe:       "3e9ed5d7b835838ee4b7d51f5bb21e2cdb7f621fc275749e644344a7a321fa9a"
+    sha256 cellar: :any, arm64_sequoia:     "2af21b852dac007f969a09a5ac7341b9b6073f5afbdb4673cf4c7f909c1f0f9b"
+    sha256 cellar: :any, arm64_linux:       "421eecefe5c859c647f32cc3e555a4b3c691d89d950f9fa138727f361de4eca0"
+    sha256 cellar: :any, x86_64_linux:      "00c484f4da9e7067609a856b5778c467854f9aafd03dffd1e1f6d034237ad62f"
   end
 
   depends_on "pkgconf" => :build
