@@ -5,6 +5,14 @@ class Dnswire < Formula
   sha256 "7db89f8118ea42b116fc211b05bc4253d105c86054c2dbce58f8ead80c8f3aad"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any, arm64_golden_gate: "03b6487836219f1bf82139fa6af2da694ffd68eefca34f3bd661ef101df5d2e2"
+    sha256 cellar: :any, arm64_tahoe:       "dfb4a22cc0a71bede61113e5121e3b9c3739a71cd07ce2fd33e64b521d614490"
+    sha256 cellar: :any, arm64_sequoia:     "0663fd5e98a0aaf43ac0652d8a349450a9b098aa9c7d51293b6bc948527cf995"
+    sha256 cellar: :any, arm64_linux:       "86bdc8eff29077180c26e1142aa5aa9f739b452e5629bb3d39557ca2b601f34e"
+    sha256 cellar: :any, x86_64_linux:      "57efa8750005d4f7d29483849902d5393f0b143368f0a69e3935bc9acbb61010"
+  end
+
   depends_on "pkgconf" => [:build, :test]
   depends_on "libuv"
   depends_on "protobuf-c"
