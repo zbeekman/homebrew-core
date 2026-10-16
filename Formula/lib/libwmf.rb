@@ -1,8 +1,8 @@
 class Libwmf < Formula
   desc "Library for converting WMF (Window Metafile Format) files"
   homepage "https://github.com/caolanm/libwmf"
-  url "https://github.com/caolanm/libwmf/releases/download/v0.2.16/libwmf-0.2.16.tar.gz"
-  sha256 "e20a0bfc2550e779f5f2f13e1afd34cb3b3692954b7e2b73a25ac94c86cb484a"
+  url "https://github.com/caolanm/libwmf/releases/download/v0.2.17/libwmf-0.2.17.tar.gz"
+  sha256 "876915024b64edda8d417daf06819d03a0d18adff1fcc2f64182c69274ed0519"
   license all_of: [
     "LGPL-2.1-or-later",
     "GD", # src/extra/gd
