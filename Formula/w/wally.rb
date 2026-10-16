@@ -14,14 +14,12 @@ class Wally < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "561453b3c6e574a6fb4f9e2aa36df545365f7c15b8560bf1e72555ab9dacf2fb"
-    sha256 cellar: :any,                 arm64_tahoe:       "8c9d6350d3eefbe0f7ffdd8ae0e3848ecf54079dfffb4bb0dc820d41c802c2af"
-    sha256 cellar: :any,                 arm64_sequoia:     "ac406b7fa1ecb8ea08e890b2f58f021bc966e7cc1073e8a57a4dbddfab32223b"
-    sha256 cellar: :any,                 arm64_sonoma:      "f231366bd7b5e801852f98c63835485b66da481b7b867d527790575ac401aced"
-    sha256 cellar: :any,                 sonoma:            "985950f162544863811b7bb0757f8dc945036d81d5c3ac4eb8592e10ea04d62f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "e8ec8105b54551fc7277e01e3cbe506921aa0ec643c16722e58adf5fcf546668"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "6280085aae3f14cacdac8fd689cd77781132ce85b22afa0acae875c0e82811a3"
+    rebuild 2
+    sha256 cellar: :any, arm64_golden_gate: "d921c076c783ba1a1e2171b2975818319c7baa2429c7856c95e733f6245afdf7"
+    sha256 cellar: :any, arm64_tahoe:       "8e5719321062e000855e60c1fd54595083551a459139c7a9ac857c4ba7b43a78"
+    sha256 cellar: :any, arm64_sequoia:     "81ba14ad8e5f126bb65d5e16b81368bf2b9b316dff3b4a44294eda88c19fff6a"
+    sha256 cellar: :any, arm64_linux:       "ffcdd332c259c1a7f08d9734d85685d52ef020cd792cfaedec2ec99edab8bd3b"
+    sha256 cellar: :any, x86_64_linux:      "4b7a4da693f4deaaebaa880c961b867cc3778fc54e8a8bcaf7b4976c5a23f566"
   end
 
   depends_on "pkgconf" => :build
