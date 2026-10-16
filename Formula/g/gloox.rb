@@ -22,20 +22,16 @@ class Gloox < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "gnutls"
   depends_on "libidn"
-  depends_on "openssl@3"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
-  # Fix build issue with `{ 0 }`, build patch sent to upstream author
-  patch :DATA
-
   def install
     system "./configure", "--disable-silent-rules",
                           "--with-zlib",
-                          "--with-openssl=#{formula_opt_prefix("openssl@3")}",
                           "--without-tests",
                           "--without-examples",
                           *std_configure_args
@@ -46,22 +42,3 @@ class Gloox < Formula
     system bin/"gloox-config", "--cflags", "--libs", "--version"
   end
 end
-
-__END__
-diff --git a/src/tlsopensslclient.cpp b/src/tlsopensslclient.cpp
-index ca18096..52322b1 100644
---- a/src/tlsopensslclient.cpp
-+++ b/src/tlsopensslclient.cpp
-@@ -51,7 +51,11 @@ namespace gloox
-     {
-       unsigned char buf[32];
-       const char* const label = "EXPORTER-Channel-Binding";
--      SSL_export_keying_material( m_ssl, buf, 32, label, strlen( label ), { 0 }, 1, 0 );
-+
-+      unsigned char context[] = {0}; // Context initialized to zero
-+      size_t context_len = sizeof(context); // Length of the context
-+
-+      SSL_export_keying_material(m_ssl, buf, 32, label, strlen(label), context, context_len, 0);
-       return std::string( reinterpret_cast<char* const>( buf ), 32 );
-     }
-     else
