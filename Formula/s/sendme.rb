@@ -1,8 +1,8 @@
 class Sendme < Formula
   desc "Tool to send files and directories, based on iroh"
   homepage "https://iroh.computer/sendme"
-  url "https://github.com/n0-computer/sendme/archive/refs/tags/v0.36.1.tar.gz"
-  sha256 "46445440a25448de21f01f6d378314d8adca62d6f0cc10fb1577e66852c400f2"
+  url "https://github.com/n0-computer/sendme/archive/refs/tags/v0.37.0.tar.gz"
+  sha256 "bbde0e324ffcb4c2fae6d8dd3af2c8191796be2d34bd40f354692c44eea5e9cf"
   license "MIT"
   head "https://github.com/n0-computer/sendme.git", branch: "main"
 
