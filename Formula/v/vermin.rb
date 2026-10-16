@@ -9,8 +9,7 @@ class Vermin < Formula
   head "https://github.com/netromdk/vermin.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "8f3e6bc4b10a13d0af9ae20cbcf3ab8fc96ddf2f0fb2b09d9a3ce902e3eb13dd"
+    sha256 cellar: :any_skip_relocation, all: "d429c49c21f32716b179ff39691d31fee0afea072378ef48d9bd19b0168d7408"
   end
 
   depends_on "python@3.15"
