@@ -6,6 +6,10 @@ class Keploy < Formula
   license "Apache-2.0"
   head "https://github.com/keploy/keploy.git", branch: "main"
 
+  livecheck do
+    throttle 5
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2f191ea86990de72a86b1b7f6917ef281bfcdd8336233ad9e0612ea8bf84c197"
     sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2f191ea86990de72a86b1b7f6917ef281bfcdd8336233ad9e0612ea8bf84c197"
