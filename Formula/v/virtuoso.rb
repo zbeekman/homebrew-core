@@ -1,9 +1,19 @@
 class Virtuoso < Formula
   desc "High-performance object-relational SQL database"
   homepage "https://virtuoso.openlinksw.com"
-  url "https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.17/virtuoso-opensource-7.2.17.tar.gz"
-  sha256 "41e0afd6d37c1c41b993282ce11c5cf68f7bb7c0bd7887ef2ff558c452570216"
   license "GPL-2.0-only" => { with: "x11vnc-openssl-exception" }
+
+  stable do
+    url "https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.17/virtuoso-opensource-7.2.17.tar.gz"
+    sha256 "41e0afd6d37c1c41b993282ce11c5cf68f7bb7c0bd7887ef2ff558c452570216"
+
+    # Backport for OpenSSL 4 support
+    patch do
+      url "https://github.com/openlink/virtuoso-opensource/commit/8a6ae8fe8d93076ac151dffcfb4c5c1ecbd61860.patch?full_index=1"
+      sha256 "12d8e6e18d22153b91d1eeac111a071b0e067b6fe8338867b70ebf79271fdca2"
+      type :backport
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_golden_gate: "8c56a143877035c2bb3609ad34fc62decb2a72de8847bde2df58d57f59ef9d04"
@@ -25,7 +35,7 @@ class Virtuoso < Formula
 
   # If gawk isn't found, make fails deep into the process.
   depends_on "gawk" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
@@ -45,6 +55,12 @@ class Virtuoso < Formula
 
   def install
     system "./autogen.sh" if build.head?
+
+    # Ignore overly restrictive OpenSSL upper bound check. Same as Debian patch:
+    # https://sources.debian.org/patches/virtuoso-opensource/7.2.12+dfsg-2/openssl-upper-bound.patch/
+    # Can be removed if upstream allows version of OpenSSL we want
+    inreplace "configure", "#error OpenSSL version too new", "//\\0"
+
     system "./configure", "--disable-silent-rules",
                           "--without-internal-zlib",
                           *std_configure_args
