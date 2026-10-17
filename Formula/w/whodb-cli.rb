@@ -24,11 +24,12 @@ class WhodbCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "99093c953fad11fd875ce3efb09b01ea73c0de5fe86256df96035f5e0fe37ee7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7650f7359d76af921a247a652c82a2b7d86c43e24c0eca81b7a1e39e4cc018bf"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2c00d46599ae65f0b10c521132cc6e2708c7314ab73a47789417d2db679889ed"
-    sha256 cellar: :any,                 arm64_linux:       "26648dc885e998ee6711c144c36ec973d678dd9566010c8fe6dde022f911cca9"
-    sha256 cellar: :any,                 x86_64_linux:      "ae7930a19b8f297b8fa94b38a360956bd767107d5413548a6b3c84fd1e967f73"
+    rebuild 1
+    sha256 cellar: :any, arm64_golden_gate: "ba2a1891ffc13c2197519ecb86a68660a630cf3680164fd4a85d0b5e7f666911"
+    sha256 cellar: :any, arm64_tahoe:       "f9e78124349ae260574b70ceffbe234f2c165fd8f5b95a3c0ba16da4f47ebfe3"
+    sha256 cellar: :any, arm64_sequoia:     "96612d3ac525b8d1f6ce69ed52f5e2e08f7a2274239459703abccc897e41aca5"
+    sha256 cellar: :any, arm64_linux:       "c21f7004ee96fef682090898d25f277d2e172ac7803992efb42761edbd1ab33a"
+    sha256 cellar: :any, x86_64_linux:      "dba5dc162c84cb734a0b4e68d53beb3d6d715f6fb89643e4f5d707090e01ba63"
   end
 
   head do
