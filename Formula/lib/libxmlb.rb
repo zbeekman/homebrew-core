@@ -23,11 +23,12 @@ class Libxmlb < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "python@3.14" => :build
   depends_on "vala" => :build
   depends_on "glib"
   depends_on "xz"
   depends_on "zstd"
+
+  uses_from_macos "python" => :build
 
   def install
     rewrite_shebang detected_python_shebang(use_python_from_path: true), "src/generate-version-script.py"
