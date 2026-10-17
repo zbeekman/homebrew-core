@@ -1,8 +1,8 @@
 class Dysk < Formula
   desc "Linux utility to get information on filesystems, like df but better"
   homepage "https://dystroy.org/dysk/"
-  url "https://github.com/Canop/dysk/archive/refs/tags/v3.8.0.tar.gz"
-  sha256 "3c17e4ceb8d81855aec7ffb4b4346dd43cfe53cb94443e8a3419f3335919688f"
+  url "https://github.com/Canop/dysk/archive/refs/tags/v3.8.1.tar.gz"
+  sha256 "8da0e478a6027803043149c63c84abbb0dd4b3538372b8d854c2f8cab8215f41"
   license "MIT"
   head "https://github.com/Canop/dysk.git", branch: "main"
 
@@ -23,10 +23,6 @@ class Dysk < Formula
   end
 
   def install
-    # TODO: Upstream forgot to bump the version, remove in the next release
-    # https://github.com/Canop/dysk/issues/124
-    inreplace %w[Cargo.lock Cargo.toml cli/Cargo.toml], "3.7.1", version.to_s
-
     system "cargo", "install", *std_cargo_args
   end
 
