@@ -7,6 +7,7 @@ class Gplugin < Formula
     "LGPL-2.0-or-later",
     "GPL-3.0-or-later", # gplugin-gtk4-viewer
   ]
+  revision 1
 
   livecheck do
     url "https://sourceforge.net/projects/pidgin/rss?path=/gplugin"
@@ -32,7 +33,7 @@ class Gplugin < Formula
   depends_on "glib"
   depends_on "gtk4"
   depends_on "pygobject3"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_macos do
     depends_on "gettext"
