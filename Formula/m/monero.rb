@@ -2,11 +2,10 @@ class Monero < Formula
   desc "Official Monero wallet and CPU miner"
   homepage "https://www.getmonero.org/downloads/#cli"
   license "BSD-3-Clause"
-  revision 1
 
   stable do
-    url "https://downloads.getmonero.org/cli/monero-source-v0.18.5.3.tar.bz2"
-    sha256 "57f8bf5a32b0f8862e6826e7e19a911294d953eae630d2b8c05a976d4dced880"
+    url "https://downloads.getmonero.org/cli/monero-source-v0.18.5.4.tar.bz2"
+    sha256 "3c5aabb6e8abcabb58169cf4ad60b11be23cd7384c051a40ed2b23490d842bab"
 
     # Backport support for OpenSSL 4
     patch do
