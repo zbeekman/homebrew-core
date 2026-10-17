@@ -1,8 +1,8 @@
 class Kata < Formula
   desc "Local-first, federated issue tracker for humans and coding agents"
   homepage "https://katatracker.com"
-  url "https://github.com/kenn-io/kata/releases/download/v0.18.0/kata_0.18.0_source.tar.gz"
-  sha256 "980503ab4a5ba37283b5c35013d034cb94e32bc55669426284cbd47030141db6"
+  url "https://github.com/kenn-io/kata/releases/download/v0.19.0/kata_0.19.0_source.tar.gz"
+  sha256 "f36b33f08bf7134cbd78a582ff04e6c72e93b7ddd80a647636685d2806b9e5bb"
   license "MIT"
 
   bottle do
