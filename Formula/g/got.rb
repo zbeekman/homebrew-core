@@ -1,11 +1,10 @@
 class Got < Formula
   desc "Version control system"
-  homepage "https://gameoftrees.org/", browsed: "2026-09-28"
-  url "https://gameoftrees.org/releases/portable/got-portable-0.129.tar.gz"
-  mirror "https://pkg.freebsd.org/ports-distfiles/got-portable-0.129.tar.gz"
-  sha256 "420f2e9be88b5e7de33b247f6ae21b918c113cceb2cb9a94b37a46d514f30a3e"
+  homepage "https://gameoftrees.org/", browsed: "2026-10-17"
+  url "https://gameoftrees.org/releases/portable/got-portable-0.130.tar.gz"
+  mirror "https://pkg.freebsd.org/ports-distfiles/got-portable-0.130.tar.gz"
+  sha256 "938307dead3d2f4c11e424e996821cea976dd6de494815721447501944bd251c"
   license "ISC"
-  revision 1
 
   # Since GitHub runners are not able to access the homepage, our Linux build
   # requires FreeBSD mirror to exist before we can bump the version.
