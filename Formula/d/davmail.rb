@@ -1,9 +1,9 @@
 class Davmail < Formula
   desc "POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway"
   homepage "https://davmail.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/davmail/davmail/7.0.0/davmail-7.0.0-4403.zip"
-  version "7.0.0"
-  sha256 "cd137f36929b296ae80f199a98c09d626b7e5adb73764568f8b458595154fdc6"
+  url "https://downloads.sourceforge.net/project/davmail/davmail/7.1.0/davmail-7.1.0-4498.zip"
+  version "7.1.0"
+  sha256 "c007d3ac57e00d680c977c1b2d027d70ca7713dd734f69423ccd4bcb11c0cf54"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -20,6 +20,8 @@ class Davmail < Formula
   depends_on "openjdk"
 
   uses_from_macos "netcat" => :test
+
+  allow_network_access! :test
 
   def install
     libexec.install Dir["*"]
