@@ -9,9 +9,9 @@ class RapidMlx < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a0e049ca6acf295bcfab47a546cdae09fb8420bdcfaf6c88d31e05cf7dd238cc"
-    sha256 cellar: :any, arm64_tahoe:       "157f4a0dbb0ff32dcc532be439ebdb5c9d794884987583c2d56a5cba6ea6034b"
-    sha256 cellar: :any, arm64_sequoia:     "8f51fb34bdb2503d1d273ab0a8edac528b4256d40aca7ca3539a7cc37e6b430d"
+    sha256 cellar: :any, arm64_golden_gate: "abee5907e15db3388dc18d07bd118c90f5076c25dded8f40194a04d7a1716b6a"
+    sha256 cellar: :any, arm64_tahoe:       "bac3ab971b474517c266ce2b708d184d3295f2d4af2b0358934c4bcbc325ccdd"
+    sha256 cellar: :any, arm64_sequoia:     "a447bfcf7bfed9f886ac7bab6aba31443509df426ac9e949ce1cc9764b470158"
   end
 
   depends_on "cmake" => :build
