@@ -339,6 +339,7 @@ jobs:
                 ghc|\
                 glib|\
                 go|\
+                libx11|\
                 libxml2|\
                 ocaml|\
                 ocaml-findlib|\
