@@ -4,6 +4,7 @@ class Plutobook < Formula
   url "https://github.com/plutoprint/plutobook/archive/refs/tags/v0.20.0.tar.gz"
   sha256 "439758ab506d4578518bc1427c4ea4eed8e654d9e01cea327267156a83428310"
   license "MPL-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "b75effcb0b7ac4af2c64f46830cbc58e2b2508d06b7b3db32b01efe84c4efd46"
@@ -20,7 +21,7 @@ class Plutobook < Formula
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "harfbuzz"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "jpeg-turbo"
   depends_on "libidn2"
   depends_on "webp"
