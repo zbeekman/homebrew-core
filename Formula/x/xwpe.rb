@@ -20,13 +20,16 @@ class Xwpe < Formula
 
   depends_on "json-c"
   depends_on "libvterm"
-  depends_on "ncurses"
-  depends_on "zlib"
+
+  uses_from_macos "ncurses"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
+
+  deny_network_access!
 
   def install
-    # ncurses is keg-only on macOS; teach pkg-config where ncursesw.pc lives.
-    ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("ncurses")/"pkgconfig" if OS.mac?
-
     # The release tarball is a `make dist` archive: it ships a working configure
     # and the pre-built Texinfo pages (docs/xwpe.info), so no autoreconf or
     # makeinfo run is needed.
