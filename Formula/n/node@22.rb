@@ -37,7 +37,6 @@ class NodeAT22 < Formula
   depends_on "libuv"
   depends_on "openssl@3"
   depends_on "simdjson"
-  depends_on "simdutf"
   depends_on "sqlite"
   depends_on "uvwasi"
   depends_on "zstd"
@@ -65,7 +64,6 @@ class NodeAT22 < Formula
       --shared-nghttp3
       --shared-openssl
       --shared-simdjson
-      --shared-simdutf
       --shared-sqlite
       --shared-uvwasi
       --shared-zlib
@@ -84,8 +82,6 @@ class NodeAT22 < Formula
       --shared-openssl-libpath=#{formula_opt_lib("openssl@3")}
       --shared-simdjson-includes=#{formula_opt_include("simdjson")}
       --shared-simdjson-libpath=#{formula_opt_lib("simdjson")}
-      --shared-simdutf-includes=#{formula_opt_include("simdutf")}
-      --shared-simdutf-libpath=#{formula_opt_lib("simdutf")}
       --shared-sqlite-includes=#{formula_opt_include("sqlite")}
       --shared-sqlite-libpath=#{formula_opt_lib("sqlite")}
       --shared-uvwasi-includes=#{formula_opt_include("uvwasi")}/uvwasi
@@ -100,13 +96,11 @@ class NodeAT22 < Formula
     # LTO is unpleasant if you have to build from source.
     args << "--enable-lto" if OS.mac? && build.bottle?
 
-    # TODO: Try to devendor these libraries.
-    # - `--shared-ada` needs the `ada-url` formula, but requires C++20
-    # - `--shared-http-parser` and `--shared-uvwasi` are not available as dependencies in Homebrew.
     ignored_shared_flags = %w[
       ada
       http-parser
       ngtcp2
+      simdutf
     ].map { |library| "--shared-#{library}" }
 
     configure_help = Utils.safe_popen_read("./configure", "--help")
