@@ -27,7 +27,11 @@ class Xidel < Formula
     resource("internettools") { url "https://github.com/benibela/internettools.git", branch: "master" }
     resource("pasdblstrutils") { url "https://github.com/BeRo1985/pasdblstrutils.git", branch: "master" }
     resource("rcmdline") { url "https://github.com/benibela/rcmdline.git", branch: "master" }
-    resource("synapse") { url "https://svn.code.sf.net/p/synalist/code/synapse/40/" }
+    resource "synapse" do
+      url "https://github.com/geby/synapse/archive/3026ab2ade62bc2e85e1c3cd8fa4ed99a3f8a98e.tar.gz"
+      version "40"
+      sha256 "a3f385971805bde2b57995da9c920ea39406385fb0d043cc020ea0322399c472"
+    end
   end
 
   depends_on "fpc" => :build
