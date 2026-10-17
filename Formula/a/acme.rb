@@ -1,8 +1,9 @@
 class Acme < Formula
   desc "Crossassembler for multiple environments"
   homepage "https://sourceforge.net/projects/acme-crossass/"
-  url "https://svn.code.sf.net/p/acme-crossass/code-0/trunk", revision: "266"
+  url "https://github.com/UffeJakobsen/acme/archive/d2683cc64dcb1afc643388100b14e575f8bfb1bd.tar.gz"
   version "0.97"
+  sha256 "efda4ca8db9811e28e4604d25b5941888c949c175d1b47e40610c90a7b74a73d"
   license "GPL-2.0-or-later"
 
   livecheck do
