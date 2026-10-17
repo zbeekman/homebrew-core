@@ -3,8 +3,8 @@ class MlxLm < Formula
 
   desc "Run LLMs with MLX"
   homepage "https://github.com/ml-explore/mlx-lm"
-  url "https://files.pythonhosted.org/packages/0c/6c/7901eee82ce19c0b49238cd09e33ce899514b0900174973bcc09bd5834d5/mlx_lm-0.32.1.tar.gz"
-  sha256 "7934554bdde3acbd3b2dcc8e0ba36538c30ae1b6c98e232329d320e9cdd6ce2a"
+  url "https://files.pythonhosted.org/packages/e1/46/eff1c17019b82912020d4d716527e6fcf4ac392b55cddef03eeb60566ab4/mlx_lm-0.32.2.tar.gz"
+  sha256 "1af8a92f6a141c3e2bf5b0369ac4464203a8e2189c47b9e40d3e921e5b3a1fe9"
   license "MIT"
   head "https://github.com/ml-explore/mlx-lm.git", branch: "main"
 
