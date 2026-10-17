@@ -1,8 +1,8 @@
 class Evnx < Formula
   desc "Comprehensive CLI tool for managing .env files"
   homepage "https://evnx.dev"
-  url "https://github.com/urwithajit9/evnx/archive/refs/tags/v0.10.6.tar.gz"
-  sha256 "28e06abf4ecf0b4bd4d196390b3c8a426d017af33ab0f98b96656cef0d9193b5"
+  url "https://github.com/urwithajit9/evnx/archive/refs/tags/v0.10.7.tar.gz"
+  sha256 "641758873821d57687367e10b64387517ceb1b159473a52eb93f0b1b3ff441d6"
   license "MIT"
 
   bottle do
