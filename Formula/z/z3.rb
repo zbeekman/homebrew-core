@@ -14,11 +14,11 @@ class Z3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "9dbb64ac09a6433c54be5271f6008d43d2ec63ec291eac78496e3696d3c6d4cd"
-    sha256 cellar: :any, arm64_tahoe:       "231979a59ac771b0a617a4273e3440dfe8ac2e54b987b1529ee995eebcbe47f1"
-    sha256 cellar: :any, arm64_sequoia:     "7e756040907e4a7096229ef78e0865967d4ac6111be1b5d4337b5093c7f84e0c"
-    sha256 cellar: :any, arm64_linux:       "c587a10d44fc3e09d81b346e1a8deb88c5e5b3a112e412723f954be71f21508f"
-    sha256 cellar: :any, x86_64_linux:      "8c2f62946a611a326b1f6b423b0b500e626976517dc7c6ad2958f692f57ec73c"
+    sha256 cellar: :any, arm64_golden_gate: "e476fd1664d2a3303ba3b6b07efbd9dd5a76a0df61ee78918755a9d1b6580064"
+    sha256 cellar: :any, arm64_tahoe:       "71608b10f9abefecfe5f2f023442f0820a253e62b3e1980c0adef9f749948709"
+    sha256 cellar: :any, arm64_sequoia:     "5436cd3b3c2a314525e5190e9d0bf57d0c90103db9f4828c646a3c8a647165ee"
+    sha256 cellar: :any, arm64_linux:       "566aeecb07d1fc926573efddd9b61d0b1753af0323f81b7f50b963fe0e569e4a"
+    sha256 cellar: :any, x86_64_linux:      "e242396095397d21baf385a0e233c4debe8b6110743c95919939c5fdbd533497"
   end
 
   depends_on "cmake" => :build
