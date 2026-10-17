@@ -1,8 +1,8 @@
 class TodoistCli < Formula
   desc "Official command-line interface for Todoist"
   homepage "https://github.com/Doist/todoist-cli"
-  url "https://registry.npmjs.org/@doist/todoist-cli/-/todoist-cli-5.5.0.tgz"
-  sha256 "813e1d252374345cf80a6f740c4295798826abff869b1205f46fa54cf5d30b5e"
+  url "https://registry.npmjs.org/@doist/todoist-cli/-/todoist-cli-5.5.1.tgz"
+  sha256 "d0ad1b99ad9eba010f990ca319539410570bbc45a5f709a0c46f45b023434169"
   license "MIT"
 
   bottle do
@@ -17,8 +17,8 @@ class TodoistCli < Formula
   depends_on "node"
 
   resource "keyring" do
-    url "https://github.com/Brooooooklyn/keyring-node/archive/refs/tags/v2.1.0.tar.gz"
-    sha256 "dcb0381cf252c577ff5c0c3bb0d5dd0750fd04a528484e5dbfdfb3c1add12467"
+    url "https://github.com/Brooooooklyn/keyring-node/archive/refs/tags/v2.1.1.tar.gz"
+    sha256 "b1f4847eb61306e8c4f1a0418bf9e47231e8fdbc41a88631777d5cfa515eaaaf"
 
     livecheck do
       url "https://raw.githubusercontent.com/Doist/todoist-cli/v#{LATEST_VERSION}/package-lock.json"
