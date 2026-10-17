@@ -9,11 +9,11 @@ class Pipx < Formula
   head "https://github.com/pypa/pipx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f5d078f7058df088cc2100a467ff5d043d7157e0e8dbeb7d280a4f4e34ce7ce3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f5d078f7058df088cc2100a467ff5d043d7157e0e8dbeb7d280a4f4e34ce7ce3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f5d078f7058df088cc2100a467ff5d043d7157e0e8dbeb7d280a4f4e34ce7ce3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b30ade919e7b7a99e71e885808ea37dd15968ff29f1aca44406000a7b1b37621"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b30ade919e7b7a99e71e885808ea37dd15968ff29f1aca44406000a7b1b37621"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5e1516a9c3c4ee0d7c3d34f0eadd94e847e880f46941448dff3b55c11ac29826"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5e1516a9c3c4ee0d7c3d34f0eadd94e847e880f46941448dff3b55c11ac29826"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5e1516a9c3c4ee0d7c3d34f0eadd94e847e880f46941448dff3b55c11ac29826"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "2554cb3d188ebb2c233718f832eb80656b645da6b9fe7987fba131d06b024f0e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2554cb3d188ebb2c233718f832eb80656b645da6b9fe7987fba131d06b024f0e"
   end
 
   depends_on "python@3.15"
