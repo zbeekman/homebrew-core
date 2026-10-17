@@ -16,11 +16,11 @@ class Got < Formula
   no_autobump! because: "GitHub runners are not abile to access the homepage or livecheck URL"
 
   bottle do
-    sha256 arm64_golden_gate: "de9efddadf064b836fce7364c0a3d36d990eb39f596855a518047968ffdd9f07"
-    sha256 arm64_tahoe:       "146d9d10a5c535f1f29948653cf405c998ac80c4c5725c663e760fc1dc3806fd"
-    sha256 arm64_sequoia:     "4c00dd25449830a5a2d66602e409a5f8d9bc59d34b8767afe9699d6ca0c874ba"
-    sha256 arm64_linux:       "714f5c33f79fd7ff2fe005143f990376e59eacd8ad7edf58bd82038671c19425"
-    sha256 x86_64_linux:      "a488a562a2971ba5e16459e4cfb6d6e5dadfae975b90de22dbdc71deeaa67676"
+    sha256 arm64_golden_gate: "8bdefe62a5b500208001b2bc294831f52a954f2fbe4adf3ada4dd17eb1efcfc9"
+    sha256 arm64_tahoe:       "4c7b58713ae09e6edcc003c3d1ed9327e57e527308195d151cc9cc47f8bd973b"
+    sha256 arm64_sequoia:     "1f721d603ca50dc77bc551e07f3bb6775395ffcc0a1ed39782fb9f4aaaf5f7d5"
+    sha256 arm64_linux:       "4677d6ea56c5c4fbbb0986eed3730855481c3ca28796a6a74700de0adb2fd212"
+    sha256 x86_64_linux:      "3a32ebf40e7fce0a82621ee0b0dac8609f9e6593560e11f5cfe9b4a67c176855"
   end
 
   depends_on "bison" => :build
