@@ -1,8 +1,8 @@
 class Syswatch < Formula
   desc "Cross-platform system diagnostics TUI"
   homepage "https://www.netwatchlabs.com/labs/syswatch"
-  url "https://github.com/matthart1983/syswatch/archive/refs/tags/v0.14.3.tar.gz"
-  sha256 "fe80d113258e60b0293de102733f9f250afdbc7c44398a2c802bcd273af38da3"
+  url "https://github.com/matthart1983/syswatch/archive/refs/tags/v0.14.4.tar.gz"
+  sha256 "390c0bf558e8c1859ffb77e05dcce47f7af073b26a38fc8800129c2d550ff44a"
   license "MIT"
 
   bottle do
@@ -24,21 +24,24 @@ class Syswatch < Formula
   end
 
   test do
-    Open3.popen2("script", "-q", "screenlog.txt") do |input, _, wait_thr|
-      input.puts "stty rows 80 cols 130"
-      input.puts "env LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8 TERM=xterm #{bin}/syswatch"
-      sleep 1
+    require "pty"
+    require "io/console"
+
+    ENV["TERM"] = "xterm"
+    output_log = testpath/"output.log"
+    PTY.spawn(bin/"syswatch", [:out, :err] => output_log.to_s) do |r, w, pid|
+      r.winsize = [80, 130]
+      sleep 2
       # bring up help dialog
-      input.puts "?"
-      sleep 1
-      input.close
+      w.write "?"
+      sleep 2
     ensure
-      Process.kill("TERM", wait_thr.pid)
+      Process.kill("TERM", pid)
     end
 
-    screenlog = (testpath/"screenlog.txt").read.scrub
-    assert_match "Services", screenlog
+    output = output_log.read.scrub
+    assert_match "Services", output
     # match text in help dialog
-    assert_match "Procs tab", screenlog
+    assert_match "Procs tab", output
   end
 end
