@@ -13,11 +13,11 @@ class Powershell < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "263d0d9e424e5e1c79dfbe21c4d35c39b5e8dc00633681bd345ac70185c7d665"
-    sha256 cellar: :any, arm64_tahoe:       "68333c07a75ca58fdb154591518809e8271a5d59789641c2089efc6ecf35daa3"
-    sha256 cellar: :any, arm64_sequoia:     "7dfd8ab2e6996e343fa22cfee5481025ea4f2dc0d397e3c295213c9c9c68027b"
-    sha256 cellar: :any, arm64_linux:       "508b729b99a1f0c3c9adacecc0110098d0a24069d24b9e2b3dd61d6b57c407ea"
-    sha256 cellar: :any, x86_64_linux:      "a049b5b4414694dc63878d41457160751bc6e4a1e5eb1d8f539eec182748f164"
+    sha256 cellar: :any, arm64_golden_gate: "7bf6f2d1bc50befa073cdf5bcead2594f8eaadd48f17cf794668348bb90999d3"
+    sha256 cellar: :any, arm64_tahoe:       "1c882f24e7475d950c7d681786b7f5938f9e18e4358d7822350cb2fb57ff221b"
+    sha256 cellar: :any, arm64_sequoia:     "0fdecd6ef2ca21cbf9886764ad13c1c9365dc08998666e4b37a3cd14c5035e87"
+    sha256 cellar: :any, arm64_linux:       "6db9e432696725ebd8fe979f61d0f8e705a4a5d9d1b0c37fe1d73811ea87c71c"
+    sha256 cellar: :any, x86_64_linux:      "3da854f2e49262843e169e3d7868a126c5c416a74953f68668876dbf266ee26c"
   end
 
   depends_on "dotnet"
