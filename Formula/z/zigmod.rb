@@ -1,9 +1,9 @@
 class Zigmod < Formula
   desc "Package manager for the Zig programming language"
   homepage "https://nektro.github.io/zigmod/"
-  url "https://github.com/nektro/zigmod/archive/refs/tags/r105.tar.gz"
-  version "r105"
-  sha256 "b88a477602b63ce4f013701369ab4356ff91830915021443aa74380df474c1b3"
+  url "https://github.com/nektro/zigmod/archive/refs/tags/r106.tar.gz"
+  version "r106"
+  sha256 "faea9f58a0cf9f582d51ebd7252b624e062c1bb6e41ea98bddbe4592005999ae"
   license "MIT"
   version_scheme 1
 
@@ -21,26 +21,22 @@ class Zigmod < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "456c7505eecfd41737459a8cf5d4f3f2f4a745a9e71421b6bda86fa515320e55"
   end
 
-  depends_on "zig@0.16" => :build
+  depends_on "git" => :build # `zig build fetch` runs `git clone --revision` (git 2.49+)
   depends_on "zig"
 
   deny_network_access!
 
   def fetch
-    ENV.prepend_path "PATH", formula_opt_bin("zig@0.16")
     system "zig", "build", "fetch", "-Dtag=#{version}"
   end
 
   def install
-    ENV.prepend_path "PATH", formula_opt_bin("zig@0.16")
-
     args = %W[
       -Dtag=#{version}
       -Dstrip=true
     ]
 
-    # Upstream doesn't use `-Doptimize`, see: https://github.com/nektro/zigmod/pull/109
-    system "zig", "build", *args, *std_zig_args.map { |s| s.sub "-Doptimize=", "-Dmode=" }
+    system "zig", "build", *args, *std_zig_args
   end
 
   test do
