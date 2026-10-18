@@ -4,7 +4,7 @@ class VapoursynthImwri < Formula
   url "https://github.com/vapoursynth/vs-imwri/archive/refs/tags/R2.tar.gz"
   sha256 "f4d2965d32877005d0709bd8339828f951885a0cb51e0c006d123ede0b74307b"
   license "LGPL-2.1-or-later"
-  revision 4
+  revision 5
   version_scheme 1
   head "https://github.com/vapoursynth/vs-imwri.git", branch: "master"
 
@@ -28,7 +28,7 @@ class VapoursynthImwri < Formula
 
   depends_on "imagemagick"
   depends_on "libheif"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "vapoursynth"
 
   on_macos do
