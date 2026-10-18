@@ -9,12 +9,11 @@ class Libunistring < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "57307eb89a02e09aa4de70e09391994dfc9520d9f101ec7e64f9af21dcea2420"
-    sha256 cellar: :any, arm64_tahoe:       "14a72bd0aa3f1b2b3a7360be24380171d140b2fc5abbde0144807d3847b6728c"
-    sha256 cellar: :any, arm64_sequoia:     "513bf2378982459bf3daf286cec9d50d3f491686f8caa8749604de3be4e6db77"
-    sha256 cellar: :any, arm64_linux:       "27ac70a1873a544d1602e2c23a60feab68707d8a5403fb686567ce94ef08e2cd"
-    sha256 cellar: :any, x86_64_linux:      "a1153bcda606e120f9bf8e7e274d102e9f87a517c88fc8324c488ffdf1cfce71"
+    sha256 cellar: :any, arm64_golden_gate: "fec6be46cabaefd1dc5d5ecd029c50aeaef6c93d9c7de4425968047811575e81"
+    sha256 cellar: :any, arm64_tahoe:       "b803434415743b204ffc6bc5415ebfceeaf3dbcb86c0c4ea8a6fc63d2a04f441"
+    sha256 cellar: :any, arm64_sequoia:     "5001abe192babcfaf0f97ad322e2e59958d0d991de3da9f2e941b24924b8a2b8"
+    sha256 cellar: :any, arm64_linux:       "142d02125d023a6908f2f407ab5b89f5fd5a9382d363d5f0b627b81d5a19f8f5"
+    sha256 cellar: :any, x86_64_linux:      "8064362db7a4b0a036feb1e0eb4513b1604da1b14fde4b7f3866d067d24808ca"
   end
 
   deny_network_access!
