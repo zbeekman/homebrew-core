@@ -1,8 +1,8 @@
 class Portop < Formula
   desc "Terminal UI showing which processes are using TCP and UDP ports"
   homepage "https://github.com/padovanl/portop"
-  url "https://github.com/padovanl/portop/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "4fb55f6146fd85fe1a05af00b1281f123025e29e1b9ba3f165d2413ce0a02343"
+  url "https://github.com/padovanl/portop/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "e84d56316ae48ebef064d1f8e995885e93ecd2d4d3abb3ba0e8e8bfec91b939a"
   license "MIT"
   head "https://github.com/padovanl/portop.git", branch: "main"
 
