@@ -11,6 +11,14 @@ class Bqlog < Formula
     regex(/^Release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_golden_gate: "877d3be7d28d983a20f6efc8cead61c0e410a324bf0d562850f5e4ffc9d64377"
+    sha256 cellar: :any, arm64_tahoe:       "be9f4938bdcc1c3d8239f04aa6f98071c0ccc88778eb510f8b4fabd28ac45ff4"
+    sha256 cellar: :any, arm64_sequoia:     "5a405402a0fdd7e44ed81c41a9370ae675e34c55472e28ee30391d87e6f4f4ce"
+    sha256 cellar: :any, arm64_linux:       "b0582f9a74dcb2078f9c1e990a5da24a848f0fb308f28d8a2c3e1afbac3a6926"
+    sha256 cellar: :any, x86_64_linux:      "b304206221d76ab8aba8cf9e59733aa83993974e1a247385766c49ea3af01f52"
+  end
+
   depends_on "cmake" => :build
 
   deny_network_access!
