@@ -1,8 +1,8 @@
 class Fakecloud < Formula
   desc "Free, open-source local AWS cloud emulator for integration testing"
   homepage "https://fakecloud.dev/"
-  url "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.50.0.tar.gz"
-  sha256 "8bfc6c977a773f8488911458e400d1e3bb01e0719a1c320f2286e68b7a7d4759"
+  url "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.51.0.tar.gz"
+  sha256 "23c16293013a73bc5eb7a7248fe36cb02deb6f93db84543d698252743dd94bd0"
   license "AGPL-3.0-or-later"
   head "https://github.com/faiscadev/fakecloud.git", branch: "main"
 
