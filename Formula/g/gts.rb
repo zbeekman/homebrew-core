@@ -4,7 +4,7 @@ class Gts < Formula
   url "https://downloads.sourceforge.net/project/gts/gts/0.7.6/gts-0.7.6.tar.gz"
   sha256 "059c3e13e3e3b796d775ec9f96abdce8f2b3b5144df8514eda0cc12e13e8b81e"
   license "LGPL-2.0-or-later"
-  revision 3
+  revision 4
 
   bottle do
     rebuild 1
