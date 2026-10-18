@@ -38,12 +38,12 @@ class DosboxStaging < Formula
   end
 
   bottle do
-    sha256               arm64_golden_gate: "631f8f9b0a0713795b5b103442a30e21345469aed7b94a0f22ec7f45c642baa4"
-    sha256               arm64_tahoe:       "6eefc723f61cee95d76f834671fc674b9207d52791b16305ed2afe476d9e7e8a"
-    sha256               arm64_sequoia:     "bdfb33287fcd9b8e8ebd12641bfe10dc23928ad12f5c279de9f4539bdfb25869"
-    sha256               arm64_sonoma:      "ab66fbed8d0d032bbbc26784ed75ef16ce57c38fef36b908439527c674f1f896"
-    sha256               arm64_linux:       "db4c8c85ba32af9c14da0e700a913e5d45b34968fd881e763eda3878d25e1067"
-    sha256 cellar: :any, x86_64_linux:      "f897b12d7b9f6b831476ccb8a1ba7fcf82ee08ecbe4232b424051caf28b33955"
+    rebuild 1
+    sha256               arm64_golden_gate: "2bf1cf1ffac1ac74860404bd384a5fbdd4ea5e83c27c1324aa9fdce8e9c805d7"
+    sha256               arm64_tahoe:       "e3abf6810ce748014c281388af63c0fa24a6ce494ec67e0f752054563245b04e"
+    sha256               arm64_sequoia:     "c466cd01624d5b416a0205783c8d5c50d8ffcc93501ff8a5e5a397ded8c42d8b"
+    sha256               arm64_linux:       "38271f126184b3824f19574085623128b8081eb4f3383e4ab3fc6d29d88c7906"
+    sha256 cellar: :any, x86_64_linux:      "d38d15d8d2ee472b83bb102b9c813f8ca37cdcad8726e40f37db44a2683ba77a"
   end
 
   head do
