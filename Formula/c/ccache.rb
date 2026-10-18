@@ -8,11 +8,11 @@ class Ccache < Formula
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    sha256 arm64_golden_gate: "843995a663c32acc5c87d4a88c1627e36cf461fe6c475e5242d0ce6741980686"
-    sha256 arm64_tahoe:       "cab61162fe5c94fdf6653b1ab79fc31e07e2da727b27f85177eb04d594f7c583"
-    sha256 arm64_sequoia:     "7414b0b6787f998cbaf6bc922a8cf9da64ebe4adc786cf6f9ae64f211704662e"
-    sha256 arm64_linux:       "8ddf47b2c127a3f13acf1a8d45dfa5e1bc0217acb5bacb27e54910bff137d6da"
-    sha256 x86_64_linux:      "fc6ea73487bdf2ca1378e6217abb8daf1fd38c1e25f226c56a7572494e16b3c0"
+    sha256 arm64_golden_gate: "8a3df0218130b3a456cc55e8d795b95c150b5c4a3ab25dc5bf234445ce3ea12b"
+    sha256 arm64_tahoe:       "3ac7f3e3e0373e379d33c39483af4b9a8cf7ad22c2807992198fd7d9f0bde5ec"
+    sha256 arm64_sequoia:     "6c45bb9f0429eb114b09e8ea5d3225cb895d90db31da3dc55b5e4d18b48bc54c"
+    sha256 arm64_linux:       "37719daf3f2ebb1a9ca05b3525f5f4fb502632ba29d3e3a4389990c93e877842"
+    sha256 x86_64_linux:      "20d1d5d4127c06da376c7c8c2e83617a7f7f6f2344c5af6b1c3e0183c2125ae5"
   end
 
   depends_on "asciidoctor" => :build
