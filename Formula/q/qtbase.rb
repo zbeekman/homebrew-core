@@ -7,6 +7,7 @@ class Qtbase < Formula
     "BSD-3-Clause", # *.cmake
     "GFDL-1.3-no-invariants-only", # *.qdoc
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtbase.git", branch: "dev"
 
@@ -21,6 +22,14 @@ class Qtbase < Formula
       url "https://github.com/qt/qtbase/commit/032643f99e090e0304ef935c2ee11c109d55c8a1.patch?full_index=1"
       sha256 "6870a711a6fb7ce6367f541e10ec9fe2785bd7d7484a2b1759b8d1f082a3f09f"
       type :backport
+    end
+
+    # Fix `#include_next` forwarding headers when the framework path precedes them
+    patch do
+      url "https://github.com/qt/qtbase/commit/8c260a771ab1ed7d6cdb5f221854ee470e5790a6.patch?full_index=1"
+      sha256 "07742a103f8928457f7df8140a0f88589980f81670ab0b6c646b19dc8cc36344"
+      type :cherry_pick
+      resolves "https://codereview.qt-project.org/c/qt/qtbase/+/776003"
     end
   end
 
