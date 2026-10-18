@@ -1,10 +1,9 @@
 class Ccache < Formula
   desc "Object-file caching compiler wrapper"
   homepage "https://ccache.dev/"
-  url "https://github.com/ccache/ccache/releases/download/v4.14.1/ccache-4.14.1.tar.xz"
-  sha256 "29f10de481ac2c41c91bfabead63d803bd2fe823e09752aade5b0b8704cc4f30"
+  url "https://github.com/ccache/ccache/releases/download/v4.14.2/ccache-4.14.2.tar.xz"
+  sha256 "0feb2707d9cb48885abb950e5d629e85f57fa79a2439cbbdfa681d6c3dc5f0dc"
   license "GPL-3.0-or-later"
-  revision 2
   compatibility_version 1
   head "https://github.com/ccache/ccache.git", branch: "master"
 
@@ -31,17 +30,27 @@ class Ccache < Formula
   depends_on "xxhash"
   depends_on "zstd"
 
-  on_macos do
-    depends_on "gcc" => :build
+  on_linux do
+    depends_on "elfutils" => :build
+    depends_on "zlib-ng-compat"
   end
 
-  on_linux do
-    depends_on "zlib-ng-compat"
+  # Workaround to allow running tests with Xcode 27 / LLVM 23 after
+  # https://github.com/swiftlang/llvm-project/commit/1e4f2519930f8756f49865096636954a33334217
+  # https://github.com/llvm/llvm-project/commit/aba18cf1cc65d5333940c4299251d986f66dee9a
+  patch do
+    on_macos do
+      file "Patches/ccache/fix-tests-xcode27.diff"
+      type :unofficial
+    end
   end
 
   deny_network_access!
 
   def install
+    # Homebrew-specific workaround due to macOS sandbox blocking Unix socket in /tmp
+    inreplace "test/CMakeLists.txt", "addtest(remote_helper)", "# \\0" if OS.mac?
+
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_INSTALL_SYSCONFDIR=#{etc}",
                     "-DENABLE_IPO=TRUE",
@@ -55,15 +64,7 @@ class Ccache < Formula
     # (especially with IPO enabled), adds negligible time to the build process, and we don't actually test
     # this formula properly in the test block since doing so would be too complicated.
     # See https://github.com/Homebrew/homebrew-core/pull/83900#issuecomment-90624064
-    #
-    # FIXME: Running test with clang adds SDKSettings.json which causes test failures
-    # and also hit test.remote_helper after a brew change.
-    test_cc = if OS.mac?
-      formula_opt_bin("gcc")/"gcc"
-    else
-      DevelopmentTools.locate(DevelopmentTools.default_compiler)
-    end
-    with_env(CC: test_cc) do
+    with_env(CC: DevelopmentTools.locate(DevelopmentTools.default_compiler)) do
       system "ctest", "-j#{ENV.make_jobs}", "--test-dir", "build", "--rerun-failed", "--output-on-failure"
     end
 
