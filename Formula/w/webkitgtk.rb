@@ -22,7 +22,7 @@ class Webkitgtk < Formula
   depends_on "ninja" => :build
   depends_on "perl" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "ruby" => :build
   depends_on "unifdef" => :build
   depends_on "at-spi2-core"
