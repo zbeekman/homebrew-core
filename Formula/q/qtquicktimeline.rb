@@ -9,6 +9,7 @@ class Qtquicktimeline < Formula
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtquicktimeline.git", branch: "dev"
 
