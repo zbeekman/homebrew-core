@@ -5,7 +5,7 @@ class Gocr < Formula
   mirror "https://fossies.org/linux/privat/gocr-0.52.tar.gz"
   sha256 "df906463105f5f4273becc2404570f187d4ea52bd5769d33a7a8661a747b8686"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   bottle do
     sha256 cellar: :any,                 arm64_golden_gate: "386efb1fcde7ebbcc2d81a5671d79266e89440d507691dbea28524d49941bf19"
