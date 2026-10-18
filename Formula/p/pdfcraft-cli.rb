@@ -6,6 +6,14 @@ class PdfcraftCli < Formula
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/storytold/pdfcraft.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "cd38267707fea1af551229fae26e06a99f14b55985d55dee652d3ff8e3f63a54"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "06bc64031a1386591d2749c76cd7aa7680a2592e5ba0a5511144c10d7d9b572f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "40d4c00c3b2aa27511c7744f1d6362e18dee1113049955d1ead3aa99e8a1643e"
+    sha256 cellar: :any,                 arm64_linux:       "f0f62780a0da44bf1bcc22480e942e45f8ee8e9073ea267677582914dbf88ecb"
+    sha256 cellar: :any,                 x86_64_linux:      "35c02a802c5014968d74109a3d5759a595717d65ec3a876188f05db3514593c5"
+  end
+
   depends_on "rust" => :build
 
   deny_network_access!
