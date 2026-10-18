@@ -1,8 +1,8 @@
 class Treemd < Formula
   desc "TUI and CLI dual pane markdown viewer"
   homepage "https://github.com/epistates/treemd"
-  url "https://github.com/Epistates/treemd/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "5f110d3ea88884200161d286cab56bc808a59f614f24088c5e8dec619f3a20a7"
+  url "https://github.com/Epistates/treemd/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "74cf698a520ae60eddba6135e5322bb06deae6474b356d69e3b367fb79a86c35"
   license "MIT"
   head "https://github.com/epistates/treemd.git", branch: "main"
 
@@ -33,20 +33,7 @@ class Treemd < Formula
 
     (testpath/"test.md").write("# Test Heading\n\nThis is a test paragraph.")
 
-    begin
-      output_log = testpath/"output.log"
-      if OS.mac?
-        pid = spawn bin/"treemd", testpath/"test.md", [:out, :err] => output_log.to_s
-      else
-        require "pty"
-        r, _w, pid = PTY.spawn("#{bin}/treemd #{testpath}/test.md > #{output_log}")
-        r.winsize = [80, 43]
-      end
-      sleep 3
-      assert_match "treemd - test.md - 1 headings", output_log.read
-    ensure
-      Process.kill("TERM", pid)
-      Process.wait(pid)
-    end
+    assert_equal (testpath/"test.md").read, shell_output("#{bin}/treemd test.md")
+    assert_equal "# Test Heading\n", shell_output("#{bin}/treemd --list test.md")
   end
 end
