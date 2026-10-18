@@ -1,8 +1,8 @@
 class Oasdiff < Formula
   desc "OpenAPI Diff and Breaking Changes"
   homepage "https://www.oasdiff.com/"
-  url "https://github.com/oasdiff/oasdiff/archive/refs/tags/v1.33.0.tar.gz"
-  sha256 "ecd6c0b87b780749963d0b2948a0419b6d3e221d888043e539c3bec9c724268f"
+  url "https://github.com/oasdiff/oasdiff/archive/refs/tags/v1.34.0.tar.gz"
+  sha256 "75e2bf60dd2f0530385eb18fd1deb6daa0ea7f2d88600c23099ef93b716bfc09"
   license "Apache-2.0"
   head "https://github.com/oasdiff/oasdiff.git", branch: "main"
 
@@ -49,7 +49,7 @@ class Oasdiff < Formula
     testpath.install resource("homebrew-openapi-test1.yaml")
     testpath.install resource("homebrew-openapi-test5.yaml")
 
-    expected = "3 error, 1 warning"
+    expected = "[api-path-removed-without-deprecation]"
     assert_match expected, shell_output("#{bin}/oasdiff changelog openapi-test1.yaml openapi-test5.yaml")
 
     assert_match version.to_s, shell_output("#{bin}/oasdiff --version")
