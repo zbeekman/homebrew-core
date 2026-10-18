@@ -11,11 +11,11 @@ class Graphqlite < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "6ab094867bf24a1690cbae0ebcf78ec02261fdd527c2a30639b3cf3ed3b70418"
-    sha256 cellar: :any, arm64_tahoe:       "94b4a6341bf4f44a633ca0a7858eede6291a47c3e488083a005c80f367f5944a"
-    sha256 cellar: :any, arm64_sequoia:     "c61c65fdee9292c70986154542da6934141ba7ba28031f68969f110f55dee0b4"
-    sha256 cellar: :any, arm64_linux:       "78fdfa1f85e822bb810c2b9474986ae74b714baefb8917ed3790c59ef87d4b5e"
-    sha256 cellar: :any, x86_64_linux:      "7e080a1abfc36b4729a3bf0475b83c80637078de09165dd618bb9fe26c545a19"
+    sha256 cellar: :any, arm64_golden_gate: "5c98b7d85d18faa3d3bac31915356cb80a3c2278007094b98cd5db818fe33735"
+    sha256 cellar: :any, arm64_tahoe:       "1799a1c97bdb69e04ac16c393a47f2e7f966a838dbcd07aac0d2f4120d892d6b"
+    sha256 cellar: :any, arm64_sequoia:     "d2d3e9042c7cd72623fdf7c802ec23908d8c16f8853ea413cd529dfb39b0357a"
+    sha256 cellar: :any, arm64_linux:       "d591109e6ad2285daaf8b6ab0e91e293832a180e36998a412443068940572673"
+    sha256 cellar: :any, x86_64_linux:      "bbef44a577a441ba0cce912ec3dab71ba201a7d9cd118a60764323b6995d3dec"
   end
 
   depends_on "bison" => :build # macOS bison is too old
