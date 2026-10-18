@@ -8,13 +8,11 @@ class Raylib < Formula
   head "https://github.com/raysan5/raylib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "86ed9803fccea2d5034e4ad865e327db4564ed3362069d4515e69be074b7c466"
-    sha256 cellar: :any, arm64_tahoe:       "15b25ecba281a742ded68d937b94128ac48ba99a38ca5472458a7677921665c2"
-    sha256 cellar: :any, arm64_sequoia:     "0034c21f3ddbf09ca8e3f47e15715c386521079fd24e6ceb4602ed4b354dcbd4"
-    sha256 cellar: :any, arm64_sonoma:      "113800ffaaf2d633b7e57470ae982e99a0955297e93efca7b0085b191df73231"
-    sha256 cellar: :any, sonoma:            "506bd5433099e45f6c2e2ec4275bbc17cbbc7f7429ff4e1d508b7818a20a49bb"
-    sha256 cellar: :any, arm64_linux:       "7043c22df6ea2bd11ee9cc38cdf4f29ab2e90fe9d140da3cda96efd3f7eaaff7"
-    sha256 cellar: :any, x86_64_linux:      "117389644a50a59966af649bcc25f5b1cb393de791fb8ea6abf54cf61c71b057"
+    sha256 cellar: :any, arm64_golden_gate: "673a7b53ade625117feee008a1a88a77ca068c5c01cfd9981c13f727f6a57540"
+    sha256 cellar: :any, arm64_tahoe:       "a0f742f031ea902a5762fe6aded4461ffcad8d4c5d235b30f46919e01830a267"
+    sha256 cellar: :any, arm64_sequoia:     "87705d21de2e87e0128096bb059310f1cc4bd0673a543b5f55a9b0e4f5d43191"
+    sha256 cellar: :any, arm64_linux:       "0e0d6c2733a90fea8435402d5944b09ed587ec65576a4f0dbb9384c7459bbd15"
+    sha256 cellar: :any, x86_64_linux:      "817953eff8058abeeb098a5faed76159947d2368190107fee34f5d404f1b2cd3"
   end
 
   depends_on "cmake" => :build
