@@ -4,7 +4,7 @@ class Libsigrokdecode < Formula
   url "https://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.3.tar.gz"
   sha256 "c50814aa6743cd8c4e88c84a0cdd8889d883c3be122289be90c63d7d67883fc0"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   head "git://sigrok.org/libsigrokdecode", branch: "master"
 
   # The upstream website has gone down due to a server failure and the previous
@@ -34,7 +34,7 @@ class Libsigrokdecode < Formula
   depends_on "pkgconf" => [:build, :test]
 
   depends_on "glib"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_macos do
     depends_on "gettext"
