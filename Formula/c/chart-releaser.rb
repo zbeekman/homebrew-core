@@ -34,6 +34,7 @@ class ChartReleaser < Formula
       -X github.com/helm/chart-releaser/cr/cmd.BuildDate=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags:, output: bin/"cr"), "./cr"
+    generate_completions_from_executable(bin/"cr", shell_parameter_format: :cobra)
   end
 
   test do
