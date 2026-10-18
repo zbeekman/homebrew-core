@@ -1,8 +1,8 @@
 class Alejandra < Formula
   desc "Command-line tool for formatting Nix Code"
-  homepage "https://kamadorueda.com/alejandra/"
-  url "https://github.com/kamadorueda/alejandra/archive/refs/tags/4.0.0.tar.gz"
-  sha256 "f3f9989c3fb6a56e2050bf5329692fae32a2b54be7c0652aa394afe4660ebb74"
+  homepage "https://alejandra.kamadorueda.com/"
+  url "https://github.com/kamadorueda/alejandra/archive/refs/tags/4.1.0.tar.gz"
+  sha256 "cf74acd0bbbaa166abed6d155f3a6206392d715336e74f9bb5fe05d874de183b"
   license "Unlicense"
   head "https://github.com/kamadorueda/alejandra.git", branch: "main"
 
