@@ -11,6 +11,7 @@ class Qtcanvaspainter < Formula
     "BSD-3-Clause", # *.cmake
     "Zlib", # nanovg
   ]
+  revision 1
   head "https://code.qt.io/qt/qtcanvaspainter.git", branch: "dev"
 
   livecheck do
