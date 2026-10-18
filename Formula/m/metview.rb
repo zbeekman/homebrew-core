@@ -11,12 +11,11 @@ class Metview < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "5a1d1e76099dbf127a5b12d140c67177c89badf19738f851329a68e2fc907057"
-    sha256 cellar: :any, arm64_tahoe:       "bd863ad07297b790be7f2926d5c0ece1ac0e6ac539a917df45bd2598a0505529"
-    sha256 cellar: :any, arm64_sequoia:     "3faa35a75423cf43a8792429f3c37d6ad586573ad6993dd480e143eff9946874"
-    sha256 cellar: :any, arm64_linux:       "4ca04059eda9ac1ba987a1735b48bbe4aacd240c5be43fb00d6bcbeb473513e7"
-    sha256 cellar: :any, x86_64_linux:      "61d3356ddca4c0457bdac6122ee00357340c0adf7fe3bef276de6e92238caa34"
+    sha256 cellar: :any, arm64_golden_gate: "55dea06ea5b4955dbb1487bf450a7582b5bd98b27bacefc4d63927253ce47a2b"
+    sha256 cellar: :any, arm64_tahoe:       "4057fcde198282a5df807e72dfd9ebca94d5eed333ee52d56231b0bf9dc4cddb"
+    sha256 cellar: :any, arm64_sequoia:     "2e41b93fda66bc5744d30db2fc8b0751513088f961be87d91bbf7602e9dd84bc"
+    sha256 cellar: :any, arm64_linux:       "0efe4526e5cefdfad2c78d90601f8a13d5972a79e64106b0af64790fb3adce3b"
+    sha256 cellar: :any, x86_64_linux:      "77a3da9cce7e0a31b7a3f68700f865d43469a31a8d835080f68796e105741ea3"
   end
 
   depends_on "cmake" => :build
