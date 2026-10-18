@@ -12,7 +12,7 @@ class Flix < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6b7e594d9ee58bfc7e8cd7cd033d93826da9643a520217af260891aad8d402ad"
+    sha256 cellar: :any_skip_relocation, all: "412db87fd6c924a045944f837e4eae02e4f02c655b7beb1cae05face7effbdff"
   end
 
   depends_on "mill" => :build
