@@ -11,6 +11,7 @@ class Qtpositioning < Formula
     "BSL-1.0",      # bundled clipper
     "MIT",          # bundled clip2tri
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtpositioning.git", branch: "dev"
 
