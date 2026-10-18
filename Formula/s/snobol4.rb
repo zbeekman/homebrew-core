@@ -1,8 +1,8 @@
 class Snobol4 < Formula
   desc "String oriented and symbolic programming language"
   homepage "https://www.regressive.org/snobol4/"
-  url "https://ftp.regressive.org/snobol/snobol4-2.3.4.tar.gz"
-  sha256 "702f73b4107438bd251ebc253d335994f37bb40379242360d876e2de6dc03f78"
+  url "https://ftp.regressive.org/snobol/snobol4-2.3.5.tar.gz"
+  sha256 "07154314d458be00936b1dd8592a32be25d5b8fc27e6bf1b73ada904886e86e2"
   license "BSD-2-Clause"
 
   livecheck do
