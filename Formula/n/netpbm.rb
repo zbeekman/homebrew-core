@@ -10,12 +10,11 @@ class Netpbm < Formula
   head "https://svn.code.sf.net/p/netpbm/code/trunk"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "2bb73565c2911bdee88e9a226f23624c9fe4b4a39208e76564ef866b4d33d912"
-    sha256 arm64_tahoe:       "fdbe8b6d5b08ede5472be2be177d83a669b3e21303da72a2d8f0a0d7cacc0323"
-    sha256 arm64_sequoia:     "0e11b57ed36c5a8c460c26bbc845b4a7c48e7ad96a7ce4b5a8a0c43a74158870"
-    sha256 arm64_linux:       "bda397bb2cad3e20df64e739d98af18f36cef8676bfee7eb9b94419eca60ee9a"
-    sha256 x86_64_linux:      "6aa00ede2592c4361312c001a60dcbd4349e3d7f2b63400426aada91ccf51d9c"
+    sha256 arm64_golden_gate: "ed9cb4f4f4594ef2c5d2afd7e5ba7bea80bd9d1bbb8d042302385fdce5caa05e"
+    sha256 arm64_tahoe:       "3e19506a833bc9090193d61b2c19b348a02ab377d743824f9d16db9e57ea1726"
+    sha256 arm64_sequoia:     "5c3d55c105decbc650943223197f02a6a35d08c9011a3ed8ce537332a1ff842c"
+    sha256 arm64_linux:       "cb22b0c20d45f0a62b274b8ce0d7c30d1231142f110cd8260007b7bd3f1b8bf6"
+    sha256 x86_64_linux:      "4d4afc6d0bc8f5806f2128fd96e868047b5f75b79e90b38f9367d8bb2ea47f47"
   end
 
   depends_on "pkgconf" => :build
