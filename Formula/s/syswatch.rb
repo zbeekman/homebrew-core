@@ -6,11 +6,11 @@ class Syswatch < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "69cfefcbc5f84b8587c59e0375dc06a404ea22239cd0971aab0122d7ee5c907f"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "70c5772a613abf237028242b1024b03a517ba378d1fa3a009b44b86dbf9e4551"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "741f758c31aab04db749ee21798a3509d470e9ca9fd132792798f89d1a048056"
-    sha256 cellar: :any,                 arm64_linux:       "af5781b323397c86e5f65c458a08f87ce2be8a18044136262b510e66b67d07f8"
-    sha256 cellar: :any,                 x86_64_linux:      "88a6dfbf6088915c15b2d21d5e64daf502fcac36b1e412517c05689f01386736"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5662b621595ea2ca0331e9c2dc1ef87785f98446bbaac0199bbcd613868d8875"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b87ff4233bba0b6753be2b059940ca3371c887f49a8aba1ac13b50a00016e35d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "55e278e3c176d66e5244d80865d6f4b996774a9ca913a60c35f67f13cd103338"
+    sha256 cellar: :any,                 arm64_linux:       "ba7f9644499273d68ac2c409b93f6fb60741738867efb69b5f03165f0c205d6c"
+    sha256 cellar: :any,                 x86_64_linux:      "f46eae8eec42570e16604e8f3a6d4a5cc6669aef2e0e64bccbb69bedcfcbfa4f"
   end
 
   depends_on "rust" => :build
