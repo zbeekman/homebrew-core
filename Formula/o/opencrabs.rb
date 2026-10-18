@@ -18,11 +18,11 @@ class Opencrabs < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "3f40b749a41460de52c1ef94c0009e0d3d5f0119a0efff4947eb2dc422e6fae9"
-    sha256 cellar: :any, arm64_tahoe:       "49bc7e856d451a7df45d24c47ab5692993b0b7d1f9464baa9d5a2dbd5c81fdeb"
-    sha256 cellar: :any, arm64_sequoia:     "34e5b03c0fb694b11c44d4e0d3595e248b3868f81f83034cb99972bc2b81c37f"
-    sha256 cellar: :any, arm64_linux:       "687d3a878122bb7ca5591d7622582b58d35d28299bc48422e7de367e0fe36ede"
-    sha256 cellar: :any, x86_64_linux:      "64c7961ec6f0d8b4b334d82ac0304dbdee17aa9e2bd9a842c2f282bf70c25c52"
+    sha256 cellar: :any, arm64_golden_gate: "5a799b87b2512a8bbd778c9774a5d72ba79b204ae789e1e2d558d99ab932d788"
+    sha256 cellar: :any, arm64_tahoe:       "78dcbb23717e6cb3598003bd1a2f0286d89a83330e6dd75634303ea26f8c2ef9"
+    sha256 cellar: :any, arm64_sequoia:     "daabaf4dbb06177797de174255597c91a3e156f8cdbac916b5e047f95092fd4b"
+    sha256 cellar: :any, arm64_linux:       "4ea6bb8134b7f193d10435759675c791d1a2c302b08c28005d39b907348ac6f5"
+    sha256 cellar: :any, x86_64_linux:      "e22dc176bba836ce302b924746c78832020e2a29c6842676784240298c662626"
   end
 
   depends_on "cmake" => :build
