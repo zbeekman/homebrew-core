@@ -1,8 +1,8 @@
 class TechnitiumDns < Formula
   desc "Self host a DNS server for privacy & security"
   homepage "https://technitium.com/dns/"
-  url "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.6.1.tar.gz"
-  sha256 "1e288eb4922066a6fb04aab92b1081ff1bb4384351b05413a9ca032134236491"
+  url "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.6.2.tar.gz"
+  sha256 "7fe162a7c1db828ca3ce0d754e9739118e5d666ddac526d2302509b47c3d513b"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -23,6 +23,7 @@ class TechnitiumDns < Formula
 
   def install
     ENV["DOTNET_CLI_TELEMETRY_OPTOUT"] = "1"
+    ENV["XDG_RUNTIME_DIR"] = buildpath
 
     dotnet = Formula["dotnet"]
     args = %W[
@@ -59,6 +60,7 @@ class TechnitiumDns < Formula
   test do
     # The sandbox denies FSEvents, so .NET's config file watcher would hang
     ENV["DOTNET_USE_POLLING_FILE_WATCHER"] = "1" if OS.mac?
+    ENV["XDG_RUNTIME_DIR"] = testpath
 
     dotnet = Formula["dotnet"]
     # Start the DNS server
