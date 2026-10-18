@@ -10,6 +10,7 @@ class Qt3d < Formula
     "BSD-3-Clause", # *.cmake
     "MIT", # bundled imgui
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qt3d.git", branch: "dev"
 
