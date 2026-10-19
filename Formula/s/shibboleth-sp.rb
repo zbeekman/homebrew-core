@@ -4,6 +4,7 @@ class ShibbolethSp < Formula
   url "https://shibboleth.net/downloads/service-provider/3.6.0/shibboleth-sp-3.6.0.tar.bz2"
   sha256 "17e071191db795b21e89d7793fd4603e2d1375d7ee8ff002a54c5d2c8ce77a2f"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url "https://shibboleth.net/downloads/service-provider/latest/"
@@ -32,6 +33,13 @@ class ShibbolethSp < Formula
   depends_on "xml-tooling-c"
 
   uses_from_macos "krb5"
+
+  # Apply FreeBSD patch to fix build with Clang 19
+  patch :p0 do
+    url "https://raw.githubusercontent.com/freebsd/freebsd-ports/319b9c0cd3556550f107a1b4d8f083b0eba665b9/security/shibboleth-sp/files/patch-shibsp_util_IPRange.cpp"
+    sha256 "fb1585b6e2e2ff44bf4460dcf6388d9657804f3938c1ead728864482d7537f06"
+    type :unofficial
+  end
 
   def install
     ENV.cxx11
