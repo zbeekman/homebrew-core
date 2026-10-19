@@ -3,8 +3,8 @@ class BumpMyVersion < Formula
 
   desc "Version bump your Python project"
   homepage "https://callowayproject.github.io/bump-my-version/"
-  url "https://files.pythonhosted.org/packages/ab/7d/6749796426303b7a96868fa7ee63db6cd4e101ce0044430d60f5596fb833/bump_my_version-1.6.2.tar.gz"
-  sha256 "29d111e4767b28e8e49bfbd29f8e332c0b17e11f58089f630b877d623d4d541a"
+  url "https://files.pythonhosted.org/packages/30/4a/c8d1330dd23349ee3f1a0f0ae2fb9ffb8f8e8e3f1a6cfc8511edcced2b12/bump_my_version-1.6.3.tar.gz"
+  sha256 "a886d5b8a86b439bb1119eecc3625a940c545e8e7b093ae5fd52a754c904c165"
   license "MIT"
   head "https://github.com/callowayproject/bump-my-version.git", branch: "master"
 
@@ -43,13 +43,13 @@ class BumpMyVersion < Formula
   end
 
   resource "httpcore2" do
-    url "https://files.pythonhosted.org/packages/cb/f3/1db7aa2bc2524062192bb0e0323969492d1883152a232fe36eea65f4e35c/httpcore2-2.13.1.tar.gz"
-    sha256 "e0aa977abe17e69a3b820a24542a6fa88702676d83880b8d194dcd18408e5103"
+    url "https://files.pythonhosted.org/packages/30/ff/b53af1b49bb2cb5fa97c92215614b173ca5c1a99ded80e2d52f15a94fa6d/httpcore2-2.14.0.tar.gz"
+    sha256 "4f57a1a8249fe6af589d935cfd456f1d13bbdcb0f0fc72af9142368fc94811d7"
   end
 
   resource "httpx2" do
-    url "https://files.pythonhosted.org/packages/d5/44/474bef2a0e9d90f1715d32cb98b0738695ca17ba324095fb2497ed7fbd59/httpx2-2.13.1.tar.gz"
-    sha256 "e48744a19e3af5ee48313d0ce5fe941d5422fae5705ea922a4aabf94d7800dfa"
+    url "https://files.pythonhosted.org/packages/e8/67/58353f1848b4ba568e1ec22ea1e0d8e039f0bca5fde7e2d1f07739fd83e7/httpx2-2.14.0.tar.gz"
+    sha256 "47ad61a3c40282cd8d0dc96311531f00f5bfc71a066c6fe3b36d8f63fb9e4f6e"
   end
 
   resource "idna" do
