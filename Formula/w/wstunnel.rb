@@ -1,10 +1,20 @@
 class Wstunnel < Formula
   desc "Tunnel all your traffic over Websocket or HTTP2"
   homepage "https://github.com/erebe/wstunnel"
-  url "https://github.com/erebe/wstunnel/archive/refs/tags/v11.0.0.tar.gz"
-  sha256 "d1a009091179863d4d6dbde10f7bcfdcf2ce7b245a3accf27e09fa82752ab3c0"
   license "BSD-3-Clause"
   head "https://github.com/erebe/wstunnel.git", branch: "main"
+
+  stable do
+    url "https://github.com/erebe/wstunnel/archive/refs/tags/v11.1.0.tar.gz"
+    sha256 "3471bfb3c6605deb5f9e1cbdab88cca638c2e31f849c03340b02156ca3ae39e2"
+
+    # Regenerate `Cargo.lock` file
+    patch do
+      url "https://github.com/erebe/wstunnel/commit/adc9e7dd99a67a817034240626d2ffdbb160397a.patch?full_index=1"
+      sha256 "9e8a1554e278e4845e09f25df82b395758096d9f858a394d5280d3f9d529ff39"
+      type :backport
+    end
+  end
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
   # labeled as "pre-release" on GitHub before the version is released, so it's
