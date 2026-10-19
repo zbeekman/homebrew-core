@@ -1,8 +1,8 @@
 class Abcmidi < Formula
   desc "Converts abc music notation files to MIDI files"
-  homepage "https://ifdo.ca/~seymour/runabc/top.html"
-  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2026.06.09.zip"
-  sha256 "4b19d93b66cf382e0a50e91206b1ac2082bdceeaa29d29f8b61738b576db8c40"
+  homepage "https://ifdo.ca/~seymour/runabc/"
+  url "https://ifdo.ca/~seymour/runabc/abcMidi-2026.10.16.zip"
+  sha256 "f865e7a0107f30b0b6fa005c063c14e7c830f81cd626d872ec9788a912488048"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -23,9 +23,6 @@ class Abcmidi < Formula
   deny_network_access!
 
   def install
-    # Work around incompatible function pointer types with newer Clang
-    ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
-
     system "./configure", *std_configure_args
     system "make", "install"
   end
