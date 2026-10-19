@@ -1,10 +1,9 @@
 class LastpassCli < Formula
   desc "LastPass command-line interface tool"
   homepage "https://github.com/lastpass/lastpass-cli"
-  url "https://github.com/lastpass/lastpass-cli/releases/download/v1.6.1/lastpass-cli-1.6.1.tar.gz"
-  sha256 "5e4ff5c9fef8aa924547c565c44e5b4aa31e63d642873847b8e40ce34558a5e1"
+  url "https://github.com/lastpass/lastpass-cli/releases/download/v1.6.2/lastpass-cli-1.6.2.tar.gz"
+  sha256 "b65b9c951a9a17b87b8ac0500808c716ef8e5fe6e70f1fd44f23b8385aa30984"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
-  revision 4
   head "https://github.com/lastpass/lastpass-cli.git", branch: "master"
 
   bottle do
@@ -34,13 +33,7 @@ class LastpassCli < Formula
     resolves "https://github.com/lastpass/lastpass-cli/pull/716"
   end
 
-  # Workaround for for API change in OpenSSL 3.5
-  patch do
-    url "https://github.com/lastpass/lastpass-cli/commit/95fff9accc5832264e31af3f54f49af461339693.patch?full_index=1"
-    sha256 "5d7559511b1814c6f9d8cccc02b7c5dbf8a4e6d2927a94cf76d090cc45a47dd2"
-    type :unofficial
-    resolves "https://github.com/lastpass/lastpass-cli/pull/718"
-  end
+  deny_network_access!
 
   def install
     ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
