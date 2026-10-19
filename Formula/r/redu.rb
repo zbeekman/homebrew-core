@@ -1,8 +1,8 @@
 class Redu < Formula
   desc "Ncdu for your restic repository"
   homepage "https://github.com/drdo/redu"
-  url "https://github.com/drdo/redu/archive/refs/tags/v0.2.15.tar.gz"
-  sha256 "09fda46231cf49663486a0f4a3ab0f217f39dc1f0ba1bcd05917e77e6f7447a2"
+  url "https://github.com/drdo/redu/archive/refs/tags/v0.2.16.tar.gz"
+  sha256 "106a0e93d2e3964f042afe46c7ec19286f40f27268b242c168811699d3d97475"
   license "MIT"
   head "https://github.com/drdo/redu.git", branch: "main"
 
