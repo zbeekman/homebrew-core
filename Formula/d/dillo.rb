@@ -1,10 +1,14 @@
 class Dillo < Formula
   desc "Fast and small graphical web browser"
-  homepage "https://dillo-browser.github.io/"
-  url "https://github.com/dillo-browser/dillo/releases/download/v3.2.0/dillo-3.2.0.tar.bz2"
-  sha256 "1066ed42ea7fe0ce19e79becd029c651c15689922de8408e13e70bb5701931bf"
+  homepage "https://dillo-browser.org/"
+  url "https://dillo-browser.org/release/3.3.0/dillo-3.3.0.tar.gz"
+  sha256 "db1863261d5efbd27b090e430c88064082b891cea1edf7a14e234cca51754f60"
   license "GPL-3.0-or-later"
-  revision 1
+
+  livecheck do
+    url "https://dillo-browser.org/release/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
 
   bottle do
     sha256 arm64_golden_gate: "9cbfe8545733a29135da340712c0ec0ea3b5d25413e479296cda15794c307e69"
@@ -17,7 +21,7 @@ class Dillo < Formula
   end
 
   head do
-    url "https://github.com/dillo-browser/dillo.git", branch: "master"
+    url "https://git.dillo-browser.org/dillo/", using: :git, branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -31,9 +35,12 @@ class Dillo < Formula
   depends_on "openssl@4"
 
   on_linux do
+    depends_on "brotli"
     depends_on "libx11"
     depends_on "zlib-ng-compat"
   end
+
+  deny_network_access!
 
   def install
     if build.head?
