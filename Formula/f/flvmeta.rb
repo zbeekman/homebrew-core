@@ -1,8 +1,8 @@
 class Flvmeta < Formula
   desc "Manipulate Adobe flash video files (FLV)"
   homepage "https://flvmeta.com/"
-  url "https://github.com/noirotm/flvmeta/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "dc0297e0e7b2cb2a044dac9cd13fa58ee3dbb3a9a6ba473b3f4d1c1787d3da78"
+  url "https://github.com/noirotm/flvmeta/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "e1a7449d5ff1d601f85534d5acb41bcb5f6adf785473401ca755fcdfb1874c00"
   license "GPL-2.0-or-later"
   head "https://github.com/noirotm/flvmeta.git", branch: "master"
 
