@@ -8,8 +8,7 @@ class Httpx2 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "4eebc21b6495189028c23f5f9bee80670a0da2c126810eab81eae659b077d74c"
+    sha256 cellar: :any_skip_relocation, all: "35f9cd401fcb573a796f5aed08e7b873ccf3c92887b3997f7b44759a8a6f19c2"
   end
 
   depends_on "python@3.15"
