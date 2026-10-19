@@ -1,8 +1,8 @@
 class Gearman < Formula
   desc "Application framework to farm out work to other machines or processes"
   homepage "https://gearman.org/"
-  url "https://github.com/gearman/gearmand/releases/download/2.1.0/gearmand-2.1.0.tar.gz"
-  sha256 "4d24340ab39be851b40d895687c17d6d16e730ece1fa9d9294d6b2b0a8cb1261"
+  url "https://github.com/gearman/gearmand/releases/download/2.2.0/gearmand-2.2.0.tar.gz"
+  sha256 "fec69ec0e893147a9eb8bfa203e173cc5598adc372e307fea12d587d13071d75"
   license "BSD-3-Clause"
 
   bottle do
