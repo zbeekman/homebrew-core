@@ -10,14 +10,14 @@ class Luajit < Formula
   # Get the latest commit with:
   #   `git ls-remote --heads https://github.com/LuaJIT/LuaJIT.git v2.1`
   # This is a rolling release model so take care not to ignore CI failures that may be regressions.
-  url "https://github.com/LuaJIT/LuaJIT/archive/2a8e017ef1ece6a95b983ffca073d30609dce7c4.tar.gz"
+  url "https://github.com/LuaJIT/LuaJIT/archive/dd3b24369ddfaa83c78cd6fdd91d157c8968ec8d.tar.gz"
   # Use the version scheme `2.1.timestamp` where `timestamp` is the Unix timestamp of the
   # latest commit at the time of updating.
   # `brew livecheck luajit` will generate the correct version for you automatically.
-  version "2.1.1791988261"
-  sha256 "54705d4b1de50a9c668539b9cf0dc3170d94ffdad51fafd1cf4477e498be7144"
+  version "2.1.1792349434"
+  sha256 "a6ac8457c474c6fb71aaa7660dd5bf8f6e0506496fc74786b2dae18e26a768cc"
   license "MIT"
-  compatibility_version 32
+  compatibility_version 33
   head "https://github.com/LuaJIT/LuaJIT.git", branch: "v2.1"
 
   livecheck do
@@ -37,6 +37,8 @@ class Luajit < Formula
     sha256 cellar: :any, arm64_linux:       "61ea5773e1fdbafdd7399502392757615fdcad15095c32cec047b89fbb7c451d"
     sha256 cellar: :any, x86_64_linux:      "00a32132d058bad891578d53c19f151bd5281a56103e75a4b01dc3b4bcc0843b"
   end
+
+  deny_network_access!
 
   def install
     # 1 - Override the hardcoded gcc.
