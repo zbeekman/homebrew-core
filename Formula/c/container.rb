@@ -1,8 +1,8 @@
 class Container < Formula
   desc "Create and run Linux containers using lightweight virtual machines"
   homepage "https://apple.github.io/container/documentation/"
-  url "https://github.com/apple/container/archive/refs/tags/1.5.0.tar.gz"
-  sha256 "e1066ad42939c0a4a7f1c677104a8e16c666f7c7c13ec3e2eadb534620f212c1"
+  url "https://github.com/apple/container/archive/refs/tags/1.6.0.tar.gz"
+  sha256 "5a5b66eb9ee55890b781d1236b0af807245378a05f082797c2af6400398f756a"
   license "Apache-2.0"
   head "https://github.com/apple/container.git", branch: "main"
 
@@ -39,13 +39,17 @@ class Container < Formula
       "container-network-vmnet" => { source: "NetworkVMNet",     entitlements: true  },
       "container-runtime-linux" => { source: "RuntimeLinux",     entitlements: true  },
       "machine-apiserver"       => { source: "MachineAPIServer", entitlements: false,
-                                     resources: ["init", "create-user.sh"] },
+                                     resources: ["init"] },
       "k8s"                     => { source: "K8s",              entitlements: false,
                                      resources: ["kindnet.yaml"] },
+      "build"                   => { source: "ContainerBuild",   entitlements: false,
+                                     binary: "container-build" },
+      "builder"                 => { source: "ContainerBuilder", entitlements: false,
+                                     binary: "container-builder" },
     }
     plugins.each do |bin_name, opts|
       plugin_dir = libexec/"container-plugins/#{bin_name}"
-      (plugin_dir/"bin").install release_dir/bin_name
+      (plugin_dir/"bin").install release_dir/(opts[:binary] || bin_name) => bin_name
       plugin_dir.install "Sources/Plugins/#{opts[:source]}/config.toml"
       opts[:resources]&.each do |resource|
         (plugin_dir/"resources").install "Sources/Plugins/#{opts[:source]}/Resources/#{resource}"
