@@ -3,8 +3,8 @@ class Durdraw < Formula
 
   desc "Versatile ASCII and ANSI Art text editor for drawing in the terminal"
   homepage "https://durdraw.org"
-  url "https://github.com/cmang/durdraw/archive/refs/tags/0.31.0.tar.gz"
-  sha256 "992801c677d0bef72ee84404ccf73667036a8de2ea72ad3c38f27729bada2173"
+  url "https://github.com/cmang/durdraw/archive/refs/tags/0.31.1.tar.gz"
+  sha256 "c87f67cdb6c1e419bc3ef5d165d06c7408629777fb9d52adddb5c822892a39fb"
   license "BSD-3-Clause"
   head "https://github.com/cmang/durdraw.git", branch: "master"
 
