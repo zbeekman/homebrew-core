@@ -12,11 +12,11 @@ class Wassette < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0639940e35827cef3ba3e613c3560967feaba99515667d7e5b7c5c0e16a7d76c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ffd6ea5278efef2b205993848c9c535261c5baf5e001f974e0c5e1b76ca1d66f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ccc255e072c78068b7120477420775932711c36959952e1082280527fd651721"
-    sha256 cellar: :any,                 arm64_linux:       "10b3a5e73c5dea1e040849cf45c308ef027dcb39fc3ae2b3d7905cfb4b0158eb"
-    sha256 cellar: :any,                 x86_64_linux:      "32055048cdfadfb84e989245172572111544190934096e729c2a5e7fb2b6ba29"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ef62c7ac5ad4d35d1341d27110d61dd581c599143237460b65d7fe3305c13974"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c00fb78d2effda46b3d6e418260abdac618dcdc239c202cf11199575db9b7c35"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "81d4110b0658d2fc2c14fb978ff521161785034e8ef3a6710809fe0681e770db"
+    sha256 cellar: :any,                 arm64_linux:       "4dad7b94d3d45624be3ce63d9d0651beebeeb956a84eb02238e1fdc8221fced9"
+    sha256 cellar: :any,                 x86_64_linux:      "7c853a29092ed9c65efa7732e354ec427277408c4c0e232174e747c632ad0d7f"
   end
 
   depends_on "pkgconf" => :build
