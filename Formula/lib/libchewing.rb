@@ -1,8 +1,8 @@
 class Libchewing < Formula
   desc "Intelligent phonetic input method library"
   homepage "https://chewing.im/"
-  url "https://github.com/chewing/libchewing/releases/download/v0.12.0/libchewing-0.12.0.tar.zst"
-  sha256 "6a7fae4aaa6e6ce2bd9f70f0016c553585ed5aca1e086476749a03ac5c3f4cb0"
+  url "https://codeberg.org/chewing/libchewing/releases/download/v0.13.1/libchewing-0.13.1.tar.zst"
+  sha256 "c897a5d0aadfdeb07784e1411ceac0efef2c97bea8143fb3b1dcde8274e14fc0"
   license "LGPL-2.1-only"
 
   bottle do
@@ -18,12 +18,9 @@ class Libchewing < Formula
   depends_on "cmake" => :build
   depends_on "corrosion" => :build
   depends_on "rust" => :build
+  depends_on "texinfo" => :build
 
   uses_from_macos "sqlite"
-
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
