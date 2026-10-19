@@ -6,11 +6,11 @@ class Sanity < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "47201ef366d3664cd3f286e77d8e449a586945cdfd301b3b849811b9ff9cdd16"
-    sha256 cellar: :any, arm64_tahoe:       "47201ef366d3664cd3f286e77d8e449a586945cdfd301b3b849811b9ff9cdd16"
-    sha256 cellar: :any, arm64_sequoia:     "47201ef366d3664cd3f286e77d8e449a586945cdfd301b3b849811b9ff9cdd16"
-    sha256 cellar: :any, arm64_linux:       "9f6c2a9ca93bf4474dc860fa0fc3137a94ee83da03d855f8d4d7fb9a82fee321"
-    sha256 cellar: :any, x86_64_linux:      "eae9e514deaae49ec10a634425f6e10b27472b4de7d96e77ee5a6011efcdeb82"
+    sha256 cellar: :any, arm64_golden_gate: "b2fb2d7670469e82d8532f8a40116e73df5890df3d44dd424a51943394e56d4e"
+    sha256 cellar: :any, arm64_tahoe:       "b2fb2d7670469e82d8532f8a40116e73df5890df3d44dd424a51943394e56d4e"
+    sha256 cellar: :any, arm64_sequoia:     "b2fb2d7670469e82d8532f8a40116e73df5890df3d44dd424a51943394e56d4e"
+    sha256 cellar: :any, arm64_linux:       "a77a75323791b0bb012f7b991e0418ff217caee00b0db164401f1a6c4a5712b8"
+    sha256 cellar: :any, x86_64_linux:      "ee512e2a445b928f52d8fd63148b3c32d403723d8ca2d97c36d34d3df545171c"
   end
 
   depends_on "node"
