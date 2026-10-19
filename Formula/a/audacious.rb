@@ -2,15 +2,14 @@ class Audacious < Formula
   desc "Lightweight and versatile audio player"
   homepage "https://audacious-media-player.org/"
   license "BSD-2-Clause"
-  revision 1
 
   stable do
-    url "https://distfiles.audacious-media-player.org/audacious-4.6.1.tar.bz2"
-    sha256 "62a5a609267eca7f6e3ce52ef6f42d5618d2961e3b4ddc227c6a5859026965d9"
+    url "https://distfiles.audacious-media-player.org/audacious-4.6.2.tar.bz2"
+    sha256 "af4c68b7dd09304d382df18616aecd843c8efa4e4eef31bfc76abce465271c83"
 
     resource "plugins" do
-      url "https://distfiles.audacious-media-player.org/audacious-plugins-4.6.1.tar.bz2"
-      sha256 "22e58a8a2c3f3caa9687434353618c822963cc8846cd239de36d4e8e5bd166a6"
+      url "https://distfiles.audacious-media-player.org/audacious-plugins-4.6.2.tar.bz2"
+      sha256 "c295c65bdaae71775b4fa9eb206799c627b383c4f45444d637c714196daf8077"
 
       livecheck do
         formula :parent
