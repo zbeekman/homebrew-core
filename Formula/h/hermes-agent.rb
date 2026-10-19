@@ -3,8 +3,8 @@ class HermesAgent < Formula
 
   desc "Self-improving AI agent that creates skills from experience"
   homepage "https://hermes-agent.nousresearch.com"
-  url "https://github.com/NousResearch/hermes-agent/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "61333ab64f7ad728bc265d103fd73b2eb4b936f9c8d9fe3ccf2531ad955e96a1"
+  url "https://github.com/NousResearch/hermes-agent/archive/refs/tags/v0.22.2.tar.gz"
+  sha256 "77d2c763a3bd5133bfb3e327986c987dba249e14988b92919ef726d389c6b9d2"
   license "MIT"
   version_scheme 1
   head "https://github.com/NousResearch/hermes-agent.git", branch: "main"
@@ -179,8 +179,8 @@ class HermesAgent < Formula
   end
 
   resource "httpcore2" do
-    url "https://files.pythonhosted.org/packages/d5/fe/6a3f9f1a8bb8733326140737446aaf72fddb8b54b8f202302f5c84960613/httpcore2-2.7.0.tar.gz"
-    sha256 "6dc0fedf329a52a990930a5579edfebaea81118ea700ea0dd7de2b5e5be49efc"
+    url "https://files.pythonhosted.org/packages/be/ad/f4f0e57345f1870f3e8cb624e058d7eca6e5a27d33bcc3311d9b618734cd/httpcore2-2.12.0.tar.gz"
+    sha256 "9293522bba0aa7c4c8e9e3f040c16575bd8868e155a77fa30c7a9085a5eae648"
   end
 
   resource "httplib2" do
@@ -199,8 +199,8 @@ class HermesAgent < Formula
   end
 
   resource "httpx2" do
-    url "https://files.pythonhosted.org/packages/a3/4a/129b2e21b90ac2985d3928d96792bccc39bc6dfe796c5eee2d8ec06d4105/httpx2-2.7.0.tar.gz"
-    sha256 "8b30709aed5c8465b0dd3b95c09ce301c8f79e7e7a2d00ab0af551e0d0375b07"
+    url "https://files.pythonhosted.org/packages/7f/f8/579a8b51e42e38ee32647df9f08aa25643ae788e275cc625b199829c4671/httpx2-2.12.0.tar.gz"
+    sha256 "7631fe9887a8a2275f4a2540e053aa670fcc50742864a9ae7c66e609fdcf12cf"
   end
 
   resource "idna" do
@@ -264,8 +264,8 @@ class HermesAgent < Formula
   end
 
   resource "nemo-relay" do
-    url "https://files.pythonhosted.org/packages/16/e8/016a4c95429c37c456d5580d92dffb46bd7d071017fea6d751c5b73582ca/nemo_relay-0.10.0.tar.gz"
-    sha256 "d3382e826d3d65551f3a307128c15116057fd7f45277f8a8d0cb51f8aca3ed68"
+    url "https://files.pythonhosted.org/packages/67/6e/80d0dc5a5ae790a36e345d84ba88cfcf352ab1e3abd3c951bfe860cc2270/nemo_relay-0.10.2.tar.gz"
+    sha256 "69a58f1f684fbe4984310b305421201fd7a131e6544b201fddfea4ca8658c148"
   end
 
   resource "oauthlib" do
