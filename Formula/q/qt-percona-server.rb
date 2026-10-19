@@ -40,6 +40,7 @@ class QtPerconaServer < Formula
       -DQT_GENERATE_SBOM=OFF
     ]
     args << "-DQT_NO_APPLE_SDK_AND_XCODE_CHECK=ON" if OS.mac?
+    args << "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON" if OS.linux?
 
     system "cmake", "-S", "src/plugins/sqldrivers", "-B", "build", "-G", "Ninja", *args, *std_cmake_args
     system "cmake", "--build", "build"
