@@ -1,14 +1,13 @@
 class Ledit < Formula
   desc "Line editor for interactive commands"
   homepage "https://pauillac.inria.fr/~ddr/ledit/"
-  url "https://github.com/chetmurthy/ledit/archive/refs/tags/ledit-2-07.tar.gz"
-  sha256 "0252dc8d3eb40ba20b6792f9d23b3a736b1b982b674a90efb913795f02225877"
+  url "https://github.com/chetmurthy/ledit/archive/refs/tags/2.08.tar.gz"
+  sha256 "0f10f70bcdde68ce6514d4eedeb0774653322385a642d1ee696438b5594050f1"
   license "BSD-3-Clause"
-  revision 4
 
   livecheck do
     url :stable
-    regex(/^ledit[._-]v?(\d+(?:[.-]\d+)+)$/i)
+    regex(/^(?:ledit[._-])?v?(\d+(?:[.-]\d+)+)$/i)
     strategy :git do |tags, regex|
       tags.filter_map { |tag| tag[regex, 1]&.tr("-", ".") }
     end
@@ -26,6 +25,8 @@ class Ledit < Formula
   depends_on "camlp-streams"
   depends_on "camlp5"
   depends_on "ocaml"
+
+  deny_network_access!
 
   def install
     # Work around for https://github.com/Homebrew/homebrew-test-bot/issues/805
