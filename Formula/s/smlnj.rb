@@ -1,8 +1,8 @@
 class Smlnj < Formula
   desc "Compiler and programming system for Standard ML"
   homepage "https://www.smlnj.org/"
-  url "https://smlnj.org/dist/working/2026.2/smlnj-arm64-unix-2026.2.tgz"
-  sha256 "504119bc2cf8fab6f469e33126cdc16769777584822e89ff7e9866c06021cda4"
+  url "https://smlnj.org/dist/working/2026.3/smlnj-arm64-unix-2026.3.tgz"
+  sha256 "7d5826317a8be3a0b347cf4001d5354b9dfdc319f80c26e2c21f265de55154e1"
   license "BSD-3-Clause"
   head "https://github.com/smlnj/smlnj.git", branch: "main"
 
@@ -39,14 +39,6 @@ class Smlnj < Formula
       url "https://smlnj.org/dist/working/2026.2/boot.amd64-unix.tgz", using: :nounzip
       sha256 "ba0d81bac93a6987aa10687ddb7646f1cdf1c350a399cb76171bfb2b8e1c8ceb"
     end
-  end
-
-  # Make `build.sh` script more portable
-  patch do
-    url "https://github.com/smlnj/smlnj/commit/a50972b5a16baf6bd3b41d48c577b28b7d406d9d.patch?full_index=1"
-    sha256 "157101e2b57857ef69b261e8fd092b6eaacec06b4bdfcabdb14789af6ff9ddb3"
-    type :unofficial
-    resolves "https://github.com/smlnj/smlnj/pull/361"
   end
 
   def install
