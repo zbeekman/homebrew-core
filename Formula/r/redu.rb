@@ -7,13 +7,11 @@ class Redu < Formula
   head "https://github.com/drdo/redu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6985f4426fb248bd7d98dab70ece33f0c6a533225ffee716fe2e00d0291baf2a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b9341847b9b17a439df4166ef6b2ef3745eccc25dfa5be72f813aabb4e80c995"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "92d07ad03c7d9c40e09d6699215125761f5969cdc027eec24e08bfd3c1479dc8"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "b11d6fb60a21c0de5b7728c0bba2646826941304e7939cb7df0a3748fce558cb"
-    sha256 cellar: :any_skip_relocation, sonoma:            "70fb244d3d565cbfbeddafa76a6ec75a4a69ae03521ae7270dc9f7f99a92cef7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c7eba457b049fa735e4900146fba93076def47a1cd5ccd7c05dc0b99d1bdc2df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "eef1d2d80d9e01dcb597fcbf653afe6da0be7033bc2151ea145ab903bc1bd4dd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dbd847b6a545d1f3fc22902736c5faeba1e4d4860952404322ae658eae169e51"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6ff3aac2d53f1d7d0ba43bd743ec74904483ff2823891b496ac95f3a9c835bef"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d99540a84c307f690dcf75e61932da4d82bcae6972074a6c11201e91d67fe0cb"
+    sha256 cellar: :any,                 arm64_linux:       "08d3d908de883a6ef221e59971319a96bed36d39ef20ebb0a572511666f4eef5"
+    sha256 cellar: :any,                 x86_64_linux:      "c5179a1b73e0447a1a30f48a98283b2e085da06bd7023fa72060edadac707a2f"
   end
 
   depends_on "rust" => :build
