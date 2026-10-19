@@ -4,6 +4,7 @@ class Libkiwix < Formula
   url "https://github.com/kiwix/libkiwix/archive/refs/tags/14.2.1.tar.gz"
   sha256 "cff1eb06d62ab42e1720a49f473b7d9364f02ee77a8a455c9adb26db419e0fff"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     rebuild 1
@@ -20,7 +21,7 @@ class Libkiwix < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libmicrohttpd"
   depends_on "libzim"
   depends_on "pugixml"
@@ -97,7 +98,7 @@ class Libkiwix < Formula
       }
     CPP
 
-    icu4c = Formula["icu4c@78"]
+    icu4c = Formula["icu4c@79"]
     system ENV.cxx, "test.cpp", "-std=c++17", "-o", "test", "-I#{include}", "-I#{icu4c.opt_include}",
                     "-L#{lib}", "-L#{icu4c.opt_lib}", "-lkiwix"
 
