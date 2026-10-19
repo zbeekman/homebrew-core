@@ -7,11 +7,11 @@ class S6Rc < Formula
   head "git://git.skarnet.org/s6-rc.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "a578d8182358720c883a725855f3fc41973caa74c5881250b226735e8e0ce389"
-    sha256 arm64_tahoe:       "970b7178c1205d1ad24a99c054b6782f09f78fb662ad9d522587ab9d0e2c0bfd"
-    sha256 arm64_sequoia:     "7574bcadb388c927b6f1992414eb0e138334c21d3e24cd0c9d4e1c00a549422d"
-    sha256 arm64_linux:       "a806a2642da994b7792d581dd73a2924442d9fbc4327afe87472d70b5a5e027d"
-    sha256 x86_64_linux:      "04fcd61328bbd5b00dd096cca856a280b19ff4a6c9c4e6c77924c1f68ddd33c4"
+    sha256 arm64_golden_gate: "c7ff903f202f1b5e665af1ed4ffcb9c3add86d7080450cc866c595081112cbb5"
+    sha256 arm64_tahoe:       "4690842be185c0acbe3631dc9c6297801c8000fbcc71996465ded00f24c9a181"
+    sha256 arm64_sequoia:     "fadd3c4376a2b4b36dbbcc39d59fd988dbc77be29e909473dcd7f88c59068a9b"
+    sha256 arm64_linux:       "7636361f6ffe9d6678a2fed45195d5b9365433cba494766fc3fb0d5825a9b642"
+    sha256 x86_64_linux:      "bde59fd1de7393f2eb5f36c744aa355b62e3d617cc5c0798dd1d8febcb58ff4b"
   end
 
   depends_on "pkgconf" => :build
