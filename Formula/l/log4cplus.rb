@@ -1,14 +1,17 @@
 class Log4cplus < Formula
   desc "Logging Framework for C++"
-  homepage "https://sourceforge.net/p/log4cplus/wiki/Home/"
-  url "https://downloads.sourceforge.net/project/log4cplus/log4cplus-stable/2.2.0/log4cplus-2.2.0.1.tar.xz"
-  sha256 "6fc6b1b392921b048dcb0a71b5a1b46e9956bff710d288bdc9c4fc689f1a5f0b"
+  homepage "https://github.com/log4cplus/log4cplus/wiki"
+  url "https://github.com/log4cplus/log4cplus/releases/download/REL_2_2_1/log4cplus-2.2.1.tar.xz"
+  sha256 "4b2801aedcdb32476a6f139a93ca01c9dac5158682516ca5a02df68c600292c6"
   license all_of: ["Apache-2.0", "BSD-2-Clause"]
   compatibility_version 1
 
   livecheck do
     url :stable
-    regex(/url=.*?log4cplus-stable.*?log4cplus[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/^REL[._-]v?(\d+(?:[._]\d+)+)$/i)
+    strategy :git do |tags, regex|
+      tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
+    end
   end
 
   bottle do
