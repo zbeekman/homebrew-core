@@ -9,7 +9,7 @@ class Durdraw < Formula
   head "https://github.com/cmang/durdraw.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5421a097e2ed1982d23a11d41154648565137ad8e0fb083b53844c25b5807a57"
+    sha256 cellar: :any_skip_relocation, all: "d9e9b2ead603ff760c2725961a1b7efece1994dfa49449ce9437295d31ddfb62"
   end
 
   depends_on "ansilove" => :no_linkage
