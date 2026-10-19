@@ -1,8 +1,8 @@
 class SnxRs < Formula
   desc "Open-source client for Check Point VPN tunnels"
   homepage "https://github.com/ancwrd1/snx-rs"
-  url "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.3.tar.gz"
-  sha256 "c68c14f02d009d33884880b8bbdc64a1cce933b17cf16ca60f8a0a833e5b9e29"
+  url "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.4.tar.gz"
+  sha256 "257c26920acc4fed159d5e620acc621f65dafa8bced38285f44ff0c681bb1715"
   license "AGPL-3.0-only"
   head "https://github.com/ancwrd1/snx-rs.git", branch: "main"
 
