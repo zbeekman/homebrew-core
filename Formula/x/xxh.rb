@@ -3,8 +3,9 @@ class Xxh < Formula
 
   desc "Bring your favorite shell wherever you go through the ssh"
   homepage "https://github.com/xxh/xxh"
-  url "https://files.pythonhosted.org/packages/d6/ac/fb40368ff37fbdd00d041e241cc0d7a50cdac7bc6ae54dcb9f1349acdde6/xxh-xxh-0.8.14.tar.gz"
-  sha256 "7904c35efdff0a6f50f76b30879d3fbfe726cc765db47a1306ab2f19c03fdfae"
+  # TODO: check if we can switch back to PyPI in next release
+  url "https://github.com/xxh/xxh/archive/refs/tags/0.8.16.tar.gz"
+  sha256 "a8100a831049be3131146da6a26d8cdb2fb15afc8d637521fcbdba37a3429a50"
   license "BSD-2-Clause"
 
   bottle do
