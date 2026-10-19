@@ -11,11 +11,11 @@ class Pdfcpu < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "784876f11ed06a708d7eaab3b3493959bae529684969f44781ac7a763c9390a2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "784876f11ed06a708d7eaab3b3493959bae529684969f44781ac7a763c9390a2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "784876f11ed06a708d7eaab3b3493959bae529684969f44781ac7a763c9390a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "afdf143a531a4e9ac6a57123772a0fe74cccbef7865ee6140e31ab3cc2363a18"
-    sha256 cellar: :any,                 x86_64_linux:      "3b600c70b4c785df9a38115e6546800219921b91e3a7a5d78c18982e3c706609"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "17895316bced2bd2fb4e69b2ed9c94e0748530f17ec44f79997a8ab00b999bd9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "17895316bced2bd2fb4e69b2ed9c94e0748530f17ec44f79997a8ab00b999bd9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "17895316bced2bd2fb4e69b2ed9c94e0748530f17ec44f79997a8ab00b999bd9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a6e7fdeb76b51448d1fa592d8f959d64116cf42695e866a6297f3b31d0d71b2f"
+    sha256 cellar: :any,                 x86_64_linux:      "f2a6de7eb9a57d54909fc7d101dd751842eb22ba4adaed71abe63ac4df4a5346"
   end
 
   depends_on "go" => :build
