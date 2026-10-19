@@ -4,7 +4,7 @@ class Luvit < Formula
   url "https://github.com/luvit/luvit/archive/refs/tags/2.18.1.tar.gz"
   sha256 "b792781d77028edb7e5761e96618c96162bd68747b8fced9a6fc52f123837c2c"
   license "Apache-2.0"
-  revision 34
+  revision 35
   head "https://github.com/luvit/luvit.git", branch: "master"
 
   bottle do
@@ -75,6 +75,8 @@ class Luvit < Formula
     url "https://github.com/zhaozg/lua-openssl/releases/download/0.11.1-1/openssl-0.11.1-1.tar.gz"
     sha256 "b49a010d254a44669d4bb84292a5211d805fdd57e312ee78f799c261525abcaf"
   end
+
+  deny_network_access!
 
   def install
     ENV["PREFIX"] = prefix
