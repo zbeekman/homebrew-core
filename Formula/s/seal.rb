@@ -1,8 +1,8 @@
 class Seal < Formula
   desc "Easy-to-use homomorphic encryption library"
   homepage "https://github.com/microsoft/SEAL"
-  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.7.0.tar.gz"
-  sha256 "e92a6dd668e83d592c020b233538496d754721dc9a48c7629412a81c4e136717"
+  url "https://github.com/microsoft/SEAL/archive/refs/tags/v4.7.1.tar.gz"
+  sha256 "49dfc5eed8274c1aaa7cb7ccfea9ec448f8896ce9305db949e27d89f4f752931"
   license "MIT"
 
   bottle do
@@ -91,7 +91,8 @@ class Seal < Formula
       # Import Microsoft SEAL
       find_package(SEAL #{version} EXACT REQUIRED
           # Providing a path so this can be built without installing Microsoft SEAL
-          PATHS ${SEALExamples_SOURCE_DIR}/../src/cmake
+          PATHS #{lib}/cmake/SEAL
+          NO_DEFAULT_PATH
       )
 
       # Link Microsoft SEAL
