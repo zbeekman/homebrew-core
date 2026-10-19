@@ -4,7 +4,7 @@ class XmlToolingC < Formula
   url "https://shibboleth.net/downloads/c++-opensaml/3.3.0/xmltooling-3.3.0.tar.bz2"
   sha256 "0a2c421be976f3a44b876d6b06ba1f6a2ffbc404f4622f8a65a66c3ba77cb047"
   license "Apache-2.0"
-  revision 3
+  revision 4
 
   livecheck do
     url "https://shibboleth.net/downloads/c++-opensaml/latest/"
@@ -43,6 +43,8 @@ class XmlToolingC < Formula
     ENV.cxx11
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
+
+    inreplace [lib/"pkgconfig/xmltooling.pc", lib/"pkgconfig/xmltooling-lite.pc"], prefix, opt_prefix
   end
 
   test do
