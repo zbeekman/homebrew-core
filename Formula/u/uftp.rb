@@ -1,10 +1,9 @@
 class Uftp < Formula
   desc "Secure, reliable, efficient multicast file transfer program"
   homepage "https://uftp-multicast.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/uftp-multicast/source-tar/uftp-5.0.3.tar.gz"
-  sha256 "cb8668c19b1f10bc63a16ffa893e205dc3ec86361037d477d8003260ebc40080"
+  url "https://downloads.sourceforge.net/project/uftp-multicast/source-tar/uftp-5.0.4.tar.gz"
+  sha256 "50df3f0e59ebd59ed1b9bc8af991a0187df14d928188ff5f62c3d65adcd113ab"
   license "GPL-3.0-or-later" => { with: "openvpn-openssl-exception" }
-  revision 1
 
   livecheck do
     url :stable
