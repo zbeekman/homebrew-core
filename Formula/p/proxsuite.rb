@@ -1,8 +1,8 @@
 class Proxsuite < Formula
   desc "Advanced Proximal Optimization Toolbox"
   homepage "https://github.com/Simple-Robotics/proxsuite"
-  url "https://github.com/Simple-Robotics/proxsuite/releases/download/v0.7.3/proxsuite-0.7.3.tar.gz"
-  sha256 "1178721869898401e0a9d7c46803486c87d6ede3356770507dfb1022500a442b"
+  url "https://github.com/Simple-Robotics/proxsuite/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "b9b05f29d30f69cf90853ae1f7015914b5e371a6dac6aa46630aaa090447c578"
   license "BSD-2-Clause"
   head "https://github.com/Simple-Robotics/proxsuite.git", branch: "devel"
 
@@ -17,17 +17,24 @@ class Proxsuite < Formula
 
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
+  depends_on "nanobind" => :build
   depends_on "pkgconf" => :build
-  depends_on "eigen"
-  depends_on "numpy"
+  depends_on "cereal" => :no_linkage
+  depends_on "eigen" => :no_linkage
+  depends_on "numpy" => :no_linkage
   depends_on "python@3.15"
   depends_on "scipy" => :no_linkage
-  depends_on "simde"
+  depends_on "simde" => :no_linkage
+
+  resource "jrl-cmakemodules" do
+    url "https://github.com/jrl-umi3218/jrl-cmakemodules/archive/refs/tags/v2.3.0.tar.gz"
+    sha256 "840cfba922b9589695ee3da4da3f9472ceeefe8fe4bccbb7ed3e885d1ca978cf"
+  end
 
   deny_network_access!
 
   def install
-    system "git", "submodule", "update", "--init", "--recursive" if build.head?
+    resource("jrl-cmakemodules").stage buildpath/"jrl-cmakemodules"
 
     # Workaround to fix error: a template argument list is expected after
     # a name prefixed by the template keyword [-Wmissing-template-arg-list-after-template-kw]
@@ -40,6 +47,7 @@ class Proxsuite < Formula
       -DBUILD_UNIT_TESTS=OFF
       -DBUILD_PYTHON_INTERFACE=ON
       -DINSTALL_DOCUMENTATION=ON
+      -DJRL_CMAKEMODULES_SOURCE_DIR=#{buildpath}/jrl-cmakemodules
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
