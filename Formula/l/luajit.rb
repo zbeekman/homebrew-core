@@ -31,11 +31,11 @@ class Luajit < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "208e7d95cc372e520b8f666de3266face32a9c40001e972c9343971d5d9997ad"
-    sha256 cellar: :any, arm64_tahoe:       "c7656d156a26c3b499daf1a2b6f087ac350b9a40ae72c9c864022aa7417e2be5"
-    sha256 cellar: :any, arm64_sequoia:     "888b0e2aa6e56edaa4deb4d5c7378c03f00b28ef9611fc400bb1cc6e469f27ad"
-    sha256 cellar: :any, arm64_linux:       "61ea5773e1fdbafdd7399502392757615fdcad15095c32cec047b89fbb7c451d"
-    sha256 cellar: :any, x86_64_linux:      "00a32132d058bad891578d53c19f151bd5281a56103e75a4b01dc3b4bcc0843b"
+    sha256 cellar: :any, arm64_golden_gate: "a767241dfad6ee4a8fe0b1fcc602c0462d758296a556d951f90da30f7c3a6bcb"
+    sha256 cellar: :any, arm64_tahoe:       "82126373ea0859d7098a3ecd3e43245d53c482fedd7ab362bad7792e92b6efd0"
+    sha256 cellar: :any, arm64_sequoia:     "e1b273c1602ff3db4a91b65a77dd79d5b26995eca5986b3c435d218774dccdc4"
+    sha256 cellar: :any, arm64_linux:       "ceaf718183fd1295392d9728aeaa6c8708d47d79f95903812455c85644981e36"
+    sha256 cellar: :any, x86_64_linux:      "1d9299f9163f30d23fd057cadf846ee7a3ebfe90bd0c81836863ef43c99802e2"
   end
 
   deny_network_access!
