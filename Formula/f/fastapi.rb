@@ -3,16 +3,16 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/38/d5/b0aeb0b303650ac87b0411de4aaf3f901b06042dcc3fb00f30b97b7ff585/fastapi-0.143.3.tar.gz"
-  sha256 "b9ab567ee57afb4454004ce04c889f8f0160ac47946b99795887cd6e88484848"
+  url "https://files.pythonhosted.org/packages/8f/6a/ac6ec87026038fb7583018e0905f6c9d55bc8ee07d30d44c743f18b19435/fastapi-0.143.5.tar.gz"
+  sha256 "0b5c8e52d243cd2f015376b41e78db5bee585578782481abd145e1ab5a62a3ba"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d1d036c8af418303e54ab479e8cdccd04f237a00ccf8f4990c0ac8a9cf296850"
-    sha256 cellar: :any, arm64_tahoe:       "9f8b9fc07d6d144a2c1830c8dd3531a47642d4d43000149f5333bc6fdde06d2f"
-    sha256 cellar: :any, arm64_sequoia:     "a6cf76436c1d250019f296677dbe6d9d6e43f7f59681f595bbf4aff01db0b20b"
-    sha256 cellar: :any, arm64_linux:       "46bdbbbb81cf378d23639253d075adee7c2b542e6f8203b50710c9cc5306231b"
-    sha256 cellar: :any, x86_64_linux:      "a7b7f437821648bf26fb209045f4a1fdc0aff062dcad5a3545d18cb702ea312d"
+    sha256 cellar: :any, arm64_golden_gate: "c52d2bb7672f470a587542c7b5159fc68cdeace8c3b83bc8b5692d70b3dd58cf"
+    sha256 cellar: :any, arm64_tahoe:       "bc740aeb9410d2cb19acaf3368ee71755fb62da10c13762c74b6f2651d0d8cab"
+    sha256 cellar: :any, arm64_sequoia:     "9391b2b7c4ddf1c04771513870d96f4c88db08180a1d2a87d041833c99b79816"
+    sha256 cellar: :any, arm64_linux:       "5ec5442d8cf64f57a6f42772f267967057a16d3fee5dfe4ff4669cb70bb5b09d"
+    sha256 cellar: :any, x86_64_linux:      "db08ddb188a9e32f389a46aeb5a24bfa99da9d51fdebf604c69211e4aebf323b"
   end
 
   depends_on "rust" => :build # for annotated-doc
@@ -94,6 +94,11 @@ class Fastapi < Formula
     sha256 "6e34463af53fd2ab5d807f399a9b45ea31c3dfa2276f15a2c3f00afff6e176e8"
   end
 
+  resource "httpcore2" do
+    url "https://files.pythonhosted.org/packages/cb/f3/1db7aa2bc2524062192bb0e0323969492d1883152a232fe36eea65f4e35c/httpcore2-2.13.1.tar.gz"
+    sha256 "e0aa977abe17e69a3b820a24542a6fa88702676d83880b8d194dcd18408e5103"
+  end
+
   resource "httptools" do
     url "https://files.pythonhosted.org/packages/3a/ec/deed52912ab7ca6c0b12859330c571c60c61d7267b341b28951fcbf13694/httptools-0.9.0.tar.gz"
     sha256 "d484ebb7e3a3f3597b0f645fbd1b85633674ca808c1f5ba11c2caf7c66f5c8b6"
@@ -102,6 +107,11 @@ class Fastapi < Formula
   resource "httpx" do
     url "https://files.pythonhosted.org/packages/b1/df/48c586a5fe32a0f01324ee087459e112ebb7224f646c0b5023f5e79e9956/httpx-0.28.1.tar.gz"
     sha256 "75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc"
+  end
+
+  resource "httpx2" do
+    url "https://files.pythonhosted.org/packages/d5/44/474bef2a0e9d90f1715d32cb98b0738695ca17ba324095fb2497ed7fbd59/httpx2-2.13.1.tar.gz"
+    sha256 "e48744a19e3af5ee48313d0ce5fe941d5422fae5705ea922a4aabf94d7800dfa"
   end
 
   resource "idna" do
@@ -237,6 +247,11 @@ class Fastapi < Formula
   resource "starlette" do
     url "https://files.pythonhosted.org/packages/e9/0c/6efb252d091ecccd7d62048ae11f0ea35cd75a4fbaeea5e30f9c3bf91d10/starlette-1.8.0.tar.gz"
     sha256 "1565dc0b35d5737a271ed1e0e04e949f4e81198799f216d2667b0a0fb9cf9522"
+  end
+
+  resource "truststore" do
+    url "https://files.pythonhosted.org/packages/ee/9f/c5201d42a484c061e528825fc8e2d565f5abd50a4ced6fb7d29c4ec99b2b/truststore-0.10.5.tar.gz"
+    sha256 "30d36967ccaded5cbb38d602c433f53600036c79d502f4533a49b60a03bbefcd"
   end
 
   resource "typer" do
