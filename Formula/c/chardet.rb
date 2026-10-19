@@ -8,8 +8,7 @@ class Chardet < Formula
   license "0BSD"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "eb5da8cd1c212d3784072bd05c2b737637e69c804b511ee6ca0e3bc28ac7bcdb"
+    sha256 cellar: :any_skip_relocation, all: "162251ba996471dce3d6ac4b59ea452f13e29e2501039d0a56a2a7770dfed7fd"
   end
 
   depends_on "python@3.15"
