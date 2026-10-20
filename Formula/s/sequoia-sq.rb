@@ -1,15 +1,10 @@
 class SequoiaSq < Formula
   desc "Sequoia-PGP command-line tool"
   homepage "https://sequoia-pgp.org"
-  url "https://gitlab.com/sequoia-pgp/sequoia-sq/-/archive/v1.4.1/sequoia-sq-v1.4.1.tar.gz"
-  sha256 "d6c1fd6454b4f469913ab22de4fc6ec349f6effa1bd0423a4f68d868dfbbee39"
+  url "https://static.crates.io/crates/sequoia-sq/sequoia-sq-1.5.0.crate"
+  sha256 "43f230abc78a8daec8a06cfc8c1191045b7b210fee5bee50dc3f75bd9f22950e"
   license "LGPL-2.0-or-later"
   head "https://gitlab.com/sequoia-pgp/sequoia-sq.git", branch: "main"
-
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
 
   bottle do
     rebuild 1
@@ -42,7 +37,8 @@ class SequoiaSq < Formula
     ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
     ENV["ASSET_OUT_DIR"] = buildpath
 
-    system "cargo", "install", "--no-default-features", *std_cargo_args(features: "crypto-openssl")
+    path = build.head? ? "tool" : "."
+    system "cargo", "install", "--no-default-features", *std_cargo_args(features: "crypto-openssl", path:)
     man1.install Dir["man-pages/*.1"]
 
     bash_completion.install "shell-completions/sq.bash" => "sq"
