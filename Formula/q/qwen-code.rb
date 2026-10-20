@@ -6,11 +6,11 @@ class QwenCode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "8c0b29bbb44081a768626920ed54f2c19b95e8d5c75321a21a9865abe2396464"
-    sha256 cellar: :any, arm64_tahoe:       "8c0b29bbb44081a768626920ed54f2c19b95e8d5c75321a21a9865abe2396464"
-    sha256 cellar: :any, arm64_sequoia:     "8c0b29bbb44081a768626920ed54f2c19b95e8d5c75321a21a9865abe2396464"
-    sha256 cellar: :any, arm64_linux:       "9baab561f54ecf1a038c1b179b9fad787ef36ffda353acc2253841db8633841f"
-    sha256 cellar: :any, x86_64_linux:      "a6642a7d2079218f27fcfbd555176e19142cabada33791af832bb9cd0063bd77"
+    sha256 cellar: :any, arm64_golden_gate: "84d43b0f7a140a64332aabb958269a2bcff460416b5729ff48cae1f5beb2cfcc"
+    sha256 cellar: :any, arm64_tahoe:       "84d43b0f7a140a64332aabb958269a2bcff460416b5729ff48cae1f5beb2cfcc"
+    sha256 cellar: :any, arm64_sequoia:     "84d43b0f7a140a64332aabb958269a2bcff460416b5729ff48cae1f5beb2cfcc"
+    sha256 cellar: :any, arm64_linux:       "116710c31d7db39ffb63df610d627bbc78b218ef1c82929fa4d4caf76f913689"
+    sha256 cellar: :any, x86_64_linux:      "c262e6f08356cc9c682dc8ab3d2beaa92ea2ab934d8be4dbdc5e01f1cef48e4f"
   end
 
   depends_on "node"
