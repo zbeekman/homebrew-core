@@ -6,6 +6,14 @@ class TpcgenCli < Formula
   license "Apache-2.0"
   head "https://github.com/datafusion-contrib/tpcgen-rs.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c60b49d4f66863b59698c5496da94ecf70723ba60b16d92c9bc907e11bba396a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0b068dd4eacfaaf5e0e5a13e53dc8d2ec7edf6b8447b0761f4a1413fbba54a07"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6daa26574fa940e1c01ebbc0dbed15b9d58f9d74598d22f12e7cd34926ca7006"
+    sha256 cellar: :any,                 arm64_linux:       "72e54af7c6aedfb3e87b794036be68f3d407cee71bb4ba01bcb75b23b522b47d"
+    sha256 cellar: :any,                 x86_64_linux:      "e2e26be7bffec78586a5ae4f1a08282fcfda2a41e90709e651a09c7e417e2e65"
+  end
+
   depends_on "rust" => :build
 
   deny_network_access!
