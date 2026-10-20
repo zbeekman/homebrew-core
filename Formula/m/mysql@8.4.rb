@@ -3,10 +3,9 @@ class MysqlAT84 < Formula
   # FIXME: Actual homepage fails audit due to Homebrew's user-agent
   # homepage "https://dev.mysql.com/doc/refman/8.4/en/"
   homepage "https://github.com/mysql/mysql-server"
-  url "https://cdn.mysql.com/Downloads/MySQL-8.4/mysql-8.4.11.tar.gz"
-  sha256 "eb3051164d625dd346a8203f76e0d5d5d9aec51dbe9d51788e39ec6b3f1394c2"
+  url "https://cdn.mysql.com/Downloads/MySQL-8.4/mysql-8.4.13.tar.gz"
+  sha256 "f6ddc7f7fb6462bab8b533b13c06af3fff57fa9ca12259b81ab13cd9930b9d58"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
-  revision 7
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/8.4.html?tpl=files&os=src&version=8.4",
