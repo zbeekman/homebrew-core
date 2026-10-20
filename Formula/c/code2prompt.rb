@@ -1,8 +1,8 @@
 class Code2prompt < Formula
   desc "CLI tool to convert your codebase into a single LLM prompt"
   homepage "https://code2prompt.dev/"
-  url "https://github.com/mufeedvh/code2prompt/archive/refs/tags/v4.2.0.tar.gz"
-  sha256 "de0fe811914bee2d03a0025e734d702d1cb50472dd75c42017cc65ac9435e481"
+  url "https://static.crates.io/crates/code2prompt/code2prompt-4.3.0.crate"
+  sha256 "990ebe1d34dec07580dd23e4097423989f0bd6c8d4f4de9d47c0ae77a0c2c732"
   license "MIT"
   head "https://github.com/mufeedvh/code2prompt.git", branch: "main"
 
@@ -23,13 +23,6 @@ class Code2prompt < Formula
     depends_on "zlib-ng-compat"
   end
 
-  # `cargo update --precise 0.9.114 openssl-sys` for minimum needed to use OpenSSL 4
-  patch do
-    file "Patches/code2prompt/4.2.0-openssl-sys-0.9.114.patch"
-    type :backport
-    resolves "https://github.com/mufeedvh/code2prompt/commit/f9ff9796f9835d0aae143d40bfc91a02a6c5ada0"
-  end
-
   deny_network_access!
 
   def fetch
@@ -40,7 +33,8 @@ class Code2prompt < Formula
     # Ensure the correct `openssl` will be picked up.
     ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@4")
 
-    system "cargo", "install", *std_cargo_args(path: "crates/code2prompt")
+    path = build.head? ? "crates/code2prompt" : "."
+    system "cargo", "install", *std_cargo_args(path:)
   end
 
   test do
