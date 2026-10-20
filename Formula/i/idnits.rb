@@ -1,8 +1,8 @@
 class Idnits < Formula
   desc "Looks for problems in internet draft formatting"
   homepage "https://author-tools.ietf.org/idnits3/"
-  url "https://registry.npmjs.org/@ietf-tools/idnits/-/idnits-3.2.0.tgz"
-  sha256 "ae59abef0eb022dba2d6682c40532880e9b11b45511a242c4934ee5b6542c4ef"
+  url "https://registry.npmjs.org/@ietf-tools/idnits/-/idnits-3.3.0.tgz"
+  sha256 "6103dd8d4e721fd59946e51a462e1fc679e747d4ad805cd55ac3a76c5a2678be"
   license "BSD-3-Clause"
 
   livecheck do
