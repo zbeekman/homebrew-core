@@ -1,8 +1,8 @@
 class Lunarr < Formula
   desc "Self-hosted media streaming server and Plex alternative for movies and TV"
   homepage "https://github.com/lunarr-app/lunarr-go"
-  url "https://github.com/lunarr-app/lunarr-go/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "b035633a2d8b98b171da2a2c59663ecf98faee2f630b78598afcedc45ec91464"
+  url "https://github.com/lunarr-app/lunarr-go/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "e1d0317e8217d8a880e7b9eb340172dd6239854ca224bd845862e777ce6628c7"
   license "Apache-2.0"
   head "https://github.com/lunarr-app/lunarr-go.git", branch: "main"
 
@@ -18,10 +18,22 @@ class Lunarr < Formula
   depends_on "ffmpeg"
   depends_on "node"
 
+  # `better-auth` needs its exact `@better-auth/core`; npm otherwise resolves a newer one with mismatched peers
+  resource "better-auth-core" do
+    url "https://registry.npmjs.org/@better-auth/core/-/core-1.7.11.tgz"
+    sha256 "ec150a0c7fee44737af5e5bf72dfcf1e80e2c863a8ec06445c7f8e4dd2c167b6"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/lunarr-app/lunarr-go/refs/tags/v#{LATEST_VERSION}/package.json"
+      regex(/(\d+(?:\.\d+)+)/)
+      strategy :json do |json, regex|
+        json.dig("dependencies", "better-auth")&.[](regex, 1)
+      end
+    end
+  end
+
   def install
-    # FIXME: pin `@better-auth/core` to match `better-auth`; newer versions drop exports it imports
-    system "npm", "pkg", "set", "overrides[@better-auth/core]=1.7.2"
-    system "npm", "install", *std_npm_args(prefix: false)
+    system "npm", "install", *std_npm_args(prefix: false), *resources.map(&:cached_download)
     system "npm", "run", "build"
     system "npm", "prune", "--omit=dev"
 
