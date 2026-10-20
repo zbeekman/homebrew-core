@@ -1,8 +1,8 @@
 class Tgrep < Formula
   desc "Trigram-indexed grep for fast regex search in large codebases"
   homepage "https://github.com/microsoft/tgrep"
-  url "https://github.com/microsoft/tgrep/archive/refs/tags/v1.2.3.tar.gz"
-  sha256 "9c4af473d19a49ebf8803596fadea1b83e3154371805e00143a3f4bb8d2b6253"
+  url "https://github.com/microsoft/tgrep/archive/refs/tags/v1.2.4.tar.gz"
+  sha256 "72cc0250fa387480e3a32b735d5268c8cde3ee6401f8fb2e0d0639b01ebe2756"
   license "MIT"
   head "https://github.com/microsoft/tgrep.git", branch: "main"
 
