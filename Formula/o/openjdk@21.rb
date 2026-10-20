@@ -1,8 +1,8 @@
 class OpenjdkAT21 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.org/"
-  url "https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.12.1-ga.tar.gz"
-  sha256 "9c719670e7be6080a46ebeb1223a375bd53818ba7c5ae11f11a02907b593775f"
+  url "https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.13-ga.tar.gz"
+  sha256 "a10eb756f12542b530db90e15aff44c72cd572ba02c47496affb5e3510814935"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
   compatibility_version 1
 
