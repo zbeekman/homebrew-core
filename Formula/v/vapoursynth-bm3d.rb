@@ -1,10 +1,9 @@
 class VapoursynthBm3d < Formula
   desc "BM3D denoising filter for VapourSynth"
   homepage "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D"
-  url "https://files.pythonhosted.org/packages/5b/16/6f1d0e05ceff921106281db6866d45e1b7eb284f078886e463ca9a1e6566/vapoursynth_bm3d-11.0.tar.gz"
-  sha256 "a1d02dd4bf7e2b5bfaa2b3c6744e5093b225e8562a39d183a6ba239554cd876c"
+  url "https://files.pythonhosted.org/packages/7b/b5/f7c6b2035409be2c3417f44426f29d9434075a42e5fcfd477ad765183f11/vapoursynth_bm3d-12.0.tar.gz"
+  sha256 "576abdee38944001a545804b4fbecd65d8789dd2ebc11eaea13e0b4e95223896"
   license "MIT"
-  revision 1
   head "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D.git", branch: "master"
 
   bottle do
@@ -21,6 +20,8 @@ class VapoursynthBm3d < Formula
   depends_on "fftw"
   depends_on "python@3.15"
   depends_on "vapoursynth"
+
+  pypi_packages exclude_packages: "vapoursynth"
 
   deny_network_access!
 
