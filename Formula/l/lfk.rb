@@ -1,8 +1,8 @@
 class Lfk < Formula
   desc "Terminal user interface for navigating and managing Kubernetes clusters"
   homepage "https://github.com/janosmiko/lfk"
-  url "https://github.com/janosmiko/lfk/archive/refs/tags/v0.19.8.tar.gz"
-  sha256 "a027d55f7efb4c98373c872465e2e06e112a6e0e008e8d3b6e43ec82b1e39c4b"
+  url "https://github.com/janosmiko/lfk/archive/refs/tags/v0.19.9.tar.gz"
+  sha256 "529d41f6d9735c532ad77b93963c83af42e679a34830f987400b5129d6053e86"
   license "Apache-2.0"
 
   bottle do
