@@ -13,7 +13,7 @@ class Idnits < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9354f658ca376a7da4ce291c08cdae14f160b2b414cbfaf735cf900f7bb7f0f5"
+    sha256 cellar: :any_skip_relocation, all: "c1dc336ce88447beec8ff60b6a741b8a0174aa0169038bb88fa9075a8d08c0ed"
   end
 
   depends_on "node"
