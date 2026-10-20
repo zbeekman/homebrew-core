@@ -4,6 +4,7 @@ class Pypy311 < Formula
   url "https://downloads.python.org/pypy/pypy3.11-v8.0.1-src.tar.gz"
   sha256 "7e5f2801ee87d52fb4de096fb650bca4d5605cd8b5fe278dba5500019fa3739e"
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://downloads.python.org/pypy/"
@@ -54,8 +55,8 @@ class Pypy311 < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/ae/15/4500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f/pip-26.2.1.tar.gz"
-    sha256 "f6ad667e89a1fe78046c8f13232b247200f5258d7828f3f7883d660878e0813f"
+    url "https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz"
+    sha256 "3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f"
   end
 
   resource "setuptools" do
