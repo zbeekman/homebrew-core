@@ -3,16 +3,16 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/6a/38/4192e2419d30c5f5b2fcda883c50ae3c04ac5b6bdee3ac6a95a00b022824/fastapi-0.147.0.tar.gz"
-  sha256 "c144ac6633b7f498ab98c8f001c7e60c8430df3f9bc6126fe2e0e2e26f790fdd"
+  url "https://files.pythonhosted.org/packages/72/da/e962004c32f34fb630e8393456cadcd08d4300b6fa0099ec0ae5052b8418/fastapi-0.148.0.tar.gz"
+  sha256 "06ee16c50e429daf993a58ecbb5306d284c4c1ee8135380af39a5e1cfa715187"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "e49bb59f0e4f7ab096c00f730417a6d578b4b2ea8f1bc9eca0757de8d55b88c1"
-    sha256 cellar: :any, arm64_tahoe:       "73bc75ea5641a2058e965a29feefc57d674d854c53741dc391f33b0a5abe0361"
-    sha256 cellar: :any, arm64_sequoia:     "6f8b9b33482f8ded1861c72d41835e3f96a6ff38ac19f45d891bab261b0e345c"
-    sha256 cellar: :any, arm64_linux:       "f3d9b95bf06ba3cbdbc1aedcab9f1075eca81cfba98f8c10e0199b0d63006086"
-    sha256 cellar: :any, x86_64_linux:      "4d653c81d90965e70c0bfaac27c725941a3f5432e13c0192c3d9c2fc4fc9b0c5"
+    sha256 cellar: :any, arm64_golden_gate: "7e04153ab3effc2d52bd2608fa83fd82594a0cbfd722f0535e75521bd12f7e32"
+    sha256 cellar: :any, arm64_tahoe:       "1efef4e205f391517d57081254e2c96b54729f580158937b616b53d5ac94296b"
+    sha256 cellar: :any, arm64_sequoia:     "61a61f83019b08aaaaba1cbeabcab87ce1db5d863411067bbaf98eece9e3c845"
+    sha256 cellar: :any, arm64_linux:       "6d9ca880818a347334b49b07ee42fc8d7b6a4b63328610cbb2c9c19179ccad50"
+    sha256 cellar: :any, x86_64_linux:      "782c9d5ba0faa61ad796e2bf6cf17f9db5c00c298a0053b39f64aa743085c964"
   end
 
   depends_on "rust" => :build # for annotated-doc
