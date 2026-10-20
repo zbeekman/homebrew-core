@@ -1,8 +1,8 @@
 class Officecli < Formula
   desc "Read, edit, and automate Office documents (.docx, .xlsx, .pptx)"
   homepage "https://github.com/iOfficeAI/OfficeCLI"
-  url "https://github.com/iOfficeAI/OfficeCLI/archive/refs/tags/v1.0.157.tar.gz"
-  sha256 "cfd858ca32cc3ecb51b16b882ab2614517921c4b141674b82b0883eeb07a3754"
+  url "https://github.com/iOfficeAI/OfficeCLI/archive/refs/tags/v1.0.158.tar.gz"
+  sha256 "5a5e7c3b84384e5db6519f0db4946f58aacb7359ff031ea52c127bbe1e7f0bc9"
   license "Apache-2.0"
 
   bottle do
@@ -16,6 +16,9 @@ class Officecli < Formula
   depends_on "dotnet"
 
   def install
+    # .NET named mutexes need `XDG_RUNTIME_DIR` (or `USER`) on Linux, which build containers may lack
+    ENV["XDG_RUNTIME_DIR"] = buildpath
+
     dotnet = Formula["dotnet"]
     args = %W[
       --configuration Release
