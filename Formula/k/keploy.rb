@@ -11,11 +11,11 @@ class Keploy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2221e55958041e09dbf381c6377a34e809709811c1c7c8d667a3dcac27b9a1be"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2221e55958041e09dbf381c6377a34e809709811c1c7c8d667a3dcac27b9a1be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2221e55958041e09dbf381c6377a34e809709811c1c7c8d667a3dcac27b9a1be"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2b4f0dcaca174dae86e7214a6e160e892fb03ddd44da94b2930e1f14d9032ac3"
-    sha256 cellar: :any,                 x86_64_linux:      "4190b6b3ff4d88a2070e91cfeefa35a072cf1d00c08881680ed6ee57fd20f731"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e40f88435d99ea43557ab34d24fdd558bf604dbc2711629f93e638fde970c86f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e40f88435d99ea43557ab34d24fdd558bf604dbc2711629f93e638fde970c86f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e40f88435d99ea43557ab34d24fdd558bf604dbc2711629f93e638fde970c86f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "31d20a9aedcb57cd9c08e036b91adfaa2c4a4380ba3246fbc7a064ea095e0999"
+    sha256 cellar: :any,                 x86_64_linux:      "0062282e1e43cb1c2a0c8711711a09e811704a6c23ddf64fec1acbf6fffea00b"
   end
 
   depends_on "go" => :build
