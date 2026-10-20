@@ -1,8 +1,8 @@
 class Goat < Formula
   desc "General purpose AT Protocol CLI in Go"
   homepage "https://github.com/bluesky-social/goat"
-  url "https://github.com/bluesky-social/goat/archive/refs/tags/v0.2.6.tar.gz"
-  sha256 "9e9128e7ebec1cf509b138f6d4809e7b93f9d29a0d9b724e0faa93b17bd11e2f"
+  url "https://github.com/bluesky-social/goat/archive/refs/tags/v0.2.7.tar.gz"
+  sha256 "3ab36603983d516cc0cb91c384e97554fa22a124bedfc91cb06c4fb7a5c774d5"
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
