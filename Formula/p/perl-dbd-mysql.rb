@@ -3,10 +3,9 @@
 class PerlDbdMysql < Formula
   desc "MySQL driver for the Perl5 Database Interface (DBI)"
   homepage "https://dbi.perl.org/"
-  url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.013.tar.gz"
-  sha256 "aeb0a6e1c26fc28a5cf6de1161e0f056ddcbb739f87954dba7cb1c5acb4e1c33"
+  url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.014.tar.gz"
+  sha256 "c5fee5207e6a340e59cfa67df211698271f7b4c885f740e52bb5c2c3a10df55c"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
-  revision 2
   compatibility_version 1
   head "https://github.com/perl5-dbi/DBD-mysql.git", branch: "master"
 
