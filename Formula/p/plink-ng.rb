@@ -1,15 +1,15 @@
 class PlinkNg < Formula
   desc "Whole-genome association analysis toolset (PLINK 2.0)"
   homepage "https://www.cog-genomics.org/plink/2.0/"
-  url "https://github.com/chrchang/plink-ng/archive/refs/tags/v2.0.0-a.7.13.tar.gz"
-  version "2.0.0-a.7.13"
-  sha256 "d125cd76cc284aa41c133add511b5030413e764b40d731fd38588dbd5104c6f6"
+  url "https://github.com/chrchang/plink-ng/archive/refs/tags/v2.0.0-b.1.0.tar.gz"
+  version "2.0.0-b.1.0"
+  sha256 "07e08fe3a2c3287d5b85697fea95cb7885fbf0d877f792817237c3bf1343411f"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later"]
   head "https://github.com/chrchang/plink-ng.git", branch: "master"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+-a\.\d+(?:\.\d+)*)$/i)
+    regex(/^v?(\d+(?:\.\d+)+-[ab]\.\d+(?:\.\d+)*)$/i)
   end
 
   bottle do
@@ -54,8 +54,8 @@ class PlinkNg < Formula
     system bin/"plink2", "--pfile", "dummy", "--make-bed", "--out", "binary"
     assert_path_exists testpath/"binary.bed"
 
-    # --pca goes through the BLAS/LAPACK backend.
-    system bin/"plink2", "--pfile", "dummy", "--pca", "2", "--out", "pca"
+    # --pca goes through the BLAS/LAPACK backend; it needs rare variants filtered.
+    system bin/"plink2", "--pfile", "dummy", "--maf", "0.05", "--pca", "2", "--out", "pca"
     assert_equal 2, (testpath/"pca.eigenval").read.lines.count
   end
 end
