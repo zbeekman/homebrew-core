@@ -10,12 +10,11 @@ class Lexicon < Formula
   head "https://github.com/dns-lexicon/dns-lexicon.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "35e98c5ef22d4031514bad342ed50ece58d16e44ca390a175faab78f4b20e6df"
-    sha256 cellar: :any, arm64_tahoe:       "bd733b2a22c21edaf21c193ef4ce9349e3c61aa341633cf672d97a6b03889196"
-    sha256 cellar: :any, arm64_sequoia:     "8074a75d594a6d4d5c4a79ae9eac1f0123d16e8fc74ad7912854a16358e4efd8"
-    sha256 cellar: :any, arm64_linux:       "4cbea8b85eb54c519646d7632bef0b21b2f7de55245c99a2e031d86ddb7e06b9"
-    sha256 cellar: :any, x86_64_linux:      "c5775264fbdc505020ea6d51b8587ca4e1fa9bdc6000426b02c15eee3038bc7d"
+    sha256 cellar: :any, arm64_golden_gate: "8fe58911a122cb805c0f24bb108aa595e1d77601f064cf0bfaf2463e7c29f3e2"
+    sha256 cellar: :any, arm64_tahoe:       "834793dc9991efde5329a35490a727340bf839edee0f1a913de0fd6307dec879"
+    sha256 cellar: :any, arm64_sequoia:     "70ce8f72f2340a3f2c1d0e6404953078ec56443851224994a35c9f029dd9e7df"
+    sha256 cellar: :any, arm64_linux:       "7daabaab9f5a22c70d35f62411c24646d1d18b099ed4c3485cc59d69e15ea8de"
+    sha256 cellar: :any, x86_64_linux:      "894870450a2ba175e970f0b3fbc488381f988ba06e86a3489371b6971010ca19"
   end
 
   depends_on "rust" => :build
