@@ -1,8 +1,8 @@
 class Range2cidr < Formula
   desc "Converts IP ranges to CIDRs"
   homepage "https://ipinfo.io"
-  url "https://github.com/ipinfo/cli/archive/refs/tags/range2cidr-1.3.0.tar.gz"
-  sha256 "562f130483c8c7b2d376f8b0325392136f53e74912c879fae0677ffe46299738"
+  url "https://github.com/ipinfo/cli/archive/refs/tags/range2cidr-3.3.3.tar.gz"
+  sha256 "bcf717e779d72f5b1ee01d808d6c86dfa5d9431ab786391c103a19cf3753948d"
   license "Apache-2.0"
 
   livecheck do
