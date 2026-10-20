@@ -1,8 +1,8 @@
 class Gitsign < Formula
   desc "Keyless Git signing using Sigstore"
   homepage "https://github.com/sigstore/gitsign"
-  url "https://github.com/sigstore/gitsign/archive/refs/tags/v0.17.1.tar.gz"
-  sha256 "0325dc76ec9e2d8d81d96aaeb6dfde0317f6cdfc60710fbab9eb636648388085"
+  url "https://github.com/sigstore/gitsign/archive/refs/tags/v0.18.0.tar.gz"
+  sha256 "d87dbb00624d0e6874ef2df37b3bb3b3a89416c3a19114753d3c3cb932dcdcba"
   license "Apache-2.0"
   head "https://github.com/sigstore/gitsign.git", branch: "main"
 
@@ -28,7 +28,7 @@ class Gitsign < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/gitsign --version")
+    assert_match version.to_s, shell_output("#{bin}/gitsign version")
 
     system "git", "clone", "https://github.com/sigstore/gitsign.git"
     cd testpath/"gitsign" do
