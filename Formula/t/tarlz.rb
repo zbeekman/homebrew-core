@@ -1,9 +1,9 @@
 class Tarlz < Formula
   desc "Data compressor"
   homepage "https://www.nongnu.org/lzip/tarlz.html"
-  url "https://download.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.30.tar.lz"
-  mirror "https://download-mirror.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.30.tar.lz"
-  sha256 "c6339319413f37fc4b155b1ba8a58640a7fee36498b095d3b6d3c13d9c7f286c"
+  url "https://download.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.31.tar.lz"
+  mirror "https://download-mirror.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.31.tar.lz"
+  sha256 "e7fafcaf83ce215d94f758ff07037a3fda4bcea006ccb7909ce3f83218e98f71"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -22,6 +22,8 @@ class Tarlz < Formula
   end
 
   depends_on "lzlib"
+
+  deny_network_access!
 
   def install
     system "./configure", *std_configure_args
