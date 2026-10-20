@@ -1,8 +1,8 @@
 class Oasis < Formula
   desc "CLI for interacting with the Oasis Protocol network"
   homepage "https://github.com/oasisprotocol/cli"
-  url "https://github.com/oasisprotocol/cli/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "442367d23ba1185bf5108a7f19a4b845b62b2361a5ba112420d88b9d6dd704a8"
+  url "https://github.com/oasisprotocol/cli/archive/refs/tags/v0.22.1.tar.gz"
+  sha256 "90dc2f6c643265dd5a14b1ddfcb29e7187acbf1059592ad593d5aa108ed1614c"
   license "Apache-2.0"
   head "https://github.com/oasisprotocol/cli.git", branch: "master"
 
