@@ -1,8 +1,8 @@
 class Nextflow < Formula
   desc "Reproducible scientific workflows"
   homepage "https://nextflow.io"
-  url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v26.10.2.tar.gz"
-  sha256 "496c91400a0757f2173b6baac0365303c9404d2ec515544e639015ddb55d9d91"
+  url "https://github.com/nextflow-io/nextflow/archive/refs/tags/v26.10.3.tar.gz"
+  sha256 "6cf4331e5c74f9e55eabb06a72a688f34cc41723cf311ce4c08e6b1d55c44020"
   license "Apache-2.0"
 
   livecheck do
