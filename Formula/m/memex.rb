@@ -7,11 +7,11 @@ class Memex < Formula
   head "https://github.com/nicosuave/memex.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "085f2841213600d8c06adc9965b4526753b8df7233813d3340eabeb6c39efda5"
-    sha256 cellar: :any, arm64_tahoe:       "256c0cd62f0db875a80dc8e549e2208892599260fc67ffcdb661f8fbde8e9557"
-    sha256 cellar: :any, arm64_sequoia:     "5fca54963d9b38a9f63a90644ac9e5d62a0015b9262805af4ce2ba0ab6278abc"
-    sha256 cellar: :any, arm64_linux:       "2c57fa3198596ae57e0260a9880193a3df6d2444b4cdf999432ee9d72c205b78"
-    sha256 cellar: :any, x86_64_linux:      "c18023c702abc50633dce01d49a8446052a8e7d0c8bbdfbdd00fd1172aefbc24"
+    sha256 cellar: :any, arm64_golden_gate: "095874c13710515ecd8d363fced6d2fa88e352d9ecfd3e69a3a36566c8fff85f"
+    sha256 cellar: :any, arm64_tahoe:       "47042840a36ff403ad1214dc5e4f724d84a0050d10841eb5d806e91c73f77017"
+    sha256 cellar: :any, arm64_sequoia:     "4354cb6e706604961913894e6c8e06605c1a64f8c53725f5b67768febf682380"
+    sha256 cellar: :any, arm64_linux:       "5afd43849283ef3c05d28c439e680a82b15e8c0a1323ee226d6dfdb7544c9b60"
+    sha256 cellar: :any, x86_64_linux:      "9d2b64ed891cba52fbabbe95e5a1370142facb4abe53580bfbeb4a7205a3ecf9"
   end
 
   depends_on "pkgconf" => :build
