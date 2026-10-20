@@ -1,21 +1,10 @@
 class Swctl < Formula
   desc "Apache SkyWalking CLI (Command-line Interface)"
   homepage "https://skywalking.apache.org/"
+  url "https://github.com/apache/skywalking-cli/archive/refs/tags/0.15.0.tar.gz"
+  sha256 "2b167a3f32939a6fa03363720e94d5c44e2e66563a5991627b109a2377883c7d"
   license "Apache-2.0"
   head "https://github.com/apache/skywalking-cli.git", branch: "master"
-
-  stable do
-    url "https://github.com/apache/skywalking-cli/archive/refs/tags/0.14.0.tar.gz"
-    sha256 "9b1861a659e563d2ba7284ac19f3ae72649f08ac7ff7064aee928a7df2cd2bff"
-
-    # fish and zsh completion support patch, upstream pr ref, https://github.com/apache/skywalking-cli/pull/207
-    patch do
-      url "https://github.com/apache/skywalking-cli/commit/3f9cf0e74a97f16d8da48ccea49155fd45f2d160.patch?full_index=1"
-      sha256 "dd17f332f86401ef4505ec7beb3f8863f13146718d8bdcf92d2cc2cdc712b0ec"
-      type :backport
-      resolves "https://github.com/apache/skywalking-cli/pull/207"
-    end
-  end
 
   bottle do
     rebuild 2
