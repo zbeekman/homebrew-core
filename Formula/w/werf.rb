@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v2.80.2.tar.gz"
-  sha256 "e2e2f90cb2b996d001e291f2f1e8d46be5a236ae9617eb63010059a5811a6cba"
+  url "https://github.com/werf/werf/archive/refs/tags/v2.81.4.tar.gz"
+  sha256 "fc515915e3a5134b2ccf4d651d38b3d3553abafd894ea3d15f952085b6980f53"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
