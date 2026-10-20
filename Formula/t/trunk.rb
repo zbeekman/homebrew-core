@@ -7,12 +7,11 @@ class Trunk < Formula
   head "https://github.com/trunk-rs/trunk.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "e95ad475c49fbb5322fbbf9549f355f97607f428281812926ce6faffb3821999"
-    sha256 cellar: :any, arm64_tahoe:       "cf27a8172e41b8e9ea3f63ce101410665baee65b32ca846854978d21c2f5b5f0"
-    sha256 cellar: :any, arm64_sequoia:     "09f4a6c46d1eb6becd97ec0c154116e8b7df5df4006536f5e3ce6ddcb649597e"
-    sha256 cellar: :any, arm64_linux:       "9e8758050043ef587c8389de3f576acbe8e4ae023b1a2856bbae469416aebe4b"
-    sha256 cellar: :any, x86_64_linux:      "03ed23f22eb0b77134230c94b7ab48df3a76342b70965b508d25f6ccf9b7c07a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "71d877e534ec6ea26cac2b6d03595c04791c7faa3c1fb0ab75ec7811d3c41f96"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b5ee348f895a70f357ac906c4a318bcae339e39bef2a106bc8b8494d8273d196"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d71fd5efddc83750ba48be983ea9358745dcb0bb095ff1b43f3b498e9667895f"
+    sha256 cellar: :any,                 arm64_linux:       "6cd1e04a22dc538a4b6a9a65d26e744c1da88759c6687cfb3bb97ad2d90799b5"
+    sha256 cellar: :any,                 x86_64_linux:      "6e165d32559461e7c222c43948a6f0a39ab79ee5eefaad5000e2c2328d3258e9"
   end
 
   depends_on "pkgconf" => :build
