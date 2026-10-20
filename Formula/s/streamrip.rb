@@ -9,12 +9,11 @@ class Streamrip < Formula
   license "GPL-3.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "26044a7d6a4fe61432b40ee3f8a85d679ff05eaec4ae655ae13ed0475894c81e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c2b1ef27012c3eacf5bb6069aa1e8aa28e5766b82ca0423677c59a06199e7b91"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ae3aa8a4da5e28404dbde738eae9c1a446bb084d5b7d09d79c81b0b72be68113"
-    sha256 cellar: :any,                 arm64_linux:       "d9ba9f649f08b6be905b2d5d01bf3cdb3e6137f96110c8d8f4a17c9d6a6a2613"
-    sha256 cellar: :any,                 x86_64_linux:      "13e0da07487b360263cac46d225f086a2132cceaf2b45edeb5353df74e9a9ad5"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5a6615144922f18822aff2ab2ad3de62f196d3bd185461afcd11fa2a5cade61a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "f12de47b8857aa9fc99178607f80cd3b1c5d23a9b5b143e15c214a1bd04d16c8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dd1990c7fa67a2384d1559f6005bf435c642061e5ab468b03452d87c9837add2"
+    sha256 cellar: :any,                 arm64_linux:       "d7e8318d15f57f7d3949f691f3cc757de70981de24740059d05e744f77fcb2bf"
+    sha256 cellar: :any,                 x86_64_linux:      "4bd789ba246e5070d77d0d68f30a2babe4199007d5ff64a3f06576e4acd0e146"
   end
 
   depends_on "certifi" => :no_linkage
