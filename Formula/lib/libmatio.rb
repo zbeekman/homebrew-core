@@ -7,14 +7,11 @@ class Libmatio < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_golden_gate: "a3f7d119f382252ad8dc80db7c1ba2db8f7986db5487c037ce03f19468eb9f06"
-    sha256 cellar: :any,                 arm64_tahoe:       "9ca72d65bf5da29bddfbe606984e69151d6e26744783b2893a34e9318e7ae22c"
-    sha256 cellar: :any,                 arm64_sequoia:     "7f5745b00f477b3aa6544162e3bb0ae280898c04041f3b1350bfc507638f040e"
-    sha256 cellar: :any,                 arm64_sonoma:      "047c7d990b169c3ba1215246b4db54cd8ff33b7a194c67e8060aa7ce62c66486"
-    sha256 cellar: :any,                 sonoma:            "83734b9696e4075b6bb93b5759a39f61195f01fa915879912d2622489813d2af"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "96ccac4352f0a05a8b17132ffd0ea5f0d6fa9fc26f0f7512c0e3b85616eaf8d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "75875bd017f8e01b60e5bf97fc8140440e0dcaa018c4e2d7809f20b31cfd3071"
+    sha256 cellar: :any, arm64_golden_gate: "ea6990edca07e7dd50b4654d08ad59ea7f37611a6c31e77f40b3fde1d300b7dc"
+    sha256 cellar: :any, arm64_tahoe:       "f5d198037e29963a23930586dbff4632a96f4ced4578732e3bb939884e89ffc2"
+    sha256 cellar: :any, arm64_sequoia:     "10db79a6aec8d6a18760edd33ba274a523ab86fdb53b190a278eab3dc559bc25"
+    sha256 cellar: :any, arm64_linux:       "b0a3228256de47e0c9980fa51e21bea90eed1293ae3b2ab60abdaae16238b26d"
+    sha256 cellar: :any, x86_64_linux:      "7e78d77454548519dee0f5891b9683f8c436b4d3f0082c6663c08de45189c4de"
   end
 
   depends_on "pkgconf" => :test
