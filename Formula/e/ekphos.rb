@@ -1,10 +1,10 @@
 class Ekphos < Formula
   desc "Terminal-based markdown research tool inspired by Obsidian"
-  homepage "https://ekphos.netlify.app/docs"
-  url "https://github.com/hanebox/ekphos/archive/refs/tags/v0.50.0.tar.gz"
-  sha256 "fe42ee4e01b31041d2813c91d88271f3cebbd0d16cc79eebce9a1289dbecbcea"
+  homepage "https://ekphos.nostacks.xyz/"
+  url "https://github.com/nostacks/ekphos/archive/refs/tags/v0.60.20.tar.gz"
+  sha256 "1f2d2e6a55a7870b25a977f02a715390f8f5d93fc2bbd805ca2e3a94a71f8649"
   license "MIT"
-  head "https://github.com/hanebox/ekphos.git", branch: "main"
+  head "https://github.com/nostacks/ekphos.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5e610c3b7d4b929c3f4662abe2d4426ab2f58ba0c8a06b10c4e2c0f06b47dacc"
