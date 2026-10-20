@@ -25,11 +25,11 @@ class Wstunnel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "acfa530cd8adae1d50819b39c24a80ca41b66fb213c795df341df1e97df533da"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8f45b2937165027102d6509ff86373fedbcb476610268834392bf7b132f3f2c6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "84fd27ac88fefca678fcf6a26df7e975e408045314c917ae5fb98a6f2c3a01b0"
-    sha256 cellar: :any,                 arm64_linux:       "3c59cf0302127f0c2888a69c6de5528998765878d67a2946512c92e7cb48f20e"
-    sha256 cellar: :any,                 x86_64_linux:      "e2994034518a75e0442cec91462084919d74df59f29572f677ae16bcf858c1c6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "7ed0d1a5201420840792e9783d0d5e9765c929956f591df239111b2218dd0653"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "570bf22be19dd4d14d7d0301a44f953ae87a3f3b22df7d94c1df74b497befaf4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "64b16590434589f635c677fe585f35d649726b4cb46610d8f1cfc20fd6ca5def"
+    sha256 cellar: :any,                 arm64_linux:       "b96e721da06b06409d9bee0f7a426830872e8b34f0e01665e68578f0f57b0649"
+    sha256 cellar: :any,                 x86_64_linux:      "d74adc0f531a0a8388213f949375683f2e44fff775b3ccbcca063b3958624326"
   end
 
   depends_on "rust" => :build
