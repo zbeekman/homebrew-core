@@ -1,8 +1,8 @@
 class Socktainer < Formula
   desc "Docker-compatible REST API on top of Apple container"
   homepage "https://socktainer.github.io"
-  url "https://github.com/socktainer/socktainer/archive/refs/tags/v1.5.3.tar.gz"
-  sha256 "9d15a30de13259ec5220240b7dd736afc54663daf9d9632a85678e3622c6ff37"
+  url "https://github.com/socktainer/socktainer/archive/refs/tags/v1.6.0.tar.gz"
+  sha256 "7a2d96fecd75480ab62162611bd76c6e67be409993597b76813600d10d35e099"
   license "Apache-2.0"
   head "https://github.com/socktainer/socktainer.git", branch: "main"
 
