@@ -1,10 +1,9 @@
 class MysqlAT97 < Formula
   desc "Open source relational database management system"
   homepage "https://github.com/mysql/mysql-server"
-  url "https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.2.tar.gz"
-  sha256 "e5a676c7cb73738dc6ea33db2093806ebd512b629a139b897fcab68fcd81aaa4"
+  url "https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.4.tar.gz"
+  sha256 "9188eb1abec42b8ab8bb69948492f06258dd27e6aabd13e2d4c6197dbcde75b2"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
-  revision 4
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/9.7.html?tpl=files&os=src",
@@ -30,6 +29,7 @@ class MysqlAT97 < Formula
   depends_on "pkgconf" => :build
   depends_on "abseil"
   depends_on "icu4c@78"
+  depends_on "libfido2"
   depends_on "lz4"
   depends_on "openssl@4"
   depends_on "protobuf"
@@ -38,6 +38,7 @@ class MysqlAT97 < Formula
 
   uses_from_macos "curl"
   uses_from_macos "cyrus-sasl"
+  uses_from_macos "krb5"
   uses_from_macos "libedit"
 
   on_ventura :or_older do
@@ -76,6 +77,10 @@ class MysqlAT97 < Formula
     var/"mysql"
   end
 
+  def icu4c = deps.map(&:name).find { |dep| dep.start_with?("icu4c@") }
+
+  def openssl = deps.map(&:name).find { |dep| dep.start_with?("openssl@") }
+
   def install
     # Remove bundled libraries other than explicitly allowed below.
     # `boost` and `rapidjson` must use bundled copy due to patches.
@@ -93,8 +98,6 @@ class MysqlAT97 < Formula
       ENV.prepend_path "HOMEBREW_LIBRARY_PATHS", formula_opt_lib("llvm")/"c++"
     end
 
-    icu4c = deps.find { |dep| dep.name.match?(/^icu4c(@\d+)?$/) }
-                .to_formula
     # -DINSTALL_* are relative to `CMAKE_INSTALL_PREFIX` (`prefix`)
     # -DWITH_FIDO=system isn't set as feature isn't enabled and bundled copy was removed.
     # Formula paths are set to avoid HOMEBREW_HOME logic in CMake scripts
@@ -109,8 +112,8 @@ class MysqlAT97 < Formula
       -DMYSQL_DATADIR=#{datadir}
       -DSYSCONFDIR=#{etc}
       -DBISON_EXECUTABLE=#{formula_opt_bin("bison")}/bison
-      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix("openssl@4")}
-      -DWITH_ICU=#{icu4c.opt_prefix}
+      -DOPENSSL_ROOT_DIR=#{formula_opt_prefix(openssl)}
+      -DWITH_ICU=#{formula_opt_prefix(icu4c)}
       -DWITH_SYSTEM_LIBS=ON
       -DWITH_EDITLINE=system
       -DWITH_LZ4=system
