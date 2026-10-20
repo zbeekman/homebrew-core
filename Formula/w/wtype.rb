@@ -1,8 +1,8 @@
 class Wtype < Formula
   desc "Xdotool type for wayland"
   homepage "https://github.com/atx/wtype"
-  url "https://github.com/atx/wtype/archive/refs/tags/v0.4.tar.gz"
-  sha256 "da91786d828b6a6e29b884bc510473939eda052658ebef87d7bdeafa6a8746f9"
+  url "https://github.com/atx/wtype/archive/refs/tags/v0.5.tar.gz"
+  sha256 "684308ac8b47c510dddf4abac3aef86b4f7b8c0e165389a40608679a7a5b77ed"
   license "MIT"
 
   bottle do
