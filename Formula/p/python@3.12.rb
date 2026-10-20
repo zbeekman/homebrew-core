@@ -4,6 +4,7 @@ class PythonAT312 < Formula
   url "https://www.python.org/ftp/python/3.12.15/Python-3.12.15.tgz"
   sha256 "de1a241a519e0a3374fea98988d0b52c886743f9d953f23be8269cc7b59c5fab"
   license "Python-2.0"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -60,8 +61,8 @@ class PythonAT312 < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/ae/15/4500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f/pip-26.2.1.tar.gz"
-    sha256 "f6ad667e89a1fe78046c8f13232b247200f5258d7828f3f7883d660878e0813f"
+    url "https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz"
+    sha256 "3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f"
   end
 
   resource "wheel" do
