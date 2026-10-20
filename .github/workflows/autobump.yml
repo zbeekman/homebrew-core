@@ -54,18 +54,7 @@ jobs:
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
-      - name: Brew information
-        run: |
-          { 
-            echo "### brew config";
-            echo "```";
-            brew config;
-            echo "```";
-            echo "### brew doctor";
-            echo "```";
-            brew doctor
-            echo "```";
-          } >> $GITHUB_STEP_SUMMARY
+      - run: brew config
 
       - name: Bump formulae
         env:
