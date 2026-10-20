@@ -7,11 +7,11 @@ class AwsSpiffeWorkloadHelper < Formula
   head "https://github.com/spiffe/aws-spiffe-workload-helper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b19ea518bc0130349fb38eab5ececc8a6c3db7bbc708dcdc755e8d92c7881596"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b19ea518bc0130349fb38eab5ececc8a6c3db7bbc708dcdc755e8d92c7881596"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b19ea518bc0130349fb38eab5ececc8a6c3db7bbc708dcdc755e8d92c7881596"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "70c82193ba68c5d82f1104849fba935facc4e15b1c251f83aaf29d1c8d2067a4"
-    sha256 cellar: :any,                 x86_64_linux:      "b85539082c2a3120c82124e60990f6ebbba37d280ba778faefef842391565c56"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fef17afdd9796fac88f78499fb895f8859f8fb7e866b27314ec7dcdac96eb764"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fef17afdd9796fac88f78499fb895f8859f8fb7e866b27314ec7dcdac96eb764"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fef17afdd9796fac88f78499fb895f8859f8fb7e866b27314ec7dcdac96eb764"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1871af561bc24aed02cad20fc83d633190eb3f2b8a3fe4476c8d945e9c096f4b"
+    sha256 cellar: :any,                 x86_64_linux:      "254a0144af1ab9ba1ce6e83dfb6995acf69d7da5aeb240f2882bd50a28fd09ec"
   end
 
   depends_on "go" => :build
