@@ -13,11 +13,11 @@ class PlinkNg < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5aa8e40a84ac05237d0b158ee88aa62b5e8eb70d3678d3531820cf765de99c2c"
-    sha256 cellar: :any, arm64_tahoe:       "c9cde9ec4c5bb453b917b8cf2d38d076317368b99a2970d23bdc9b400c9260fa"
-    sha256 cellar: :any, arm64_sequoia:     "944e5ccbda9ec52fe707276705e37febafb9367d104b4d8b9a3fab2ae17c8ad9"
-    sha256 cellar: :any, arm64_linux:       "e59de55e920a62a66aadf83dec4670cfba5c0e0897a9e68ff2bdbf97a269043c"
-    sha256 cellar: :any, x86_64_linux:      "76632573040309938beca71af4c2db6889a785ce1d0ec0a484e6558141a4107c"
+    sha256 cellar: :any, arm64_golden_gate: "6b36e10047823c5a7878fd16226c18b1df9284aae17c7860b6b85328a0201c9e"
+    sha256 cellar: :any, arm64_tahoe:       "17b23b41fb6d08ef711ded4cf95a2188daddc2b7b0d770c5f15d898fca56a1b4"
+    sha256 cellar: :any, arm64_sequoia:     "26b57bc80cfc13cf302924b7344a9544de66231eb6358d378fc676e5bff62e0d"
+    sha256 cellar: :any, arm64_linux:       "67d4c9fdc5c008a7b660ee69ec174b9b7ff4aa0c6300b92dc2022ed2cc268727"
+    sha256 cellar: :any, x86_64_linux:      "67d7578574a3d202ed0f89782e0a6d91def91bc8906f9f8aeffb8b0e1669446a"
   end
 
   depends_on "zstd"
