@@ -7,12 +7,11 @@ class Bind < Formula
   # "version_scheme" because someone upgraded to 9.15.0, and required a
   # downgrade.
   license "MPL-2.0"
-  revision 1
   version_scheme 1
 
   stable do
-    url "https://downloads.isc.org/isc/bind9/9.20.29/bind-9.20.29.tar.xz"
-    sha256 "587029508b3b1b43229fae416c97e5543aba45809cefaca98a5004a02a5736c1"
+    url "https://downloads.isc.org/isc/bind9/9.20.30/bind-9.20.30.tar.xz"
+    sha256 "9e1443a40a72a30272cbc3196d020a6b2e26937111c83e59e101e82e1e3b4fef"
 
     depends_on "readline" # TODO: Remove in 9.22
   end
