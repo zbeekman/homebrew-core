@@ -11,11 +11,11 @@ class Micronaut < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "30349c15fde5c00e95d0ec29cad7bb5ed2462aa98cbf1ec351a1c09bd31d26eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "30349c15fde5c00e95d0ec29cad7bb5ed2462aa98cbf1ec351a1c09bd31d26eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "30349c15fde5c00e95d0ec29cad7bb5ed2462aa98cbf1ec351a1c09bd31d26eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f2abdaee0cd9d6217ac036ed74417968c63f28c793f8e1146f2336edca242dbd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "f2abdaee0cd9d6217ac036ed74417968c63f28c793f8e1146f2336edca242dbd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9c8ac400b311a58b22bf3b5913962404398fe07bb200015fd146dc6fa7bdbee"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b9c8ac400b311a58b22bf3b5913962404398fe07bb200015fd146dc6fa7bdbee"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b9c8ac400b311a58b22bf3b5913962404398fe07bb200015fd146dc6fa7bdbee"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1629f1928e6e7214a513dc923a4028e25908f106ea8a29c893664dfb5ba94f72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1629f1928e6e7214a513dc923a4028e25908f106ea8a29c893664dfb5ba94f72"
   end
 
   depends_on "gradle" => :build
