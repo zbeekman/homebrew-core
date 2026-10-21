@@ -2,8 +2,8 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v1.5.6",
-      revision: "069cc9f9b5be802405797faecc284961b07c70ef"
+      tag:      "v2.0.0",
+      revision: "d54cbbe3df17e8e5ce68312f483b4155836112aa"
   license "MIT"
 
   bottle do
@@ -68,7 +68,7 @@ class Duckdb < Formula
     (testpath/"CMakeLists.txt").write <<~CMAKE
       cmake_minimum_required(VERSION 3.10)
       project(test_duckdb)
-      set(CMAKE_CXX_STANDARD 11)
+      set(CMAKE_CXX_STANDARD 17)
       find_package(DuckDB REQUIRED)
       add_executable(test test.cpp)
       target_link_libraries(test duckdb)
