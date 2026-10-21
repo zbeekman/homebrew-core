@@ -6,6 +6,7 @@ class Brotli < Formula
   mirror "http://fresh-center.net/linux/misc/legacy/brotli-1.2.0.tar.gz"
   sha256 "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec"
   license "MIT"
+  revision 1
   compatibility_version 1
   head "https://github.com/google/brotli.git", branch: "master"
 
@@ -15,16 +16,22 @@ class Brotli < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "4344732ad26e00a3a397dafee2e87ca1b4210e8605c24aefa9bf8ea3fc5f271a"
-    sha256 cellar: :any,                 arm64_tahoe:       "71ffd30ccd74a9f28cfb210c21fcdc1aa5fec79e23ad2264b6dbceb73437601f"
-    sha256 cellar: :any,                 arm64_sequoia:     "b8e388c96be5a63a46e0335c390fecb20dda7adb1368a2ba0209b38cae17c708"
-    sha256 cellar: :any,                 arm64_sonoma:      "46b1cc7ef8ba325e56f7363de1068a84449dac940187dd2290a75e7008b3b4e1"
-    sha256 cellar: :any,                 sonoma:            "c9d272f3ac33b730d548da14ca323e8b4e0185273a6c85b0f12a4bbcd9f684af"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "485e0a6a74702cbe57819b32177bfb81e0195a71f52a16bab84b03529a672cf3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "d97618daaa84b66bc783888297f1765eb6f60e6a78e9b7c2ba0406889c159c05"
+    sha256 cellar: :any, arm64_golden_gate: "fc57a4b7192e85eb81b440bfa786216f7cea407dd8d7bf93e17f886742b83ecd"
+    sha256 cellar: :any, arm64_tahoe:       "a976542fe597e48a569a03f5a083405454f383995c657156979ef84b31c9e418"
+    sha256 cellar: :any, arm64_sequoia:     "832894ee6c084c1ac212f6031518ec9e4d731ac372854f9cb8173da186114d13"
+    sha256 cellar: :any, arm64_linux:       "8cfd9b38bae4952796e298c7856f4cf80f5b86d2e7412f10de8ab207f0a079ae"
+    sha256 cellar: :any, x86_64_linux:      "18c72483cf18493596dbec9bc932c8e693203bd13084e18b24df0925fa594884"
   end
 
   depends_on "cmake" => :build
+
+  # Backport earlier invalid stream detection for CVE-2026-111497
+  patch do
+    url "https://github.com/google/brotli/commit/0ed4268a4401abcb4472096340477cf4af7d1a2b.patch?full_index=1"
+    sha256 "d6f962509000223def7062958229bd08457e5e032e7ed0d1d94fb790b054b1fc"
+    type :backport
+    resolves "CVE-2026-111497"
+  end
 
   deny_network_access!
 
