@@ -1,8 +1,8 @@
 class Gperftools < Formula
   desc "Multi-threaded malloc() and performance analysis tools"
   homepage "https://github.com/gperftools/gperftools"
-  url "https://github.com/gperftools/gperftools/releases/download/gperftools-2.19/gperftools-2.19.tar.gz"
-  sha256 "97adc4509128200e21f3b29cd0f1184d4a41cfad892750cd15e6b8f5b5f96f21"
+  url "https://github.com/gperftools/gperftools/releases/download/gperftools-2.19.1/gperftools-2.19.1.tar.gz"
+  sha256 "4b0ac7a3803868685caa0ca4c190100ad8a302af6eb10b3e7482d36367f97309"
   license "BSD-3-Clause"
   compatibility_version 1
 
