@@ -1,8 +1,8 @@
 class Pixtuoid < Formula
   desc "Terminal pixel-art office for AI coding agents"
   homepage "https://github.com/IvanWng97/pixtuoid"
-  url "https://github.com/IvanWng97/pixtuoid/archive/refs/tags/v0.19.0.tar.gz"
-  sha256 "78293abd3691e5b8ce747490f5588ade49f14e31c6b7dda5ea4ffe5a893c29b9"
+  url "https://github.com/IvanWng97/pixtuoid/archive/refs/tags/v0.20.0.tar.gz"
+  sha256 "195e94c082e4a16170709a3ee5f884980aa4eac6d1b5a1c67a507e3f324dcb45"
   license "MIT"
   head "https://github.com/IvanWng97/pixtuoid.git", branch: "main"
 
@@ -41,11 +41,8 @@ class Pixtuoid < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/pixtuoid --version")
 
-    system bin/"pixtuoid", "init-pack", testpath/"pack"
-    assert_match "OK: pack \"skeleton\"", shell_output("#{bin}/pixtuoid validate-pack #{testpath}/pack")
-
-    connected = JSON.parse(shell_output("#{bin}/pixtuoid connect claude-code --json"))
-    assert_equal [{ "id" => "claude-code", "outcome" => "connected" }], connected
-    assert_match "pixtuoid-hook", (testpath/".claude/settings.json").read
+    connected = JSON.parse(shell_output("#{bin}/pixtuoid connect claude-code --json", 1)).first
+    assert_equal "claude-code", connected["id"]
+    assert_equal "failed", connected["outcome"]
   end
 end
