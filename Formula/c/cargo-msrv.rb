@@ -1,17 +1,17 @@
 class CargoMsrv < Formula
   desc "Find the minimum supported Rust version (MSRV) for your project"
   homepage "https://foresterre.github.io/cargo-msrv"
-  url "https://github.com/foresterre/cargo-msrv/archive/refs/tags/v0.19.4.tar.gz"
-  sha256 "95a118bf46830bbbd9edbd2281cb141e1082c393fe048d3f288de2ed39ba8364"
+  url "https://github.com/foresterre/cargo-msrv/archive/refs/tags/v0.19.5.tar.gz"
+  sha256 "b9b208bc8f7c91e01ff792b442b9ef972ed923573d862da3e3560cf975404e7e"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/foresterre/cargo-msrv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "49aede8bad2c5febe142d4eba459301e3aac69e2b116b62a90bdd47fedaf1ca3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ac7b68d836937a6997bc1936701d9e2b4def3e79a9c9cb9a4658dd9dfae2f278"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3930c076e8777dd80f3f42aeed9753c11a8a7b798b14926987468a9e121e7804"
-    sha256 cellar: :any,                 arm64_linux:       "a144d4a6b5383702fb3ea66a802e68428561a11a1b5fc9381fda31b06c2e8df5"
-    sha256 cellar: :any,                 x86_64_linux:      "16ca24356374f2d827714ce41b56aeea8a80bef60d114d7e0d2252a8babbb22c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2ce5d680542f3a65d6adef50072543de44b67b691c9f9422fdd3401904378f7e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8e429e8298a5ed4a89c97ba0070333d011b09eef24e494f310ffc79243c00a11"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5e304cab01987534820116df57bff460ab2f8c6bb1d866a2cad112536aa0f251"
+    sha256 cellar: :any,                 arm64_linux:       "1204e8fed633f0bb52992f0bed6e29ff7a98a269ea7bd2355827df5d412866c0"
+    sha256 cellar: :any,                 x86_64_linux:      "832808aee0d9ad0364979f06a374cf60421f557a18d34e07b71aa9b8e369753d"
   end
 
   depends_on "rust" => :build
