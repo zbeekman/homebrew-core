@@ -8,7 +8,7 @@ class Texlive < Formula
   mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2026/texlive-20260301-source.tar.xz"
   sha256 "cb120d314d3ceb23ac608af17ddd2c623afcf02331f400a0f25eead5b8ac1d70"
   license :cannot_represent
-  revision 1
+  revision 2
   compatibility_version 1
   head "https://github.com/TeX-Live/texlive-source.git", branch: "trunk"
 
@@ -315,8 +315,8 @@ class Texlive < Formula
   end
 
   resource "Mozilla::CA" do
-    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20250602.tar.gz"
-    sha256 "adeac0752440b2da094e8036bab6c857e22172457658868f5ac364f0c7b35481"
+    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20261020.tar.gz"
+    sha256 "1aeed97a463389e582e085e82de03ae0bffae74d46cf8ee4c511341e5508c21d"
   end
 
   resource "Net::SSLeay" do
