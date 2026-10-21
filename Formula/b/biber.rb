@@ -4,6 +4,7 @@ class Biber < Formula
   url "https://github.com/plk/biber/archive/refs/tags/v2.22.tar.gz"
   sha256 "82adcff9e71b4fc02ad6132f9ccd79137ad390e4d3392c7f681a85246c0cdc01"
   license "Artistic-2.0"
+  revision 1
 
   bottle do
     rebuild 2
@@ -579,8 +580,8 @@ class Biber < Formula
   end
 
   resource "Mozilla::CA" do
-    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20260813.tar.gz"
-    sha256 "81f0bd9665eacbb6feef13b0fa16fbb30162c09292542b1206434e569196dd9b"
+    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20261020.tar.gz"
+    sha256 "1aeed97a463389e582e085e82de03ae0bffae74d46cf8ee4c511341e5508c21d"
   end
 
   resource "PerlIO::utf8_strict" do
