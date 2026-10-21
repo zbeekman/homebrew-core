@@ -1,8 +1,8 @@
 class Anyzig < Formula
   desc "Universal zig executable that runs any version of zig"
   homepage "https://github.com/marler8997/anyzig"
-  url "https://github.com/marler8997/anyzig/archive/refs/tags/v2026_10_13.tar.gz"
-  sha256 "fa87b33ea91cda5f7df7bfb74fdb4ead644b53f68a5bdf9480b7292bcb1affbe"
+  url "https://github.com/marler8997/anyzig/archive/refs/tags/v2026_10_20.tar.gz"
+  sha256 "36ad6d7304e755347de26cba7423b4bcef8c9a35fb55e32a1c67baf2cbadd479"
   license "MIT"
 
   livecheck do
@@ -12,8 +12,6 @@ class Anyzig < Formula
       tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
     end
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "59f476bf71a90d6166bb03115d81576680f174d2158ee6d04fd073afe8191448"
