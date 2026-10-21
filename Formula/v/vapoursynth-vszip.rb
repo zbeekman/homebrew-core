@@ -1,10 +1,9 @@
 class VapoursynthVszip < Formula
   desc "VapourSynth Zig Image Process"
   homepage "https://github.com/dnjulek/vapoursynth-zip"
-  url "https://files.pythonhosted.org/packages/3e/5e/3823f1c3ce492c3f0acca288501e67cbd1de4be317c436c71d5fdfdd81c9/vapoursynth_vszip-22.1.0.tar.gz"
-  sha256 "93c1aaf5867ad43e1f21b77418fa89b0b1ed2191d0c4bfb03a65c958826ed8c9"
+  url "https://files.pythonhosted.org/packages/ac/5b/46cc32a9236271e709904c88056f053a731973c7358f4be44830aa242c9f/vapoursynth_vszip-23.0.0.tar.gz"
+  sha256 "7ef229ccbe9484a9a7b4b28f0535bcdc10e2e51386c9ba085f49f3134d2e85f1"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dddfa06563a0c12bd158063bf6a8c5bc81761f2a5af6f649f1de073601e5420a"
@@ -14,11 +13,13 @@ class VapoursynthVszip < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "5cdc4a3deac4aaff6e38fac617eae0a5513bec603cedd4610021def0071848a3"
   end
 
-  depends_on "zig@0.16" => :build
+  depends_on "zig" => :build
   depends_on "python@3.15"
   depends_on "vapoursynth"
 
   preserve_rpath # skip unnecessary relocation for plugin which avoids headerpad errors
+
+  pypi_packages exclude_packages: "vapoursynth"
 
   deny_network_access!
 
