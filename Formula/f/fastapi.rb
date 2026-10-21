@@ -3,16 +3,16 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/65/4b/136a9d2ff03259df54b8b0f11c89b3a86f3db295b15353526ee735ff35d9/fastapi-0.151.0.tar.gz"
-  sha256 "f5bd74323048882837f422b6592b11f84dda1754defc4545a4c570cfa19a7a41"
+  url "https://files.pythonhosted.org/packages/0a/69/8461d4c25490b5efe65b2178c857273785bd8b42a5555264b6b4f9bf2ed0/fastapi-0.153.0.tar.gz"
+  sha256 "5dbf5dcf6cf86388326c147566077c56a14c55b0f1bef370195da98e724a503f"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b606096a7513f2a84e13680301a049b84addaaeed3015f8016623cd06c8dc797"
-    sha256 cellar: :any, arm64_tahoe:       "a401b94c1ba8f232f53efb674674983811be678e19564e923ecda0b5c803a8d5"
-    sha256 cellar: :any, arm64_sequoia:     "bd06e554158816de64e0be9e487f06b33c7ca971a8a1d685330a21dae60d85ed"
-    sha256 cellar: :any, arm64_linux:       "8e2e103a82c4d4c4c4356d7f3b6d5c033d11cceb4bbcb204b1eed1777f39d6ce"
-    sha256 cellar: :any, x86_64_linux:      "ea5f529bee79de6c8f1dd4f4bf46b514c3e19dafbc1e477cdfdf5e5e16d70788"
+    sha256 cellar: :any, arm64_golden_gate: "0134c8fc639f11aff10c4d91580abf038c00cc58cf6d242b11c4c27e53c53d77"
+    sha256 cellar: :any, arm64_tahoe:       "035967337581e3bc34f431d36e07744fcb7d96be982a7c209288a78f78093440"
+    sha256 cellar: :any, arm64_sequoia:     "a5fdbe2f2467224a6ad7e028a1367174193b3e2a61ed9ba9f3df32d0221a4d08"
+    sha256 cellar: :any, arm64_linux:       "2cc26834c077ebc036d8a038623535863c9fd9ba40c0ae3ba14b53e919e8a2e9"
+    sha256 cellar: :any, x86_64_linux:      "065316bdd0bc1e78abb1ced6eddbd68a9dcbc641c94043780e15c7f0515a7ddb"
   end
 
   depends_on "rust" => :build # for annotated-doc
@@ -190,8 +190,8 @@ class Fastapi < Formula
   end
 
   resource "pydantic-settings" do
-    url "https://files.pythonhosted.org/packages/2e/3b/a5d2294799b53b448319978cfb5bd139d5a9d45e862af91661614f14c922/pydantic_settings-2.16.0.tar.gz"
-    sha256 "5b6c578049ede4db0e2ef3b4eaa4ad4069cfa9211f83fb38df899dfade50a614"
+    url "https://files.pythonhosted.org/packages/05/ca/7817b4bf0c4b15c6a6ab8cdf4cb96c268335a8ca2f525de93b6ebe4c7d28/pydantic_settings-2.16.1.tar.gz"
+    sha256 "aff602a1886338c2df3d1e958e2193a8dc33cec75b91f202e83fd98484b4b0da"
   end
 
   resource "pygments" do
