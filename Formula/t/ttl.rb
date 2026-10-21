@@ -1,8 +1,8 @@
 class Ttl < Formula
   desc "Modern traceroute/mtr-style TUI with hop stats and ASN/geo enrichment"
   homepage "https://github.com/lance0/ttl"
-  url "https://github.com/lance0/ttl/archive/refs/tags/v0.24.0.tar.gz"
-  sha256 "db1fd6933ad07f01029c5bedf3c6ccd485683eadf8e875564552f0891142f40d"
+  url "https://github.com/lance0/ttl/archive/refs/tags/v0.24.1.tar.gz"
+  sha256 "7093ee7bd8cb0f10cf391b2c1842463ac84f7823ca6e0f998cd8932de844c17d"
   license "MIT"
 
   head "https://github.com/lance0/ttl.git", branch: "master"
