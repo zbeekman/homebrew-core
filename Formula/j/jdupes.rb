@@ -20,6 +20,8 @@ class Jdupes < Formula
 
   depends_on "libjodycode"
 
+  deny_network_access!
+
   def install
     system "make", "ENABLE_DEDUPE=1"
     system "make", "install", "PREFIX=#{prefix}"
