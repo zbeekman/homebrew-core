@@ -6,7 +6,7 @@ class Diffle < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "50f58dcf7de8bfe587213e5a143686742ebf9ac65f7be7fd1636478cdca3cb80"
+    sha256 cellar: :any_skip_relocation, all: "68a48d9dc617dddf20248d4bd081fc6d3690cf75c5fad25a8755054d6c97ce18"
   end
 
   depends_on "node"
