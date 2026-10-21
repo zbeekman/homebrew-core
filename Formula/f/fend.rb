@@ -12,12 +12,11 @@ class Fend < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3e198b7422c3fa7d29fe81cfcf5217ccc16cb1d913e847cbe19b556ce4e1995d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7f42544ef852d93cb0d6b129db48884bb910271f507c06facad44a6cd76e5c47"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0c7cbd81d7a5db05284f968efc13bff3007c7bfb8748d29a02a8fb1e54bd94a1"
-    sha256 cellar: :any,                 arm64_linux:       "29cd91e3028114059d6349b1a32fd89b379bc8df27489862ad1d618e76ec912c"
-    sha256 cellar: :any,                 x86_64_linux:      "ae6633345d519c769157e0bbb85dc8f541e42a786e034e7eb80e8e1e26836958"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2a18235fa7f6de8f7f38d90e477147f24dfc372272fd833666b168833ffa760d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "23fe7e45d34f460baa763d2424bcc1d319c684881491720d89d21d5951f53f5d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d067d51b05963bc38be4c60133ead918e7dc1d5df4a386104f4729784ad001cb"
+    sha256 cellar: :any,                 arm64_linux:       "0293e2dfad04512cf43e0b02608989c95c21b3efdb08692851f5527f77d7f9e0"
+    sha256 cellar: :any,                 x86_64_linux:      "06e6725a3de6b1f8ed89be982d895aea9d15eef0839a1efea41f5e1cac3586b4"
   end
 
   depends_on "pandoc" => :build
