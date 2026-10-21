@@ -6,11 +6,11 @@ class ProtonPassCli < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "a4931d2ddfd8e10bcd4dab8c88ea8ef82c975059b08f4ab1fd5927fb60b0843e"
-    sha256 cellar: :any, arm64_tahoe:       "4a4f15c6658c00dc05b02eeed347075557df51494bdaf6d76e5c708a74ea4853"
-    sha256 cellar: :any, arm64_sequoia:     "3ea5dacf92b4aca19ca7a014a5b1e999ec952ec73d1ea5504986831cd580fd96"
-    sha256 cellar: :any, arm64_linux:       "dc633f5a38ca787b91c12d8f319586f06a1c3af6a5a9b2177a952a334f15d679"
-    sha256 cellar: :any, x86_64_linux:      "4563d67c130399852bcb1ff90d212d673a769c9fb181ce224f3791a9bfe8976f"
+    sha256 cellar: :any, arm64_golden_gate: "932dc1a1b64d2a939ba055cfa58f2d77728a15be54155ddbe3326cefcdf898bb"
+    sha256 cellar: :any, arm64_tahoe:       "25d60cf361d9ecc1a333636c5acf3c1f325464da1584a417541630469ad2815d"
+    sha256 cellar: :any, arm64_sequoia:     "d94d4dad0f7a761a0c28b314ee2282849957fbe7a4c39f34bf597c4929c69648"
+    sha256 cellar: :any, arm64_linux:       "9ede1c58a3c5851a272a8d2cfc7eff70ea692bc033ecb1c1338e9d4432563550"
+    sha256 cellar: :any, x86_64_linux:      "caac073346c1910e574f7f02553c4c2075eede2717acb8727fcf037cb25dd5e3"
   end
 
   depends_on "pkgconf" => :build
