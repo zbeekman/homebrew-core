@@ -7,11 +7,11 @@ class Libsais < Formula
   head "https://github.com/IlyaGrebnov/libsais.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b888c36277cf41b1a70526be91ed0b19b328d2c34a0a9a7062b147e5412c448c"
-    sha256 cellar: :any, arm64_tahoe:       "08275f42379e0e1c4f992c404fd5b597a7dd08e6ff10b909d5ea88253ee8e482"
-    sha256 cellar: :any, arm64_sequoia:     "208205756e92c767a4b597fab7abac80e5b098d19219af428f967011163ead91"
-    sha256 cellar: :any, arm64_linux:       "72c6eb851b18801b8fb93fa1837d17f7a1c80a4eefa8b5e833963637e0fa5d41"
-    sha256 cellar: :any, x86_64_linux:      "04059478085f811b859ca4a179377897f00e7e9a9b0d01fef2e28e84c8d742e7"
+    sha256 cellar: :any, arm64_golden_gate: "880daf7bc6a7f03adfaf6f49a0cf391cabac103be308db8f0c12b4ec4e869940"
+    sha256 cellar: :any, arm64_tahoe:       "05b05573fdabd0c7b2ed680b142a4e644dd0c7684ee43ffe7db176ef80653192"
+    sha256 cellar: :any, arm64_sequoia:     "d28c1cf9505515b0e0ecab6bdf4dc913b3b4eb8bd1fcbac5d3dee20c803c4ba1"
+    sha256 cellar: :any, arm64_linux:       "d80dccac8ff9d8253d75a9e534a37e08d6959dd1765cd151fb7968bf5b0b2478"
+    sha256 cellar: :any, x86_64_linux:      "ba79b5080d30c062557384d6a54cf2f71d54d6d68875a06a6241df3c4b3d675e"
   end
 
   depends_on "cmake" => :build
