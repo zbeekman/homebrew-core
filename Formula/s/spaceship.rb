@@ -1,8 +1,8 @@
 class Spaceship < Formula
   desc "Zsh prompt for Astronauts"
   homepage "https://spaceship-prompt.sh/"
-  url "https://github.com/spaceship-prompt/spaceship-prompt/archive/refs/tags/v4.22.5.tar.gz"
-  sha256 "2b82500b06efd7bca5c5a104279d247ec24466f90f38df0e65cbfa4509e67fe9"
+  url "https://github.com/spaceship-prompt/spaceship-prompt/archive/refs/tags/v4.22.6.tar.gz"
+  sha256 "02da1413520241668141041f82284410dad5d3b4379a4d21b346ee206ee5f2be"
   license "MIT"
   head "https://github.com/spaceship-prompt/spaceship-prompt.git", branch: "master"
 
@@ -35,7 +35,9 @@ class Spaceship < Formula
   end
 
   test do
+    # sourcing exits non-zero when `zcompile` cannot write beside the read-only keg, so check the prompt hook instead
     assert_match "SUCCESS",
-      shell_output("zsh -fic '. #{opt_prefix}/spaceship.zsh && (( ${+SPACESHIP_VERSION} )) && echo SUCCESS'")
+      shell_output("zsh -fc '. #{opt_prefix}/spaceship.zsh 2>/dev/null; " \
+                   "(( ${precmd_functions[(I)prompt_spaceship_precmd]} )) && echo SUCCESS'")
   end
 end
