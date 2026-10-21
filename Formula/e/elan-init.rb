@@ -25,6 +25,7 @@ class ElanInit < Formula
   depends_on "rust" => :build
   depends_on "coreutils"
   depends_on "gmp"
+  depends_on "openssl@4"
 
   uses_from_macos "bzip2"
   uses_from_macos "curl"
@@ -35,6 +36,20 @@ class ElanInit < Formula
   end
 
   conflicts_with "lean-cli", because: "both install `lean` binaries"
+
+  # openssl@4 support
+  patch do
+    url "https://github.com/leanprover/elan/commit/5a90cb8529f1c96105cd7f67e3080781a52bac45.patch?full_index=1"
+    sha256 "c2a7087cc30d2481de7c6ae14fbd43189b9a7f7048a16cdc4059d9aa289a0bbe"
+    type :unofficial
+    resolves "https://github.com/leanprover/elan/pull/213"
+  end
+
+  allow_network_access! :test
+
+  def fetch
+    system "cargo", "fetch", *std_cargo_fetch_args
+  end
 
   def install
     ENV["RELEASE_TARGET_NAME"] = "homebrew-build"
