@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.38.3.tar.gz"
-  sha256 "05bbea6f8e7708b8f3d53ddcff29c5570f64df8def1cea806aa5951f6c894ebe"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.38.4.tar.gz"
+  sha256 "ecea66a95c2a3d0b82157b790b8709158e2e77664baecdaa7fcf1e17cd9b241f"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/aws/aws-cli.git", branch: "v2"
@@ -33,8 +33,8 @@ class Awscli < Formula
   pypi_packages extra_packages: "flit-core"
 
   resource "awscrt" do
-    url "https://files.pythonhosted.org/packages/93/bc/9a88ccd0f764a61fbc0f40b600d099110e3b16cf68fc92a401c3c953cfb3/awscrt-0.37.0.tar.gz"
-    sha256 "9e2ddadc609084b5f60affb8b87e77304fed64e271e2b2b7558186cf65d81e5a"
+    url "https://files.pythonhosted.org/packages/0c/c4/1f7c4161aa665b06ddb9c34acbe6b5ea8fc8bf72b78de474d65e6f494ca4/awscrt-0.38.0.tar.gz"
+    sha256 "4a8423c4a76390c6e5c4f386e3e367dccdcf67d6d1a0bc1c59776bb14cdc2ad9"
   end
 
   resource "colorama" do
