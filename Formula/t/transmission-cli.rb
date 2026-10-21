@@ -40,6 +40,7 @@ class TransmissionCli < Formula
     args = %w[
       -DENABLE_CLI=ON
       -DENABLE_DAEMON=ON
+      -DENABLE_GTK=OFF
       -DENABLE_MAC=OFF
       -DENABLE_NLS=OFF
       -DENABLE_QT=OFF
