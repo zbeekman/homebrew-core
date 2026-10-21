@@ -133,6 +133,7 @@ class PythonFreethreading < Formula
       args << "--with-framework-name=PythonT"
       args << "--with-dtrace"
       args << "--with-dbmliborder=ndbm"
+      args << "--with-tail-call-interp"
 
       # Avoid linking to libgcc https://mail.python.org/pipermail/python-dev/2012-February/116205.html
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
