@@ -1,8 +1,8 @@
 class Berglas < Formula
   desc "Tool for managing secrets on Google Cloud"
   homepage "https://github.com/GoogleCloudPlatform/berglas"
-  url "https://github.com/GoogleCloudPlatform/berglas/archive/refs/tags/v2.0.17.tar.gz"
-  sha256 "398be8a793f72670307139ba9250f5082829f6b73870555bba17900a54e93c7a"
+  url "https://github.com/GoogleCloudPlatform/berglas/archive/refs/tags/v2.0.18.tar.gz"
+  sha256 "7066f3cdd8b23fa16cdc5945a97711785eb906c5fbdc70dcace5b79a48a69c82"
   license "Apache-2.0"
   head "https://github.com/GoogleCloudPlatform/berglas.git", branch: "main"
 
