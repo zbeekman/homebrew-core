@@ -11,11 +11,11 @@ class Pdnsrec < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "6f75a61973dffa5d475d34c96453e57b8a92e6b8f45d23260006f1b833788e4f"
-    sha256 arm64_tahoe:       "6be0b40711d76356d4456e8691f93e3cc937a6ddef57f7fc55c25866fc4a3629"
-    sha256 arm64_sequoia:     "a2fa6071fee7a330dbc01b1f76cd630a8818a8ca11b7e265a96c85983b106701"
-    sha256 arm64_linux:       "5ca129d6bcaa3f7377dfd605e3b032bdc14982142647f7cd64f20c28178151da"
-    sha256 x86_64_linux:      "873596e213de53513c9ad3f31fedf34597a8b31193ff118ebe1356aa4031014d"
+    sha256 arm64_golden_gate: "5db8d96c106dbb42d1cb09bdccbe0e7d28eb906a0b731078e9d7b744e7b6959a"
+    sha256 arm64_tahoe:       "e02e768fc746599cf313acfa69805714355dd7793f1c55e5804869883ae19372"
+    sha256 arm64_sequoia:     "d0442fd3899f9796643c8be622d77c87002782a5169dba32e38a754056f7f709"
+    sha256 arm64_linux:       "bb2fc659ebc3e22e13c44ae25afc35ed473cbb51267e5c1bd5c9a2357d85eb3b"
+    sha256 x86_64_linux:      "44e967f7386597489f5d71b598c6d95dd60db0b523a4c2a1dac5b3aa64c713fe"
   end
 
   depends_on "pkgconf" => :build
