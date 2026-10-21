@@ -37,12 +37,11 @@ class Texlive < Formula
   no_autobump! because: :incompatible_version_format
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "10dad928a43900b07a552aabe6c437cb684fcda63350a9c836e8a3b932577cfa"
-    sha256 arm64_tahoe:       "62f080ddb07da865d57b30ac72112451fdac24769e17d8b26a55cec49525ed09"
-    sha256 arm64_sequoia:     "5d874379f5d594ac5d96cc5632625bd484f451b28436af79e98d840176acb6da"
-    sha256 arm64_linux:       "aa6fec05d51c5424d6076395703fbb05c0025b5f124ef9aff931ffbb3f83b4cd"
-    sha256 x86_64_linux:      "e771c73576d8a6ade8542d7bd575b3c6aff50aed25bb4791310941d344795aad"
+    sha256 arm64_golden_gate: "aa269d1f84bd4a176bafc835f90e5e5f311f24b9f3cc6c55127ab03d42f93403"
+    sha256 arm64_tahoe:       "c1aec161730a0402d95eb03692cfaa55c57931373361ae334c6f2476d06fa669"
+    sha256 arm64_sequoia:     "0e457cce9dbffbf1f9c370560c702f920ca498d9aed0a51a57d20c8e996022df"
+    sha256 arm64_linux:       "02d3f1ff8b28d1c4da9df84d46195028687f54b52fc70745ca6dcbc557aed439"
+    sha256 x86_64_linux:      "8f3e068824f8014f22d7cf89dd70dc8ad989d27e5760a75932a39ebacf873633"
   end
 
   depends_on "pkgconf" => :build
