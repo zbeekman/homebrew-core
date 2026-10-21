@@ -1,8 +1,8 @@
 class Deepline < Formula
   desc "CLI for Deepline data enrichment and durable plays"
   homepage "https://code.deepline.com"
-  url "https://registry.npmjs.org/deepline/-/deepline-0.3.320.tgz"
-  sha256 "f682ab8737397a27080f3593ee9a063abf311c2460b186c139b529877007dc74"
+  url "https://registry.npmjs.org/deepline/-/deepline-0.3.400.tgz"
+  sha256 "e9abcf7c73b56922a8d64dee59d1c4a4b2d4cee84fe398e83e7cf20dd32330f4"
   license "MIT"
 
   livecheck do
@@ -26,6 +26,6 @@ class Deepline < Formula
 
   test do
     assert_match '"status": "not connected"',
-      shell_output("#{bin}/deepline auth status --auth-scope folder")
+      shell_output("#{bin}/deepline auth status --auth-scope folder --json")
   end
 end
