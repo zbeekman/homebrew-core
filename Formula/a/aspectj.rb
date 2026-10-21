@@ -1,8 +1,8 @@
 class Aspectj < Formula
   desc "Aspect-oriented programming for Java"
   homepage "https://eclipse.dev/aspectj/"
-  url "https://github.com/eclipse-aspectj/aspectj/releases/download/V1_9_25_1/aspectj-1.9.25.1.jar"
-  sha256 "c1209b5b0f561422b2a906e5af765954231b8530ee0c5d91c6267cc34f6f9034"
+  url "https://github.com/eclipse-aspectj/aspectj/releases/download/V1_9_26/aspectj-1.9.26.jar"
+  sha256 "8c207931b685a5fdd28a12d6579e08ec8728f88ebe6eb95c87ed4dca5b623fd0"
   license "EPL-2.0"
 
   livecheck do
