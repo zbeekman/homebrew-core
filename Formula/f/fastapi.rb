@@ -8,11 +8,11 @@ class Fastapi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "411f8786c88348cdcb3062edaeec67351e9603f77ba03109af42999633e17053"
-    sha256 cellar: :any, arm64_tahoe:       "ca090dfc49129574c970daf45d906d614dbdcd06c4538b77957517cb869d46fb"
-    sha256 cellar: :any, arm64_sequoia:     "07f6b32073e14dcfb6ba298413da418749794afac03e7de8d5e4b06db2555f60"
-    sha256 cellar: :any, arm64_linux:       "1e6e51571d7afe2a6cbe0619fd5a78ceceee2f2ec32485771fd81ff2add819b4"
-    sha256 cellar: :any, x86_64_linux:      "bc418e5104dc1ab23ebb2321fdffa9be152dc3bdb5d99fe0798e673f900599bf"
+    sha256 cellar: :any, arm64_golden_gate: "706b6daee1f9478f9ac00ad7c8216f7bbbe8585d3c9698c21eb65b02557f592a"
+    sha256 cellar: :any, arm64_tahoe:       "dca8db7aa4d6c01c090a125b063fe614787f7b3a3d97ae01f84a351d1280e120"
+    sha256 cellar: :any, arm64_sequoia:     "59946fcdc6d21c4dd03b2d014153c3502856d6b4abeeb23806b7a33489763da4"
+    sha256 cellar: :any, arm64_linux:       "3dc55290a001ac3e7cc883a22794e425fa37d29e0e347d6efa0139e9b89d3bea"
+    sha256 cellar: :any, x86_64_linux:      "032e5e271e698a300b8484d604b2a2cd70adfe99783b67a632346d411213cc80"
   end
 
   depends_on "rust" => :build # for annotated-doc
