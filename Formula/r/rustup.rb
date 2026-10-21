@@ -2,15 +2,14 @@ class Rustup < Formula
   desc "Rust toolchain installer"
   homepage "https://rust-lang.github.io/rustup/"
   license any_of: ["Apache-2.0", "MIT"]
-  revision 1
   compatibility_version 1
   head "https://github.com/rust-lang/rustup.git", branch: "main"
 
   stable do
     # TODO: Remove curl when release has following:
     # https://github.com/rust-lang/rustup/commit/747057342d4616d6cd2cda6b00826c0ebdd0e671
-    url "https://github.com/rust-lang/rustup/archive/refs/tags/1.29.1.tar.gz"
-    sha256 "00f79a02275fd0252be6928d7a44f96bfba706a0cc47a0c85557aa4a875d1181"
+    url "https://github.com/rust-lang/rustup/archive/refs/tags/1.29.2.tar.gz"
+    sha256 "ba43980f0651730631174635a0e7764831e810be08a06ae53f9c0620caef019d"
     uses_from_macos "curl"
   end
 
