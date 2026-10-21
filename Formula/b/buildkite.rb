@@ -6,6 +6,14 @@ class Buildkite < Formula
   license "MIT"
   head "https://github.com/buildkite/cli.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e8623babbc15b4db062e1b4e47b7970523b984156ced48237dcb05a0696de398"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e8623babbc15b4db062e1b4e47b7970523b984156ced48237dcb05a0696de398"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e8623babbc15b4db062e1b4e47b7970523b984156ced48237dcb05a0696de398"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "778068eb50961e24f885748e7189ce2273a90b4856b3342620d45b91c05345d4"
+    sha256 cellar: :any,                 x86_64_linux:      "7e3b395b814919c154bd71fbcb5c1fe0394e73824962fc2c912ca6926df69c35"
+  end
+
   depends_on "go" => :build
 
   deny_network_access!
