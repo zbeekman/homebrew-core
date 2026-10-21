@@ -14,11 +14,11 @@ class Rustup < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4b477dd5e5de10a9d1518773de69521f27bf34053e54c5b63c7b60c0b378a8c8"
-    sha256 cellar: :any, arm64_tahoe:       "8bc2e3e7547cb990101e554542c85a0f28086ae34be929e23e8a2685222a47ca"
-    sha256 cellar: :any, arm64_sequoia:     "f91db8ed2e19c72ec4d4f4bbba0d76aebe8385d358582d59b32d78b4b626ba2c"
-    sha256 cellar: :any, arm64_linux:       "466409e46da5082156e59a46fba8150956fb131cd5e02c8b51bf71a36975c148"
-    sha256 cellar: :any, x86_64_linux:      "bc6d95ad7ebdf2ba63bd5e1cdc0dce33b45dc90670d28b046c4d7535ce2bb992"
+    sha256 cellar: :any, arm64_golden_gate: "27bbc67ff56c010b5ae02abd09456d513e6ccb4b54d0818915c1d49e32075cbe"
+    sha256 cellar: :any, arm64_tahoe:       "4a777627c17a11cd1f907e2bbe68095baa247ca27d29745f5d03dd99c3a5b4a3"
+    sha256 cellar: :any, arm64_sequoia:     "4a14a4be824bc9a7f39869350c1cb1f91468ee35586f8dd70fc7dae3020484e7"
+    sha256 cellar: :any, arm64_linux:       "f2cb1c2104d13d32dba4cb2803d46a711b167e3c6606132ccdae9623387bcd40"
+    sha256 cellar: :any, x86_64_linux:      "03b2c1db2e4fac2f1cc365de392a3ddc56603a8abdb7c9aefed572aa4ef60878"
   end
 
   keg_only "it conflicts with rust"
