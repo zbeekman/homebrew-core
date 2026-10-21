@@ -6,15 +6,11 @@ class Libansilove < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "0e7e679a92bc1d07b4143aa6bbc5f6207ac82edb78a6e6c6aea91b7e9e13b808"
-    sha256 cellar: :any,                 arm64_tahoe:       "fc81ba49030d1ff262da56b77367d10a98ef1f677415349a0c81c80c052b2750"
-    sha256 cellar: :any,                 arm64_sequoia:     "dfb18e4ee2a90aede28ee22f8b97de7eb9fa957b0619658788b4e562ba01391e"
-    sha256 cellar: :any,                 arm64_sonoma:      "a1cafdd2cb1445925addb324d92288e4f238905416d384571d9769641fc34034"
-    sha256 cellar: :any,                 arm64_ventura:     "6dec1d8b0d8b0a0ad22327e1d0674bbc557c48999c2f92c6126636f7247475f4"
-    sha256 cellar: :any,                 sonoma:            "6e9222974a1c639e44e28db4d3c0e128a95dd0cf4fd7f85254ab649062ead51b"
-    sha256 cellar: :any,                 ventura:           "30ee13455efb6991e98ce76c3446a2010bf8ef20bb5c4dda3a6cc04100d865bf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "175358f696c2f5286e866f812b7890f15e30555fe5c12bd7eadeb4a8e050db35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "464592e648d31ec4ade3ee710dde95d5059bec8c3fe47bb9881a05cf3b87d449"
+    sha256 cellar: :any, arm64_golden_gate: "b6e0e5bb88c36b447468db240f48efc8780e49f7ed42f97630af89bc39ccdabf"
+    sha256 cellar: :any, arm64_tahoe:       "fbe5ab7bef599afc237311c07cb90eccfdec21f0a3799caa6b2ca8a1351a6da7"
+    sha256 cellar: :any, arm64_sequoia:     "be99543375629829a7ccb6dbb1e6c902f23af9f7db75fbe2d5e32d70a119ffd1"
+    sha256 cellar: :any, arm64_linux:       "395052f55a78697be46463fb028a3b8ac0e5560fa8871e33c1657ae15c24eb12"
+    sha256 cellar: :any, x86_64_linux:      "0b3ac1241efa6c7b9af1d0f781fee223146946ed719d1783bb71bcfd83a771be"
   end
 
   depends_on "cmake" => :build
