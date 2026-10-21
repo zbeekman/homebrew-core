@@ -4,7 +4,7 @@ class Prek < Formula
   url "https://github.com/j178/prek/archive/refs/tags/v0.5.7.tar.gz"
   sha256 "c14bfbb5121c24421aea5fbb91a9c835e3e3372e53bdaeb3dedd87cc8eda56b5"
   license "MIT"
-  head "https://github.com/j178/prek.git", branch: "master"
+  head "https://github.com/j178/prek.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "05d9c234e51b489277abd06672c5e5500ed36b863e77141fe4b047558ead363e"
