@@ -7,11 +7,11 @@ class Packslip < Formula
   head "https://github.com/jdx/packslip.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3f70de02a2c68b131cf91108312377f21e1cb7473c1911c6e37ece965e507298"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4095fad80e7705fa7e993ccec8ee54a9ee3e735169fa8cb7946f3137ea7ea260"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d25fd0399ed1f7ad8a1f851d993ddaaf11c2a71db2bf7bc31cfe502de5477229"
-    sha256 cellar: :any,                 arm64_linux:       "55ff603c513ab1d64067cda2225b35ccd99d0da7b392603fcb4828dcdf208c09"
-    sha256 cellar: :any,                 x86_64_linux:      "3b0c4ce7c46f2bfe066a29516b9a9057d5929592f8662cf69aea5adbb94d5869"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1c5e9d25246f972df9ef51d57238cf7fba2150d5d919f8dc21bc8a0ce101b129"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c5ccab9618c6f8506b837f6bfb4b4e3d35baf6de311340141505bbf3b03c5ce0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c3952c6418b57be2b10b3cfe2e26e4fa284e5daaa973156cbfda4ac6fd29b8c8"
+    sha256 cellar: :any,                 arm64_linux:       "028edd828aa4bd893556be218e7cdb660b762ea46e85bee053ba5819064e751f"
+    sha256 cellar: :any,                 x86_64_linux:      "b8fabc2ca6b7d236452bb362ca509f0f39255c4f92a24b1a18c4b8a44d59661c"
   end
 
   depends_on "rust" => :build
