@@ -4,6 +4,7 @@ class Teslamate < Formula
   url "https://github.com/teslamate-org/teslamate/archive/refs/tags/v4.3.0.tar.gz"
   sha256 "b27b77ba878211f59f4c6399dcbf434063f36c9cee06d581475834804a242728"
   license "AGPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "5e5f641bb146a54e5f5fb719416c1ae4090941104aee08b95af14e1bbeebe205"
@@ -51,6 +52,11 @@ class Teslamate < Formula
       #{bin}/teslamate eval "TeslaMate.Release.migrate"
       exec #{bin}/teslamate start
     BASH
+
+    # Use brewed ca-certificates PEM file instead of the bundled copy
+    cacerts = libexec.glob("lib/castore-*/priv/cacerts.pem").fetch(0)
+    rm cacerts
+    cacerts.make_relative_symlink Formula["openssl@4"].pkgetc/"cert.pem"
   end
 
   service do
