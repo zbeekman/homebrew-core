@@ -6,11 +6,11 @@ class NetlifyCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "b6f1f2f1c4873e3e96c8a3bedd650d95ca3ae5075ae3e7253993ef72ca4b5115"
-    sha256 cellar: :any, arm64_tahoe:       "2a0697e03dce3b3e284704954664894571e22a000166aa0fef58cf79fb998ba1"
-    sha256 cellar: :any, arm64_sequoia:     "c2147be48712d20b555ef123df0ba4b0e5551e479541ccc3adceb5644b63e443"
-    sha256 cellar: :any, arm64_linux:       "c83efd36bdd8525dc8e16c2a93fdafc738b1471d875a6893f25479af537d7c29"
-    sha256 cellar: :any, x86_64_linux:      "62c9db52224cbe17980388754cca026cc9d4740e3c0caca7f6fc960a663fbd65"
+    sha256 cellar: :any, arm64_golden_gate: "328b8245cc56dcf9f6bb0c2bbbebb5f4e9f53053c64073b731610fe98fa8992b"
+    sha256 cellar: :any, arm64_tahoe:       "828d12ad455abb25711cc62b93aad51e7eae4f8d25292f0d5d3b79a3fe65cc7b"
+    sha256 cellar: :any, arm64_sequoia:     "fd3a027dfe382f599a66674c158b13ca4b8fbeba8267576f16cbe693bd973452"
+    sha256 cellar: :any, arm64_linux:       "d6295a2bd4e00474be99cf110149716917e66e3cc7a8e281af42e8022166d06b"
+    sha256 cellar: :any, x86_64_linux:      "cb1a2bf90f76af6e261cdbc94ebd0a3baa3b06e1130a77de4737434837ab39b8"
   end
 
   depends_on "pkgconf" => :build
