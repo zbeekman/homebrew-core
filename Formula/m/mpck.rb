@@ -1,8 +1,8 @@
 class Mpck < Formula
   desc "Check MP3 files for errors"
   homepage "https://checkmate.gissen.nl/"
-  url "https://checkmate.gissen.nl/checkmate-0.21.tar.gz"
-  sha256 "a27b4843ec06b069a46363836efda3e56e1daaf193a73a4da875e77f0945dd7a"
+  url "https://checkmate.gissen.nl/checkmate-0.22.tar.gz"
+  sha256 "104e5002c4796759c3fdbb987c531f82236bd622399e323b2a406c88ed82cad5"
   license "GPL-2.0-or-later"
 
   livecheck do
