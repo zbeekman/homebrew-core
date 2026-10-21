@@ -13,12 +13,11 @@ class PythonAT314 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "789869eac42ee37cc4311059d65f88cb673fa62d170693da4ab44d00c014f4f2"
-    sha256 arm64_tahoe:       "a6e9f54e583c2ca8668a4c63141ef599dd6db5cf927f3cb210820321e97c86cd"
-    sha256 arm64_sequoia:     "3849a3188921562ed6d698a84e9a0f5d9c0c7b921f40e1fcb0c21d4ce531b99f"
-    sha256 arm64_linux:       "9d53b15def0d3bc96d0d0cc5b7c84286fc69d5bc38955a22924224c580865334"
-    sha256 x86_64_linux:      "8e2ea9ce754771c5be07ad023887a1511708a136370770895204ab715e4cd3a6"
+    sha256 arm64_golden_gate: "d9505d6e84e2ce13469cdea94e2b4a10751def0bac3c3b4451e8bcef0686ed84"
+    sha256 arm64_tahoe:       "b1ce1a966e353358fdb23638557d6fb2b9b8e2254fbc10303825f66422c55d8a"
+    sha256 arm64_sequoia:     "3012383247b4980014d3d2b70cb911cf031f47e45e2c848daac41f0743103f83"
+    sha256 arm64_linux:       "a76276bebc52d3c2df87a6eb39b5af0593c40dfbc0f0d8952656490e3def26ed"
+    sha256 x86_64_linux:      "c6e11d0b384b3d31afb89a7cc2cd8a24b1945061b7620949390accfd739af348"
   end
 
   # https://devguide.python.org/versions/#versions
