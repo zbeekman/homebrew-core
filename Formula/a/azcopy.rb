@@ -1,8 +1,8 @@
 class Azcopy < Formula
   desc "Azure Storage data transfer utility"
   homepage "https://github.com/Azure/azure-storage-azcopy"
-  url "https://github.com/Azure/azure-storage-azcopy/archive/refs/tags/v10.32.8.tar.gz"
-  sha256 "07b362e171e193993b1d0384215e7bef34bc7dadaf681ba4ef5e8a1154bd1556"
+  url "https://github.com/Azure/azure-storage-azcopy/archive/refs/tags/v10.34.0.tar.gz"
+  sha256 "65ba78cd16bb65ec6adaaa5cb6df7bcb7d4ddd376cdd297d453308080ee88d41"
   license "MIT"
   head "https://github.com/Azure/azure-storage-azcopy.git", branch: "main"
 
