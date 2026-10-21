@@ -12,11 +12,11 @@ class Lld < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "d3b61a45eae78730f87ca82ffc3b8a92237eb050b836795b065d81515ea48dd5"
-    sha256 cellar: :any, arm64_tahoe:       "75d7942c768ce1da4d68045bc1a7d2729aa27a1ebef52dbcb9705edd5eb751af"
-    sha256 cellar: :any, arm64_sequoia:     "2c34e34b63e20fa129894931d91f33b17f045816ac1cec08ce629776e105b5e5"
-    sha256 cellar: :any, arm64_linux:       "cf65feb0139dd4a6c0875806cf78f4c03342996a8e4b670e1464094a8cc8f88c"
-    sha256 cellar: :any, x86_64_linux:      "37a397b55da97b91faf37642677338a8e32870aa460182135ea66ff04da7163c"
+    sha256 cellar: :any, arm64_golden_gate: "7371786d7b307342f4870441e8aab2b139fe477fa5ca07eda557f1f4b99224fd"
+    sha256 cellar: :any, arm64_tahoe:       "f2da69e86f04075ab83199af9d00a15297116f9649f63960bc36e179ba79a38c"
+    sha256 cellar: :any, arm64_sequoia:     "8fd7894eb40d5f4a9426ad560d39b528873de3fe146a713f3071874341315b7c"
+    sha256 cellar: :any, arm64_linux:       "36d441c39c2be5e0d66e8266ef6324e3caaf67777991a1c6b43e42d5969904b1"
+    sha256 cellar: :any, x86_64_linux:      "6f4003fac7dac01201cd746bfb13c7e1419d1451fa4f27c86b92ba72e796acaa"
   end
 
   depends_on "cmake" => :build
