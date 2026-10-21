@@ -31,54 +31,28 @@ class Exiftool < Formula
     sha256 cellar: :any,                 x86_64_linux:      "bb8eeb6467f5a666187563c43f8e6c482ee019d6574b5592ac2ce5de199a08e4"
   end
 
-  depends_on "cmake" => :build
+  depends_on "brotli"
+  depends_on "xz"
 
   uses_from_macos "perl"
 
-  resource "FFI::CheckLib" do
-    url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/FFI-CheckLib-0.31.tar.gz"
-    sha256 "04d885fc377d44896e5ea1c4ec310f979bb04f2f18658a7e7a4d509f7e80bb80"
+  # Resources are for "recommends" which include the following non-core modules:
+  # ├── Archive::Zip (included in macOS perl)
+  # ├── Compress::Raw::Lzma
+  # ├── IO::Compress::Brotli / IO::Uncompress::Brotli (patched to remove bundled brotli and Alien::cmake3)
+  # │   └── File::Slurper
+  # └── POSIX::strptime
+
+  resource "Archive::Zip" do
+    on_linux do
+      url "https://cpan.metacpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz"
+      sha256 "984e185d785baf6129c6e75f8eb44411745ac00bf6122fb1c8e822a3861ec650"
+    end
   end
 
-  resource "File::Which" do
-    url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz"
-    sha256 "3201f1a60e3f16484082e6045c896842261fc345de9fb2e620fd2a2c7af3a93a"
-  end
-
-  resource "Capture::Tiny" do
-    url "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.50.tar.gz"
-    sha256 "ca6e8d7ce7471c2be54e1009f64c367d7ee233a2894cacf52ebe6f53b04e81e5"
-  end
-
-  resource "File::chdir" do
-    url "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/File-chdir-0.1011.tar.gz"
-    sha256 "31ebf912df48d5d681def74b9880d78b1f3aca4351a0ed1fe3570b8e03af6c79"
-  end
-
-  resource "Path::Tiny" do
-    url "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.150.tar.gz"
-    sha256 "ff20713d1a14d257af9c78209001f40dc177e4b9d1496115cbd8726d577946c7"
-  end
-
-  resource "Alien::Build" do
-    url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Build-2.84.tar.gz"
-    sha256 "8e891fd3acbac39dd8fdc01376b9abff931e625be41e0910ca30ad59363b4477"
-  end
-
-  resource "Mozilla::CA" do
-    url "https://cpan.metacpan.org/authors/id/L/LW/LWP/Mozilla-CA-20250602.tar.gz"
-    sha256 "adeac0752440b2da094e8036bab6c857e22172457658868f5ac364f0c7b35481"
-  end
-
-  resource "Sort::Versions" do
-    url "https://cpan.metacpan.org/authors/id/N/NE/NEILB/Sort-Versions-1.62.tar.gz"
-    sha256 "bf5f3307406ebe2581237f025982e8c84f6f6625dd774e457c03f8994efd2eaa"
-  end
-
-  # 0.10 rejects Homebrew's cmake 4 and falls back to bundled binaries that fail audit/linkage checks.
-  resource "Alien::cmake3" do
-    url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-cmake3-0.08.tar.gz"
-    sha256 "93dfb1146f0053ec1ed59558f5f6d8f85d87b822a8433c6485d419c4f0182f1f"
+  resource "Compress::Raw::Lzma" do
+    url "https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.225.tar.gz"
+    sha256 "1292b126d831822f6b45c6c02c4fc69cc5ffbf6dc8f2515ff4f301cfcfcf684d"
   end
 
   resource "File::Slurper" do
@@ -87,8 +61,21 @@ class Exiftool < Formula
   end
 
   resource "IO::Compress::Brotli" do
-    url "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/IO-Compress-Brotli-0.019.tar.gz"
-    sha256 "37f40dd7cee44acea26f2f763a773e61d4ec223305ddeeca4612443cbf288fbf"
+    url "https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/IO-Compress-Brotli-0.022.tar.gz"
+    sha256 "364d2f4131548d6fac5f2df7750d0bd8ebfee10a7c28eb05e7b98ce6ac7facc1"
+
+    # Workaround to unbundle brotli until supported upstream. All Linux distros do something similar
+    # but we can't use their patches as they either are for old versions or don't work with brew brotli
+    patch do
+      file "Patches/exiftool/unbundle-brotli.diff"
+      type :unofficial
+      resolves "https://github.com/timlegge/perl-IO-Compress-Brotli/issues/5"
+    end
+  end
+
+  resource "POSIX::strptime" do
+    url "https://cpan.metacpan.org/authors/id/G/GO/GOZER/POSIX-strptime-0.13.tar.gz"
+    sha256 "a818109829e35a4ac79677d68063865f40c87c99ca7f3a20890177a8f8e5c277"
   end
 
   resource "sunset-logo-jxl", :test do
@@ -99,34 +86,25 @@ class Exiftool < Formula
   allow_network_access! :test
 
   def install
-    perl_lib = libexec/"lib/perl5"
-    ENV.prepend_create_path "PERL5LIB", perl_lib
+    ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
 
     resources.reject(&:test?).each do |r|
       r.stage do
-        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
-        if r.name == "IO::Compress::Brotli"
-          ENV.deparallelize { system "make", "install" }
-        else
-          system "make", "install"
-        end
+        # Remove bundled brotli code
+        rm_r("brotli") if r.name == "IO::Compress::Brotli"
+
+        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", "INSTALLMAN3DIR=none"
+        system "make", "install"
       end
     end
 
     system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
     system "make", "install"
 
-    # replace the hard-coded path to the lib directory
-    inreplace "exiftool", "unshift @INC, $incDir;", <<~EOS
-      use Config;
-      unshift @INC, "#{perl_lib}";
-      unshift @INC, "#{perl_lib}/$Config{archname}";
-    EOS
-
-    bin.install "exiftool"
+    (bin/"exiftool").write_env_script libexec/"bin/exiftool", PERL5LIB: ENV["PERL5LIB"]
     doc.install Dir["html/*"]
-    man1.install "blib/man1/exiftool.1"
-    man3.install Dir["blib/man3/*"]
+    man1.install_symlink libexec/"man/man1/exiftool.1"
+    man3.install_symlink libexec.glob("man/man3/*.3pm")
   end
 
   test do
