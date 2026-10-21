@@ -13,11 +13,12 @@ class PythonAT314 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "d9505d6e84e2ce13469cdea94e2b4a10751def0bac3c3b4451e8bcef0686ed84"
-    sha256 arm64_tahoe:       "b1ce1a966e353358fdb23638557d6fb2b9b8e2254fbc10303825f66422c55d8a"
-    sha256 arm64_sequoia:     "3012383247b4980014d3d2b70cb911cf031f47e45e2c848daac41f0743103f83"
-    sha256 arm64_linux:       "a76276bebc52d3c2df87a6eb39b5af0593c40dfbc0f0d8952656490e3def26ed"
-    sha256 x86_64_linux:      "c6e11d0b384b3d31afb89a7cc2cd8a24b1945061b7620949390accfd739af348"
+    rebuild 1
+    sha256 arm64_golden_gate: "57ffe772408f8c9f9eb7346eb3a4ea1a0c5cd610177eede77283454a9d40bd3c"
+    sha256 arm64_tahoe:       "2ed708f639655bf3dd4273121b4b76d15349a2cb8f86b1e74ecd9160f146b436"
+    sha256 arm64_sequoia:     "5b0219d25e7c5ada753fea0431636e6205c70393ea2be38492dff42da84103f8"
+    sha256 arm64_linux:       "a90e10a3ce8dcc341e925f801c3180518af16ba1bb6903c6487a2988ae7eb17c"
+    sha256 x86_64_linux:      "c46ca996b222525204177285e5dc8b27973ed0dbb3b009cdeff5fe054abdf170"
   end
 
   # https://devguide.python.org/versions/#versions
@@ -183,6 +184,7 @@ class PythonAT314 < Formula
       args << "--enable-framework=#{frameworks}"
       args << "--with-dtrace"
       args << "--with-dbmliborder=ndbm"
+      args << "--with-tail-call-interp"
 
       # Avoid linking to libgcc https://mail.python.org/pipermail/python-dev/2012-February/116205.html
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
