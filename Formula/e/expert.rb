@@ -4,6 +4,7 @@ class Expert < Formula
   url "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "af65f7172e2ba54fe19064c8dea9c38619d50bd70a97961ae826a3c4d3bc378f"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/expert-lsp/expert.git", branch: "main"
 
   bottle do
@@ -30,6 +31,11 @@ class Expert < Formula
     system "mix", "local.rebar", "--force", "--if-missing"
 
     system "just", "install", "--prefix=#{prefix}"
+
+    # Use brewed ca-certificates PEM file instead of the bundled copy
+    cacerts = libexec.glob("expert/lib/*/priv/engine_source/apps/engine/deps/castore/priv/cacerts.pem").fetch(0)
+    rm cacerts
+    cacerts.make_relative_symlink Formula["openssl@4"].pkgetc/"cert.pem"
   end
 
   test do
