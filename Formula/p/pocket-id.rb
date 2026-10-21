@@ -1,8 +1,8 @@
 class PocketId < Formula
   desc "Open-source identity provider for secure user authentication"
   homepage "https://pocket-id.org"
-  url "https://github.com/pocket-id/pocket-id/archive/refs/tags/v2.18.0.tar.gz"
-  sha256 "a5a3c6c1fa81151073f3c3876fd591e13879a2479c665dc747d1765946bef657"
+  url "https://github.com/pocket-id/pocket-id/archive/refs/tags/v2.19.0.tar.gz"
+  sha256 "c78002e0871d2b6bd01938f8528a6be8f7bbd022f25bdf71dddb52b89fc04ba1"
   license "BSD-2-Clause"
   head "https://github.com/pocket-id/pocket-id.git", branch: "main"
 
