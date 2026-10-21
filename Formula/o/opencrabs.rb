@@ -1,21 +1,10 @@
 class Opencrabs < Formula
   desc "Autonomous, self-improving AI agent in a single Rust binary"
   homepage "https://opencrabs.com"
+  url "https://github.com/opencrabs/opencrabs/archive/refs/tags/v0.5.12.tar.gz"
+  sha256 "6a2a9d7500eaa943be1212a0abdf9ff1ce85d21b978aa3c1171f67777b531316"
   license "MIT"
   head "https://github.com/opencrabs/opencrabs.git", branch: "main"
-
-  stable do
-    url "https://github.com/opencrabs/opencrabs/archive/refs/tags/v0.5.11.tar.gz"
-    sha256 "134b7383c6eebf4e636062d5199b210679d846e3f360c3d83812f8f5b520c3eb"
-
-    # Fix `opencrabs init` failing on a fresh install
-    patch do
-      url "https://github.com/opencrabs/opencrabs/commit/09f25a468cdd16b5f61519468a8fe6a32e6f820a.patch?full_index=1"
-      sha256 "0e01a74cea9782a3078f1c91d324979dd0c733b37ed1c2c8e250ba2f96bafab5"
-      type :backport
-      resolves "https://github.com/opencrabs/opencrabs/issues/2093"
-    end
-  end
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "5a799b87b2512a8bbd778c9774a5d72ba79b204ae789e1e2d558d99ab932d788"
