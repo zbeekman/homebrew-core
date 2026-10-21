@@ -1,8 +1,8 @@
 class Cdxgen < Formula
   desc "Creates CycloneDX Software Bill-of-Materials (SBOM) for projects"
   homepage "https://github.com/CycloneDX/cdxgen"
-  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.8.6.tgz"
-  sha256 "cbe766872a686a453d0178fab677eb725863a2c6ddbf8cbc1d4d6c1c87cc6b7c"
+  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.8.7.tgz"
+  sha256 "df3dfd0c2023f06f800d866ef52dac65255ce14f9b266a8003d0ac8ac2134735"
   license "Apache-2.0"
 
   bottle do
@@ -48,6 +48,8 @@ class Cdxgen < Formula
 
     resource("dosai").stage do
       ENV["DOTNET_CLI_TELEMETRY_OPTOUT"] = "1"
+      # .NET named mutexes need `XDG_RUNTIME_DIR` (or `USER`) on Linux, which build containers may lack
+      ENV["XDG_RUNTIME_DIR"] = buildpath
       dosai_cmd = "dosai-#{os}-#{arch}"
       dotnet = Formula["dotnet"]
       args = %W[
