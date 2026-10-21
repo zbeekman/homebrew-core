@@ -1,8 +1,8 @@
 class Expert < Formula
   desc "Official Elixir Language Server Protocol implementation"
   homepage "https://expert-lsp.org"
-  url "https://github.com/expert-lsp/expert/archive/refs/tags/v0.1.11.tar.gz"
-  sha256 "8784b2e26cbd4c512459278239659a855d3f074a7dea93310ab299b1d19378f2"
+  url "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "af65f7172e2ba54fe19064c8dea9c38619d50bd70a97961ae826a3c4d3bc378f"
   license "Apache-2.0"
   head "https://github.com/expert-lsp/expert.git", branch: "main"
 
