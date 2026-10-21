@@ -3,8 +3,8 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/65/4b/136a9d2ff03259df54b8b0f11c89b3a86f3db295b15353526ee735ff35d9/fastapi-0.151.0.tar.gz"
-  sha256 "f5bd74323048882837f422b6592b11f84dda1754defc4545a4c570cfa19a7a41"
+  url "https://files.pythonhosted.org/packages/0a/69/8461d4c25490b5efe65b2178c857273785bd8b42a5555264b6b4f9bf2ed0/fastapi-0.153.0.tar.gz"
+  sha256 "5dbf5dcf6cf86388326c147566077c56a14c55b0f1bef370195da98e724a503f"
   license "MIT"
 
   bottle do
@@ -190,8 +190,8 @@ class Fastapi < Formula
   end
 
   resource "pydantic-settings" do
-    url "https://files.pythonhosted.org/packages/2e/3b/a5d2294799b53b448319978cfb5bd139d5a9d45e862af91661614f14c922/pydantic_settings-2.16.0.tar.gz"
-    sha256 "5b6c578049ede4db0e2ef3b4eaa4ad4069cfa9211f83fb38df899dfade50a614"
+    url "https://files.pythonhosted.org/packages/05/ca/7817b4bf0c4b15c6a6ab8cdf4cb96c268335a8ca2f525de93b6ebe4c7d28/pydantic_settings-2.16.1.tar.gz"
+    sha256 "aff602a1886338c2df3d1e958e2193a8dc33cec75b91f202e83fd98484b4b0da"
   end
 
   resource "pygments" do
