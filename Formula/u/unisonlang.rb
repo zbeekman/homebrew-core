@@ -2,6 +2,7 @@ class Unisonlang < Formula
   desc "Friendly programming language from the future"
   homepage "https://unison-lang.org/"
   license "MIT"
+  revision 1
 
   stable do
     url "https://github.com/unisonweb/unison/archive/refs/tags/release/1.5.0.tar.gz"
@@ -44,10 +45,10 @@ class Unisonlang < Formula
   depends_on "node" => :build
   depends_on "pkgconf" => :build
   depends_on "libyaml"
+  depends_on "sqlite" # macOS sqlite lacks `sqlite3_enable_load_extension` used by `direct-sqlite`
 
   uses_from_macos "python" => :build
   uses_from_macos "xz" => :build
-  uses_from_macos "sqlite"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -77,6 +78,7 @@ class Unisonlang < Formula
       # HACK: Flaky command occasionally stalls build indefinitely so we force fail
       # if that occurs. Problem seems to happening while running `elm-json install`.
       # Issue ref: https://github.com/zwilias/elm-json/issues/50
+      require "timeout"
       Timeout.timeout(300) do
         system "npm", "run", "ui-core-install"
       end
@@ -97,6 +99,8 @@ class Unisonlang < Formula
       --skip-ghc-check
       --system-ghc
     ]
+    # `ghc@9.10`'s `rts` puts the SDK `usr/lib` on the library path, so search Homebrew `sqlite` first
+    stack_args << "--extra-lib-dirs=#{formula_opt_lib("sqlite")}" if OS.mac?
     if OS.linux?
       stack_args << "--ghc-options=-pie"
 
