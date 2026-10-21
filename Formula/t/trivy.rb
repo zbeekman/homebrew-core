@@ -1,8 +1,8 @@
 class Trivy < Formula
   desc "Vulnerability scanner for container images, file systems, and Git repos"
   homepage "https://trivy.dev/"
-  url "https://github.com/aquasecurity/trivy/archive/refs/tags/v0.76.0.tar.gz"
-  sha256 "38899439182f18f03f1a70b133d3541b809f77647a0b95fcf194674aa34952f0"
+  url "https://github.com/aquasecurity/trivy/archive/refs/tags/v0.76.1.tar.gz"
+  sha256 "641d78078e6201afce9f18e5daf0ecabaa9dbee7a257b48828e1e3fc43670aca"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/aquasecurity/trivy.git", branch: "main"
