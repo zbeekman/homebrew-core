@@ -29,6 +29,8 @@ class Opentofu < Formula
     ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = "-X github.com/opentofu/opentofu/version.dev=no"
     system "go", "build", *std_go_args(output: bin/"tofu", ldflags:), "./cmd/tofu"
+
+    generate_completions_from_executable(bin/"tofu", "completion")
   end
 
   test do
