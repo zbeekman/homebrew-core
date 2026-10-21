@@ -14,8 +14,8 @@ class MecabUnidicExtended < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "16217e32273610a5314c981b56a06476002a596ad3e17af6bd8ad48adf7f8f23"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "5c9eebc9df1254cf1dd0a6247f4a84f582755f5bb07eca9bd70b7cc6737b0294"
   end
 
   depends_on "mecab"
