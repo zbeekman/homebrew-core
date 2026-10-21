@@ -7,12 +7,11 @@ class Biber < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "8b7449bedeb39cfb25cc533b9448a473283f306e6325c8ae1ce6253ea63dd6ec"
-    sha256 cellar: :any, arm64_tahoe:       "de9f5e453d737f1d25bae91b5fc87c16af5e8174a4f3c378e5de0a4949e285b1"
-    sha256 cellar: :any, arm64_sequoia:     "0d8056305d36256d3346916977baf4c32fa6dfeaa502bbd1e12e22e7f01bd68a"
-    sha256 cellar: :any, arm64_linux:       "a9417721640ff25ce4713575a5e3885222e42fc94621991506d082f6ebf4d6fa"
-    sha256 cellar: :any, x86_64_linux:      "edd833e7e014a511884d29368463478c2e984e1c94246c80af440bb9bb1489be"
+    sha256 cellar: :any, arm64_golden_gate: "fe83fcf2b2966d87e30ff12ed6a11ee38225598ff3103d185e69df34279bbbdb"
+    sha256 cellar: :any, arm64_tahoe:       "a89d5a44f32f29dd167b8abdfddc5656aceeae49f39618143a25ef4087a76b6f"
+    sha256 cellar: :any, arm64_sequoia:     "4534d8a7164307634cbbea6c68eaa61a3c33e76301f6c39a19e6777022f07720"
+    sha256 cellar: :any, arm64_linux:       "d141089193d6bae8c82a9864fc581e8d3f75f281a63e1d7c1142904951a49838"
+    sha256 cellar: :any, x86_64_linux:      "17020b2b91ca32d72b37223489394772b1ce0b32c7ac7092b356d92b812b76b2"
   end
 
   depends_on "pkgconf" => :build
