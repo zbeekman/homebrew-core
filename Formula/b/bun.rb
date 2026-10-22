@@ -3,8 +3,8 @@ class Bun < Formula
   homepage "https://bun.com/"
   # Need git checkout to build. Alternatively could set GIT_SHA if we extract the commit.
   url "https://github.com/oven-sh/bun.git",
-      tag:      "bun-v1.4.3",
-      revision: "c6da4a4d3010e5553438c60f6bd76d981976867c"
+      tag:      "bun-v1.4.4",
+      revision: "38afee6c84fcf48c0edb2466aa4b27d287a59c30"
   license all_of: [
     "MIT",
     "LGPL-2.0-or-later", # JavaScriptCore
@@ -113,7 +113,7 @@ class Bun < Formula
 
   # Based on https://github.com/oven-sh/bun/blob/main/CONTRIBUTING.md#building-webkit-locally--debug-mode-of-jsc
   def install
-    bootstrap_version = File.read("scripts/build/ci-images/spec.ts")[/^\s*bun: \{ version: "(\d+(?:\.\d+)+)" \}/, 1]
+    bootstrap_version = File.read("scripts/build/ci-images/spec.ts")[/^\s*bun: \{\n\s*version: "(\d+(?:\.\d+)+)"/m, 1]
     odie "Update bootstrap to #{bootstrap_version}" if resource("bootstrap").version != bootstrap_version
 
     # Upstream only allows building for specific microarchitectures they support
@@ -182,6 +182,32 @@ class Bun < Formula
 end
 
 __END__
+diff --git a/src/runtime/cli/lint_js.rs b/src/runtime/cli/lint_js.rs
+--- a/src/runtime/cli/lint_js.rs
++++ b/src/runtime/cli/lint_js.rs
+@@ -409,12 +409,21 @@
+ /// Startup state that all VMs share.
+-#[derive(Default)]
+ struct Start {
+     initialize: std::sync::Once,
+     /// Set if the run won't have more than a few VMs. Stays unset if a VM starts before the files are known.
+     is_for_few: AtomicBool,
+     memory: std::sync::OnceLock<usize>,
+ }
+
++impl Default for Start {
++    fn default() -> Self {
++        Self {
++            initialize: std::sync::Once::new(),
++            is_for_few: AtomicBool::new(false),
++            memory: std::sync::OnceLock::new(),
++        }
++    }
++}
++
+ impl Start {
+     /// [`memory_for_engines`]
+     fn memory(&self) -> usize {
 diff --git a/src/collections/lib.rs b/src/collections/lib.rs
 index 57539df..46e4209 100644
 --- a/src/collections/lib.rs
