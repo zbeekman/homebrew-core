@@ -1,8 +1,8 @@
 class VapoursynthVszip < Formula
   desc "VapourSynth Zig Image Process"
   homepage "https://github.com/dnjulek/vapoursynth-zip"
-  url "https://files.pythonhosted.org/packages/ac/5b/46cc32a9236271e709904c88056f053a731973c7358f4be44830aa242c9f/vapoursynth_vszip-23.0.0.tar.gz"
-  sha256 "7ef229ccbe9484a9a7b4b28f0535bcdc10e2e51386c9ba085f49f3134d2e85f1"
+  url "https://files.pythonhosted.org/packages/16/d0/7f54ac694e2895e6db2a7fa09f27936db9b8257847a12935078f60b38554/vapoursynth_vszip-23.1.0.tar.gz"
+  sha256 "1187c34e6965bd289c42eb96e6104288d59949723316c2730b118fa3b1e70d94"
   license "MIT"
 
   bottle do
