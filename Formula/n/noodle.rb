@@ -4,6 +4,7 @@ class Noodle < Formula
   url "https://github.com/wilfredinni/noodle/archive/refs/tags/v0.10.1.tar.gz"
   sha256 "16f869ec37275e39234e47b7f0c9f27e76530f570b0fa4da031a75a83cd7530b"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 arm64_golden_gate: "9fb7b5f8a6f6434e0eb5ab9f4faa174e1110057d16d72e259cf953ddc031a6e0"
