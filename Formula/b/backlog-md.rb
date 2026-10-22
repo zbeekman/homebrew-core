@@ -1,10 +1,9 @@
 class BacklogMd < Formula
   desc "Markdown‑native Task Manager & Kanban visualizer for any Git repository"
   homepage "https://github.com/MrLesk/Backlog.md"
-  url "https://github.com/MrLesk/Backlog.md/archive/refs/tags/v1.55.1.tar.gz"
-  sha256 "f4356cf9ce2f348b555d3ee228366b48a77df67d680ea37b49e2c781ebfb2523"
+  url "https://github.com/MrLesk/Backlog.md/archive/refs/tags/v1.55.2.tar.gz"
+  sha256 "defd47f30b787a69bcf888499ea95ddd0ce6fc352c775a0b12010485b874b6c8"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 arm64_golden_gate: "aa0fca1715ccafad12ffe38231027a8003e7c871af8ed801faf4bf848cf9d723"
