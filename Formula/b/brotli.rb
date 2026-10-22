@@ -1,12 +1,11 @@
 class Brotli < Formula
   desc "Generic-purpose lossless compression algorithm by Google"
   homepage "https://github.com/google/brotli"
-  url "https://github.com/google/brotli/archive/refs/tags/v1.2.0.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/brotli-1.2.0.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/brotli-1.2.0.tar.gz"
-  sha256 "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec"
+  url "https://github.com/google/brotli/archive/refs/tags/v1.2.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/brotli-1.2.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/brotli-1.2.1.tar.gz"
+  sha256 "98d35d11a78dc453aebb7d10c3748f3f73ff78c8267c0dc697b8631f67bf7e8f"
   license "MIT"
-  revision 1
   compatibility_version 1
   head "https://github.com/google/brotli.git", branch: "master"
 
@@ -16,22 +15,14 @@ class Brotli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fc57a4b7192e85eb81b440bfa786216f7cea407dd8d7bf93e17f886742b83ecd"
-    sha256 cellar: :any, arm64_tahoe:       "a976542fe597e48a569a03f5a083405454f383995c657156979ef84b31c9e418"
-    sha256 cellar: :any, arm64_sequoia:     "832894ee6c084c1ac212f6031518ec9e4d731ac372854f9cb8173da186114d13"
-    sha256 cellar: :any, arm64_linux:       "8cfd9b38bae4952796e298c7856f4cf80f5b86d2e7412f10de8ab207f0a079ae"
-    sha256 cellar: :any, x86_64_linux:      "18c72483cf18493596dbec9bc932c8e693203bd13084e18b24df0925fa594884"
+    sha256 cellar: :any, arm64_golden_gate: "ba4564da654b3cbc6a143d98194a5c0a4971976d5190c5627ed0b76c5c971b8f"
+    sha256 cellar: :any, arm64_tahoe:       "c5a6fba2965b2423acfbf5084a4d8291bf95b96bbc64b534c8ef83a480413e49"
+    sha256 cellar: :any, arm64_sequoia:     "7b92f3978056e44ac3f4bb6f5fc1ec31278a6b5972706236e8988e7c255cb3d4"
+    sha256 cellar: :any, arm64_linux:       "460dda539a03bf4f7d821763d20351c9207683321611fde79da080e5302f69b5"
+    sha256 cellar: :any, x86_64_linux:      "cb1fe9a81c06db13b0c0824450e9616d0f2a633f03f83047d1dfa88e4f981981"
   end
 
   depends_on "cmake" => :build
-
-  # Backport earlier invalid stream detection for CVE-2026-111497
-  patch do
-    url "https://github.com/google/brotli/commit/0ed4268a4401abcb4472096340477cf4af7d1a2b.patch?full_index=1"
-    sha256 "d6f962509000223def7062958229bd08457e5e032e7ed0d1d94fb790b054b1fc"
-    type :backport
-    resolves "CVE-2026-111497"
-  end
 
   deny_network_access!
 
