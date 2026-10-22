@@ -7,11 +7,11 @@ class BacklogMd < Formula
   revision 1
 
   bottle do
-    sha256 arm64_golden_gate: "d78871f60b2860518eedf90542430cc5c6a311f758bbd4294f1738b9fb651764"
-    sha256 arm64_tahoe:       "2e40f85a8376a172da73e6874bee353780ae9add2ced8482878da05f10b79d00"
-    sha256 arm64_sequoia:     "7994d04e4d8f3c29c385bd46ebd7fce44a0d8b75e3ae8a8a6759943792cf8780"
-    sha256 arm64_linux:       "83ce80af778fea79a816159c327585606379f9e119240e8aac23741c72fd6abb"
-    sha256 x86_64_linux:      "1de12b73c0edd7583fc9600910a6feba32dc1b3d6e05e7b2476019e816071882"
+    sha256 arm64_golden_gate: "aa0fca1715ccafad12ffe38231027a8003e7c871af8ed801faf4bf848cf9d723"
+    sha256 arm64_tahoe:       "a3398befc8f4962748ae534caa9815262a1f1c65a2335e2e6564eca2ba66aabd"
+    sha256 arm64_sequoia:     "326550f93778de21595e82bd6dd9551f9682e4c9efe5944d4664181716209830"
+    sha256 arm64_linux:       "1c94a2ead86f9719041dced77c7bcbb6e660b55fcc5a112f8c10f6d0906e3784"
+    sha256 x86_64_linux:      "015503c7f1c1a69365e3a8ed36991bb0b99dffc70cbaaebb153448625cffa2d6"
   end
 
   depends_on "bun" => :build
