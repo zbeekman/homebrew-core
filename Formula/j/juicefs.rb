@@ -1,8 +1,8 @@
 class Juicefs < Formula
   desc "Cloud-based, distributed POSIX file system built on top of Redis and S3"
   homepage "https://juicefs.com"
-  url "https://github.com/juicedata/juicefs/archive/refs/tags/v1.4.1.tar.gz"
-  sha256 "c64ebb28212840d12e37baaa1046d8226a3074427946c697a5ed22f158055758"
+  url "https://github.com/juicedata/juicefs/archive/refs/tags/v1.4.2.tar.gz"
+  sha256 "d398e39c4545b63685aa8846fb8847d3f5f37c93ea8436e49f6cf19d16e8091c"
   license "Apache-2.0"
   head "https://github.com/juicedata/juicefs.git", branch: "main"
 
