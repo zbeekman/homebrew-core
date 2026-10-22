@@ -1,8 +1,8 @@
 class Bzip3 < Formula
   desc "Better and stronger spiritual successor to BZip2"
   homepage "https://github.com/iczelia/bzip3"
-  url "https://github.com/iczelia/bzip3/releases/download/1.5.4/bzip3-1.5.4.tar.gz"
-  sha256 "89a5e4bf29e4aae98b29bb1ef275addfa2d0806ba1ef60bf8a87263cdb21f581"
+  url "https://github.com/iczelia/bzip3/releases/download/1.5.5/bzip3-1.5.5.tar.gz"
+  sha256 "dc3bd8237178e1a2b99d8dcf1f4aeb3593c723788a9863606e121b40784e596d"
   license "LGPL-3.0-only"
 
   bottle do
@@ -14,14 +14,18 @@ class Bzip3 < Formula
     sha256 cellar: :any, x86_64_linux:      "579ecd6e7477d9fa72ae9f3041b9c75f543e546780c1703132de2105dbadcd10"
   end
 
+  depends_on "pkgconf" => :build
+
+  deny_network_access!
+
   def install
     system "./configure", "--disable-silent-rules", "--disable-arch-native", *std_configure_args
     system "make", "install"
   end
 
   test do
-    testfilepath = testpath + "sample_in.txt"
-    zipfilepath = testpath + "sample_in.txt.bz3"
+    testfilepath = testpath/"sample_in.txt"
+    zipfilepath = testpath/"sample_in.txt.bz3"
 
     testfilepath.write "TEST CONTENT"
 
