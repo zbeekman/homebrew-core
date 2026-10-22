@@ -1,8 +1,8 @@
 class Wasmedge < Formula
   desc "Lightweight, high-performance, and extensible WebAssembly runtime"
   homepage "https://WasmEdge.org/"
-  url "https://github.com/WasmEdge/WasmEdge/releases/download/0.18.0/WasmEdge-0.18.0-src.tar.gz"
-  sha256 "c3ef59723d8e5e09021bb9ed7ec55c596b33969b95bc1fbfb0ce1d21075e061e"
+  url "https://github.com/WasmEdge/WasmEdge/releases/download/0.18.1/WasmEdge-0.18.1-src.tar.gz"
+  sha256 "589031c828628fbae8576e9d6ef497ac9888bca964dacacaa79ad9c82f9538bc"
   license "Apache-2.0"
   head "https://github.com/WasmEdge/WasmEdge.git", branch: "master"
 
