@@ -1,8 +1,8 @@
 class Gomplate < Formula
   desc "Command-line Golang template processor"
   homepage "https://gomplate.ca/"
-  url "https://github.com/hairyhenderson/gomplate/archive/refs/tags/v5.3.0.tar.gz"
-  sha256 "57082793307653a7b5189922c0be93da144db281dc478523a480858f6f906985"
+  url "https://github.com/hairyhenderson/gomplate/archive/refs/tags/v5.3.1.tar.gz"
+  sha256 "4f3e313a9eaaa677d5f69406a62adaf1191daf4901a92729d1a6e8b3be954a2a"
   license "MIT"
   head "https://github.com/hairyhenderson/gomplate.git", branch: "main"
 
