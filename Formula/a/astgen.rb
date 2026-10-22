@@ -26,13 +26,23 @@ class Astgen < Formula
     depends_on "icu4c@78"
   end
 
-  def install
+  deny_network_access!
+
+  def fetch
     cd "javascript-astgen" do
       system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
-      system "bun", "run", "binary"
+    end
+  end
 
-      os = OS.mac? ? "macos" : "linux"
-      arch = Hardware::CPU.arm? ? "arm64" : "x64"
+  def install
+    os = OS.mac? ? "macos" : "linux"
+    arch = Hardware::CPU.arm? ? "arm64" : "x64"
+
+    cd "javascript-astgen" do
+      # Only build the host target, as cross-compiling downloads the other targets' bun runtimes
+      inreplace "scripts/build-binaries.ts", "targets.map(",
+                "targets.filter(({outfile}) => outfile === \"./astgen-#{os}-#{arch}\").map("
+      system "bun", "run", "binary"
 
       bin.install "astgen-#{os}-#{arch}" => "astgen"
     end
