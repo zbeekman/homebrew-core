@@ -1,8 +1,8 @@
 class Cpm < Formula
   desc "Fast CPAN module installer"
   homepage "https://metacpan.org/pod/CPM"
-  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-v1.1.5.tar.gz"
-  sha256 "bdb75f82f7d4a8a90971c674a980eefc95577196ebde2a2799b9ad37445f9912"
+  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-v1.1.6.tar.gz"
+  sha256 "c78f0ce4bb7770fff95334956bfd63a9cab537d4cca4bdb1d1844990ad601fa8"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/skaji/cpm.git", branch: "main"
 
@@ -151,8 +151,8 @@ class Cpm < Formula
   end
 
   resource "URI" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.35.tar.gz"
-    sha256 "89648964ce5ae006726951f42f718576fbefe9e98a41bd2212d57386163092d2"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.40.tar.gz"
+    sha256 "ef5d2ef099a1a24a6e83ffe543de73337805d3d39c00b84fa205d725ad1a1b63"
   end
 
   resource "Win32::ShellQuote" do
@@ -161,8 +161,8 @@ class Cpm < Formula
   end
 
   resource "YAML::PP" do
-    url "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.41.0.tar.gz"
-    sha256 "3ddfb2bdd2e7ef2d949dbd8ffb51439164c84d22bff615e47dbd8ea48ba75cae"
+    url "https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-PP-v0.43.0.tar.gz"
+    sha256 "f4a2a6d22b32a31e418debcbd04b843ba0997f9dea0fcc1f96b08b2f2ebcb2e7"
   end
 
   resource "local::lib" do
