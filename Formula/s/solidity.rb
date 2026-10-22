@@ -11,12 +11,11 @@ class Solidity < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f6670235d9eca969a357efb5d2995e819000c05dde8d0173566a0b9f07596f3c"
-    sha256 cellar: :any, arm64_tahoe:       "545a7a1683aa06d64d0c2a1d86192de77b6f5f414ee61c9f5782968cd6aa0885"
-    sha256 cellar: :any, arm64_sequoia:     "4e0edcec1250896a4bb0b5810905c57a10fce130a28bb5d80e28f7bca663e21f"
-    sha256 cellar: :any, arm64_linux:       "0c85b0e3e7e55c4b8fb527764d24c8ebd3a264082e220418c1c32848a9a521bd"
-    sha256 cellar: :any, x86_64_linux:      "02bb12c5ad3307a601d2624084ef9856964d72ea21f1a0114d097813d0240611"
+    sha256 cellar: :any, arm64_golden_gate: "7bf8b278ce33bf766d7ae105fcf204f15fa7fcd51da620ac45d038197ac2721a"
+    sha256 cellar: :any, arm64_tahoe:       "72d189a4a4ac38d26baf2f0e15de1357334ac9d75d3fac664d51dde2054162ab"
+    sha256 cellar: :any, arm64_sequoia:     "5966dc9899cac1ae2f1ab73dd6c8feea7a421569ac2bbdb1be532a1cf7d27988"
+    sha256 cellar: :any, arm64_linux:       "c08a9bf758eba251b025af3e399b3dc45c57967e4f9f9c5773a921e022ce7696"
+    sha256 cellar: :any, x86_64_linux:      "05e8d424ce57c39ab363a298b0945ddb1fc4029f62b55e8f893a0bc8d7c44d4e"
   end
 
   depends_on "cmake" => :build
