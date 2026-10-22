@@ -4,6 +4,7 @@ class Supabase < Formula
   url "https://github.com/supabase/cli/archive/refs/tags/v2.121.0.tar.gz"
   sha256 "1333db3d6e3a83526745eb6400e46355f85ed14d46b504dbe87ec5920f2e81ec"
   license "MIT"
+  revision 1
   head "https://github.com/supabase/cli.git", branch: "develop"
 
   livecheck do
