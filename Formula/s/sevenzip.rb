@@ -1,13 +1,11 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://github.com/ip7z/7zip/releases/download/26.04/7z2604-src.tar.xz"
-  sha256 "9691944c0fe0d01bb49373a704fb983fd33bc98b1738695179dfbf99ac1734f6"
+  url "https://github.com/ip7z/7zip/archive/refs/tags/26.05.tar.gz"
+  sha256 "989c658cef4c13124ed1f4ff7330a6ce5ab22cefdbbc9daae9b2c110dde9a63b"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
   compatibility_version 1
   head "https://github.com/ip7z/7zip.git", branch: "main"
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "3151d8a3228dfb7d4a4e66675ea66333294582711be7bf6cdaa3ee07532e45a4"
