@@ -8,11 +8,11 @@ class Croaring < Formula
   head "https://github.com/RoaringBitmap/CRoaring.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "f5eb897368d39162bafefb896bf10b16d63ef94cc901560e2fc6ae7f06a706e9"
-    sha256 cellar: :any, arm64_tahoe:       "f6234b35b2bdc12d3594e4842901ad6f85a1ce92588b68f7f368bb217c696f40"
-    sha256 cellar: :any, arm64_sequoia:     "6806d4d453e7370a68f61e3c6f8683ea50f6052824367679825c97e2fa2f1233"
-    sha256 cellar: :any, arm64_linux:       "145a5fb853ec3c2fc0ba7e2a8661a52e07414b217a3a4133ce260da6c0e829f1"
-    sha256 cellar: :any, x86_64_linux:      "b2d35a25eac9963260a284504fd729384c38f6723137ba0c7671400c45677d2f"
+    sha256 cellar: :any, arm64_golden_gate: "d469086e4e508f4fb7bae41a8276fdc43278cd6a7b16b651c1b674605ac35e4e"
+    sha256 cellar: :any, arm64_tahoe:       "f7d88cb875eb803391893dac88e66bddcc96cf2f88c1e6c3f39fc5a56ffe8d9a"
+    sha256 cellar: :any, arm64_sequoia:     "c2e282997c398e1be5d28795eb64a22cbc881cff7d29bde4f0622ed55c96391c"
+    sha256 cellar: :any, arm64_linux:       "57375c4236f76ba4130b5ce39185c43b709af70e1e3b5233f4c52da2cc3cf02c"
+    sha256 cellar: :any, x86_64_linux:      "e53a30ac51793cf6de1b8a9e121302a985d55365c83eddf05c5fadbf5a594a09"
   end
 
   depends_on "cmake" => :build
