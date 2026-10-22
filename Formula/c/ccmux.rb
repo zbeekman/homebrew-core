@@ -27,6 +27,12 @@ class Ccmux < Formula
     depends_on "icu4c@78"
   end
 
+  deny_network_access!
+
+  def fetch
+    system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
+  end
+
   def install
     if OS.linux?
       bun_icu = Formula["bun"].deps.find { |dep| dep.name.start_with?("icu4c") }.to_formula
@@ -35,7 +41,6 @@ class Ccmux < Formula
       odie "Update icu4c dependency!" if bun_icu.name != icu.name
     end
 
-    system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
     system "bun", "run", "build"
 
     # Without this the executable inherits the repository's bunfig.toml, whose
