@@ -7,8 +7,8 @@ class Apptainer < Formula
   head "https://github.com/apptainer/apptainer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_linux:  "61d89963bff829735fca3394150faa81aa7ad27b0247970d372b63b82c756ee3"
-    sha256 cellar: :any, x86_64_linux: "ea22bb95a9ee7b59784238531874d0f728827648a1f8f513c7063181c3795a22"
+    sha256 cellar: :any, arm64_linux:  "65cc255d5c32f25ee29bda0ce3f2ce8256eec4c435a9c8195f756b1e04c5aaca"
+    sha256 cellar: :any, x86_64_linux: "76ac99606a9249c14384c453600c361ed54b92bda15093f26e8204d170128c18"
   end
 
   # No relocation, the localstatedir to find configs etc is compiled into the program
