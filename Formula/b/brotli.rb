@@ -15,11 +15,11 @@ class Brotli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "fc57a4b7192e85eb81b440bfa786216f7cea407dd8d7bf93e17f886742b83ecd"
-    sha256 cellar: :any, arm64_tahoe:       "a976542fe597e48a569a03f5a083405454f383995c657156979ef84b31c9e418"
-    sha256 cellar: :any, arm64_sequoia:     "832894ee6c084c1ac212f6031518ec9e4d731ac372854f9cb8173da186114d13"
-    sha256 cellar: :any, arm64_linux:       "8cfd9b38bae4952796e298c7856f4cf80f5b86d2e7412f10de8ab207f0a079ae"
-    sha256 cellar: :any, x86_64_linux:      "18c72483cf18493596dbec9bc932c8e693203bd13084e18b24df0925fa594884"
+    sha256 cellar: :any, arm64_golden_gate: "ba4564da654b3cbc6a143d98194a5c0a4971976d5190c5627ed0b76c5c971b8f"
+    sha256 cellar: :any, arm64_tahoe:       "c5a6fba2965b2423acfbf5084a4d8291bf95b96bbc64b534c8ef83a480413e49"
+    sha256 cellar: :any, arm64_sequoia:     "7b92f3978056e44ac3f4bb6f5fc1ec31278a6b5972706236e8988e7c255cb3d4"
+    sha256 cellar: :any, arm64_linux:       "460dda539a03bf4f7d821763d20351c9207683321611fde79da080e5302f69b5"
+    sha256 cellar: :any, x86_64_linux:      "cb1fe9a81c06db13b0c0824450e9616d0f2a633f03f83047d1dfa88e4f981981"
   end
 
   depends_on "cmake" => :build
