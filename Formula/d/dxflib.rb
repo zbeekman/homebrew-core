@@ -41,6 +41,8 @@ class Dxflib < Formula
     sha256 "e5744edaa77d1612dec44d1a47adad4aad3d402dbf53ea2aff5a57c34ae9bafa"
   end
 
+  deny_network_access!
+
   def install
     # For libdxflib.a
     system "qmake", "dxflib.pro"
