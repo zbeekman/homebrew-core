@@ -4,6 +4,7 @@ class BacklogMd < Formula
   url "https://github.com/MrLesk/Backlog.md/archive/refs/tags/v1.55.1.tar.gz"
   sha256 "f4356cf9ce2f348b555d3ee228366b48a77df67d680ea37b49e2c781ebfb2523"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 arm64_golden_gate: "d78871f60b2860518eedf90542430cc5c6a311f758bbd4294f1738b9fb651764"
@@ -20,6 +21,12 @@ class BacklogMd < Formula
     depends_on "icu4c@78"
   end
 
+  deny_network_access!
+
+  def fetch
+    system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
+  end
+
   def install
     if OS.linux?
       bun_icu = Formula["bun"].deps.find { |dep| dep.name.match?(/^icu4c/) }.to_formula
@@ -27,8 +34,6 @@ class BacklogMd < Formula
 
       odie "Update icu4c dependency!" if bun_icu.name != icu.name
     end
-
-    system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
 
     # Upstream injects the version at release time; the tagged `package.json` lags.
     ENV["BACKLOG_BUILD_VERSION"] = version.to_s
