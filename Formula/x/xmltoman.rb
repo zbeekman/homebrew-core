@@ -11,15 +11,8 @@ class Xmltoman < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "997c2d4d56d3d69c761c1be4a6cc422b1b5e1e33a82bb365dcd84fed5b6ebe1d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5da8397d661fb35e42adec8172bfdc0fbcb5370c59885ec9710f362951a0fd12"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5da8397d661fb35e42adec8172bfdc0fbcb5370c59885ec9710f362951a0fd12"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "5da8397d661fb35e42adec8172bfdc0fbcb5370c59885ec9710f362951a0fd12"
-    sha256 cellar: :any_skip_relocation, tahoe:             "5da8397d661fb35e42adec8172bfdc0fbcb5370c59885ec9710f362951a0fd12"
-    sha256 cellar: :any_skip_relocation, sequoia:           "5da8397d661fb35e42adec8172bfdc0fbcb5370c59885ec9710f362951a0fd12"
-    sha256 cellar: :any_skip_relocation, sonoma:            "5da8397d661fb35e42adec8172bfdc0fbcb5370c59885ec9710f362951a0fd12"
-    sha256 cellar: :any,                 arm64_linux:       "bd5e21010f569948d6da34986ff3881e2befdacedd5c755005b0caa8b4ac4a3e"
-    sha256 cellar: :any,                 x86_64_linux:      "13c53ad2a94fa4249c146a7d34a0b3127be4696b8f56dbd0f86aecc1671fb1cd"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "030311ad2a8646176d1d60e593d9829323b27d8412838a6751b850af08d2bdf5"
   end
 
   uses_from_macos "perl"
