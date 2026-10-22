@@ -3,8 +3,8 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/c7/09/6487af16b8abaa58259e5f68ab3b72e3140156478af1b02fac5d9a20a9dd/locust-2.46.7.tar.gz"
-  sha256 "cf112214068abe59615d36769db31ffd1430b67c6e5f693b9a23b8510224442b"
+  url "https://files.pythonhosted.org/packages/d2/17/1099f80db4462e93c56619f3aba0c629ea01b08fd143181c2ecfa128f9bd/locust-2.47.0.tar.gz"
+  sha256 "70ffe28cdb7a3224a4efb60b31d585c26343d5679fec8d5b18017ffb6893b423"
   license "MIT"
 
   bottle do
@@ -126,8 +126,8 @@ class Locust < Formula
   end
 
   resource "pluggy" do
-    url "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe6ef3fa267035b518369d9511ffab804f839851d2779/pluggy-1.6.0.tar.gz"
-    sha256 "7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3"
+    url "https://files.pythonhosted.org/packages/bf/db/7fc19e6f2dc92a966727031389fc2e08b558f0f25eb7403c1119ad4713cd/pluggy-1.7.0.tar.gz"
+    sha256 "d1eaa46ebb595891b860ab086b4d09c8588af65ebd4361b8e8f4bb8920b90ba8"
   end
 
   resource "psutil" do
@@ -196,8 +196,8 @@ class Locust < Formula
   end
 
   resource "zope-interface" do
-    url "https://files.pythonhosted.org/packages/26/39/a8481b926e42c44a6fcc670904f8251469ec42edbff1ba066719ca1e7fb4/zope_interface-8.6.tar.gz"
-    sha256 "b40ef9b4873afb5d0dec02b8d2dfde1cf18c72337b60c99cb735961e0bac05c0"
+    url "https://files.pythonhosted.org/packages/de/ff/a1f0021a26033da0df223fd05a7455d6d2881b67daf2c6dc897b4fe0a427/zope_interface-8.7.tar.gz"
+    sha256 "0b47b62e8d0d99b24bcdd32f4f2120425e5019c3bee2ad69a0e1d75737487a96"
   end
 
   deny_network_access! :test
