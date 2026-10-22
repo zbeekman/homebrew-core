@@ -24,10 +24,11 @@ class Unisonlang < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "ffb7b68f53788bb18f1811a571196cff31a0671274e420457b79311c34a8a63a"
-    sha256 cellar: :any, arm64_sequoia: "40e7cb1fd92bbb37a8346f5f52c7807091ac44703155e8f68684a7faeba74560"
-    sha256 cellar: :any, arm64_linux:   "5bb9d4f360807834e59d5a606ef2c33a6ef33f7d221bee0cc089b2e6582f7fe6"
-    sha256 cellar: :any, x86_64_linux:  "2c04e3f8016eb807fb4c32965820c29b754b520ffe3675b10dbd216319ac0978"
+    sha256 cellar: :any, arm64_golden_gate: "56118216af434b10ea3625c111be122e39cad6eb21e811feb0e16c9f176d2424"
+    sha256 cellar: :any, arm64_tahoe:       "38d6801268e41c624daccc6dc4858ab48731c5e4383e5c831a4876004e229108"
+    sha256 cellar: :any, arm64_sequoia:     "abc75dce0641de5d0585895331a085675a8c2601f9a8106a94dc0c079590a777"
+    sha256 cellar: :any, arm64_linux:       "da8072644cd7b1649e771ab55ee41421736e6a4f9f710f50d89b262d7d234d52"
+    sha256 cellar: :any, x86_64_linux:      "d960c4e8e6e1acd128c27da93820c7522b7700d9df6719eb82cb58037419f0fe"
   end
 
   head do
