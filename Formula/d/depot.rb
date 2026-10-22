@@ -1,8 +1,8 @@
 class Depot < Formula
   desc "Build your Docker images in the cloud"
   homepage "https://depot.dev/"
-  url "https://github.com/depot/cli/archive/refs/tags/v2.102.25.tar.gz"
-  sha256 "fa9e1b61f038c807098f5814d8b8cc6097269d821774e23b344c73628522a538"
+  url "https://github.com/depot/cli/archive/refs/tags/v2.103.0.tar.gz"
+  sha256 "35d5fc895a7cf6d63bc3dbb9e58d05d15695e05d9b0e5bd8c32d7dace0c9175f"
   license "MIT"
   head "https://github.com/depot/cli.git", branch: "main"
 
@@ -22,14 +22,6 @@ class Depot < Formula
   end
 
   depends_on "go" => :build
-
-  # Fix linking on Linux arm64 with Go 1.27, which rejects cpuid 2.0.4's linkname to `runtime.sched_getaffinity`.
-  patch do
-    url "https://github.com/depot/cli/commit/627f8a6dfad7e7f2f33c774d3aa22af9884f0ebb.patch?full_index=1"
-    sha256 "bffa3eaea34bebeeb3c27fb9ed326137b8824a1ded170eeeb2cdd91c30dd48ac"
-    type :unofficial
-    resolves "https://github.com/depot/cli/pull/570"
-  end
 
   deny_network_access!
 
