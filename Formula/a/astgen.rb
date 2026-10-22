@@ -4,6 +4,7 @@ class Astgen < Formula
   url "https://github.com/joernio/astgen-monorepo/archive/refs/tags/javascript-astgen/v3.51.0.tar.gz"
   sha256 "4eedce9cf55123b550fe1abe2b895d9a2159d0f242ed6da28a2685aacbaf47a7"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/joernio/astgen-monorepo.git", branch: "main"
 
   livecheck do
