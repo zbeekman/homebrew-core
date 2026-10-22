@@ -27,12 +27,20 @@ class CodeCli < Formula
     depends_on "zlib-ng-compat"
   end
 
-  def openssl = Formula["openssl@4"]
+  deny_network_access!
+
+  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
+
+  def fetch
+    cd "cli" do
+      system "cargo", "fetch", *std_cargo_fetch_args
+    end
+  end
 
   def install
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
-    ENV["OPENSSL_DIR"] = openssl.opt_prefix
+    ENV["OPENSSL_DIR"] = formula_opt_prefix(openssl)
 
     ENV["VSCODE_CLI_NAME_LONG"] = "Code OSS"
 
@@ -49,8 +57,8 @@ class CodeCli < Formula
     assert_match version.to_s, shell_output("#{bin}/code --version")
 
     linked_libraries = [
-      openssl.opt_lib/shared_library("libssl"),
-      openssl.opt_lib/shared_library("libcrypto"),
+      formula_opt_lib(openssl)/shared_library("libssl"),
+      formula_opt_lib(openssl)/shared_library("libcrypto"),
     ]
 
     linked_libraries.each do |library|
