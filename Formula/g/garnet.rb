@@ -1,8 +1,8 @@
 class Garnet < Formula
   desc "High-performance cache-store"
   homepage "https://microsoft.github.io/garnet/"
-  url "https://github.com/microsoft/garnet/archive/refs/tags/v2.2.3.tar.gz"
-  sha256 "29fa21790324709a19708871a1a9073a12ce170a9b7bec779f4bf0875aac4dc4"
+  url "https://github.com/microsoft/garnet/archive/refs/tags/v2.2.4.tar.gz"
+  sha256 "84c3efaa16336bf1007981f4dae723ddd537fcc64da71678f5375906db5c438c"
   license "MIT"
 
   livecheck do
@@ -29,6 +29,9 @@ class Garnet < Formula
   end
 
   def install
+    # .NET named mutexes need `XDG_RUNTIME_DIR` (or `USER`) on Linux, which build containers may lack
+    ENV["XDG_RUNTIME_DIR"] = buildpath
+
     # Ignore dotnet version specification and use homebrew one
     rm "global.json"
 
