@@ -1,10 +1,9 @@
 class LibtorrentRakshasa < Formula
   desc "BitTorrent library with a focus on high performance"
   homepage "https://github.com/rakshasa/libtorrent"
-  url "https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.25.tar.gz"
-  sha256 "c0390ef3454e9456aadb21f704eac6ef659bccc2b3ceb8215f59f1ef30735a14"
+  url "https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.26.tar.gz"
+  sha256 "f3674a26c8398c38583f62e235a69056cf4142745af11cf9f7c2a6006c23a30a"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :stable
