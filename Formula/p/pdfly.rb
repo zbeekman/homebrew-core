@@ -9,12 +9,11 @@ class Pdfly < Formula
   revision 27
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "030625a8002cafbead6b342bac3f55f9ceb367b8dfcb0cba3da256a14b268448"
-    sha256 cellar: :any, arm64_tahoe:       "ff9d9fcc8fb0713cc3b317a9999773b0c760ab771f3ca124a4b62c713090f664"
-    sha256 cellar: :any, arm64_sequoia:     "9564114a56de581fa3a57d3ebb4866ae407aa14e591b229359d2cd09e8a888ae"
-    sha256 cellar: :any, arm64_linux:       "4c2d393edd792e793d5eaf1c77b163558e4a3a4fa87c53a0046ae010950fb3e4"
-    sha256 cellar: :any, x86_64_linux:      "96267370c99deb2eec1a32636f70611db216194e063e22648edbd6ac04e9ea45"
+    sha256 cellar: :any, arm64_golden_gate: "bcf3c63709d94d3084c330ed3dd2957f5f56404c6173181136f41ef0d31c8bbb"
+    sha256 cellar: :any, arm64_tahoe:       "356eff92a05d2fe618bec1f19630e66e725a2171f1156458ebe6659cc4812aa7"
+    sha256 cellar: :any, arm64_sequoia:     "640e9b353a4273cb50c712d9d4059905245e85bdd072caad402fed2dba2525e3"
+    sha256 cellar: :any, arm64_linux:       "23a6fe784f599693879ce79c3c10d647c920b245796a8600e87402d2fe02238f"
+    sha256 cellar: :any, x86_64_linux:      "d3b05386124f118ef1e32c3774e4296b293495d82888b59cd5a6ca3a95523429"
   end
 
   # `pkgconf` and `rust` are for bcrypt
