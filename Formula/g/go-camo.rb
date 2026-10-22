@@ -1,8 +1,8 @@
 class GoCamo < Formula
   desc "Secure image proxy server"
   homepage "https://github.com/cactus/go-camo"
-  url "https://github.com/cactus/go-camo/archive/refs/tags/v2.7.7.tar.gz"
-  sha256 "e75d744025c97121566209e63dce13edd41ed0d396db9fc2ca0ddf6d862c1293"
+  url "https://github.com/cactus/go-camo/archive/refs/tags/v3.0.tar.gz"
+  sha256 "c6a09edc5d22f5b5277633db48a36a2dec169f9ae2a392577b3e004943b2c322"
   license "MIT"
   head "https://github.com/cactus/go-camo.git", branch: "master"
 
@@ -15,6 +15,12 @@ class GoCamo < Formula
   end
 
   depends_on "go" => :build
+
+  # Fix metrics startup panic, upstream PR ref, https://github.com/cactus/go-camo/pull/90
+  patch do
+    url "https://github.com/cactus/go-camo/commit/d23a95e720114fc85802e4c37200d18cd23f8637.patch?full_index=1"
+    sha256 "4c89ffb3c58626c08fb883fec1e45e99ff86105700a0125ab31cc1ba57269ab6"
+  end
 
   allow_network_access! :test
 
