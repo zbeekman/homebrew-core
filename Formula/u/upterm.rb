@@ -1,8 +1,8 @@
 class Upterm < Formula
   desc "Instant terminal sharing"
   homepage "https://upterm.dev"
-  url "https://github.com/owenthereal/upterm/archive/refs/tags/v0.38.0.tar.gz"
-  sha256 "1170d81987ce39480f88d8ed893fe3eceb7f1f0ff505732fc67f8b10caebe520"
+  url "https://github.com/owenthereal/upterm/archive/refs/tags/v0.39.0.tar.gz"
+  sha256 "896f2185f02cbf9821002a7eea864572f25cbcc52358975bcfee137418c1343a"
   license "Apache-2.0"
   head "https://github.com/owenthereal/upterm.git", branch: "master"
 
