@@ -1,8 +1,8 @@
 class UnorderedDense < Formula
   desc "Hashmap and hashset based on robin-hood backward shift deletion"
   homepage "https://github.com/martinus/unordered_dense"
-  url "https://github.com/martinus/unordered_dense/archive/refs/tags/v5.3.2.tar.gz"
-  sha256 "b406f056813da38755b4ad3366b58a8a2a4d2fa6b4a0448722800e4a675fcd03"
+  url "https://github.com/martinus/unordered_dense/archive/refs/tags/v5.3.3.tar.gz"
+  sha256 "862605ef21424c6c92881aac4cf8f09c3abd91c80588446c83892583228eca67"
   license "MIT"
 
   bottle do
