@@ -1,8 +1,8 @@
 class Pcapmirror < Formula
   desc "Tool for capturing network traffic on remote host using TZSP or ERSPAN"
   homepage "https://git.freestone.net/cramer/pcapmirror"
-  url "https://git.freestone.net/cramer/pcapmirror/-/archive/0.7/pcapmirror-0.7.tar.gz"
-  sha256 "e551d567b82465fa4fcf058da117186beb1b7f1073d245ea37e8e443c0ae27c4"
+  url "https://git.freestone.net/cramer/pcapmirror/-/archive/0.7.1/pcapmirror-0.7.1.tar.gz"
+  sha256 "b01b56d8515dbcdfb93e48bae171770747ba4772997e388adfc43397ff553232"
   license "BSD-3-Clause"
 
   bottle do
