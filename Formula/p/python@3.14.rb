@@ -1,10 +1,9 @@
 class PythonAT314 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.14.8/Python-3.14.8.tgz"
-  sha256 "a65b20a728f169f4e66ae143f40b1bd3d33c38d770251663f627c9767b79b210"
+  url "https://www.python.org/ftp/python/3.14.9/Python-3.14.9.tgz"
+  sha256 "8b47e85ee67e93945e93620a051a8f44bfc1e9735ed67075d166f4a74b7a060b"
   license "Python-2.0"
-  revision 3
   compatibility_version 1
 
   livecheck do
@@ -13,11 +12,11 @@ class PythonAT314 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "d9505d6e84e2ce13469cdea94e2b4a10751def0bac3c3b4451e8bcef0686ed84"
-    sha256 arm64_tahoe:       "b1ce1a966e353358fdb23638557d6fb2b9b8e2254fbc10303825f66422c55d8a"
-    sha256 arm64_sequoia:     "3012383247b4980014d3d2b70cb911cf031f47e45e2c848daac41f0743103f83"
-    sha256 arm64_linux:       "a76276bebc52d3c2df87a6eb39b5af0593c40dfbc0f0d8952656490e3def26ed"
-    sha256 x86_64_linux:      "c6e11d0b384b3d31afb89a7cc2cd8a24b1945061b7620949390accfd739af348"
+    sha256 arm64_golden_gate: "05f021564d66621d1ac3a15cd0e270404523d5fa1769ca95bda1fddd596caa5d"
+    sha256 arm64_tahoe:       "797bc39ad48b63f0d245f3f2ac9103a44355f86a29d1f148da596c253931a859"
+    sha256 arm64_sequoia:     "3f51d17beb5c413233c0ef8d650c5bcfe7cc7b1e0d28d5eb617ae64c95a7131e"
+    sha256 arm64_linux:       "452da09bdc7b313b3344e19f765e7b473312063b8f34b3c2fee7eb3886809d83"
+    sha256 x86_64_linux:      "bbf2ffcba9a69c1e131e4aee9bf1c6d36e86f56136464adf75c9ff203c60c4c4"
   end
 
   # https://devguide.python.org/versions/#versions
@@ -183,6 +182,7 @@ class PythonAT314 < Formula
       args << "--enable-framework=#{frameworks}"
       args << "--with-dtrace"
       args << "--with-dbmliborder=ndbm"
+      args << "--with-tail-call-interp"
 
       # Avoid linking to libgcc https://mail.python.org/pipermail/python-dev/2012-February/116205.html
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
