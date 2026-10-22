@@ -2,14 +2,13 @@ class Grpc < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   license "Apache-2.0"
-  revision 2
   compatibility_version 6
   head "https://github.com/grpc/grpc.git", branch: "master"
 
   stable do
     url "https://github.com/grpc/grpc.git",
-        tag:      "v1.84.0",
-        revision: "3252a89f10d8e92997862167ca7d095ecda85973"
+        tag:      "v1.84.1",
+        revision: "b0c0c4f8823ba69e7e43aaaf183c30a43e549924"
 
     # Backport support for OpenSSL 4
     patch do
