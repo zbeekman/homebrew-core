@@ -1,8 +1,8 @@
 class Ooniprobe < Formula
   desc "Network interference detection tool"
   homepage "https://ooni.org/"
-  url "https://github.com/ooni/probe-cli/archive/refs/tags/v3.30.0.tar.gz"
-  sha256 "8ddd7bf5f831e635dada1f8eca2db688f8da9c37e06deed03fa94826d943315b"
+  url "https://github.com/ooni/probe-cli/archive/refs/tags/v3.31.0.tar.gz"
+  sha256 "0c7aab87ef755c5c5454ba81df7fb800249fd3a26d1e7e77043be766e19013a0"
   license "GPL-3.0-or-later"
   head "https://github.com/ooni/probe-cli.git", branch: "master"
 
