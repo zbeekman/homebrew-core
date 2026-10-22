@@ -1,17 +1,17 @@
 class PocketId < Formula
   desc "Open-source identity provider for secure user authentication"
   homepage "https://pocket-id.org"
-  url "https://github.com/pocket-id/pocket-id/archive/refs/tags/v2.19.0.tar.gz"
-  sha256 "c78002e0871d2b6bd01938f8528a6be8f7bbd022f25bdf71dddb52b89fc04ba1"
+  url "https://github.com/pocket-id/pocket-id/archive/refs/tags/v2.19.1.tar.gz"
+  sha256 "30e54b7743fe8291cba333d5ec3bee3d7b7539871861858f09afca9ed48b2a94"
   license "BSD-2-Clause"
   head "https://github.com/pocket-id/pocket-id.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1991243352642bc2b6eb8674c7af1b0890f0060e6e0733d5ad07b71679b99e38"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ff40f4cd3e7ced941b49a8c951541213bbf8215e993f0682f8f0082f25bac43f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07916dcc6d9f0ac0cb97b512045f67c20ce3cbb059eaa5ff44cf0c6c077d6dad"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4ef3bced708055d2119078b083ef74adfd255d16306fb01d6e59ab4bcddbc905"
-    sha256 cellar: :any,                 x86_64_linux:      "ad13cc698b65fc0d6310912186a34d8e99fa2fd04e0d1a524043de3d08aef4ac"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f02f3af7b96006c885d08e53bbf31724f48684788d3cac82a9ebb4b3ce598298"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a2b428147a6f07dff93a8ac04638f723b94fe7ef94274a83d187739a68f24919"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "339e69c3d5197ea2abec515b0c4a1a4c45e91e7a2ad7f7261379c72b7701c615"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "dbdfba61706208369fd9be0adbccdd583ccc510ccfd7bee9ff82379bb7b4bc2b"
+    sha256 cellar: :any,                 x86_64_linux:      "9736d367a6c2fc239a7c5c04340818552e8930d9217782f84bb35111ea21eb8c"
   end
 
   depends_on "go" => :build
