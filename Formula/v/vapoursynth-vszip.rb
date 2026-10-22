@@ -6,11 +6,11 @@ class VapoursynthVszip < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5815c68c18be180d7228fd2ca10dca45b0da387a61e5511b2409d8f85769ad6a"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "130410f45b7cbcf5d6f0f1a82acba050a78d7a6217114c3e4fdab9f16665b677"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6ecf3844e37bac1a3bbae46b448fad74a0c0d4192a05ec4fd865e185cd5c3ee2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "4e1c5855caab6c1e905ab84859df0380e1794896475ba8c03e31070b02879964"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1fb6f0660655da12d07ad3fc5a85e3fbc22d492cc1ca00dfa85ee9d145c5f910"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dd810cd37b335772be7ea9219e240146ad4baad213fb2d22a287bfcb574817ca"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bc02aee7ae5724a476a6f96b315172c496f8626d300bbea6bf5ec5ea8854c544"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "87443a9d918b108e0f691dcaf9417d1dc9e7d638ac4ea11d55a8d407d2ce11ac"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "f4be4f576c338877ca9fd323cc91ac063c497eba746cb493d3fbab46f2923f2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "8d8f14caf5709ff7995fb2cc5c8f61ea3f6f4b94f8ee80d4138f1a7cd70e0f2e"
   end
 
   depends_on "zig" => :build
