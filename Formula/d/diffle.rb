@@ -6,7 +6,11 @@ class Diffle < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "68a48d9dc617dddf20248d4bd081fc6d3690cf75c5fad25a8755054d6c97ce18"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "727b040f2a709f40385d8ea5098339493d8ba0ad677cf250eddfbf3e0b1bf7a9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "175a9726b7d119740dd3b117676b12358966ed754e14e21f65ddc7b2a3344914"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6b86893b1c13b9cf6baa23a44fabf220f7d21185d0dcd0127a41f6341d5a51c9"
+    sha256 cellar: :any,                 arm64_linux:       "ada4349b8329b405a9a1042d173615b4c0f3a82ee41c5149a02ff3ca5060477c"
+    sha256 cellar: :any,                 x86_64_linux:      "fb8a28157f71029ebb3a3ffca1f2c08119660ca85fbf834c543184b99a993853"
   end
 
   depends_on "node" => :build
