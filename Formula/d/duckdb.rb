@@ -5,6 +5,7 @@ class Duckdb < Formula
       tag:      "v2.0.0",
       revision: "d54cbbe3df17e8e5ce68312f483b4155836112aa"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "3c85bb18d505e5c8905aaafe1f74911c94cd1cb9703e6a3364e2e92ff64a0758"
@@ -17,9 +18,15 @@ class Duckdb < Formula
   depends_on "cmake" => [:build, :test]
   uses_from_macos "python" => :build
 
+  deny_network_access!
+
   def install
-    args = %w[
+    # See https://github.com/duckdb/duckdb/blob/v2.0-cyanoptera/.github/workflows/OSX.yml#L24
+    args = %W[
+      -DOVERRIDE_GIT_DESCRIBE=v#{version}
       -DBUILD_EXTENSIONS='autocomplete;icu;parquet;json'
+      -DLINK_CORE_EXTENSIONS=1
+      -DDUCKDB_CAPABILITIES=httplib;loadable_extensions
       -DENABLE_EXTENSION_AUTOLOADING=1
       -DENABLE_EXTENSION_AUTOINSTALL=1
     ]
@@ -34,6 +41,19 @@ class Duckdb < Formula
   end
 
   test do
+    # a release build must report the tagged version, not a -dev build
+    assert_match "v#{version} ", shell_output("#{bin}/duckdb --version")
+    refute_match "-dev", shell_output("#{bin}/duckdb --version")
+
+    # the extensions named in BUILD_EXTENSIONS must be linked in, not merely built
+    linked_sql = "SELECT extension_name FROM duckdb_extensions() " \
+                 "WHERE install_mode = 'STATICALLY_LINKED' " \
+                 "AND extension_name IN ('autocomplete', 'icu', 'json', 'parquet') ORDER BY 1"
+    assert_equal "autocomplete\nicu\njson\nparquet\n",
+                 shell_output("#{bin}/duckdb -csv -noheader -c \"#{linked_sql}\"")
+    autocomplete_sql = "SELECT suggestion FROM sql_auto_complete('SEL')"
+    assert_match "SELECT", shell_output("#{bin}/duckdb -csv -noheader -c \"#{autocomplete_sql}\"")
+
     sql_commands = <<~SQL
       CREATE TABLE weather (temp INTEGER);
       INSERT INTO weather (temp) VALUES (40), (45), (50);
