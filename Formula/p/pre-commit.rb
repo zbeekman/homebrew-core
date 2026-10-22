@@ -10,11 +10,11 @@ class PreCommit < Formula
   head "https://github.com/pre-commit/pre-commit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "aee4dca6055f8893366b68b2f91e97de4fc365724aceb99ab1ec41e068606ff7"
-    sha256 cellar: :any, arm64_tahoe:       "9c8e07b8678cffda43f2ed424e99d60244938575abfffea5fd0685219db80198"
-    sha256 cellar: :any, arm64_sequoia:     "95c4c114d85ec740a167cdc755669fbf1a4edf8aba5ca0b51c148f6fc9a95f17"
-    sha256 cellar: :any, arm64_linux:       "f3eed6ee527aca533df376fc7b8208192ba5ce83a56844d81ff0be0e19467d2a"
-    sha256 cellar: :any, x86_64_linux:      "ba0c6ed95c93025428b25079d3f0af362cbc08eed9c92b5785cd3217bc67cb02"
+    sha256 cellar: :any, arm64_golden_gate: "50e0f0595696b57d216539e7a27e8dcf5ddc46c703c4d44dc68b2ef25cb35b2f"
+    sha256 cellar: :any, arm64_tahoe:       "7e389ae736c1952454f2f86d97a774d58dc513a0a7d4e53df5e0f874bb22144c"
+    sha256 cellar: :any, arm64_sequoia:     "dc33f991e683da3f8ebb7aa8d597674e3a286daa6de2edaa2144bc6f7b227cc3"
+    sha256 cellar: :any, arm64_linux:       "6088684d1ee244053059637d5545335deac2dce499f39960241d9d0de55d3e9a"
+    sha256 cellar: :any, x86_64_linux:      "cccc238041861699c5bc1c28d79316a6a7016c172965ff56cbbcbdd663057909"
   end
 
   depends_on "libyaml"
