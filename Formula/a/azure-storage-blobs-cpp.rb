@@ -1,8 +1,8 @@
 class AzureStorageBlobsCpp < Formula
   desc "Microsoft Azure Storage Blobs SDK for C++"
   homepage "https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/storage/azure-storage-blobs"
-  url "https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-storage-blobs_12.19.0.tar.gz"
-  sha256 "346cf098f055b90b88b380ac08c3e31bfca1578e1186b85ba85be7b436c0ad63"
+  url "https://github.com/Azure/azure-sdk-for-cpp/archive/refs/tags/azure-storage-blobs_12.19.1.tar.gz"
+  sha256 "2f7af311f5c21b3eaf797d3184b50ac741652e534b3b3d0346a4bb88427c6d06"
   license "MIT"
 
   livecheck do
