@@ -9,12 +9,11 @@ class Charmcraft < Formula
   head "https://github.com/canonical/charmcraft.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "8e2ea8f068af64ea4dd7de52b2075f16b5a3140e91b72aa4b607ed029b0556c6"
-    sha256 cellar: :any, arm64_tahoe:       "ff084a6de72a8d669e223c884d0cc4da36180e76ef3c9523098f5ba2703df148"
-    sha256 cellar: :any, arm64_sequoia:     "0dc70fba79cca1ec7659730cb5875bd9021476759b76a23e30754bb9ef6f7289"
-    sha256 cellar: :any, arm64_linux:       "cc53cb4b7dfc37734274bfb4a062abb804327255f3b112cc1e0d5174a80f2d41"
-    sha256 cellar: :any, x86_64_linux:      "b6bd349d17c7a503798bf55fb68401886270584082e0598cb79928a678e5b54b"
+    sha256 cellar: :any, arm64_golden_gate: "5c0c45613a72e8239c505fb611598c646cc2165644b67b6445d733d86e986f93"
+    sha256 cellar: :any, arm64_tahoe:       "de491fd2ca516198d2f05b591374fbd770fed0291efa6698196cbf88ebb5b665"
+    sha256 cellar: :any, arm64_sequoia:     "4a13fe69a3a85b6c907366c25144483e11ff1bdbbf4ed759b392b1d5bff69e34"
+    sha256 cellar: :any, arm64_linux:       "d85788284c5e74adb7bcf21a2b8eaf795764ef20993a5d9ef3562f50ed17b817"
+    sha256 cellar: :any, x86_64_linux:      "a1fdf0fe07fc4984cadb203b70c0e1b8dda62aa7a51b1a598cdba1abf313a24a"
   end
 
   depends_on "certifi" => :no_linkage
