@@ -5,6 +5,14 @@ class ZvecGrep < Formula
   sha256 "a958bb24f161c6d092fe555ddeeb44989f933354d9e21392d89af4bc75bd4393"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any, arm64_golden_gate: "fdf5450fd7e02f90312c70f6740e23c81cc04a1647391c9b137f7bb99300c80f"
+    sha256 cellar: :any, arm64_tahoe:       "5bd5d4d2eb01c37f6fe3a44ed2e0526d98da280e746f29cd4f7000edd9bf93b4"
+    sha256 cellar: :any, arm64_sequoia:     "4a6f39a575e979f40b9735e0fcceaef3fc0fe9cfa454db38895e4620616558d4"
+    sha256 cellar: :any, arm64_linux:       "951d0c0a421e09a377148b84b99a07345aca65a04066d9a57a7afda0fde06688"
+    sha256 cellar: :any, x86_64_linux:      "3c2b066dd8b1ede506f3477b1a9ee9b2a800ecfe27967ac021c5d814c2756b2a"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "glib"
   depends_on "node"
