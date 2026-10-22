@@ -11,6 +11,12 @@ class OpensshSkProvider < Formula
     formula "openssh"
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_golden_gate: "1341dfec9716a62a3c0905ea851231ecd369adedf6ec5b4d59ee56b2eac357ac"
+    sha256 cellar: :any, arm64_tahoe:       "fc54672eabd0336f07d1218ccfe5e9481581a2fa2f5338bda41162e1c83fe863"
+    sha256 cellar: :any, arm64_sequoia:     "b2aa849c90d1f974c0085314c97f79dfca61fea34486c68e44214cacdb08df60"
+  end
+
   head do
     url "https://github.com/openssh/openssh-portable.git", branch: "master"
 
