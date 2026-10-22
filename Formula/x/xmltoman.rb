@@ -22,41 +22,24 @@ class Xmltoman < Formula
     sha256 cellar: :any,                 x86_64_linux:      "13c53ad2a94fa4249c146a7d34a0b3127be4696b8f56dbd0f86aecc1671fb1cd"
   end
 
-  uses_from_macos "expat"
   uses_from_macos "perl"
 
-  resource "XML::Parser" do
-    on_linux do
-      url "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.44.tar.gz"
-      sha256 "1ae9d07ee9c35326b3d9aad56eae71a6730a73a116b9fe9e8a4758b7cc033216"
-    end
+  on_macos do
+    depends_on "coreutils" => :build
+  end
+
+  on_linux do
+    depends_on "perl-xml-parser"
   end
 
   def install
-    if OS.linux?
-      ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
+    ENV.prepend_path "PATH", formula_opt_libexec("coreutils")/"gnubin" if OS.mac?
+    # Modify shebang to run xmltoman during build as automatic rewrite happens after install
+    rewrite_shebang detected_perl_shebang, "xmltoman" if OS.linux?
 
-      resources.each do |res|
-        res.stage do
-          system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
-          system "make", "PERL5LIB=#{ENV["PERL5LIB"]}"
-          system "make", "install"
-        end
-      end
-
-      inreplace "xmltoman", "#!/usr/bin/perl -w", "#!/usr/bin/env perl"
-      rewrite_shebang detected_perl_shebang, "xmlmantohtml"
-    end
-
-    # generate the man files from their original XML sources
-    system "./xmltoman xml/xmltoman.1.xml > xmltoman.1"
-    system "./xmltoman xml/xmlmantohtml.1.xml > xmlmantohtml.1"
-
-    man1.install %w[xmltoman.1 xmlmantohtml.1]
-    bin.install %w[xmltoman xmlmantohtml]
-    pkgshare.install %w[xmltoman.xsl xmltoman.dtd xmltoman.css]
-
-    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"]) if OS.linux?
+    system "make"
+    system "make", "install", "PREFIX=#{prefix}"
+    man1.install "xmltoman.1", "xmlmantohtml.1"
   end
 
   test do
