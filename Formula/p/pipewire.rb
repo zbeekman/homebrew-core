@@ -1,14 +1,13 @@
 class Pipewire < Formula
   desc "Server and user space API to deal with multimedia pipelines"
   homepage "https://pipewire.org"
-  url "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.9/pipewire-1.6.9.tar.gz"
-  sha256 "dbc3624cf71215c26a22fc98f6f71f7b8599f5f6b415eab4a5c90ca96c170c7c"
+  url "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.10/pipewire-1.6.10.tar.gz"
+  sha256 "93b7c4f1e62fd9ec3a921846c6bfc64442872bb2366c2bbc3ea69a427b79a4f9"
   license all_of: [
     "MIT",
     "GPL-2.0-only",      # libjackserver.so
     "LGPL-2.1-or-later", # libspa-alsa.so
   ]
-  revision 1
   head "https://gitlab.freedesktop.org/pipewire/pipewire.git", branch: "master"
 
   # We restrict matching to versions with an even-numbered minor version number,
