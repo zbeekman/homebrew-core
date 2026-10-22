@@ -29,11 +29,11 @@ class Ruby < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "42c252a757b8794b20229dc2f3d4b642bc5c7b293c1e454068047316daf99b70"
-    sha256 arm64_tahoe:       "c5f5264f6b1484a038cfdf0fc444348adc36f8588c11ecfe1dbbeba37b3d426a"
-    sha256 arm64_sequoia:     "b65a871b19ebcedb14e1ba06a3f365f09f3573a56fc2daf5aa413dbb79ef18f9"
-    sha256 arm64_linux:       "0adcca64574f55a9504aaf05f24dc923d67534f590b9ea4a774d9b14e29f345a"
-    sha256 x86_64_linux:      "712b24ac5b6a081e3d0ae59861b0dfdf2586562367bac34876a1b396fccfc8f5"
+    sha256 arm64_golden_gate: "4d8eda94fe114ac9ddf16591911774ac3e4a1d9d3843b1a32fd163d1efa0f60e"
+    sha256 arm64_tahoe:       "f636618a190f60776cf8ce082767e4543297a713e5c5798167c513dd02e7177f"
+    sha256 arm64_sequoia:     "58f5a0354971a25a0e86cd4191a2954e694656c05ced84e338d1fe3b631aad0b"
+    sha256 arm64_linux:       "86ecf4f26fa95b6c4e5f8bd49dfb2a76535460405ed9bd3df1e4d1c9ba8a32e2"
+    sha256 x86_64_linux:      "b547b2f7b5b51c6a0ac3718c3057401f3a90b6c279cc151a94cb36a59c55095a"
   end
 
   head do
