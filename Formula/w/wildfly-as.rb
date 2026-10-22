@@ -1,8 +1,8 @@
 class WildflyAs < Formula
   desc "Managed application runtime for building applications"
   homepage "https://www.wildfly.org/"
-  url "https://github.com/wildfly/wildfly/releases/download/41.0.1.Final/wildfly-41.0.1.Final.tar.gz"
-  sha256 "26e27908f5c720d53f24abb95f9575d04f580510e5d85fad513cda9ade8119c3"
+  url "https://github.com/wildfly/wildfly/releases/download/42.0.0.Final/wildfly-42.0.0.Final.tar.gz"
+  sha256 "6c2e50b8f3e2c0c3ad8f5241e18276f12bfd3e6e37b750e3fe1d6ce1dd2800ce"
   license "Apache-2.0"
 
   livecheck do
@@ -43,8 +43,8 @@ class WildflyAs < Formula
   end
 
   resource "netty" do
-    url "https://github.com/netty/netty/archive/refs/tags/netty-4.1.137.Final.tar.gz"
-    sha256 "8638b624ecb6cc4122439f78f74f707da46197cfade615b0c88239af9fe74e43"
+    url "https://github.com/netty/netty/archive/refs/tags/netty-4.1.139.Final.tar.gz"
+    sha256 "eb1da5afe6042b6a2c4a0dfe7cdd20afacffdf9d855a7ec802202e1ac44392d5"
 
     livecheck do
       url "https://raw.githubusercontent.com/wildfly/wildfly/refs/tags/#{LATEST_VERSION}.Final/pom.xml"
@@ -93,8 +93,10 @@ class WildflyAs < Formula
     rm_r(libdir)
 
     resource("artemis-native").stage do
+      # Maven 3.10+ rejects a Maven coordinate as `parent.relativePath` and can't load enforcer 1.4.1
+      inreplace "pom.xml", "<relativePath>org.apache:apache</relativePath>", "<relativePath />"
       with_env(CMAKE_POLICY_VERSION_MINIMUM: "3.5") do
-        system "mvn", "compile", "-Pbare-metal"
+        system "mvn", "compile", "-Pbare-metal", "-Denforcer.skip=true"
         (libdir/"linux-#{arch}").install "target/output/lib/linux-#{arch}/#{libartemis}"
       end
     end
@@ -128,12 +130,15 @@ class WildflyAs < Formula
     rm_r(netty_dir/"netty-transport-native-epoll/main/lib/META-INF/native")
 
     resource("netty").stage do
+      # netty lacks a `java27` profile, so JDK 27 falls back to unsupported `-source 1.6`
+      # PR ref: https://github.com/netty/netty/pull/18099
+      mvn_args = %w[-DskipTests -Pjava26]
       cd "transport-native-unix-common" do
-        system "mvn", "install", "-DskipTests"
+        system "mvn", "install", *mvn_args
         common_dir.install "target/#{common_jar}"
       end
       cd "transport-native-#{io}" do
-        system "mvn", "package", "-DskipTests"
+        system "mvn", "package", *mvn_args
         native_dir.install "target/classes/META-INF/native/#{native_lib}"
       end
     end
