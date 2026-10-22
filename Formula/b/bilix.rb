@@ -169,6 +169,14 @@ class Bilix < Formula
     resolves "https://github.com/HFrost0/bilix/pull/244"
   end
 
+  # Fall back to the API when bilibili serves a captcha page instead of the video page
+  patch do
+    url "https://github.com/HFrost0/bilix/commit/f06e8aa90e88c90a38d7f2d80bad6345451525ad.patch?full_index=1"
+    sha256 "540b45643af2961296bbedacde883e6df1b66a0d3b965793cd96d421a9880794"
+    type :unofficial
+    resolves "https://github.com/HFrost0/bilix/pull/255"
+  end
+
   def install
     virtualenv_install_with_resources
 
