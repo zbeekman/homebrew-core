@@ -1,8 +1,8 @@
 class NetlifyCli < Formula
   desc "Netlify command-line tool"
   homepage "https://www.netlify.com/docs/cli"
-  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-27.14.0.tgz"
-  sha256 "79a62df743aeab409b477838974a67cf4b071c6fb1a1696e2695eee5282b6f49"
+  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-27.14.1.tgz"
+  sha256 "33dfec563c056871d2562a4cac28159f98efa9b10769a2d99001bb89720a23af"
   license "MIT"
 
   bottle do
@@ -48,6 +48,12 @@ class NetlifyCli < Formula
     node_modules = libexec/"lib/node_modules/netlify-cli/node_modules"
     rm_r(node_modules.glob("@img/sharp-*"))
     rm_r(node_modules.glob("@parcel/watcher-{darwin,linux}*"))
+
+    # sharp 0.35+ no longer builds from source on install, so build it against brewed `vips` explicitly
+    cd node_modules/"sharp" do
+      system "npm", "run", "build"
+      rm_r("src/build/Release/obj.target")
+    end
 
     clipboardy_fallbacks_dir = node_modules/"clipboardy/fallbacks"
     rm_r(clipboardy_fallbacks_dir, force: true) # remove pre-built binaries
