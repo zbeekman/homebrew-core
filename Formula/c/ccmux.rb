@@ -4,6 +4,7 @@ class Ccmux < Formula
   url "https://github.com/epilande/ccmux/archive/refs/tags/v1.4.4.tar.gz"
   sha256 "e5e44bc18eab59ee68ffa33a398c6a254e11831b52a9c649201f36faaf3ee80b"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 arm64_golden_gate: "791c90401483b733786967f5c491864286d9c9a489d4357b80cadf4961a1e531"
