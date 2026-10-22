@@ -54,6 +54,8 @@ jobs:
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
+      - run: brew config
+
       - name: Bump formulae
         env:
           HOMEBREW_TEST_BOT_AUTOBUMP: 1
