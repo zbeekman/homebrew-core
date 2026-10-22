@@ -1,22 +1,11 @@
 class QpidProton < Formula
   desc "High-performance, lightweight AMQP 1.0 messaging library"
   homepage "https://qpid.apache.org/proton/"
+  url "https://www.apache.org/dyn/closer.lua?path=qpid/proton/0.41.1/qpid-proton-0.41.1.tar.gz"
+  mirror "https://archive.apache.org/dist/qpid/proton/0.41.1/qpid-proton-0.41.1.tar.gz"
+  sha256 "03d9ba7f88c62524c125de8b1aff997313dcddb35e98c5a7927c0844842f9121"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/apache/qpid-proton.git", branch: "main"
-
-  stable do
-    url "https://www.apache.org/dyn/closer.lua?path=qpid/proton/0.40.0/qpid-proton-0.40.0.tar.gz"
-    mirror "https://archive.apache.org/dist/qpid/proton/0.40.0/qpid-proton-0.40.0.tar.gz"
-    sha256 "0acb39e92d947e30175de0969a5b2e479e2983bc3e3d69c835ee5174610e9636"
-
-    patch do
-      url "https://github.com/apache/qpid-proton/commit/7be093d8d96104caab3fa858ab9886f23d62ee04.patch?full_index=1"
-      sha256 "472f573caf0ed1f545a9ed25a850d5117db857f9ce5cd1d0687022d98cc045f5"
-      type :backport
-      resolves "https://github.com/apache/qpid-proton/pull/447"
-    end
-  end
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "56e55efa0b662312ed6acebb75e89b9e7244ffe75ce0a27b076cd513da752589"
