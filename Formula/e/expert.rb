@@ -7,11 +7,11 @@ class Expert < Formula
   head "https://github.com/expert-lsp/expert.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "71f5f37d68f9d93bca30b841b2cd792061fe3c62b6a92a5d1935aa099eb79b86"
-    sha256 cellar: :any, arm64_tahoe:       "e7f9184a06c59e4170cf5e316462a3c945697a29a4986663346b53c64dcb400b"
-    sha256 cellar: :any, arm64_sequoia:     "9c19b7ce29eb583eb8297890fb21a482901fd653cd6e5784d167e1ff74c98767"
-    sha256 cellar: :any, arm64_linux:       "829f11ab79ab828ea185dc3a56c7120e48af495dd72b1a81feb476389b651fb7"
-    sha256 cellar: :any, x86_64_linux:      "6c4aa147d4695f41e78c0ad45e12353b4a2d1a50046d4dd0844ad4ac7289341e"
+    sha256 cellar: :any, arm64_golden_gate: "c076e5ede26b1a36a0bc701769bacd8e1d3d973968fe5db798ddd06b305f59ff"
+    sha256 cellar: :any, arm64_tahoe:       "e32caa47eb8eb7080c1e634853e70308d170f66e9211b9e4a499848b5d15cd7b"
+    sha256 cellar: :any, arm64_sequoia:     "ccae87aff3ac4eeb5d813fd6ee18e8fb8d6297a047845ed813b636d4c5244342"
+    sha256 cellar: :any, arm64_linux:       "b6e7f0f90d76b78d71925b6032ee96b50a968734fcc42e4ec1e207d13f15b7e0"
+    sha256 cellar: :any, x86_64_linux:      "8018721aa90a94da04e4e8a022686444593be857ddfba8972c2b1a16359dc785"
   end
 
   depends_on "elixir" => :build
