@@ -6,7 +6,7 @@ class OhdearCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ab966c625578cc6bf29fd1a8cbe38ce4ae81813f2745bab617edb992bec7fd44"
+    sha256 cellar: :any_skip_relocation, all: "20b1aac27386853c014fdd986288126f1857bde7b18a2ea5966c34ec613aa09b"
   end
 
   depends_on "php"
