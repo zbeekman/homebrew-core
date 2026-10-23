@@ -15,12 +15,12 @@ class Moreutils < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f533802691224945833b48a1e863892a96ce8e5e2628ac8c6b4b14bd384bb62e"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b0a34e96a17bb7b858cc814f77883b48ebb343ddf1be4665d46ab0e95bb6def7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "85e92e23c3134e822c04671a8b80d0a3ca2fe898ec6b6ea2018264e554687eca"
-    sha256 cellar: :any,                 arm64_linux:       "16e5e4ed9955126db2fd7eeace322fc6c450542bd7247a32ab2ef4c38c388ada"
-    sha256 cellar: :any,                 x86_64_linux:      "fb287d198077078c09137d7f3725b4f2b9825ee9ad52483a189e6c18a0cce842"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6a7ff4ef8702f3fe3e31a148f87b1a5051804d9b971069fda621668cfd9b397d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4791896aa6bbf8d7cc1a59c11210c687960fb2e6a30980bcf39fe5963de44434"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a381a17a5d3a4db5e311c622d78cf23dbe823b3ffe14fe33eba0269c3eb274bf"
+    sha256 cellar: :any,                 arm64_linux:       "a62fe5d94e08dedbb81b2fb11dfd1f2d6af480405da084232dada7f18123e363"
+    sha256 cellar: :any,                 x86_64_linux:      "9e091816d85d311cbee7a188d3ce74a8705d163af9bb80e76981352599002ef8"
   end
 
   depends_on "docbook-xsl" => :build
