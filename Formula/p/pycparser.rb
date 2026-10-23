@@ -7,7 +7,7 @@ class Pycparser < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "df35b6e61bc37678856474d9c9fc0eb38cf5da68d19ac8dcabe6b7a6c05d7acc"
+    sha256 cellar: :any_skip_relocation, all: "a7a56dfe603baa785cb95e964e6e726284786b4cc5ef1d61b0e6aeb016680dce"
   end
 
   depends_on "python-setuptools" => :build
