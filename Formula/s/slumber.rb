@@ -7,11 +7,11 @@ class Slumber < Formula
   head "https://github.com/LucasPickering/slumber.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2efb531c109281581433347e44ff2edf2c2d380441584faf3e9053bc8b893934"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d8abe7f1c9454e6da7fc6b85c082cb73c160114e7dea30cb62ff511378010032"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4f8a6353a8ebc57f4fed487e557ab1139366d5a25dda1b9090934a1df811ead9"
-    sha256 cellar: :any,                 arm64_linux:       "e7e67062384f19cd2363bdd007ee1615cf0f48b764faa9ec4ed3c2d622c1dd0e"
-    sha256 cellar: :any,                 x86_64_linux:      "df426dbf81c82ebb1731d6c3374901e254ab0d250efb96bdeb65f8717586e52e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2298cf354892a2e5f19b633d78410fc4cd8b457da33b4dd676889de0ec39259b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b4500a6e1171d9193c8bd4beb864e02411f45cb8b4e34505acf4b17aff3d941d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "fdffcc1593ba1779ebec621f088b8aeb7d73e5f22adcf9fdd5d70ee504aa66c6"
+    sha256 cellar: :any,                 arm64_linux:       "f39b2710a9ef145a7b74737e2776c5045fc60ced28a8534e33386f4d339f36d1"
+    sha256 cellar: :any,                 x86_64_linux:      "fbd63046ac64135c9cf9ed0febd2ca510085367f7c914d562508567a4a9469ae"
   end
 
   depends_on "rust" => :build
