@@ -7,11 +7,11 @@ class Kubecfg < Formula
   head "https://github.com/kubecfg/kubecfg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1fb0ff2f585983c8f3203b21431b4ff37032c68157ff36a91f82f6895ded55f6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "a34d07387d2ac606e2cd06e83a12e71e6514126db3cb47ea0bcb98e1e14558c9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "365978ec4bbcb71f742734b378e2fe21ac196ba56f595a1fb69bd1112af27053"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a84bb7032095d82062c69ab5ab188416e8bf7036fc997154b0ce5e8715ed4c7f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "5ef58c7a3b6b8320d11456fd113fbf38adc3805129ccc56160074a9a9ac638a3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "9c20e88c4772fd7a421cb4a096baaff84283ec073b0005cb356422c49107dfd9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "beb47afaa94888cc833062cb90483c6000644253848720ddf4477378cf9f5588"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "80193a48720c06508579a931b5246a521e039cd4cc4e60ad16482b95f0a5b167"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c15e4782868829c873c4ce2004a6db4525fe473660011f47572e2c01ea7f067f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "b59824ed84c5cb5728c2c0bb6defd3a74809e29aad94c28015aa7e9bdaf7ca61"
   end
 
   depends_on "go" => :build
