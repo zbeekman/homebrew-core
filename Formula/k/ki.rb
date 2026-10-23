@@ -1,8 +1,8 @@
 class Ki < Formula
   desc "Kotlin Language Interactive Shell"
   homepage "https://github.com/Kotlin/kotlin-interactive-shell"
-  url "https://github.com/Kotlin/kotlin-interactive-shell/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "5b65d784a66b6e7aa7e6bc427e2886435747cb9b2969f239d3be1f2190929fe7"
+  url "https://github.com/Kotlin/kotlin-interactive-shell/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "46404602ca69c18a777ed2c88de5c5eec7e43d4cc1e77a4b44e413701bd327a0"
   license "Apache-2.0"
   head "https://github.com/Kotlin/kotlin-interactive-shell.git", branch: "main"
 
@@ -17,18 +17,16 @@ class Ki < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "5fef66e2012700f86ed7c3bf130320fdc58d1362a0b681fe88862af169a8d42e"
   end
 
-  # not compatible with kotlin 2.0+, https://github.com/Kotlin/kotlin-interactive-shell/issues/131
-  deprecate! date: "2025-10-26", because: :unmaintained
-  disable! date: "2026-10-26", because: :unmaintained
-
   depends_on "maven" => :build
   depends_on "openjdk@21"
+
+  allow_network_access! :build
 
   def install
     ENV["JAVA_HOME"] = Language::Java.java_home("21")
 
     system "mvn", "-DskipTests", "package"
-    libexec.install "lib/ki-shell.jar"
+    libexec.install "lib/ki-shell.jar", "lib/ki-completion-plugin.jar"
     bin.write_jar_script libexec/"ki-shell.jar", "ki", java_version: "21"
   end
 
