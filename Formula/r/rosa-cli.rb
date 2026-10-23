@@ -29,7 +29,11 @@ class RosaCli < Formula
   end
 
   def install
-    system "go", "build", *std_go_args(output: bin/"rosa"), "./cmd/rosa"
+    ldflags = %W[
+      -X github.com/openshift/rosa/pkg/info.DefaultVersion=#{version}
+      -X github.com/openshift/rosa/pkg/info.Build=#{tap.user}
+    ]
+    system "go", "build", *std_go_args(output: bin/"rosa", ldflags:), "./cmd/rosa"
 
     generate_completions_from_executable(bin/"rosa", shell_parameter_format: :cobra)
   end
