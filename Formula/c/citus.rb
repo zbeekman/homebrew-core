@@ -1,10 +1,9 @@
 class Citus < Formula
   desc "PostgreSQL-based distributed RDBMS"
   homepage "https://www.citusdata.com"
-  url "https://github.com/citusdata/citus/archive/refs/tags/v14.2.0.tar.gz"
-  sha256 "df221da519cea3740b3a538b846ce0ce5bdc082c5f05321f0361b8f5edc57ff7"
+  url "https://github.com/citusdata/citus/archive/refs/tags/v14.3.0.tar.gz"
+  sha256 "1d024dddcf448e553994b07d8def22d6db30dc27388560c98e602721eb6a63f6"
   license "AGPL-3.0-only"
-  revision 1
   head "https://github.com/citusdata/citus.git", branch: "main"
 
   # There can be a notable gap between when a version is tagged and a
