@@ -1,8 +1,8 @@
 class PvMigrate < Formula
   desc "CLI tool to migrate or backup/restore Kubernetes persistent volumes"
   homepage "https://github.com/utkuozdemir/pv-migrate"
-  url "https://github.com/utkuozdemir/pv-migrate/archive/refs/tags/v3.6.2.tar.gz"
-  sha256 "42c82639f48d5d58dd34ed5b7b07072b651a9b090b5955b99afd00153afa069f"
+  url "https://github.com/utkuozdemir/pv-migrate/archive/refs/tags/v3.7.0.tar.gz"
+  sha256 "f69a7d025369542544a438c0b5ea24227405c47e0c64a565605d77d290e72dea"
   license "Apache-2.0"
   head "https://github.com/utkuozdemir/pv-migrate.git", branch: "main"
 
