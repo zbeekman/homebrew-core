@@ -1,8 +1,8 @@
 class LolHtml < Formula
   desc "Low output latency streaming HTML parser/rewriter with CSS selector-based API"
   homepage "https://github.com/cloudflare/lol-html"
-  url "https://github.com/cloudflare/lol-html/archive/refs/tags/v3.0.1.tar.gz"
-  sha256 "76b29b987ede8ea8971edf4a07a0e2edf5a1dfe21a8d2c073f6534d01b2f5c9f"
+  url "https://github.com/cloudflare/lol-html/archive/refs/tags/v3.0.2.tar.gz"
+  sha256 "a5a59c7d7cb6c33c2b001394dd05768f891aa1769b5bc855f62cbc496a782075"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/lol-html.git", branch: "main"
 
