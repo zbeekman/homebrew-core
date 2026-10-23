@@ -1,8 +1,8 @@
 class Kubetrim < Formula
   desc "Trim your KUBECONFIG automatically"
   homepage "https://github.com/alexellis/kubetrim"
-  url "https://github.com/alexellis/kubetrim/archive/refs/tags/v0.0.2.tar.gz"
-  sha256 "24455f11699c61760613f630ded0d395cdf5b2d3925a08a730878819f353e00f"
+  url "https://github.com/alexellis/kubetrim/archive/refs/tags/v0.0.3.tar.gz"
+  sha256 "0721b0712d0184cabc3424019f161220e9ae4cc39f0eaf6cb5051ffb94d0ce80"
   license "MIT"
   head "https://github.com/alexellis/kubetrim.git", branch: "master"
 
