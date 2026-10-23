@@ -16,13 +16,11 @@ class Openj9 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "310b926bd72e79033f80f40609253611bd6179f9f313cc3307d2cd139a51c55c"
-    sha256 cellar: :any, arm64_tahoe:       "8975b2aa675867b03babb4d95ab6ad79234bee91dfedfb15709f0d7d66dbb316"
-    sha256 cellar: :any, arm64_sequoia:     "a4657536bfcb554f30285208dfd4fe411955ced94a731d2aa3fdb68062ddc5ff"
-    sha256 cellar: :any, arm64_sonoma:      "02c70e30a3f5997d9f3e6bd430d3c88513e3643041c613dc2564d8bf5344b089"
-    sha256 cellar: :any, sonoma:            "7df45ebe61b92d2927c7a16d54cdc595185c4809bf918bb98116c19d2618ea70"
-    sha256               arm64_linux:       "f46ad745dd7d13631120430a3b2e3deb53b7c6d5eae5c8047ef6bb6deec83ca5"
-    sha256               x86_64_linux:      "04675d6d8364029a190fec6013afed6c85700c98ceb7a3d46170729aefc7e600"
+    sha256 cellar: :any, arm64_golden_gate: "ff00e87073fb4d6f78781d857bfd03b12a7ca5aa9937c988d551213e56eac6b6"
+    sha256 cellar: :any, arm64_tahoe:       "ef3d06b7eec73f32746ad7aa3cde1e6f7f23b0ddcec03917bc0b3193c476f4d5"
+    sha256 cellar: :any, arm64_sequoia:     "20e87f753449ef1f6f4934f2649c55bb1e15c657950b679a3902e7152cd49b6b"
+    sha256               arm64_linux:       "2046e3f1aecf87a6a74a10842c83358e072b8ddde19369af26955621bccdffc9"
+    sha256               x86_64_linux:      "8c6cecbef084f048a2ff2fc24debe2dac648939b38d9afcc32d86046642a5d6e"
   end
 
   keg_only :shadowed_by_macos
