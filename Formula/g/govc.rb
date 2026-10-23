@@ -1,8 +1,8 @@
 class Govc < Formula
   desc "Command-line tool for VMware vSphere"
   homepage "https://github.com/vmware/govmomi/tree/main/govc"
-  url "https://github.com/vmware/govmomi/archive/refs/tags/v0.56.0.tar.gz"
-  sha256 "f8f6a90fb59ea6145701b3b2584aed8ce057bb9fcec85a5044e98d7b3bc7c575"
+  url "https://github.com/vmware/govmomi/archive/refs/tags/v0.56.1.tar.gz"
+  sha256 "da5ed306f41a0ee2e8bf56f85e39092863ea34a008d80fdf63d43062c75ec161"
   license "Apache-2.0"
   head "https://github.com/vmware/govmomi.git", branch: "main"
 
