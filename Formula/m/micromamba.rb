@@ -1,10 +1,9 @@
 class Micromamba < Formula
   desc "Fast Cross-Platform Package Manager"
   homepage "https://github.com/mamba-org/mamba"
-  url "https://github.com/mamba-org/mamba/archive/refs/tags/2.9.0.tar.gz"
-  sha256 "57befdcc985b07f95d1a495569ac249a270c71167d111374ff08443154821e1d"
+  url "https://github.com/mamba-org/mamba/archive/refs/tags/2.10.0.tar.gz"
+  sha256 "396cf6c08f16ecbc0a98b45a3f14469911aa2f6dda9c3b4ca98d010cea017835"
   license "BSD-3-Clause"
-  revision 2
   head "https://github.com/mamba-org/mamba.git", branch: "main"
 
   livecheck do
@@ -48,6 +47,7 @@ class Micromamba < Formula
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1600
+    depends_on "howard-hinnant-date"
   end
 
   on_linux do
@@ -57,6 +57,11 @@ class Micromamba < Formula
   fails_with :clang do
     build 1600
     cause "Requires C++23 support for `std::ranges::views::join`"
+  end
+
+  fails_with :gcc do
+    version "13"
+    cause "Requires C++20 `std::chrono::parse`"
   end
 
   def install
