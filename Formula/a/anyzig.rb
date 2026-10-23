@@ -1,8 +1,8 @@
 class Anyzig < Formula
   desc "Universal zig executable that runs any version of zig"
   homepage "https://github.com/marler8997/anyzig"
-  url "https://github.com/marler8997/anyzig/archive/refs/tags/v2026_10_20.tar.gz"
-  sha256 "36ad6d7304e755347de26cba7423b4bcef8c9a35fb55e32a1c67baf2cbadd479"
+  url "https://github.com/marler8997/anyzig/archive/refs/tags/v2026_10_23.tar.gz"
+  sha256 "9b515e94e9afa321c2966261aea490a729dd4358fa18ca63f5611b084df5f487"
   license "MIT"
 
   livecheck do
