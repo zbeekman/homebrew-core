@@ -12,11 +12,12 @@ class RosaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "65a856bcc88004e409953366651c72506d8196b8e2f882cbe08eeab967ff7492"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75690814724fb3a3aa433d7e457b883e16be3b5fbfe284444c2e6520ae43e3dd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "d1f88a6e6eecd8931d85588d030d422bf76ec2e08d6bcd0d2d0e5cca89f5479f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "41a52d2c34c0ccccb48055dfbefe1e36aa8a5440c9fd024e236ea2500fa89def"
-    sha256 cellar: :any,                 x86_64_linux:      "8ea4f1ac1fab134a5ae2081e2a57029d28477b64228e835fa7c3dbf1cdb7028f"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bba40ba31e5e51d75a8d4f2db3c800167e54cb18927b5480defff45a866a4e0f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "60b5fa33b0817c94040b9b7213d58847f9c91c6ded2b5f787874b4daf6f7f219"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "00cd81570c9f781893f8f88604583c30e9ae8cd60bcdac29e43a1e713e600d1e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "a44e291caac26033928807f6b4cbefe7ac35ab44e6b6de22aceefa15e8826f1e"
+    sha256 cellar: :any,                 x86_64_linux:      "649fcfbb0e995febcbaa94255e791c34d3b7012b2c5b162a85ecee2f54063cc0"
   end
 
   depends_on "go" => :build
@@ -29,7 +30,11 @@ class RosaCli < Formula
   end
 
   def install
-    system "go", "build", *std_go_args(output: bin/"rosa"), "./cmd/rosa"
+    ldflags = %W[
+      -X github.com/openshift/rosa/pkg/info.DefaultVersion=#{version}
+      -X github.com/openshift/rosa/pkg/info.Build=#{tap.user}
+    ]
+    system "go", "build", *std_go_args(output: bin/"rosa", ldflags:), "./cmd/rosa"
 
     generate_completions_from_executable(bin/"rosa", shell_parameter_format: :cobra)
   end
