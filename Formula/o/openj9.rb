@@ -1,8 +1,8 @@
 class Openj9 < Formula
   desc "High performance, scalable, Java virtual machine"
   homepage "https://www.eclipse.org/openj9/"
-  url "https://github.com/eclipse-openj9/openj9/archive/refs/tags/openj9-0.61.0.tar.gz"
-  sha256 "903620a8a2625b2c1152a70cfb5ed935623da0b00b41ff12dbf34c526d5f5e17"
+  url "https://github.com/eclipse-openj9/openj9/archive/refs/tags/openj9-0.63.0.tar.gz"
+  sha256 "7a34308256f7c045a5e71f359ee966212aa3c8c5152e5fad0efa137adf494b68"
   license any_of: [
     "EPL-2.0",
     "Apache-2.0",
@@ -45,6 +45,10 @@ class Openj9 < Formula
   uses_from_macos "cups" => :no_linkage
   uses_from_macos "libffi"
 
+  on_macos do
+    depends_on xcode: :build # metal support
+  end
+
   on_linux do
     keg_only "it conflicts with openjdk"
 
@@ -67,9 +71,9 @@ class Openj9 < Formula
 
   resource "omr" do
     url "https://github.com/eclipse-openj9/openj9-omr.git",
-        branch:   "v0.61.0-release",
-        revision: "ebd02d9129dc06fa67a6f885f99a3926aa869154"
-    version "0.61.0"
+        branch:   "v0.63.0-release",
+        revision: "c2a3a9ae0f8f70ab32e489e453114f37136aa67e"
+    version "0.63.0"
 
     livecheck do
       formula :parent
@@ -81,21 +85,13 @@ class Openj9 < Formula
   # This matches official documentation and allows us to bootstrap from an OpenJDK formula
   resource "openj9-openjdk-jdk" do
     url "https://github.com/ibmruntimes/openj9-openjdk-jdk25.git",
-        branch:   "v0.61.0-release",
-        revision: "fd5c7608e811f85a9c9ccaa7263dd52ae4171a0f"
-    version "0.61.0"
+        branch:   "v0.63.0-release",
+        revision: "98052ba3b11d121ad5fa9cfed14f46006ef13030"
+    version "0.63.0"
 
     livecheck do
       formula :parent
     end
-  end
-
-  # Fix build on Clang 17+
-  patch do
-    url "https://github.com/eclipse-openj9/openj9/commit/7936ac3ce51ff78e2853b35dce94cb3d4371596b.patch?full_index=1"
-    sha256 "998999131d989b1cf15c6e73650ba66505206e9635f925434182dc709c5d501a"
-    type :backport
-    resolves "https://github.com/eclipse-openj9/openj9/pull/24278"
   end
 
   def install
