@@ -11,11 +11,11 @@ class RubyAT33 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "3ff50442e7d59f6020d170fc3b2af7d8ef784b99a39a245ea7e2007ec3ae90a9"
-    sha256 arm64_tahoe:       "565328fd6dd7722ca23079f0d7685f3050e676b84360b2411ba719617a015286"
-    sha256 arm64_sequoia:     "f617e58b0a1350151a255b634a97f2e02b8a1a9fb6013a1477088bbfe44c5f80"
-    sha256 arm64_linux:       "0a864f289b655107000978a7abc5731eeb9014a153847aebf198e905f4ba1461"
-    sha256 x86_64_linux:      "13a7bd26a8d21fa8e6bfdaeabb29ac053b301d5e3ba472e666fc3dd54ab6c85c"
+    sha256 arm64_golden_gate: "2fb8dcd7e74a3df2cc3015de44948d4a2f5d16814f1243ec120c3e86e905d4e4"
+    sha256 arm64_tahoe:       "01802ceee30dd61aa336ce5c14252598a82357c35c30704087fa66d2d5812a46"
+    sha256 arm64_sequoia:     "21988c8cb841d7013a20edc34f67660eae1ad002ed97da0872a89fbb26a9c63f"
+    sha256 arm64_linux:       "b48401588f513a271b02b81e426f5b884b98ace1185387aa513ab96714b2dfbb"
+    sha256 x86_64_linux:      "ea2e4f37b328353aaec446b9d17d9ca2fec8b825a6c2836ed80abb20bf2682ac"
   end
 
   keg_only :versioned_formula
