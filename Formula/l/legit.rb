@@ -10,8 +10,7 @@ class Legit < Formula
   head "https://github.com/frostming/legit.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "05e68277620905953a8345501d2027b5c2d7c520ef537e6118fe92a2a1d3b253"
+    sha256 cellar: :any_skip_relocation, all: "dedb03cc4874bbf8f8b7cb562d143c8bc76a56eae6e03542fd32c369a615ccfa"
   end
 
   depends_on "python@3.15"
