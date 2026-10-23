@@ -9,12 +9,11 @@ class ZabbixCli < Formula
   head "https://github.com/unioslo/zabbix-cli.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f6ce055ea01886ece6650c0ab2190910f44aa8adb45cb70a78a6df4a005f09d8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "16a5b42069be8c7cede49dda492c5f92b3e9407d79de3102e32ff2fb7effb814"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "66307a4ae746a8dc4793dd727df1113f9a521e8dd36adf1dee037bd829d39bba"
-    sha256 cellar: :any,                 arm64_linux:       "a93d2e84c8e48311eff0c1f476a15afa3609a0aa88f1dbd3aeeb8f23175a09a6"
-    sha256 cellar: :any,                 x86_64_linux:      "727f116c0795733007c9031a02474cd5412c214aa171cde00e768b5156f10e52"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b38571e82b89c35c658c7d727d8bbde2d7fce48ef733b4ddcd58d9d851eb1d27"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bf7fb9e6b9fb465bafdfd6ed9e9a67df2727d9099394d40148d823d3350f3793"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1c2722ac6f63d991a2369e7bb72fd518a2d0479a2af6c5204aaadaa8cff203c5"
+    sha256 cellar: :any,                 arm64_linux:       "245e40f0c3c7896eb459656a19c3f45678f5a83da307bf2d45749aab3fc9cebc"
+    sha256 cellar: :any,                 x86_64_linux:      "32cf85745d7c2cc5142d77ff7cdcd2b6e15cb45f95122dbcabf81ee22d173826"
   end
 
   depends_on "certifi" => :no_linkage
