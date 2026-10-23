@@ -7,13 +7,11 @@ class Fortitude < Formula
   head "https://github.com/PlasmaFAIR/fortitude.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2f136cd8db07325fb548431ae17694b6356f101720b1f2d2296dd5b97f4ffb7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "db7e886c979d9ba7478bd577ab59a72b7caff475384c6923a84b60ce33f75ba6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6cc085a2bf4e106de34b4a1dd7707b623e9d765261f03c9b84c4da52671b3cd5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "04ed4828a178e34842cfaff2c97a85f27865f6d88d1bdc41dc16134aac757a8a"
-    sha256 cellar: :any_skip_relocation, sonoma:            "de4c8463acc9d1a22a7ee49c779252b87fa3b8d9aa8fbf2d7807643caeb62ea0"
-    sha256 cellar: :any,                 arm64_linux:       "f293c61552b068b8e96b84176b53459303a04dba4ddfb56830c88dd4c015cb42"
-    sha256 cellar: :any,                 x86_64_linux:      "6f4d21f8601f25ac226a1a649abe506047f1da590e767ccf5a59cea2c57b4c60"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fba43909d21295d500c2c58746e768c7f037560f7b6d9af5c914be7042870d1e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "979994d2f0eb0b75f2bf0af694321efddb24b0712bdad50d00ade7eaab9d8656"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "013d6cdc6fe8e921126cb718c7a00b3c239e54abaa69ce3c41413d594b7316c6"
+    sha256 cellar: :any,                 arm64_linux:       "8156d2ff6a5b06d1ef80e1edf2e8e0bbaa852db6df372b969dce4ecad97cf2f4"
+    sha256 cellar: :any,                 x86_64_linux:      "3f6c452e7060a6892d8c0ca3ab60f1088bd524d6a70936306c6ce7758f61e538"
   end
 
   depends_on "rust" => :build
