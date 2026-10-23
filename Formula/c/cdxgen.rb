@@ -1,8 +1,8 @@
 class Cdxgen < Formula
   desc "Creates CycloneDX Software Bill-of-Materials (SBOM) for projects"
   homepage "https://github.com/CycloneDX/cdxgen"
-  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.8.7.tgz"
-  sha256 "df3dfd0c2023f06f800d866ef52dac65255ce14f9b266a8003d0ac8ac2134735"
+  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.8.8.tgz"
+  sha256 "9b362f3a1144893350eea430f3057b76f5893023718351840968c5144689cf2c"
   license "Apache-2.0"
 
   bottle do
@@ -20,15 +20,22 @@ class Cdxgen < Formula
   depends_on "trivy"
 
   resource "dosai" do
-    url "https://github.com/owasp-dep-scan/dosai/archive/refs/tags/v3.0.6.tar.gz"
-    sha256 "ab7a4338e2f14f8f357bca95497d086939a396012a3c3a0cbf39266c43668240"
+    url "https://github.com/owasp-dep-scan/dosai/archive/refs/tags/v4.1.0.tar.gz"
+    sha256 "f988bda63f1fd6b648f4bd177bb8b1526b953434735a75d9590b9ebfcaca98f9"
   end
+
+  # For `npm` and `dotnet`
+  allow_network_access! :build
+
+  def dotnet = deps.find { |d| d.name.match?(/^dotnet(@\d+(\.\d+)*)?$/) }.to_formula
+
+  def ruby = deps.map(&:name).find { |d| d.match?(/^ruby(@\d+(\.\d+)*)?$/) }
 
   def install
     # https://github.com/cdxgen/cdxgen/blob/master/lib/managers/binary.js
     # https://github.com/AppThreat/atom/blob/main/wrapper/nodejs/rbastgen.js
     cdxgen_env = {
-      RUBY_CMD:         "${RUBY_CMD:-#{formula_opt_bin("ruby")}/ruby}",
+      RUBY_CMD:         "${RUBY_CMD:-#{formula_opt_bin(ruby)}/ruby}",
       SOURCEKITTEN_CMD: "${SOURCEKITTEN_CMD:-#{formula_opt_bin("sourcekitten")}/sourcekitten}",
       TRIVY_CMD:        "${TRIVY_CMD:-#{formula_opt_bin("trivy")}/trivy}",
     }
@@ -51,7 +58,6 @@ class Cdxgen < Formula
       # .NET named mutexes need `XDG_RUNTIME_DIR` (or `USER`) on Linux, which build containers may lack
       ENV["XDG_RUNTIME_DIR"] = buildpath
       dosai_cmd = "dosai-#{os}-#{arch}"
-      dotnet = Formula["dotnet"]
       args = %W[
         --configuration Release
         --framework net#{dotnet.version.major_minor}
@@ -79,7 +85,7 @@ class Cdxgen < Formula
   end
 
   test do
-    (testpath/"Gemfile.lock").write <<~EOS
+    (testpath/"Gemfile.lock").write <<~LOCK
       GEM
         remote: https://rubygems.org/
         specs:
@@ -90,7 +96,7 @@ class Cdxgen < Formula
         hello
       BUNDLED WITH
         2.4.12
-    EOS
+    LOCK
 
     assert_match "BOM includes 1 components and 2 dependencies", shell_output("#{bin}/cdxgen -p")
 
