@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.org/"
-  url "https://github.com/openjdk/jdk27u/archive/refs/tags/jdk-27.0.1-ga.tar.gz"
-  sha256 "e97f539ba547ab533b511ce1f937211c1e9795e7c1092321f8ba23c658a11dd9"
+  url "https://github.com/openjdk/jdk27u/archive/refs/tags/jdk-27.0.1.0.2-ga.tar.gz"
+  sha256 "c0ff3893a386349331ef8604677f14954743713f0afa8a196da821cf7559a637"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
   compatibility_version 2
 
