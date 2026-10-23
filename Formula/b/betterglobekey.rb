@@ -7,9 +7,9 @@ class Betterglobekey < Formula
   head "https://github.com/Serpentiel/betterglobekey.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b6c566abf974b1c6f564ae952dd9ae9b45174d30bf1e89ebc97dc93e5cd28808"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "26e3de053cd6a5c54c58b602ffa2323a4ab2bf843d3a07cd734248afb3df6e54"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e416110884136741cc139232a6cdd431edd1184e4e16e21d7b3f708b570236ca"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2da2c56921f8f0dcadc50d10126963f4d3124afb5d2b411a85303fd61986de72"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "12513a25ad6ced112e4e9920b468b12b04978c2beb58bc3fec21f019a9a29229"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ae9796a303fa9146e3fadadac633ff86e8e4dfef8147c22f81586bf9875947dc"
   end
 
   depends_on "go" => :build
