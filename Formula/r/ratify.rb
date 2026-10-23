@@ -14,11 +14,11 @@ class Ratify < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "6bac6fb09d0f64c1a6c6174668f1c07f2b4551a59fee172d430cb68c91ea0566"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "73018e2bf7ed2ff15718015265edb4a5c81b58905a57fa8f19fa4e85f4533604"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "6d14e1e19bfb6c2119d4f040d11e47a5ba60fce6965559ce25950cf7bdc09978"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c09c3059bd0eac9cd0bd8a2f56765ddd25876006708f3b421261f1ced9119b9b"
-    sha256 cellar: :any,                 x86_64_linux:      "3bc2b4c1f2a56688ab0e5674d29d94ce3fff7d1b17a3a9990c0dbbfa1c92538e"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "17c5d7c13787bf5d34b20bb60f69da4fdbd4d74753fbae759d6c388a867efbcc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ede6ebddd54e6511ff76997353049abac83be0eb91b80ad2a6541518c9c3a4ff"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "07236f83be05ce8606bc920d687603d120528c997724a52180a3a152e4208dd5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "94b992e4d5fdb0422a62c884509b7424ac84c75f77153d78981ca6478cb1ce5e"
+    sha256 cellar: :any,                 x86_64_linux:      "8f559bafd0034579f63391f6cc9277501b9bf2500bfc06be30b39c8b47a2f350"
   end
 
   depends_on "go" => :build
