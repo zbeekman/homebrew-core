@@ -11,11 +11,11 @@ class MkConfigure < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f7f60b573eb1b8f32294c06dc64e45763d048382baa1ac18afe10b9445a353f5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed1f8c9202cfb6db52541a0f10df245d509fc65272d0ef8e71efbd0484e97b2e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e75aa24b899577cb752dbcd6adba9c252415a1bac9250026992b2ee24487f9e3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "0a6de8357a9d466c63fea644ed45d8ed13139efa6c977e02c2775c78b8b5f9c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "c97110b1533107cf566ba07a2e02af894366d1a3b3d5727888f37c15f7fe4846"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "ccb10984762f775d30bfad9339f1923cca187136f2995405b43560b1b6d4a900"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7fba1636b38bcab13a6ee3dfcd83da99ed0014590213212c145471bd2a6f88b9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7e3d19239825c9d7a257cb30b9f676b511393edb44a00e992be8f85d668cd9c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "cb04b35f3c38771a85f84db5eaf13b75a5b340a472d09ebbe0250f20d158c49b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "71f07607193d9718bb7186298ddd29b43df95060529a38efb5883b3d9b1a8f6f"
   end
 
   depends_on "bmake"
