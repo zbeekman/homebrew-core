@@ -11,12 +11,11 @@ class JavaServiceWrapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "7b9742909e007a1ed79c6dfbd3a69b9568a93a7bb736dcd5fbf191dc8ed23f39"
-    sha256 cellar: :any, arm64_tahoe:       "df75eb05ed823887a661f3a2609339a20024b9389d362bf5163dbe3fff8bb1ac"
-    sha256 cellar: :any, arm64_sequoia:     "07ac280c30fc8c0fad446b0d09a446cfac7afb9d864393f5c9adc2e36b328730"
-    sha256 cellar: :any, arm64_sonoma:      "962c928c16efd2af779ce09af168b5536c37c7af8fd629beb8c34be199dbf227"
-    sha256 cellar: :any, arm64_linux:       "776e7bc61a4311cb52da862351756852b958e75b3b753a05b20b0e7717276912"
-    sha256 cellar: :any, x86_64_linux:      "561e4e053959f56fbd41755155f32e690e0799bd23385a77919d79d78c9818c5"
+    sha256 cellar: :any, arm64_golden_gate: "1e651d620cedc5a7181020b116f9934dc26573f6f73d9202dc92c85706ec9e7c"
+    sha256 cellar: :any, arm64_tahoe:       "9a7a72187165750e8557fdefa324a45190d8bae5bad3a7620c53de9dad4cc0fe"
+    sha256 cellar: :any, arm64_sequoia:     "a13d5d3891727ae53a31bd25211daee9010cf31384ac7d2abecb6ce8d34ee9d3"
+    sha256 cellar: :any, arm64_linux:       "1f798359967269be8b81ffad2563a4ad87e7ccc1a8bc64021e3535f77b4825ba"
+    sha256 cellar: :any, x86_64_linux:      "013e1e60fc8335865575ea2b25363dc30ba9cf2322bca596e8582ba6bb92dadf"
   end
 
   depends_on "ant" => :build
