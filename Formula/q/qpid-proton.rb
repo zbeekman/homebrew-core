@@ -8,11 +8,11 @@ class QpidProton < Formula
   head "https://github.com/apache/qpid-proton.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "56e55efa0b662312ed6acebb75e89b9e7244ffe75ce0a27b076cd513da752589"
-    sha256 cellar: :any, arm64_tahoe:       "baa86a5bb46dc8a4f281ebcd100d98a68009a2ae82080906e4fbad89e78cfbf1"
-    sha256 cellar: :any, arm64_sequoia:     "44cd2be3e3f85bb100810f107178230067e56f16a5fbffb383bc04fc37f8d9b8"
-    sha256 cellar: :any, arm64_linux:       "ae96c75d3605093924d86cfc79b3420e978b5167781ca3ce00f417513274cb7d"
-    sha256 cellar: :any, x86_64_linux:      "8d6e1966b7dc98ec6bbe237c64d8d609058148a0639af1e5c1ff65ca55cb764d"
+    sha256 cellar: :any, arm64_golden_gate: "af4de91f018373503206f573854b873c7d96def17b55c2ffa3748b4df6c4454a"
+    sha256 cellar: :any, arm64_tahoe:       "b3fc6e974bf73feb50ee1d0633717827957124658f35e279191f338081f6a056"
+    sha256 cellar: :any, arm64_sequoia:     "e7077ebdecc703db9776d8acaaf634846b5a28e73cffe174cea37e8cd6980b61"
+    sha256 cellar: :any, arm64_linux:       "78bd4a8cdba4f54bf19d629a3fa259aefc6af60e0edae6b867937395bfc8ef60"
+    sha256 cellar: :any, x86_64_linux:      "d5aea91f4d784aa8e93d13fa753eacbd624ff1ce08614c5e2ab8307633c2566a"
   end
 
   depends_on "cmake" => :build
