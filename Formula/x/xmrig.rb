@@ -1,10 +1,19 @@
 class Xmrig < Formula
   desc "Monero (XMR) CPU miner"
   homepage "https://xmrig.com/"
-  url "https://github.com/xmrig/xmrig/archive/refs/tags/v6.26.0.tar.gz"
-  sha256 "5005144e78571f26586410c2b2ede2b0c72afe22f97f1708ea24cfb253c3939b"
   license "GPL-3.0-or-later"
   head "https://github.com/xmrig/xmrig.git", branch: "dev"
+
+  stable do
+    url "https://github.com/xmrig/xmrig/archive/refs/tags/v6.26.0.tar.gz"
+    sha256 "5005144e78571f26586410c2b2ede2b0c72afe22f97f1708ea24cfb253c3939b"
+
+    patch do
+      url "https://github.com/xmrig/xmrig/commit/2c86216a5ce816237c923e6057c5bc9aaa5387c2.patch?full_index=1"
+      sha256 "abbd10046ae5db3df2712072fc49b8569daeff68e797e2b4acd1e382257c52fe"
+      type :backport
+    end
+  end
 
   livecheck do
     url :stable
@@ -24,7 +33,7 @@ class Xmrig < Formula
   depends_on "cmake" => :build
   depends_on "hwloc"
   depends_on "libuv"
-  depends_on "openssl@3" # TODO: OpenSSL 4 PR - https://github.com/xmrig/xmrig/pull/3808
+  depends_on "openssl@4"
 
   def install
     # Use shared OpenSSL on macOS. In cmake/OpenSSL.cmake:
