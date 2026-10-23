@@ -12,11 +12,11 @@ class DartSdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "4c46538423f54995829fe06adff7fa3676af1ce6bbfeb8966762598885330c20"
-    sha256 cellar: :any, arm64_tahoe:       "50f47ce344fa29f8ee8c0183a46a693bdae6d77a51eae31e43a8ba8fe816c283"
-    sha256 cellar: :any, arm64_sequoia:     "eaf98451c69ab8664ce3088d7bf71b8b783016baca3dc1677fae390d3ce8ebeb"
-    sha256 cellar: :any, arm64_linux:       "04cfcf846a792a3e2f85e69bf54afb1dcba9b2540ed640c23292409dc7541990"
-    sha256 cellar: :any, x86_64_linux:      "80825fca857c832a6d2e9413dcc1ff21146a078ae6d077947fc6a8c423380481"
+    sha256 cellar: :any, arm64_golden_gate: "95088584b90c2338619fad110494b7e44d1f9fe61cd3fdccb01f4c9677e82dfd"
+    sha256 cellar: :any, arm64_tahoe:       "6ad0e27d397749539db7470ffd077d5f72733e101073942c9c027c769d4e0060"
+    sha256 cellar: :any, arm64_sequoia:     "d325b40b927d9921f84a84591d42121f21b15ad1bfcb97c71e1174cd11654a27"
+    sha256 cellar: :any, arm64_linux:       "30de9dac4b496d17ec3fb464c6f7f98d7195d29ff16605168e9dfe77f2b9de83"
+    sha256 cellar: :any, x86_64_linux:      "410563acd62ab44dcc7bde97d33d4f88869e1e0381739d733bdb21dd9dc4d98e"
   end
 
   depends_on "ninja" => :build
