@@ -9,12 +9,11 @@ class YtDlp < Formula
   compatibility_version 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e8ed94760ee7d35e5b39d26e2a1baf11a74e919900672c4429f0976b7136105"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "9ef93f5fdbc2b0f061471c05797b6aeb5c46248252205951a2ac35b5b98b7e6c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0d110ce0649bcb289ccf96271e8fb2247b1492890d7b0b242282c6cfb53003d4"
-    sha256 cellar: :any,                 arm64_linux:       "6ad45b5ec0186fa85589b7b2c7256c8edfa5fd1ee7c07cdc87d576a9f0e90363"
-    sha256 cellar: :any,                 x86_64_linux:      "e72e6150ca4156caa870039cd1ea2866d513986e9ba4238b7ad5fc263423a011"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "95ad28db55e74bc78ad86338e834b57144de1f9c87843e742ebe4998466e3243"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "114c8372e2f4e152a97a8ea3b3f2de1688e8b4088970be400f887a73059314da"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "f08f557f000de51bf26a44209a82ab78af1c753f7035bf71e6ee81cd214f746f"
+    sha256 cellar: :any,                 arm64_linux:       "32bb685d49aff2f75e97591d835c0bf1f69fb787a2c063b52d3b2111628fc9a2"
+    sha256 cellar: :any,                 x86_64_linux:      "7858175bba1926f2b30155b66ead7334d57803f939d5c1ebaccc4d3f1bc04b65"
   end
 
   head do
