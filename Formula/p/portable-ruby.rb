@@ -54,6 +54,8 @@ class PortableRuby < PortableFormula
     end
   end
 
+  allow_network_access! :test
+
   def install
     # Remove almost all bundled gems and replace with our own set.
     rm_r ".bundle"
@@ -78,11 +80,8 @@ class PortableRuby < PortableFormula
     end
     File.write("gems/bundled_gems", bundled_gems.join)
 
-    libyaml = Formula["portable-libyaml"]
     libxcrypt = Formula["portable-libxcrypt"]
     openssl = Formula["portable-openssl"]
-    libffi = Formula["portable-libffi"]
-    zlib = Formula["portable-zlib"]
 
     args = portable_configure_args + %W[
       --prefix=#{prefix}
@@ -102,7 +101,7 @@ class PortableRuby < PortableFormula
     args << "ac_cv_header_stdckdint_h=no" if OS.mac? && Hardware::CPU.intel?
     # We don't specify OpenSSL as we want it to use the pkg-config, which `--with-openssl-dir` will disable
     args += %W[
-      --with-libyaml-dir=#{libyaml.opt_prefix}
+      --with-libyaml-dir=#{formula_opt_prefix("portable-libyaml")}
     ]
 
     if OS.linux?
@@ -110,8 +109,8 @@ class PortableRuby < PortableFormula
       ENV["XLDFLAGS"] = "-L#{libxcrypt.opt_lib}"
 
       args += %W[
-        --with-libffi-dir=#{libffi.opt_prefix}
-        --with-zlib-dir=#{zlib.opt_prefix}
+        --with-libffi-dir=#{formula_opt_prefix("portable-libffi")}
+        --with-zlib-dir=#{formula_opt_prefix("portable-zlib")}
       ]
 
       # Ensure compatibility with older Ubuntu when built with Ubuntu 22.04
