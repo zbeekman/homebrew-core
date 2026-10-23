@@ -10,12 +10,11 @@ class Mk < Formula
   head "https://github.com/pycontribs/mk.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "af16e041ffcfd65068d18383f18e68422e6fef0ca763127063a78da3bb6e2230"
-    sha256 cellar: :any, arm64_tahoe:       "6d364b83f6f8327c0bc1cb6a63cdb3926d59a8f3c2bc39d4e603f2c84fef5a9b"
-    sha256 cellar: :any, arm64_sequoia:     "a6918b51e9f085e0ce41e5d12bd676b41dd915fd2ae2f93ac72eb1009441c5a6"
-    sha256 cellar: :any, arm64_linux:       "9718b545459bcef1bfd98ade2dd2bfb28cafdb33cd3019536d8853b864874ed3"
-    sha256 cellar: :any, x86_64_linux:      "a22a156508ca337ebc3cd96152fdbaf10e141bae4b05a1c418fc035e6d9de881"
+    sha256 cellar: :any, arm64_golden_gate: "0de03d25d2796dae03d021ad834fcbe2dde3176fdb2e5697521be9c27cce6643"
+    sha256 cellar: :any, arm64_tahoe:       "502b3d42113eb05786faa9ba457126350dfd4a7a7100a99177c445a07f01f13f"
+    sha256 cellar: :any, arm64_sequoia:     "d48f5d65d8a27e724abbf038d426c6e344d3572c7b46c1d7419ba3a6a3039bc0"
+    sha256 cellar: :any, arm64_linux:       "52f6be82f5bec8d7853d52e945b2486c156b4780df0766ffff611db196a8b465"
+    sha256 cellar: :any, x86_64_linux:      "ac9421ea7ad914e1d81ab80a7858905dd287e66894efe1e8a1c4df4b50a55a3b"
   end
 
   depends_on "rust" => :build
