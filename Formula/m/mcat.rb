@@ -1,8 +1,8 @@
 class Mcat < Formula
   desc "Terminal image, video, directory, and Markdown viewer"
   homepage "https://github.com/Skardyy/mcat"
-  url "https://github.com/Skardyy/mcat/archive/refs/tags/v0.6.5.tar.gz"
-  sha256 "d998b70d88acc06910c0092e5724b72e617abe2d34e7a8601c47f56ff25bd0e1"
+  url "https://github.com/Skardyy/mcat/archive/refs/tags/v0.6.6.tar.gz"
+  sha256 "f5fc7043ed5b5c467383ba1e2e62f493e629ad729a910d46202cfaa16d58b80a"
   license "MIT"
   head "https://github.com/Skardyy/mcat.git", branch: "main"
 
@@ -18,6 +18,16 @@ class Mcat < Formula
   depends_on "rust" => :build
 
   conflicts_with "mtools", because: "both install `mcat` binaries"
+
+  # Avoid hanging when probing a terminal that does not answer: macOS poll(2) does
+  # not support ttys, and a background process group is stopped by SIGTTOU/SIGTTIN
+  # Upstream PR ref: https://github.com/Skardyy/mcat/pull/109
+  patch do
+    url "https://github.com/Skardyy/mcat/commit/1dcf9b3cca130086d17641d73811535c3826b29b.patch?full_index=1"
+    sha256 "559307c6ddbd0217495b05024a374791aa591dcb174807efea52074cea2090ad"
+    type :unofficial
+    resolves "https://github.com/Skardyy/mcat/pull/109"
+  end
 
   deny_network_access!
 
