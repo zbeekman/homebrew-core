@@ -13,12 +13,11 @@ class K3sup < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e7d9ce78ed5d93e59185b0c00949d329ee5104f942de2faafb27804f6a8d8f7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8e7d9ce78ed5d93e59185b0c00949d329ee5104f942de2faafb27804f6a8d8f7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8e7d9ce78ed5d93e59185b0c00949d329ee5104f942de2faafb27804f6a8d8f7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "8e7d9ce78ed5d93e59185b0c00949d329ee5104f942de2faafb27804f6a8d8f7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "713f366228e5eb09801d6f6336bba0beb2b703a52ffc87b6df4ad8063106a31c"
-    sha256 cellar: :any,                 x86_64_linux:      "a6e20f89629c4818fbc4a4b9f6045fefa20721bdb4f646b616303b509110d7eb"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b87a1bf12fc9ee451a0b53a25cfc4310d661c5dd07948b7b21b79ae9b7dba2fb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "e7645f21da208f50a433e710f270217848e817d2afdfd2c94952e9e8f0b16778"
+    sha256 cellar: :any,                 x86_64_linux:      "00e3e322c3b6b653fec8845dc1a177f80e82b10d7c1224b4c32cbdee84a41746"
   end
 
   depends_on "go" => :build
