@@ -9,11 +9,11 @@ class Fwupd < Formula
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
-    sha256 arm64_golden_gate: "b2e931884b4844bf2f616a60be7fc73a07fc2a0cb6867204898423278c4389ba"
-    sha256 arm64_tahoe:       "d67ebfacc236c51c0cbbdedc288fa94425399327e73bb3f9afa860665c1824e3"
-    sha256 arm64_sequoia:     "2dff8a6939d04229fc7ec7886c9e9be8e36b01a4220ac109ee932b396ad80c79"
-    sha256 arm64_linux:       "f56ea33713b3e07dcb6b378999d10a823c6fefc9fdef1f946621ee27fcaf1d11"
-    sha256 x86_64_linux:      "dfd4ad174090e247f02d356de19f68702514c4bb17b9ab0ee4832bc8dcc09893"
+    sha256 arm64_golden_gate: "b604cc6a061dd0a05986b1248e4713b1a47388c07b12f65e8a402659b038f5a4"
+    sha256 arm64_tahoe:       "5c59d56c27c3ba2882c3e16039342fc4cc6aeeb0053012f2f4841dcfab812bf2"
+    sha256 arm64_sequoia:     "fb9291d9e9d626b2f444a738144adfe1ab60aa66b121bea2620d482c595dca10"
+    sha256 arm64_linux:       "e2fa742515d9b9383844c6da6969c569d7ed35d9d7c0e219e5eefaf1c7429660"
+    sha256 x86_64_linux:      "d9775fba87bd1e962f322ab37506eacd05936af330faf41e5ccbd9c2d5464882"
   end
 
   depends_on "gettext" => :build # for msgfmt
