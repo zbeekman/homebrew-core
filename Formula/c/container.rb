@@ -1,8 +1,8 @@
 class Container < Formula
   desc "Create and run Linux containers using lightweight virtual machines"
   homepage "https://apple.github.io/container/documentation/"
-  url "https://github.com/apple/container/archive/refs/tags/1.6.0.tar.gz"
-  sha256 "5a5b66eb9ee55890b781d1236b0af807245378a05f082797c2af6400398f756a"
+  url "https://github.com/apple/container/archive/refs/tags/1.6.1.tar.gz"
+  sha256 "29c95aee960d5346452ef314fd3fdcb527c217ea4298a46bdb315221397f28b5"
   license "Apache-2.0"
   head "https://github.com/apple/container.git", branch: "main"
 
@@ -40,7 +40,7 @@ class Container < Formula
       "container-runtime-linux" => { source: "RuntimeLinux",     entitlements: true  },
       "machine-apiserver"       => { source: "MachineAPIServer", entitlements: false,
                                      resources: ["init"] },
-      "k8s"                     => { source: "K8s",              entitlements: false,
+      "cluster"                 => { source: "Cluster",          entitlements: false,
                                      resources: ["kindnet.yaml"] },
       "build"                   => { source: "ContainerBuild",   entitlements: false,
                                      binary: "container-build" },
