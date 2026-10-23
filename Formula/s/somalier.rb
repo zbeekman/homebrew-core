@@ -1,10 +1,9 @@
 class Somalier < Formula
   desc "Relatedness, QC and ancestry checks from BAM/CRAM/VCF"
   homepage "https://github.com/brentp/somalier"
-  url "https://github.com/brentp/somalier/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "506f540589495cdc933b5c9e014f01b16261a567e003bcce60afbcf8de4519a8"
+  url "https://github.com/brentp/somalier/archive/refs/tags/v0.3.6.tar.gz"
+  sha256 "7dc3c8764d9dd962221b653353be0e444ac98e53d1c872e47d745674215f2da2"
   license "MIT"
-  revision 1
   head "https://github.com/brentp/somalier.git", branch: "master"
 
   bottle do
@@ -79,8 +78,8 @@ class Somalier < Formula
   end
 
   resource "hts" do
-    url "https://github.com/brentp/hts-nim/archive/refs/tags/v0.3.31.tar.gz"
-    sha256 "e2e8572156cced4557fcb75ecf5a7ee072bcc7abf81066d4b54d5bf674dab3e0"
+    url "https://github.com/brentp/hts-nim/archive/refs/tags/v0.3.32.tar.gz"
+    sha256 "98eb4da6140e61e1383946b77451b684865d8b7ea00ddc17a4bf331ee171892d"
 
     livecheck do
       url :url
