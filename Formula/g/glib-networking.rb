@@ -1,8 +1,8 @@
 class GlibNetworking < Formula
   desc "Network related modules for glib"
   homepage "https://gitlab.gnome.org/GNOME/glib-networking"
-  url "https://download.gnome.org/sources/glib-networking/2.90/glib-networking-2.90.0.tar.xz"
-  sha256 "83a75e3d9c36b66ee86d3281c2fc997816101968a5126ba322b2acb9a74dd8c0"
+  url "https://download.gnome.org/sources/glib-networking/2.90/glib-networking-2.90.1.tar.xz"
+  sha256 "ea95636590098355a05e3027579dba1a9a950b05e456b2488ea03d82e4b6c18a"
   license "LGPL-2.1-or-later"
 
   # This regex is intended to avoid the `Gnome` strategy's version filtering
