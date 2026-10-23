@@ -7,12 +7,11 @@ class CfTerraforming < Formula
   head "https://github.com/cloudflare/cf-terraforming.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "21bf7e2a9922b7e098d926440bbd817817982db10042847f73c786a5d45bc6eb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f56c791cb09f5b6bf4b55c6c43f9f129ae07f7d832c880b48a26808355325419"
-    sha256 cellar: :any,                 x86_64_linux:      "51537fdf729cdebc1bd121ed0484d975e1f5224f3235503786f8a8c4e975ab14"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "0b0a73e0b93e3453ef0054cf7b121411ff829413cd28c0939ee34fc6a5b3e2f8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "0b0a73e0b93e3453ef0054cf7b121411ff829413cd28c0939ee34fc6a5b3e2f8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0b0a73e0b93e3453ef0054cf7b121411ff829413cd28c0939ee34fc6a5b3e2f8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "d1467a9b2fd8f23ea8614c4c6daec8fb31cbbf2210a56e53c6be2a9bdecf18e1"
+    sha256 cellar: :any,                 x86_64_linux:      "e0aabd07bbe28358d1ab243ff65ae9fa667f24e7dbf775a4ba8f2544bbd27a31"
   end
 
   depends_on "go" => :build
