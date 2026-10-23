@@ -1,8 +1,8 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages"
   homepage "https://samizdat.dev"
-  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.22.0.tar.gz"
-  sha256 "b713695ecc0bde718a0598279236934819c9fb07e3a3978f5499871d02b9898f"
+  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.23.0.tar.gz"
+  sha256 "c6bca2748c6d5752a24837fc0080767559308fa28496b49dc03135f36b536d4b"
   license "Apache-2.0"
   head "https://github.com/kovetskiy/mark.git", branch: "master"
 
@@ -34,7 +34,7 @@ class Mark < Formula
     MARKDOWN
 
     touch testpath/"mark.toml"
-    output = shell_output("#{bin}/mark --config mark.toml sync 2>&1", 1)
+    output = shell_output("#{bin}/mark --config mark.toml publish 2>&1", 1)
     assert_match "confluence base URL should be specified", output
   end
 end
