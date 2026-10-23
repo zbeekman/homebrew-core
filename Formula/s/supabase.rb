@@ -1,10 +1,9 @@
 class Supabase < Formula
   desc "Postgres development platform"
   homepage "https://supabase.com/docs/reference/cli/about"
-  url "https://github.com/supabase/cli/archive/refs/tags/v2.121.0.tar.gz"
-  sha256 "1333db3d6e3a83526745eb6400e46355f85ed14d46b504dbe87ec5920f2e81ec"
+  url "https://github.com/supabase/cli/archive/refs/tags/v2.122.0.tar.gz"
+  sha256 "67aca53ea123ffa3d385800eb858e3bfad08923fa77347f8d611f5a0d63245fa"
   license "MIT"
-  revision 1
   head "https://github.com/supabase/cli.git", branch: "develop"
 
   livecheck do
