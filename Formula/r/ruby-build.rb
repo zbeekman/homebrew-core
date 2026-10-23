@@ -8,20 +8,25 @@ class RubyBuild < Formula
   head "https://github.com/rbenv/ruby-build.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "358e0a9c5b47dfe7cff90805b62a0e87b320a7357ff0d095b9eab1813703635c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "9259e8028433f3a523f2015a206af22fa89b5f0ccbae2b03450026e3cc5875be"
   end
 
   depends_on "autoconf"
   depends_on "libyaml"
-  depends_on "openssl@3" # TODO: OpenSSL 4 needs https://github.com/rbenv/ruby-build/pull/2647
+  depends_on "openssl@4"
   depends_on "pkgconf"
   depends_on "readline"
+
+  deny_network_access!
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/ruby-build --version")
+
     assert_match "2.0.0", shell_output("#{bin}/ruby-build --definitions")
   end
 end
