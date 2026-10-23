@@ -1,8 +1,8 @@
 class Fantom < Formula
   desc "Object oriented, portable programming language"
   homepage "https://fantom.org/"
-  url "https://github.com/fantom-lang/fantom/releases/download/v1.0.83/fantom-1.0.83.zip"
-  sha256 "f695b731526a7981f419a61e6265192feff6b18643c45437c317e6420c8ec588"
+  url "https://github.com/fantom-lang/fantom/releases/download/v1.0.84/fantom-1.0.84.zip"
+  sha256 "3ea9f6728a43cca961ae4094a4cd8cb381d3dc3c57d08b023c9cb19b334bc4d5"
   license "AFL-3.0"
 
   bottle do
