@@ -1,8 +1,8 @@
 class Tinycbor < Formula
   desc "Concise Binary Object Representation (CBOR) Library"
   homepage "https://github.com/intel/tinycbor"
-  url "https://github.com/intel/tinycbor/archive/refs/tags/v7.0.tar.gz"
-  sha256 "8b1b76001b9f987677f2ea7aa814fba1f810ff6cbbffa62ea3bac612c55b1a56"
+  url "https://github.com/intel/tinycbor/archive/refs/tags/v7.1.tar.gz"
+  sha256 "08c0a4c0a983000806f3d8c1599ec07995789ae49e9a23034db4cbfccc81c2e5"
   license "MIT"
   head "https://github.com/intel/tinycbor.git", branch: "main"
 
