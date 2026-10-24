@@ -6,6 +6,14 @@ class Erpc < Formula
   license "Apache-2.0"
   head "https://github.com/erpc/erpc.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e823f5deb6dc96f271eaf19c4ebbb977b43a074119afd56cbd6800f324cf8a6f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "523bbe064a2b7ad81c4484d0ad10bb63e304bf345e95472fe6546cf53f9b1f2c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "833aa8d565a4fadcb72919bea9344ae727f11aad3eee67e0ae86f37253825e04"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "6ec68b82903aff2095b2808db0a2d60b733f152ae9f7616eb568fad6e3eb2d53"
+    sha256 cellar: :any,                 x86_64_linux:      "9e643775c56a1d0964e653760134d8e8a163e7bad2be3fc326d8611e33ac44c5"
+  end
+
   depends_on "go" => :build
 
   # `test do` block starts a local RPC proxy
