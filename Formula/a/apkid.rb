@@ -9,12 +9,11 @@ class Apkid < Formula
   head "https://github.com/rednaga/APKiD.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "3a5c78eabbf3d544051d0396a3e120cbb01d88b272ae481bd1b6140b845b637e"
-    sha256 arm64_tahoe:       "3c073aad9b3eb34cc7ee245cba568767531a528984a4354a2e8d711da2d120be"
-    sha256 arm64_sequoia:     "d9917f0cea045f3ccda9a22ed81add45d6d5b8c17d384e4f06c68e3a5aeac61c"
-    sha256 arm64_linux:       "55ce33c7b03a596b06d2769928665f7d81ac52b906dc1d09c8d514d668179c21"
-    sha256 x86_64_linux:      "40df10352001ba9a89682fd0aaf47c8e53da4969db3465b453f7d25b682fb4a0"
+    sha256 arm64_golden_gate: "3195941c4d6ecf513f63a725621221513c4e2a60f9f2883d4f14807c56c8e523"
+    sha256 arm64_tahoe:       "39975317af3bb7e15840124c81e8466ae8d5e587ac4f2e4f9ec96993264623f3"
+    sha256 arm64_sequoia:     "7ba7adc981bdc5af666100300b80a5f83dfaedcc6ee1c7fe526310e7b9f582cf"
+    sha256 arm64_linux:       "ea2fcec4a31623d23456922396ebcadb1ec798a314eb69b63f4ef329871b340a"
+    sha256 x86_64_linux:      "896b8bf3a1a8a4cbe8c26b61623f1aae66d7d2819c14951d3e5d3e31a9f3451b"
   end
 
   depends_on "python@3.15"
