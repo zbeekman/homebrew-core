@@ -6,11 +6,11 @@ class I2pd < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "18a66e12c054f844acc2bb91724d0485f6b8a8b39f0f2cd06e27515348b6b0f4"
-    sha256 cellar: :any, arm64_tahoe:       "54a9027eac10f00b8f2ae221712e286d9a23c716c2b518f4b88c33d64f249e5d"
-    sha256 cellar: :any, arm64_sequoia:     "f6eae04cfe67429316423c98213a86fa4508e41bd4df2ae0857b70cbff7087cc"
-    sha256 cellar: :any, arm64_linux:       "20dd540648b8e68367323252731edc91ef520b5e78d67d42e552fbfdeb5a567e"
-    sha256 cellar: :any, x86_64_linux:      "aa58c37e8468b55fe435de6f1969475fd5823ea9e2137473b08f6d55ba95ddeb"
+    sha256 cellar: :any, arm64_golden_gate: "fa2215f7408627641f18b4bd209e5e288e564ffd376557ea9b419db59182e802"
+    sha256 cellar: :any, arm64_tahoe:       "6738bb8b5afd3e42c8a13cd966c8e6895b729e9e49755ec0aed57c0d585e4308"
+    sha256 cellar: :any, arm64_sequoia:     "e841c5994c8ebcf2a9195859de569107da920212281eef7bd74b647bc51fd313"
+    sha256 cellar: :any, arm64_linux:       "9518101d1fcd84a9f26b3992f0bae9e924c756ad534bb08201c3b635a7a2e16d"
+    sha256 cellar: :any, x86_64_linux:      "9fa2f09285867f6d5be9736d9464998a53254551274464c6dd34f886dadc848a"
   end
 
   depends_on "boost"
