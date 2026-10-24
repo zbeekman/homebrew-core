@@ -1,8 +1,8 @@
 class GitSync < Formula
   desc "Clones a git repository and keeps it synchronized with the upstream"
   homepage "https://github.com/kubernetes/git-sync"
-  url "https://github.com/kubernetes/git-sync/archive/refs/tags/v4.7.1.tar.gz"
-  sha256 "e575e37581869cd31d4752f50365fc0a94c3f9f95fb70c8b2f98262776077a3c"
+  url "https://github.com/kubernetes/git-sync/archive/refs/tags/v4.8.0.tar.gz"
+  sha256 "8c6bee1f131434546e6202fe544ebc116b3227ed3af4ab75eee15337c209b308"
   license "Apache-2.0"
   head "https://github.com/kubernetes/git-sync.git", branch: "master"
 
@@ -19,6 +19,7 @@ class GitSync < Formula
   depends_on "go" => :build
 
   depends_on "coreutils"
+  depends_on "git" # needs `git config list` (git 2.46+)
 
   conflicts_with "git-extras", because: "both install `git-sync` binaries"
 
