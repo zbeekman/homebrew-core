@@ -9,11 +9,11 @@ class Nox < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4041004fe4b71ceb89e991d0f0e206726c079a6ff8b334de71f0e6397e596051"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4041004fe4b71ceb89e991d0f0e206726c079a6ff8b334de71f0e6397e596051"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4041004fe4b71ceb89e991d0f0e206726c079a6ff8b334de71f0e6397e596051"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "ae81bfec54987a56e46e0a9d48b485c174131cafc8b475fb9b3421924a0112db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ae81bfec54987a56e46e0a9d48b485c174131cafc8b475fb9b3421924a0112db"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2293fa69bcb4075a996ffcd40374c181ed481a62e4dab79d0574ffe3bb7a3c44"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "37f9d81c7d708417331deb7851d165ffda341daed65f6baf801a086654fe27f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "06c45287ce7f473ebbb313aa73733e9fd9e01c94431050175649b17788dead21"
   end
 
   depends_on "certifi" => :no_linkage
