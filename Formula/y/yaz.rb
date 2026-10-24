@@ -15,11 +15,11 @@ class Yaz < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "bf4d71563df50a4feb41aeea1aa5c816209f62ebffded600cdb41c429638196f"
-    sha256 cellar: :any, arm64_tahoe:       "aecbef8c012fb602022283f1b6895dcd140ca49d4cc17717ecc0108517d9cd55"
-    sha256 cellar: :any, arm64_sequoia:     "aac010b3418f342a0ca2db7d5d593104287040441a0dfd7e07451281f9a54459"
-    sha256 cellar: :any, arm64_linux:       "5e275a632a8738493a3570bfd1b3560a82e88ffa455e73ea53865bd601f680bd"
-    sha256 cellar: :any, x86_64_linux:      "97edce17f241fb328f2939d9cc01e49772672fb3a8e95ac86f1522613405df67"
+    sha256 cellar: :any, arm64_golden_gate: "dc3e9293442755aa6edba7f3e5cf501f97ceba18164a787db1168b94309d3e1c"
+    sha256 cellar: :any, arm64_tahoe:       "d4919b92294b43ebb36e61f4b3f26177061371e996d601dce948af47d60444ab"
+    sha256 cellar: :any, arm64_sequoia:     "dc594cb1418b46b6bc42807565f354ae28b93ee009a062b01b8c58fa65e2cdc7"
+    sha256 cellar: :any, arm64_linux:       "bebc077ec0aff57efcd1191c0ff67603f327b7a7d0c79c2d8a73ba31b37fe0e0"
+    sha256 cellar: :any, x86_64_linux:      "6c86e10b65f50af27a28590dd8611827eea489d652fd1c313a72e8d7377b5a76"
   end
 
   head do
