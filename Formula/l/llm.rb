@@ -9,12 +9,11 @@ class Llm < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "70c6eaffc3aaaf1af8ba680364f4ac06b0bcd78d1328c1688e910207db08d766"
-    sha256 cellar: :any, arm64_tahoe:       "4f2e8510b840bdad62c6eaf2c595d1319239082e755323db7e4505c9cb0a4f15"
-    sha256 cellar: :any, arm64_sequoia:     "ffaa6173d3e65919dbc13a6bf05684aa58ff2eeee98120b187664161ff8dcc38"
-    sha256 cellar: :any, arm64_linux:       "27a0c1d1384a9c615240f86b1068405c7a388a94a238e37b08ca4f7e5b462608"
-    sha256 cellar: :any, x86_64_linux:      "073bc024e04e4f0eaae956b0cd66a80edbc60b891b9a13c63b8d6a4b6d2baf71"
+    sha256 cellar: :any, arm64_golden_gate: "5d48b3dbcac8669ceb35c0d9b1cf49c49b62210b76b55c60b510542833896bcc"
+    sha256 cellar: :any, arm64_tahoe:       "a31a03d10b559ef5b1f638887b340a60ae86b4ea900d871ba8ee824eeefd5865"
+    sha256 cellar: :any, arm64_sequoia:     "b4786557992bd156090af65a82e9d9aae632301b2be44596b17d179d8ba6669f"
+    sha256 cellar: :any, arm64_linux:       "81890deffc77a14db1c269dc131403b65bd4ca17ede55c7b24387998f8dd37cf"
+    sha256 cellar: :any, x86_64_linux:      "55e0ce5edd269a9427bb3c228957e5f3eb943398e7571187ee86356bc06ef013"
   end
 
   depends_on "rust" => :build # for jiter
