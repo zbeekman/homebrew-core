@@ -10,12 +10,11 @@ class Gdtoolkit < Formula
   head "https://github.com/Scony/godot-gdscript-toolkit.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "971d6af2b58c22e0654c258fab9f6dc8b138e0f86174e5eb72631f881705213e"
-    sha256 cellar: :any, arm64_tahoe:       "87c81cfac9e4460e846308c8808c3994a4d66b4e247b49cd5217c639608af952"
-    sha256 cellar: :any, arm64_sequoia:     "88fd03b09ae80a261c84fd42afb9205755960755ef2d9ffbe6de8583bc83775e"
-    sha256 cellar: :any, arm64_linux:       "63d9a670d4450fd24ff960d75be67772cc4c97ed85ef626df3762d78fba0ef72"
-    sha256 cellar: :any, x86_64_linux:      "f1050ea0e043b19718e680a5e8aaa1db8409b84ca2867a731ba61920a2b931d8"
+    sha256 cellar: :any, arm64_golden_gate: "3a3701c39c9ed659965415b1de6cb5f6af0b0ef74e3f13123500ad93a782c163"
+    sha256 cellar: :any, arm64_tahoe:       "58bfb8a793290379afe32a957bf0cd0b22a799ca367a173c1bfec6d56994f609"
+    sha256 cellar: :any, arm64_sequoia:     "f5c6caaa69d03d6a2aff6d574dc27f23ae490fe7d07f986eae697e5a1ee61831"
+    sha256 cellar: :any, arm64_linux:       "f9493236e127af0ef8e6da5d2ca73122325841bb4b3651695744472685677ecd"
+    sha256 cellar: :any, x86_64_linux:      "29d649c5ad1c0ff236929cfd785ff9ea7f3f1ca32ba54156853c13eda0dbe39c"
   end
 
   depends_on "libyaml"
