@@ -10,11 +10,11 @@ class Py7zr < Formula
   head "https://github.com/miurahr/py7zr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bf1e66ce13f5015342666ebe0fee3fc8ce061fcea63d43873f281bcd0b2d886c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6d133c53a16c1f45cf35f344b2c63b6c3edb28fda3d396910090e7877d321d49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "0166f521ff9822300eae45ca010b1989578adf0adf66985cedc0134adb0469f7"
-    sha256 cellar: :any,                 arm64_linux:       "fa72d91dbc535048b7d91b3a9ffc750c86016671f8ca31b490c67ac60ebcd3e2"
-    sha256 cellar: :any,                 x86_64_linux:      "8546ad3e682a00ec8e90ddb090009b10fd11659333a1127d1626071b377f4719"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "3fc40d3821676e4258cf6f4aa25b530a194c64a7e83fea7f788a1ab1bd089cde"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8c851f016a5d219506dd234f22f3d2e2fac03ba403a586d425b59447b11e4f8c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "7c559fd0fd37ec78e1be22747f598255e67ab963f8088ea17edc3863035e7ec2"
+    sha256 cellar: :any,                 arm64_linux:       "66974bbdabd725f686af36b5efcba39d693dff14cb1f53cf0fb9fc96e5422c93"
+    sha256 cellar: :any,                 x86_64_linux:      "bd6c352204448d0b47fe67680852a05c3f05db50b5aa5d104c271f4d48975f66"
   end
 
   depends_on "python@3.15"
