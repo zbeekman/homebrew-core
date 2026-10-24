@@ -3,8 +3,8 @@ class B2Tools < Formula
 
   desc "B2 Cloud Storage Command-Line Tools"
   homepage "https://github.com/Backblaze/B2_Command_Line_Tool"
-  url "https://files.pythonhosted.org/packages/23/87/9a9c521ffca7f09f05655767614e1926cdf6e79e655868455ded244d6b80/b2-5.0.1.tar.gz"
-  sha256 "5ea42c13562d714726df3ad4d815ee0d2a43bacc06a5bb3b5f2e4de0f2f8d168"
+  url "https://files.pythonhosted.org/packages/9e/89/6dfc6338307c1ef0f2e0a1bd505b2065a0637e84bf3b5475b142179442c9/b2-5.0.2.tar.gz"
+  sha256 "c2f6950a9840143f744b25712deefc1ceeba5fec97e28921355d5007961e3787"
   license "MIT"
 
   bottle do
@@ -68,8 +68,8 @@ class B2Tools < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
-    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+    url "https://files.pythonhosted.org/packages/0e/df/f15f80383f152452d8985b36d95cb8751f901a3e0ff4cd27f7e118f168e2/python_dateutil-3.0.0.tar.gz"
+    sha256 "7ebcb3c29a92f3ceafe79a7a48a5c45677e9e004bbeec5742ac0bbb00560b7a2"
   end
 
   resource "requests" do
