@@ -4,6 +4,7 @@ class MysqlAT97 < Formula
   url "https://cdn.mysql.com/Downloads/MySQL-9.7/mysql-9.7.4.tar.gz"
   sha256 "9188eb1abec42b8ab8bb69948492f06258dd27e6aabd13e2d4c6197dbcde75b2"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
+  revision 1
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/9.7.html?tpl=files&os=src",
@@ -28,7 +29,7 @@ class MysqlAT97 < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "abseil"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libfido2"
   depends_on "lz4"
   depends_on "openssl@4"
