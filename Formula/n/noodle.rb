@@ -6,11 +6,11 @@ class Noodle < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_golden_gate: "b888425575aa68b81458e9b25b03d0bb10fd69ccadb074fe3fc9854aeac85cd6"
-    sha256 arm64_tahoe:       "14e201f06a3db0d443e3fe63c5146e3c72e5301455806840e5250b1fa842e319"
-    sha256 arm64_sequoia:     "e98a430d3e4578450192deee3a41d1d87855ffdb8316c61c6120ec4cd80a7343"
-    sha256 arm64_linux:       "4045a71055d54f78a4d588967a8d9c2ddd89295de34de68f5d747a6610cc713b"
-    sha256 x86_64_linux:      "49720f76ab80379e23b7bd348e31ed72a3aa0b6d33210075f37145e16c46ba77"
+    sha256 arm64_golden_gate: "b0e13398a339cee8d88b38e762aa7dfbc439e26d5decdbadfa11e4399b4314e2"
+    sha256 arm64_tahoe:       "65e773afb70d92cbf49842b9f8e49cf33576c3281c37a1e501b72f5476efa641"
+    sha256 arm64_sequoia:     "642c6916dac0b9de68d3630476e10731b2790bd1200efbd634e937b049501309"
+    sha256 arm64_linux:       "7ca41bc126e8d0889ff6fa886f82a3592182b6a0e7caa35faeda4a49ef6b1df6"
+    sha256 x86_64_linux:      "23309bf622c532f06c7d39f37c7fff9220c86aad34cba61da2d5b3a32cf26141"
   end
 
   depends_on "bun" => :build
