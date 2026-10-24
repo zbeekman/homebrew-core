@@ -15,16 +15,16 @@ class Ki < Formula
   end
 
   depends_on "maven" => :build
-  depends_on "openjdk@21"
+  depends_on "openjdk"
 
   allow_network_access! :build
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home("21")
+    ENV["JAVA_HOME"] = Language::Java.java_home
 
     system "mvn", "-DskipTests", "package"
     libexec.install "lib/ki-shell.jar", "lib/ki-completion-plugin.jar"
-    bin.write_jar_script libexec/"ki-shell.jar", "ki", java_version: "21"
+    bin.write_jar_script libexec/"ki-shell.jar", "ki"
   end
 
   test do
