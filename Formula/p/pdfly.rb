@@ -6,7 +6,7 @@ class Pdfly < Formula
   url "https://files.pythonhosted.org/packages/48/ae/70f161c80b3f39d8fe4ff784c78045225820d10375c81c2097c0e85ac0fc/pdfly-0.5.1.tar.gz"
   sha256 "636e9736ca3296ed69ad7e14d997813ea5a662ba7a86c77d155e343494dcc3d7"
   license "BSD-3-Clause"
-  revision 27
+  revision 28
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "bcf3c63709d94d3084c330ed3dd2957f5f56404c6173181136f41ef0d31c8bbb"
@@ -55,8 +55,8 @@ class Pdfly < Formula
   end
 
   resource "brotli" do
-    url "https://files.pythonhosted.org/packages/f7/16/c92ca344d646e71a43b8bb353f0a6490d7f6e06210f8554c8f874e454285/brotli-1.2.0.tar.gz"
-    sha256 "e310f77e41941c13340a95976fe66a8a95b01e783d430eeaf7a2f87e0a57dd0a"
+    url "https://files.pythonhosted.org/packages/cf/81/1546c983678a9b4e77cb4718eaedd1b2caf24a6cdbf1eb8775938d22aff7/brotli-1.2.1.tar.gz"
+    sha256 "02b2f7b5a83485efe448a44ddf7983def05c3bb1dcf917d4f7154070260e13de"
   end
 
   resource "charset-normalizer" do
@@ -130,8 +130,8 @@ class Pdfly < Formula
   end
 
   resource "pypdf" do
-    url "https://files.pythonhosted.org/packages/51/e1/32a9c4dbd94618145f8bab5c623bdb0a528f23fc8719afd77ba0278fd377/pypdf-6.21.1.tar.gz"
-    sha256 "2d62c383acd6e0dff0a96322ba8b1135229343b084d73c6f6cfd947fd291afcb"
+    url "https://files.pythonhosted.org/packages/06/28/081f1cbcca7042441dafc8de00f48ba60853f89e5bff92c5f26477346d81/pypdf-6.21.2.tar.gz"
+    sha256 "0a3e1c5c886a1be03646c16a04827cc166c2a0575c971b26a4bf89686551c2d4"
   end
 
   resource "python-bidi" do
