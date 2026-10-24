@@ -11,11 +11,11 @@ class DbxCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "1f7019d270494852bd4bcbebed0c7518f54dbfe74a98fd15c6894820bf0b7247"
-    sha256 cellar: :any, arm64_tahoe:       "24f46b162454adffdfc6c240a0381f1f67c71042f4b5a3f77d1722d5f2eef80d"
-    sha256 cellar: :any, arm64_sequoia:     "ae319c895bfc16452a3f769fc39cb5e37d237f34f429b1333e8664b4693346f7"
-    sha256 cellar: :any, arm64_linux:       "a4a83db29a21bdfac065ea1312494b1494d1df042c46b6e59743f70df78923da"
-    sha256 cellar: :any, x86_64_linux:      "412ffaa9c837556099f69cb86bbd05b4b8ee0c70233abc71beab2f74cf2bc447"
+    sha256 cellar: :any, arm64_golden_gate: "26eacdf86bbbcc13ae0060ecc5d8c215a8d224ff42b0c52b396376fabb1291a5"
+    sha256 cellar: :any, arm64_tahoe:       "f537fdd8e1eb1faa2991fe07e8810a73ec1a78b3cbcff62edc5e8fecc65cf255"
+    sha256 cellar: :any, arm64_sequoia:     "09cbc1d0155998387f87f847088fd37714c0029a6352085e56a7c717a0d9ea57"
+    sha256 cellar: :any, arm64_linux:       "e7449e605c4dbac74910e5304499147e04e67a2d37ea64cc8a0857e065f56e60"
+    sha256 cellar: :any, x86_64_linux:      "444e41adb9ec2807070b96788a712166d7b192ae07aa69bb1706dbbf27b31b97"
   end
 
   depends_on "pkgconf" => :build
