@@ -1,8 +1,8 @@
 class Oarfish < Formula
   desc "Long read RNA-seq quantification"
   homepage "https://github.com/COMBINE-lab/oarfish"
-  url "https://github.com/COMBINE-lab/oarfish/releases/download/v0.10.3/source.tar.gz"
-  sha256 "de886868c4efb9ef7a77d0865bb4bda7effcf7143841c2a74e3ec714e49e4546"
+  url "https://github.com/COMBINE-lab/oarfish/releases/download/v0.11.0/source.tar.gz"
+  sha256 "ddcb4889fe714e949ffceeabdd35b3da6b0f21dbf6893abceef3f5e6bf6606aa"
   license "BSD-3-Clause"
   head "https://github.com/COMBINE-lab/oarfish.git", branch: "main"
 
