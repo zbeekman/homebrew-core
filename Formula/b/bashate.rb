@@ -10,8 +10,7 @@ class Bashate < Formula
   head "https://github.com/openstack/bashate.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "0103030d6e61feda29826552ec0a6dcb1d8b519a5db021336b752c7f053eab17"
+    sha256 cellar: :any_skip_relocation, all: "fa569171730e9b35fcb109fe707a4df0e73ebc2c494b3668863c5ef4f3499df2"
   end
 
   depends_on "python@3.15"
