@@ -3,8 +3,8 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/af/42/12fef91cbde60702d543bf5e868d9a4a61ca9a817b38990b59791aef8a3e/fastapi-0.160.0.tar.gz"
-  sha256 "dba76bd82ed8fcd6b8d6db5103f5c2e12d01dd1a0087966362c96e63732a861a"
+  url "https://files.pythonhosted.org/packages/ed/3d/2cc1a0dbc2dac6e157b4ef12bac063e1016cb7c6d7395f76665e439cf1aa/fastapi-0.161.1.tar.gz"
+  sha256 "4076b88434452e20289379068e976c4a04c65ffc8e6be31510106e150a422f0f"
   license "MIT"
 
   bottle do
@@ -80,8 +80,8 @@ class Fastapi < Formula
   end
 
   resource "googleapis-common-protos" do
-    url "https://files.pythonhosted.org/packages/8d/2b/6ce81972d5c8cab9705fddce3153be63222d9e12fd96f8baba5038a744dd/googleapis_common_protos-1.75.5.tar.gz"
-    sha256 "c7a866fc34ed29a3b10af627a4b9b1dc2433313ca6e959f0ae4feb132047ed72"
+    url "https://files.pythonhosted.org/packages/62/b6/bc095b23a3e0d978e75c8c18cabe4c11f791837410670e4486f0d539bfba/googleapis_common_protos-1.76.0.tar.gz"
+    sha256 "71db0e44a1d4c2dd024ebad44ca67129cc1e2892e4861df466764749d5ef8642"
   end
 
   resource "h11" do
