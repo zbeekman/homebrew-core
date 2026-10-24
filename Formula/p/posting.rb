@@ -22,11 +22,11 @@ class Posting < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "94bbdbca89ec9b49036e323829991fac296c507da0ee6e96e2dabcbc314ad9c4"
-    sha256 cellar: :any, arm64_tahoe:       "e418ea9903f008cdb4bd2a9c04528c4adc56c31774f6288bdfdf5847eff6a47b"
-    sha256 cellar: :any, arm64_sequoia:     "35338b638b18d6c1da9d25f726e735d26dc0db6d5f972f7571a563a7a712574b"
-    sha256 cellar: :any, arm64_linux:       "3a909fc72b0d4790ac81e6d8a6648cafc3ffc7a190ee1b6e1dcbc4387e05edd2"
-    sha256 cellar: :any, x86_64_linux:      "84edfd72ef6f95d829f2fcac05a1a12d413659618e52d4a825333387b62c087a"
+    sha256 cellar: :any, arm64_golden_gate: "6c38c2876835e54b43bfc9a04afd9e0f1d5c2d88737d53dcc9244255db220e15"
+    sha256 cellar: :any, arm64_tahoe:       "a15cd53648cfeccb72fbdab061b60865f6f3cad3bf10c89c37939af76813d578"
+    sha256 cellar: :any, arm64_sequoia:     "3005489926ed6622294bdcbbfb7e6aafe1050bae6e6b10f63fafc7ca1adfe8d4"
+    sha256 cellar: :any, arm64_linux:       "e439181be3e959e3747619c143b86f6cd672e21ca9e89220148cca2812ab0841"
+    sha256 cellar: :any, x86_64_linux:      "3aad328ac0ba2e1c74cade51b9b45a8c8b8052ac6dd8e99e7bb8afcc48ff458d"
   end
 
   head do
