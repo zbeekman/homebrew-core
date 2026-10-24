@@ -1,17 +1,17 @@
 class TerraformMcpServer < Formula
   desc "MCP server for Terraform"
   homepage "https://github.com/hashicorp/terraform-mcp-server"
-  url "https://github.com/hashicorp/terraform-mcp-server/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "b8ab7795bfb78654f8c90cc2f1447e19b7fc55aed161708df6036c0dfdd9a66d"
+  url "https://github.com/hashicorp/terraform-mcp-server/archive/refs/tags/v1.4.1.tar.gz"
+  sha256 "8c744e2ad553ee37db41b66a0f2dbb6532939c00e17b5f00bd10f5809f6f3990"
   license "MPL-2.0"
   head "https://github.com/hashicorp/terraform-mcp-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "52a178aab4ee378a27b9c25f9c8f1e528feeda0d0946d886130372fa1ed773b4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "52a178aab4ee378a27b9c25f9c8f1e528feeda0d0946d886130372fa1ed773b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "52a178aab4ee378a27b9c25f9c8f1e528feeda0d0946d886130372fa1ed773b4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "d1d072d1f7dcb971d59ceb8a470b5d0174b8a8974136868700ffc0ee60ee286a"
-    sha256 cellar: :any,                 x86_64_linux:      "20f88c9a3bc8b0fbb051fa5367063b54e607c70d136a49e365cb11ffb0d1cec7"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "43bde70b5a0176e3c97cde0710b392b82cebc7f34028d7e957865e090bd569a1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "43bde70b5a0176e3c97cde0710b392b82cebc7f34028d7e957865e090bd569a1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "43bde70b5a0176e3c97cde0710b392b82cebc7f34028d7e957865e090bd569a1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "7e2f08506e098a32a03e8a736f504a61b80f6721e7ad4ede778278c707187337"
+    sha256 cellar: :any,                 x86_64_linux:      "d4c5583d9031f436ecfcc6f68918feeb82bb4941f7c69a1a3cd374d2a3742eb8"
   end
 
   depends_on "go" => :build
