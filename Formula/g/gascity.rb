@@ -12,11 +12,11 @@ class Gascity < Formula
   end
 
   bottle do
-    sha256                               arm64_golden_gate: "7d41f9aca007b375f741d3ea83ac27752a8423129b577eea7c0578cbb1ca6915"
-    sha256                               arm64_tahoe:       "aab58140f12f9bd093b149a89b2dfed47567197de7590eb7ca33410690319446"
-    sha256                               arm64_sequoia:     "4cf709f8fa783a0bd664ca705c9e19393b15a1c0cf8b0bb1710e875f24be559a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a4bb8299446be26ddeb7f00821c5a5446112f303ffe93c2a434422a593c60284"
-    sha256 cellar: :any,                 x86_64_linux:      "05d35bcc664ac55cdbfcdb3b6b46a2c4ac2a90b85dc694bf6e1842532f581499"
+    sha256                               arm64_golden_gate: "889a380a0d1d3b2b1a6732cfa62508764c5742aafdeb4f9bc8c648526fce3aae"
+    sha256                               arm64_tahoe:       "5dc2c3f0a10543c8b92f11cb8d73a9e95c27f485d776c16b3c8267dbe1b4a153"
+    sha256                               arm64_sequoia:     "84ef90e6923217a80311c872d1dc944e1ef2c77d97cc6154d47d0f9595bfcb40"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "cb27d63f0dc62e967a2e41cfc79709b95991b511a8788bd3f002a02efc2bd5e0"
+    sha256 cellar: :any,                 x86_64_linux:      "396feec8ea86d147f16a7111ff064c8fc9306a5472ad380b303f92aa5714b624"
   end
 
   depends_on "go" => :build
