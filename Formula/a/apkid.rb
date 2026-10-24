@@ -3,8 +3,8 @@ class Apkid < Formula
 
   desc "Android application identifier for compilers, packers, and obfuscators"
   homepage "https://github.com/rednaga/APKiD"
-  url "https://files.pythonhosted.org/packages/0b/fb/cb4cdbcb1c1dd2f59f38a0505923cdc2304b6efe9aacc87e5b383e325b7d/apkid-3.1.0.tar.gz"
-  sha256 "8b1f2184e1b88d42ac61f616c89bf222ef2a61570f0760ff115ce241131e81af"
+  url "https://files.pythonhosted.org/packages/f5/16/f354c98176e0e60e68ba5e8e4748063c43287d40482a6ccfd50acabd3c5f/apkid-3.2.0.tar.gz"
+  sha256 "e812cf362672450f25941b3a38974c8e99d6e59e091d0a047ac05677c2b0d162"
   license "GPL-3.0-only"
   head "https://github.com/rednaga/APKiD.git", branch: "master"
 
@@ -21,8 +21,8 @@ class Apkid < Formula
   depends_on "yara"
 
   # `yara-python-dex` has no recent sdist; link `yara-python` to Homebrew's `yara`, which enables DEX
-  pypi_packages exclude_packages: ["yara-python-dex"],
-                extra_packages:   ["yara-python"]
+  pypi_packages exclude_packages: "yara-python-dex",
+                extra_packages:   "yara-python"
 
   resource "yara-python" do
     url "https://files.pythonhosted.org/packages/51/38/347d1fcde4edabd338d5872ca5759ccfb95ff1cf5207dafded981fd08c4f/yara_python-4.5.4.tar.gz"
@@ -31,11 +31,15 @@ class Apkid < Formula
 
   # The PyPI sdist only ships `rules.yarc` compiled with YARA 3.x, so rebuild it from the rule sources
   resource "apkid-rules" do
-    url "https://github.com/rednaga/APKiD/archive/refs/tags/v3.1.0.tar.gz"
-    sha256 "8ba0e116826452f10643977e9818e6914eacbfad48be088e766fe723f7f3d5a6"
+    url "https://github.com/rednaga/APKiD/archive/refs/tags/v3.2.0.tar.gz"
+    sha256 "7898ef35dcbd367fe6d4311478ce133ca81cb861c0e8a111c00f2d5f3c88f57d"
+
+    livecheck do
+      formula :parent
+    end
   end
 
-  deny_network_access! :test
+  allow_network_access! :build
 
   def install
     venv = virtualenv_install_with_resources without: %w[apkid-rules yara-python]
@@ -47,24 +51,24 @@ class Apkid < Formula
 
     rules = venv.site_packages/"apkid/rules"
     resource("apkid-rules").stage { rules.install Dir["apkid/rules/*"] }
-    system libexec/"bin/python", "-c", <<~PY, rules
+    system libexec/"bin/python", "-c", <<~PYTHON, rules
       import sys
       from apkid.rules import RulesManager
       manager = RulesManager(sys.argv[1])
       manager.compile()
       manager.save()
-    PY
+    PYTHON
   end
 
   test do
     apk = testpath/"test.apk"
-    system python3, "-c", <<~PY, apk
+    system python3, "-c", <<~PYTHON, apk
       import sys
       import zipfile
       with zipfile.ZipFile(sys.argv[1], "w") as archive:
           archive.writestr("AndroidManifest.xml", "manifest")
           archive.writestr("assets/AndroidManifest.xml", "manifest")
-    PY
+    PYTHON
 
     output = shell_output("#{bin}/apkid --json #{apk}")
     assert_match "apkid_version", output
