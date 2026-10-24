@@ -1,8 +1,8 @@
 class OsctrlMcp < Formula
   desc "Fast and efficient osquery management"
   homepage "https://docs.osctrl.net/components/osctrl-mcp/"
-  url "https://github.com/jmpsec/osctrl/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "a7b8d6ab402890a8cc2a27a87246cc30e0e3e2c410eebfa0fe02807677def77d"
+  url "https://github.com/jmpsec/osctrl/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "f4ac2f8bc45ac845137dd7c733dec0108c8a3b7ac50aafa7ac6bde2efe57646a"
   license "MIT"
   head "https://github.com/jmpsec/osctrl.git", branch: "develop"
 
