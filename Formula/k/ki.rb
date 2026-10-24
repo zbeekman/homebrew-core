@@ -7,11 +7,12 @@ class Ki < Formula
   head "https://github.com/Kotlin/kotlin-interactive-shell.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "bb730ac6d47ff9ba3b7d1f3813ee1e3d992f2dc5cd3b809cf3984b99fa80e532"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bb730ac6d47ff9ba3b7d1f3813ee1e3d992f2dc5cd3b809cf3984b99fa80e532"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "bb730ac6d47ff9ba3b7d1f3813ee1e3d992f2dc5cd3b809cf3984b99fa80e532"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "2133117a4a3345dcce8f8d0a08d3d475fd5ce9cb48d701fcb305c6cf79964194"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "2133117a4a3345dcce8f8d0a08d3d475fd5ce9cb48d701fcb305c6cf79964194"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e3e0dbec5307e74aca8119b3b683fefaa9d8bfb1e987354a63bd09a410bd9256"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e3e0dbec5307e74aca8119b3b683fefaa9d8bfb1e987354a63bd09a410bd9256"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e3e0dbec5307e74aca8119b3b683fefaa9d8bfb1e987354a63bd09a410bd9256"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "761bf632ea5e157351729a1e137da1333e4f712a6143ec4581d116eb9e1ccf18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "761bf632ea5e157351729a1e137da1333e4f712a6143ec4581d116eb9e1ccf18"
   end
 
   depends_on "maven" => :build
