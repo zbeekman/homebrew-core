@@ -9,11 +9,11 @@ class Locust < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "20742d672f3a48f47340370b4f6895b83f013a4e5e8490ea92608c9ab293909e"
-    sha256 cellar: :any, arm64_tahoe:       "3e030e6001fc66a67f67b930eaf643a644499f41a1a711af65452ed012b00cd4"
-    sha256 cellar: :any, arm64_sequoia:     "c3aad3831dfddaaeaccb1d28474f5ea7ccbb4667b7b4ce02181a13928af7a181"
-    sha256 cellar: :any, arm64_linux:       "aacb50b1138d902de9e1ac9f3afd0dc6ca2b6ee42d34e8daf69be8692376eed9"
-    sha256 cellar: :any, x86_64_linux:      "5a275f24ffa74143aa375c1d59ed03f98534f471b49b448f1161f6c3b5e53a66"
+    sha256 cellar: :any, arm64_golden_gate: "348e3b6cf75bb978c50dba18e09b5bc210e4bf7327f8af8638d5ebfd98b5be6b"
+    sha256 cellar: :any, arm64_tahoe:       "07b2fa9b1c33e540e7f0f120b4dfb1ceef34ede26266d3d4bd564e98fe162287"
+    sha256 cellar: :any, arm64_sequoia:     "af99f1d687e55fb7a186ea2e7ae667f54310f3d4d9301a24113443c3e1df4b8b"
+    sha256 cellar: :any, arm64_linux:       "3514905ef35c89aec113dfd3aaf30f3264692a6f392b3ef85d12f3729b5e47e4"
+    sha256 cellar: :any, x86_64_linux:      "9bb50eb14753c1bbfe9c9c19eb5658c5e41c1d1df625297280e532d62de022e9"
   end
 
   depends_on "cmake" => :build # for pyzmq
