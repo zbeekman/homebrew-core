@@ -6,6 +6,10 @@ class Annotsv < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/lgmgeo/AnnotSV.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "bf5a6441920e56fe816839ddf1f85dd51d97fa701bb3c14712b23209ffd0dc61"
+  end
+
   depends_on "bcftools"
   depends_on "bedtools"
   depends_on "tcl-tk"
