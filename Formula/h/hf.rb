@@ -10,12 +10,11 @@ class Hf < Formula
   head "https://github.com/huggingface/huggingface_hub.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "9e00d9c0ba1e4d9ceab34031bec953dee2d2bacbdffe0ea288612922f25214b5"
-    sha256 cellar: :any, arm64_tahoe:       "4edafd6cce3f901367f7dda9aa71efddec1fd5b5e7b549ac36b433b870dbf0c1"
-    sha256 cellar: :any, arm64_sequoia:     "ace4aac197db65f463982779dfb3f6b63aafccc3322c7680f0010c7c0869f8c5"
-    sha256 cellar: :any, arm64_linux:       "3b11cb5cf2a83daa0f1fd8931218bf5ab069cd33e6d38da22d68900be6f79607"
-    sha256 cellar: :any, x86_64_linux:      "a1aff5065b5deaba34ef781a7ba553e4b52eef822df04bbcf1a92ffd320533e0"
+    sha256 cellar: :any, arm64_golden_gate: "807f8895927e6ae6fc7caadef7e08a8e6cb081f7a1f1f83d0aec244f678e4b50"
+    sha256 cellar: :any, arm64_tahoe:       "15fa207a0081cdbbdab91fc4a7f5fcbb37cfe10712c4f14fed5a4af5bfd6ece3"
+    sha256 cellar: :any, arm64_sequoia:     "6618c32f7c44efb7a26cbe9013553f8664518f35add09a744068438928837dfd"
+    sha256 cellar: :any, arm64_linux:       "123231174ac43008130079c024baac2d0406838c65b1fbf52237a73f4bbb612a"
+    sha256 cellar: :any, x86_64_linux:      "53706cecc8d854ac2fdde5f12c94fb01002bd41467477111e41a85e8c31d5698"
   end
 
   depends_on "pkgconf" => :build
