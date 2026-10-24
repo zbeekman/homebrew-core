@@ -10,12 +10,11 @@ class CloudformationCli < Formula
   head "https://github.com/aws-cloudformation/cloudformation-cli.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "f0b52e20184674911cd66611f380608deb262ac7ae4c69fb5ceeb7674079cb8c"
-    sha256 cellar: :any, arm64_tahoe:       "d5da6afe8d02de4f7b187471ceb498fb38002e20e4129990d47aa769bdb0ae9f"
-    sha256 cellar: :any, arm64_sequoia:     "25bb2d847a25de45a57dc433bea9a29a879de6fa3efb1ab82f6b73fc5fa8c0c6"
-    sha256 cellar: :any, arm64_linux:       "7bf78b9d9b8ed57d841dd8bf68fdcda93db05397012dec32ccc532f2d4b658cc"
-    sha256 cellar: :any, x86_64_linux:      "fbdb44980c13e8762d37f6ec9f91b23f6b895aec82fd412249889cc6b0ae306d"
+    sha256 cellar: :any, arm64_golden_gate: "a52226ac46cf5b0d3cc21ef064fd200d06cfac98b702d5400021ec4a33b25b92"
+    sha256 cellar: :any, arm64_tahoe:       "b60f0ebfcab495b5f864e87c3d39a2cff356361b45e927a119c6de9bbd9dbe40"
+    sha256 cellar: :any, arm64_sequoia:     "fea5316051a4e70d32e3c9f08fa3e74ebd7e033867a1b9bfbfc7e635854aeba9"
+    sha256 cellar: :any, arm64_linux:       "54e48a2373a01689287544de6ce3dd18ed207f33dec2bbfd3f26bc2ed68698b3"
+    sha256 cellar: :any, x86_64_linux:      "16a8d548ea77c1e955f79c95342b7e03f08f933af553913a54fa7cac4df62390"
   end
 
   depends_on "rust" => :build # for hypothesis
