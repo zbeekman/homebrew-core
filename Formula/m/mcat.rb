@@ -7,12 +7,11 @@ class Mcat < Formula
   head "https://github.com/Skardyy/mcat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "65b5fdddf624425860a972599c43b0ede36764779e1f7b6470b27ded8e768505"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "37eee59c4d98186de389836b9a70dea4e5a56654a5bf230924ca1f53f5144d9e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "2bb0b6017ab2e805c7d19ae4abe23b776161149063225d86a6d48a0555f9bc33"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:      "eba8da8ec142bd8d603ed1998377ac926bf7a29c86e134d124745341af0be33b"
-    sha256 cellar: :any,                 arm64_linux:       "0edf6a0f117170b07bc1f8e54dedc3eb8e714fa9f0871c8463be15a4aebafb6f"
-    sha256 cellar: :any,                 x86_64_linux:      "ada543b6769a56b0632afc92284a26588fbb642e135200ac30b30678e69ce344"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "f652b1aa23fc267b3f90880ab0559f9a192dd58e8b0be937b0a15e83198020c3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bcf8153c2c50fef0cab5959f560c9f81c72359d9c0faa6af3364c09f7b1b70e4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "56ddcbd82cd9ead637451f7e490705e327084e8fc11ba9030b9770e9075ffe4f"
+    sha256 cellar: :any,                 arm64_linux:       "d4efd3ffa64f55810f950cfbd39f3a91cfd213072d12ce967fabff6c0b331f8f"
+    sha256 cellar: :any,                 x86_64_linux:      "125a94ff52566152a4202f699fefba2f3cd1859570a65104852ce9cf244320dc"
   end
 
   depends_on "rust" => :build
