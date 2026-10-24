@@ -1,10 +1,10 @@
 class JvmMon < Formula
   desc "Console-based JVM monitoring"
   homepage "https://ajermakovics.github.io/jvm-mon/"
-  url "https://github.com/ajermakovics/jvm-mon/archive/refs/tags/1.3.tar.gz"
-  sha256 "71f27098bc130525c837ce5821481d795be1b315464f327dbe9d828a221338dd"
+  url "https://github.com/ajermakovics/jvm-mon/archive/refs/tags/1.4.tar.gz"
+  sha256 "1fda84dbb8e848c1fe6046468a290ac53fcfeb147db8585d9f4ea2ecbdec0058"
   license "Apache-2.0"
-  head "https://github.com/ajermakovics/jvm-mon.git", branch: "master"
+  head "https://github.com/ajermakovics/jvm-mon.git", branch: "main"
 
   livecheck do
     url :stable
@@ -35,7 +35,7 @@ class JvmMon < Formula
   def install
     cd "jvm-mon-go" do
       system "./make-agent.sh"
-      system "go", "build", *std_go_args
+      system "go", "build", *std_go_args(ldflags: "-X main.version=#{version}")
     end
   end
 
