@@ -1,8 +1,8 @@
 class DejaVu < Formula
   desc "Local searchable memory over the session histories of coding agents"
   homepage "https://github.com/vshulcz/deja-vu"
-  url "https://github.com/vshulcz/deja-vu/archive/refs/tags/v0.23.0.tar.gz"
-  sha256 "56546242614ccd2398d1779e590ed31a12b7b3d5a7755dfbd1f18003ea165618"
+  url "https://github.com/vshulcz/deja-vu/archive/refs/tags/v0.23.1.tar.gz"
+  sha256 "fc578d218322f45dc8e4502d53016f58d379f555b215e0465b06d6cddbc58c52"
   license "MIT"
   head "https://github.com/vshulcz/deja-vu.git", branch: "main"
 
