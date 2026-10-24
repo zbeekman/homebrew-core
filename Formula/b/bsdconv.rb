@@ -1,8 +1,8 @@
 class Bsdconv < Formula
   desc "Charset/encoding converter library"
   homepage "https://github.com/buganini/bsdconv"
-  url "https://github.com/buganini/bsdconv/archive/refs/tags/11.6.tar.gz"
-  sha256 "e856e24474deb3731ac059a96af0078ba951895f2cb3b31f125148a29cc32b70"
+  url "https://github.com/buganini/bsdconv/archive/refs/tags/11.7.tar.gz"
+  sha256 "c7ce9b7fd5a80f5da36dfbf2b49ca86f67088b006d26f708fcc1112b7c1feafc"
   license "BSD-2-Clause"
   head "https://github.com/buganini/bsdconv.git", branch: "master"
 
