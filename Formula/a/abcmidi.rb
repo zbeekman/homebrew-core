@@ -1,9 +1,10 @@
 class Abcmidi < Formula
   desc "Converts abc music notation files to MIDI files"
   homepage "https://ifdo.ca/~seymour/runabc/"
-  url "https://ifdo.ca/~seymour/runabc/abcMidi-2026.10.16.zip"
-  sha256 "f865e7a0107f30b0b6fa005c063c14e7c830f81cd626d872ec9788a912488048"
+  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2026.10.23.zip"
+  sha256 "5d91850dd116fab9e313e4e28ea257b0dde3b290b779f436c9a875577c289573"
   license "GPL-2.0-or-later"
+  head "https://github.com/sshlien/abcmidi.git", branch: "master"
 
   livecheck do
     url :homepage
@@ -21,6 +22,7 @@ class Abcmidi < Formula
   deny_network_access!
 
   def install
+    chmod "+x", "configure"
     system "./configure", *std_configure_args
     system "make", "install"
   end
