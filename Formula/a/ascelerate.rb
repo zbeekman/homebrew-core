@@ -6,6 +6,12 @@ class Ascelerate < Formula
   license "MIT"
   head "https://github.com/keremerkan/ascelerate.git", branch: "main"
 
+  bottle do
+    sha256 arm64_golden_gate: "0fb6ffac3e063c1b6e4a19de0a5c405d7a3215c9d71256f51679c8b1350101b6"
+    sha256 arm64_tahoe:       "aa8c0f6a4e5e0117e6f7ec48f37a4841b62dea60f45ed9ff93b7d8e62488c98d"
+    sha256 arm64_sequoia:     "2eb78c88c5b06449426e72a5bdd4b21da57ad44bb04c5fdb8a4b7b02ca2f30c5"
+  end
+
   depends_on xcode: ["26.0", :build]
   depends_on macos: :sequoia
 
