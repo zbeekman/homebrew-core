@@ -2,8 +2,8 @@ class Sccache < Formula
   desc "Used as a compiler wrapper and avoids compilation when possible"
   homepage "https://github.com/mozilla/sccache"
   # TODO: Migrate to `openssl@4` after https://github.com/mozilla/sccache/issues/2780 is resolved
-  url "https://github.com/mozilla/sccache/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "14e37fc2cb4f21c188789d518e170181b7cd1ba523152880cdf8009269d79732"
+  url "https://github.com/mozilla/sccache/archive/refs/tags/v0.19.0.tar.gz"
+  sha256 "2da079033cd19fd8e2a09f56f9a7d9d1a72d591ff3acdc47d95b920145cf2671"
   license "Apache-2.0"
   head "https://github.com/mozilla/sccache.git", branch: "main"
 
