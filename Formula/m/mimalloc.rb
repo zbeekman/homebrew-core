@@ -1,8 +1,8 @@
 class Mimalloc < Formula
   desc "Compact general purpose allocator"
   homepage "https://github.com/microsoft/mimalloc"
-  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.5.4.tar.gz"
-  sha256 "36e9b5bf1bb703567a0347491721ce2098000db8284dc55cd53d211452723cdb"
+  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.6.0.tar.gz"
+  sha256 "c663101ba193b5b823c8541c1b719ab67e3ebf9976e425a02359a5cad5e52990"
   license "MIT"
 
   livecheck do
@@ -32,6 +32,6 @@ class Mimalloc < Formula
   test do
     cp pkgshare/"test/main.c", testpath
     system ENV.cc, "main.c", "-L#{lib}", "-lmimalloc", "-o", "test"
-    assert_match(/pages\s+peak\s+total\s+current\s+block\s+total/, shell_output("./test 2>&1"))
+    assert_match(/blocks\s+peak\s+total\s+current\s+block\s+total/, shell_output("./test 2>&1"))
   end
 end
