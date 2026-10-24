@@ -10,11 +10,11 @@ class Bbot < Formula
   head "https://github.com/blacklanternsecurity/bbot.git", branch: "stable"
 
   bottle do
-    sha256 arm64_golden_gate: "1181c738df8bbb14d58ae5719292d26a2a72417bba198e926ea89c16e5dbb242"
-    sha256 arm64_tahoe:       "3c90a885b3881e587e20fab8dbb15445c0a1c65281b05fd4e96dc50e2487b3fd"
-    sha256 arm64_sequoia:     "825e2912315bcc490fa01d60e9abd6245bc3da38c895425697f8deb115916c53"
-    sha256 arm64_linux:       "acc5f9282fd47fe3c14346b93f098b4a6bff93be9f07b3ef5b7bc5c788fa56e5"
-    sha256 x86_64_linux:      "556ac5988c8cd9f6646e44e0a096cea7611b24c32c49eec18f8f1c4e5a3609c1"
+    sha256 arm64_golden_gate: "7f4498133fa4e8512b833a7b0e7a6639c2ecaca824dcd79d6328bf6a80ecf2da"
+    sha256 arm64_tahoe:       "68b577e2c86df2ea710474d3fc430bc72810718be84e0365d93dfcff9bbf29a3"
+    sha256 arm64_sequoia:     "025b78e93f38688a5f99f06637323981d0c8c62c0e0765c3947bb76234346396"
+    sha256 arm64_linux:       "f9ca3c945594abde4701da5eac7f39d37e3108e25723612d9763c39870862421"
+    sha256 x86_64_linux:      "5e091990222e82e00cdb86b7383f65b882df8ef24c28056ea4632c1d5371dc22"
   end
 
   depends_on "cmake" => :build
