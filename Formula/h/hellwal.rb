@@ -1,8 +1,8 @@
 class Hellwal < Formula
   desc "Fast, extensible color palette generator"
   homepage "https://github.com/danihek/hellwal"
-  url "https://github.com/danihek/hellwal/archive/refs/tags/1.0.8.tar.gz"
-  sha256 "53f629f22bd80c95150fa8510c4c5f4969beec06bfd01ad33a5fdad3d56a357e"
+  url "https://github.com/danihek/hellwal/archive/refs/tags/v1.0.9.tar.gz"
+  sha256 "f708cbe7326299ac14a9a39869f5a833d58668ec7bbc679fea8b24915b307864"
   license "MIT"
 
   bottle do
@@ -12,6 +12,8 @@ class Hellwal < Formula
     sha256 cellar: :any,                 arm64_linux:       "b124d10fb5b5bd860b33fb44bd44ee9495f59acf48e20797ede02c642a965db9"
     sha256 cellar: :any,                 x86_64_linux:      "432792a355394a09a0f26bf0a2f1d07bb9e306bf587aaa8ca0a8bb6c37856942"
   end
+
+  deny_network_access!
 
   def install
     system "make", "install", "DESTDIR=#{bin}"
