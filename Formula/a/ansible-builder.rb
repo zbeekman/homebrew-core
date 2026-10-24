@@ -9,11 +9,11 @@ class AnsibleBuilder < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "5bd98d53421bca56ced5eaaeb29dd3dd10d0cbc4b2c1b19d1173f262fb4a743a"
-    sha256 cellar: :any, arm64_tahoe:       "2b1d2eb180b506bb361cf422c5a03bf424d765172bcb10a93ea7adaf8a5a8b17"
-    sha256 cellar: :any, arm64_sequoia:     "2379217f75e87a1481080175b53a3bc96fedd52a9ca8c8f25555970bde81ce6d"
-    sha256 cellar: :any, arm64_linux:       "edf1eda72461548c01c773f232434966c239b4958d9048a307b285d61344871e"
-    sha256 cellar: :any, x86_64_linux:      "21fa2886e6b8d83ffcf3dfd06f8a97704c603d28fcba58295f7b0ca6d9c8d741"
+    sha256 cellar: :any, arm64_golden_gate: "874766b57678de7117a97a6fbd2caf0cd42fe550df032fd8364c99405fc34a01"
+    sha256 cellar: :any, arm64_tahoe:       "81b0a4f82251ad9eb9c3e5c3d31f59d5ff257680cfbbd41ae9bb9aa9e4ebe98c"
+    sha256 cellar: :any, arm64_sequoia:     "fa6d255518aaf7b73ae8c1fc22193a4249898e449fe4a219336d16c2a6ff1bbb"
+    sha256 cellar: :any, arm64_linux:       "7d3ae35428a994b7c93c60601e09d89da8567c54cbecf4111ea790ab81ae39ae"
+    sha256 cellar: :any, x86_64_linux:      "2c49e642f152368c00eb04ad6fb13e4c9c7dc91209d13184436318b3a8674f7e"
   end
 
   depends_on "libyaml"
