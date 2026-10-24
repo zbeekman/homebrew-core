@@ -10,12 +10,11 @@ class PythonFreethreading < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_golden_gate: "0dc8f0367f0b5fdcadefe799c02444eee157f11d12f3229175dc13a3cd27e374"
-    sha256 arm64_tahoe:       "85788213c25037b3b205c74cf627dab34a6f7992f8e5a58b34e51d78bffd6f22"
-    sha256 arm64_sequoia:     "87f2b35f7f34420955082065d944c5e6b26c8d9056530950adcf34ecfe2f65f5"
-    sha256 arm64_linux:       "4a7c61243055a56612d8a278dbab9fd1fa458054f736d945dcd936805a5d376c"
-    sha256 x86_64_linux:      "9fe61c97abfcf3fe183a8dd766edd5945f6d3e26967c98c25d4dcb3935d3da9a"
+    sha256 arm64_golden_gate: "a132a71770ddc9cf7886b7629eec98ae13152832dffb7161d23dc3d461c6cd58"
+    sha256 arm64_tahoe:       "336f3541e15aeadf96aa9b35425631146f82bba8d0729e0f51348c7e657ce88a"
+    sha256 arm64_sequoia:     "40c68784e464ec4c6eee1045a1b63f82e0066f6236558019fa122eaf0599ad1a"
+    sha256 arm64_linux:       "09af016a48d7aa409bf0b76978b4336591929c874470b2a68834be0efb67ebee"
+    sha256 x86_64_linux:      "4980d282f08f5c2352b2429f2458bbf89c446db622313ef40b9afe4d2658eb00"
   end
 
   depends_on "pkgconf" => :build
