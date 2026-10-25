@@ -1,8 +1,8 @@
 class Cppinsights < Formula
   desc "See your source code with the eyes of a compiler"
   homepage "https://cppinsights.io/"
-  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_21.1.tar.gz"
-  sha256 "205361d9a19e78a7bfe62b673fc1f86e41af6f6bae37a427c2be2e2444171ff2"
+  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_23.1.tar.gz"
+  sha256 "2c2ac2f96612e8e789c96305031dd55af3d399a572989827d1657c388cdbdbb6"
   license "MIT"
 
   bottle do
@@ -16,19 +16,26 @@ class Cppinsights < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@21"
+  depends_on "llvm"
 
   fails_with :clang do
     build 1500
     cause "Requires Clang > 15.0"
   end
 
+  fails_with :gcc do
+    version "14"
+    cause "GNU version must be at least 15.1"
+  end
+
   deny_network_access!
 
   def install
     args = %W[
-      -DINSIGHTS_LLVM_CONFIG=#{formula_opt_bin("llvm@21")}/llvm-config
+      -DINSIGHTS_LLVM_CONFIG=#{formula_opt_bin("llvm")}/llvm-config
       -DINSIGHTS_USE_SYSTEM_INCLUDES=OFF
+      -DCLANG_LINK_CLANG_DYLIB=ON
+      -DLLVM_LINK_LLVM_DYLIB=ON
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
