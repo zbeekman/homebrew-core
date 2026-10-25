@@ -4,6 +4,7 @@ class Dolt < Formula
   url "https://github.com/dolthub/dolt/archive/refs/tags/v2.6.0.tar.gz"
   sha256 "ad4eba0b1b39d0696f3866ab20385efaa18e3701e67123aa3d1d0f7e2ac7700c"
   license "Apache-2.0"
+  revision 1
   version_scheme 1
   head "https://github.com/dolthub/dolt.git", branch: "main"
 
@@ -21,7 +22,7 @@ class Dolt < Formula
   end
 
   depends_on "go" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   deny_network_access!
 
