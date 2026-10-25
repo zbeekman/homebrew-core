@@ -19,6 +19,7 @@ class Bun < Formula
     "Zlib",              # zlib-ng
     "Apache-2.0" => { with: "LLVM-exception" }, # __cxa_thread_atexit
   ]
+  revision 1
 
   livecheck do
     url :stable
@@ -46,7 +47,7 @@ class Bun < Formula
 
   on_linux do
     depends_on "lld" => :build
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
   end
 
   on_intel do
