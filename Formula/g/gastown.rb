@@ -4,6 +4,7 @@ class Gastown < Formula
   url "https://github.com/gastownhall/gastown/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "ddfaf8e774e9f3a281239c04592d04aee10afe621cbfa5df3e29310c9838d753"
   license "MIT"
+  revision 1
   head "https://github.com/gastownhall/gastown.git", branch: "main"
 
   bottle do
@@ -18,7 +19,7 @@ class Gastown < Formula
 
   depends_on "go" => :build
   depends_on "beads"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   conflicts_with "genometools", "libslax", because: "both install `gt` binaries"
 
