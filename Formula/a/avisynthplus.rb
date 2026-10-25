@@ -1,8 +1,8 @@
 class Avisynthplus < Formula
   desc "Improved version of the AviSynth frameserver"
   homepage "https://avs-plus.net"
-  url "https://github.com/AviSynth/AviSynthPlus/archive/refs/tags/v3.7.5.tar.gz"
-  sha256 "2533fafe5b5a8eb9f14d84d89541252a5efd0839ef62b8ae98f40b9f34b3f3d5"
+  url "https://github.com/AviSynth/AviSynthPlus/archive/refs/tags/v3.7.6.tar.gz"
+  sha256 "8c019a934189688e73fe1cd85e6768cc0bc120fe1f4a3310c889060283c9e083"
   license "GPL-2.0-or-later"
   head "https://github.com/AviSynth/AviSynthPlus.git", branch: "master"
 
@@ -33,6 +33,9 @@ class Avisynthplus < Formula
   deny_network_access!
 
   def install
+    # Preserve per-file SIMD flags for code selected by runtime CPU detection.
+    ENV.runtime_cpu_detection
+
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
