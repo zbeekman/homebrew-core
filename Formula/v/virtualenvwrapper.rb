@@ -9,11 +9,11 @@ class Virtualenvwrapper < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "864e463036509e705ef985673c772013cc739417d9dff1bbb199e6267ae70c01"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "864e463036509e705ef985673c772013cc739417d9dff1bbb199e6267ae70c01"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "864e463036509e705ef985673c772013cc739417d9dff1bbb199e6267ae70c01"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "af53d8cfddcb4ae6ad5376459034303520967c7c2be637755c70bbc7f078bd55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "af53d8cfddcb4ae6ad5376459034303520967c7c2be637755c70bbc7f078bd55"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1d76065757e7c0321d0a397663da7590d74e2617d499e7fa6e97640315c7778c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "1d76065757e7c0321d0a397663da7590d74e2617d499e7fa6e97640315c7778c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "1d76065757e7c0321d0a397663da7590d74e2617d499e7fa6e97640315c7778c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "867d19699d413f573a50e000414556633f2dc2530e9acf8a322a93f1c9e399d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "867d19699d413f573a50e000414556633f2dc2530e9acf8a322a93f1c9e399d9"
   end
 
   depends_on "python@3.15"
