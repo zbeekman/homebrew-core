@@ -14,6 +14,14 @@ class SpidermonkeyAT140 < Formula
     regex(%r{href=.*?/v?(140(?:\.\d+)+)/releasenotes}i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_golden_gate: "bdd545ed24b1d5a0e6decb92ee0f1fb8a697d8668e9fb2c0f3e7ba6ca29f9dad"
+    sha256 cellar: :any, arm64_tahoe:       "f58e587b4c9c5366f0ff26267ea2598c5717a7120eee795b36ba7940f926a846"
+    sha256 cellar: :any, arm64_sequoia:     "962ad454f64c87be0834f8ffc9c6cf453aa47c84bdf748bbbb605b9d1dc27c6a"
+    sha256               arm64_linux:       "ccd1c3a2854a01195cdca63e94c9828f024b5bb01e02cf3f5084a901cf9c0279"
+    sha256               x86_64_linux:      "045e0e43c4fc81546b4e266c87551b9b406dcf10519ff2987c5ef83ac1f27df4"
+  end
+
   keg_only :versioned_formula
 
   depends_on "cbindgen" => :build
