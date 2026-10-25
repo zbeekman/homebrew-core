@@ -1,10 +1,9 @@
 class GoHassAgent < Formula
   desc "Native Home Assistant agent for desktop/laptop devices"
   homepage "https://github.com/joshuar/go-hass-agent"
-  url "https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.17.0.tar.gz"
-  sha256 "8506161fb719b948ab026c2533bd43b03659d0ac490f6b343fa2b4591f62696c"
+  url "https://github.com/joshuar/go-hass-agent/archive/refs/tags/v14.18.0.tar.gz"
+  sha256 "a6637642cec0a64955460f5ee8e8a879194a34c462e17e809f4439eae78c14ff"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e5128833fce0828d5cbc93305fa1a0f2ad7bdeae53f964c5365cac1ad71c6727"
