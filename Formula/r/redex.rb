@@ -11,12 +11,11 @@ class Redex < Formula
   head "https://github.com/facebook/redex.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "1ed1cce33a7d67f4ec10ecaf6a40ea17699855ae79bb02f122350d8d97e47bbd"
-    sha256 cellar: :any, arm64_tahoe:       "a973c777f52ab4049df67c5632f7867eb9c0ce0f8453b624fbcc9ef07889935b"
-    sha256 cellar: :any, arm64_sequoia:     "ad5494a08728627a58a8e69d183abbc48eb1116a41203424c81e87718529d434"
-    sha256 cellar: :any, arm64_linux:       "1157ff91dc3973c1fc1a27b186f9ff56679d6f3c74f10f186dd1fd8ab2751552"
-    sha256 cellar: :any, x86_64_linux:      "388f6cfd23f1c2b9f2cef7b707e47b33797543fd151da84230a531da8a4309be"
+    sha256 cellar: :any, arm64_golden_gate: "20a063c4644e2531248458e23c1b6a3001de8fef0e2873f2ee3699210bad3dd1"
+    sha256 cellar: :any, arm64_tahoe:       "35d57c0731d2e992dcf7239194a2cdebc2ebf72bb071bd694ad0086593a7633b"
+    sha256 cellar: :any, arm64_sequoia:     "12cb20a278dea9becf6315273bf333ddb0f671513db1752d4b1424c19cd54c2a"
+    sha256 cellar: :any, arm64_linux:       "d94f1c627bca1a8e875fcca1a31b796531684943a263bd37d7ec2680a58f1525"
+    sha256 cellar: :any, x86_64_linux:      "6ae288548ccd9ba4fc9a148cd6599a55278810aaaf703338ba82f5c2a159a73b"
   end
 
   depends_on "cmake" => :build
