@@ -6,7 +6,7 @@ class S3cmd < Formula
   url "https://files.pythonhosted.org/packages/b3/9c/ad4cd51328bd7a058bfda6739bc061c63ee3531ad2fbc6e672518a1eed01/s3cmd-2.4.0.tar.gz"
   sha256 "6b567521be1c151323f2059c8feec85ded96b6f184ff80535837fea33798b40b"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/s3tools/s3cmd.git", branch: "master"
 
   bottle do
@@ -37,7 +37,10 @@ class S3cmd < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_install_with_resources
+
+    # Build an `:all` bottle
+    inreplace venv.site_packages/"magic/loader.py", "/opt/homebrew", HOMEBREW_PREFIX
   end
 
   test do
