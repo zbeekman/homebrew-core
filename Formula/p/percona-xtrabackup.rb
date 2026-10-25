@@ -22,11 +22,11 @@ class PerconaXtrabackup < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "79c7a9f5fa6d396c62e7ed4aa6da0690e211b1609fde96f2cfcc4d44b175d477"
-    sha256 arm64_tahoe:       "0c885df6a7454a5ab28719ed4479527f1c7b19b91eba1b175270b82fbca8264d"
-    sha256 arm64_sequoia:     "950ef8f952c469af81b3963f9926c7d7ccbb6c974f22c06b5595d76d0a57caf3"
-    sha256 arm64_linux:       "54cec886226616984352e8da9807cf5a333c120cc4f5b06892017320bad43d16"
-    sha256 x86_64_linux:      "a0140edfbbdd6483976228c45a2e0f78db43488dd0f289363b1056fb9f01abef"
+    sha256 arm64_golden_gate: "de5bd2ff1deb840ecf8e09ccac159e3266c84d7fcb81d79a8215a4456fd85461"
+    sha256 arm64_tahoe:       "624fa4434bfe13952465bd9d0b9f71f89fe65841d884a7f440fc8b7535f7dc3a"
+    sha256 arm64_sequoia:     "56996d98c9f9a2210467ded37ce8e87b18a097f75bc76984186203273276f0f8"
+    sha256 arm64_linux:       "b6d3a83e1611cb2f1088c10eeba1c9bc1ddae94116d7a1c2d248804ad80a00a5"
+    sha256 x86_64_linux:      "692338a0c374f98f61c8533d48507dfd9f3e33897f0b0e079e24a33e0cb51b66"
   end
 
   depends_on "bison" => :build # needs bison >= 3.0.4
