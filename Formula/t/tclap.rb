@@ -1,8 +1,8 @@
 class Tclap < Formula
   desc "Templatized C++ command-line parser library"
   homepage "https://tclap.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/tclap/tclap-1.2.5.tar.gz"
-  sha256 "bb649f76dae35e8d0dcba4b52acfd4e062d787e6a81b43f7a4b01275153165a6"
+  url "https://downloads.sourceforge.net/project/tclap/v1.4.0/tclap-1.4.0.tar.gz"
+  sha256 "413014a7e68740d9aa972a058532e3e9959b4af7509d6ae7b11a8c1828378567"
   license "MIT"
 
   livecheck do
@@ -15,12 +15,16 @@ class Tclap < Formula
     sha256 cellar: :any_skip_relocation, all: "1067d4df91f61b3a6af2efd80c62b4359cc7f1f9088892ad9443d13be791bc0a"
   end
 
+  depends_on "cmake" => :build
+
   def install
-    system "./configure", *std_configure_args
-    system "make"
-    # Installer scripts have problems with parallel make
-    ENV.deparallelize
-    system "make", "install"
+    args = %w[
+      -DBUILD_EXAMPLES=OFF
+      -DBUILD_DOC=OFF
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
