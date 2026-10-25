@@ -1,8 +1,8 @@
 class Dekit < Formula
   desc "Process manager for dev and prod"
   homepage "https://dekit.run"
-  url "https://github.com/pvolok/dekit/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "6acfd19444a371ce04557af1a755accc4735c64e650704ae257aaf9f2e1168ba"
+  url "https://github.com/pvolok/dekit/archive/refs/tags/v0.10.3.tar.gz"
+  sha256 "175467fb30195c084df4bd38bf2000fad80f7e03b1e3488c29e3b114f3587ca9"
   license "MIT"
   head "https://github.com/pvolok/dekit.git", branch: "master"
 
