@@ -1,8 +1,8 @@
 class QwenCode < Formula
   desc "AI-powered command-line workflow tool for developers"
   homepage "https://github.com/QwenLM/qwen-code"
-  url "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.26.0.tgz"
-  sha256 "16dccd12a9ba433d0e7aa9a18637d2e340bf1a2a4ad01f0f3ca1eb5a69e5f2e1"
+  url "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.26.1.tgz"
+  sha256 "9198d276e8583b789ee42a9c38b521d57818b94682d155b2b47741534c90fb73"
   license "Apache-2.0"
 
   bottle do
@@ -16,6 +16,9 @@ class QwenCode < Formula
   depends_on "node"
   depends_on "ripgrep"
 
+  # OpenTUI loads its native library by path, so keep its relocatable install name.
+  preserve_rpath
+
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
@@ -27,6 +30,10 @@ class QwenCode < Formula
 
     os = OS.mac? ? "darwin" : "linux"
     arch = Hardware::CPU.intel? ? "x64" : "arm64"
+    qwen_code.glob("opentui-assets/@opentui/core-*").each do |dir|
+      rm_r(dir) if dir.basename.to_s != "core-#{os}-#{arch}"
+    end
+
     (qwen_code/"node_modules/node-pty/prebuilds").glob("*").each do |dir|
       rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}"
     end
