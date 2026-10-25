@@ -17,7 +17,6 @@ class Tealdeer < Formula
   depends_on "rust" => :build
 
   conflicts_with "tlrc", because: "both install `tldr` binaries"
-  conflicts_with "tldr", because: "both install `tldr` binaries"
 
   # `test do` block downloads the tldr pages cache
   allow_network_access! :test
