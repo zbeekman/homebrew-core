@@ -7,6 +7,14 @@ class DepScan < Formula
   sha256 "534254287e29d58768e1a7db2c1132ff4d964865b213fbe75f9cf7293ddd36b9"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any, arm64_golden_gate: "529ef9d8776f72c73e36928aa96110a37dc0cf0d6c66e6ba66c73d169f8443af"
+    sha256 cellar: :any, arm64_tahoe:       "4d6d10dc8e293dcbf3cd21b8988e03b1c54480bc83f39f53eaecc97fec2a79c2"
+    sha256 cellar: :any, arm64_sequoia:     "00ca36bde61fe2c76cc8428fc40979de09485abb1504a3ac2ce3bf689cfe8609"
+    sha256 cellar: :any, arm64_linux:       "29c1ee8d9dcfd450c2340de03af454693326f31ffca1b7f3c54d1fe476c790f9"
+    sha256 cellar: :any, x86_64_linux:      "080b5da1416dc29a7d60966bc7e99da7a619540e13822e0a591013d96c8e747d"
+  end
+
   depends_on "rust" => :build
   depends_on "certifi" => :no_linkage
   depends_on "libyaml"
