@@ -8,6 +8,14 @@ class Cellpose < Formula
   license "BSD-3-Clause"
   head "https://github.com/MouseLand/cellpose.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "c2ccb3cddaaee0dd9b1de68e6e6fc37fc2febc489847bc97aed5ba7e88296035"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b176b8026c933c76f8ba2c30005d3ed487cfb80b0431ee09e77e5e17b979b1ec"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "217ba5e52dab60115a9ce40372e2fd74b466ef968240130dee37c66f5906a8f8"
+    sha256                               arm64_linux:       "4d9e998bd9c8becffa485c91272af3e3a6d5ead630296b517d20123694d4bb1c"
+    sha256                               x86_64_linux:      "3f73bb1d2b32bdd1da0fb8c8f7d2ae2a58cdb06d6a3f57fc21a46d82d4500829"
+  end
+
   depends_on "python-setuptools" => :build
   depends_on "numpy"
   depends_on "opencv"
