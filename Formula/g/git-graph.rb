@@ -1,8 +1,8 @@
 class GitGraph < Formula
   desc "Command-line tool to show clear git graphs arranged for your branching model"
   homepage "https://github.com/git-bahn/git-graph"
-  url "https://github.com/git-bahn/git-graph/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "906ef8f5931c32324ab372ac0047b6440faf76b8ce61fda811d8b85cdc3da577"
+  url "https://github.com/git-bahn/git-graph/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "0694bcf963c7a0ba865303fa03f1b7382031271e651625ac55a97aeb340f36b4"
   license "MIT"
   head "https://github.com/git-bahn/git-graph.git", branch: "master"
 
