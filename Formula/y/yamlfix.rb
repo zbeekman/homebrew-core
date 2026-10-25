@@ -9,12 +9,11 @@ class Yamlfix < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "932398d2bb2cd749ad3ce648bb274bfaefc2a9cc447fa6f66f9d118a16cfbe14"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "932398d2bb2cd749ad3ce648bb274bfaefc2a9cc447fa6f66f9d118a16cfbe14"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "932398d2bb2cd749ad3ce648bb274bfaefc2a9cc447fa6f66f9d118a16cfbe14"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "62d43f63ec330c60050d95608fbe3b078e9968940f493f96db373536fa1b72a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "62d43f63ec330c60050d95608fbe3b078e9968940f493f96db373536fa1b72a6"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e48609d764baabfe99ac4b0e9c536ad056453965ea6840fb9fa8fb9e06bb71c8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "e48609d764baabfe99ac4b0e9c536ad056453965ea6840fb9fa8fb9e06bb71c8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e48609d764baabfe99ac4b0e9c536ad056453965ea6840fb9fa8fb9e06bb71c8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3d4d0a675ba30ddc9be9cb5194292ded9d5bd40fff3af71744d3f014ce4573d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "3d4d0a675ba30ddc9be9cb5194292ded9d5bd40fff3af71744d3f014ce4573d9"
   end
 
   depends_on "pydantic" => :no_linkage
