@@ -4,6 +4,7 @@ class Beads < Formula
   url "https://github.com/gastownhall/beads/archive/refs/tags/v1.3.2.tar.gz"
   sha256 "d2969ec18f4754dee4f08cb05a0d978dfcca750aa6db9a72b3f35ef3cd62dcc9"
   license "MIT"
+  revision 1
   compatibility_version 1
   head "https://github.com/gastownhall/beads.git", branch: "main"
 
@@ -17,7 +18,7 @@ class Beads < Formula
 
   depends_on "go" => :build
   depends_on "dolt"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   deny_network_access!
 
