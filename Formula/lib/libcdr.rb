@@ -22,13 +22,15 @@ class Libcdr < Formula
 
   depends_on "boost" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "librevenge"
   depends_on "little-cms2"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
+
+  deny_network_access!
 
   def install
     system "./configure", "--disable-silent-rules",
