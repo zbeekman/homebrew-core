@@ -3,8 +3,8 @@ class Mediamtx < Formula
   homepage "https://mediamtx.org"
   # need to use the tag to generate the version info
   url "https://github.com/bluenviron/mediamtx.git",
-      tag:      "v1.21.2",
-      revision: "914e39535ece709919ac325aaeed98d394ed9093"
+      tag:      "v1.21.3",
+      revision: "9540cb6c1d9f1e9351fcc4ded3afc249ffff22bc"
   license "MIT"
   head "https://github.com/bluenviron/mediamtx.git", branch: "main"
 
