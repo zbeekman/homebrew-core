@@ -11,12 +11,11 @@ class Rawdog < Formula
   head "https://github.com/granawkins/rawdog.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "1dd4a03903b1937596359ae40fa1b49a92e365e00fa5644d344e17aa0f9134dc"
-    sha256 cellar: :any, arm64_tahoe:       "fda50d5a2bd3c66e528b0bd770fef722c6de5801a76b98f8f70795d4df75dde2"
-    sha256 cellar: :any, arm64_sequoia:     "7116a94a6484a6c56cbb97588a3bdd6c30462c2eb93645c080c2555a90f83d2d"
-    sha256 cellar: :any, arm64_linux:       "27d5b53e05d094206aa5a47a093ba98d411bec2c278e9d12ac008a117103fd77"
-    sha256 cellar: :any, x86_64_linux:      "74791e3e6a0e90a0a9f6311805c2f3fae6f84916dc7e082e4fcd3a0f148b6686"
+    sha256 cellar: :any, arm64_golden_gate: "5fac9b5d04a51dc4345805d020ec96fea0d947f0bfc90111f9e2c74a3e2418dd"
+    sha256 cellar: :any, arm64_tahoe:       "855f657e83d3b2e8971e98791a681a1440a102d03c9e0b7c1bdbec49a2b193c4"
+    sha256 cellar: :any, arm64_sequoia:     "2415d277f0c1c0a9503a62bd8104b64c33f74307c7395aff776591fe4e61ac3b"
+    sha256 cellar: :any, arm64_linux:       "1addc6453f820c2739f661732395d652addf2848fc85b005de2bf1139ee4bda8"
+    sha256 cellar: :any, x86_64_linux:      "f9d5bc83fa3a2324f6bde8943185ff88413751b20f9e76963e1b2de0ed2da83d"
   end
 
   depends_on "pkgconf" => :build
