@@ -9,12 +9,11 @@ class Commitizen < Formula
   head "https://github.com/commitizen-tools/commitizen.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "d494db3edf823e13f234f19d6e14f330467b9ce164be33cf715c78390fac7b05"
-    sha256 cellar: :any, arm64_tahoe:       "fa37aee9ed4da2c9e0d0f9783deb4881c3c3989ac235c7ace8f3356f33030082"
-    sha256 cellar: :any, arm64_sequoia:     "213327bf957b985d1f4692d089d91ff94faeb0b3af649a505cd0963a167b9cb7"
-    sha256 cellar: :any, arm64_linux:       "6f1bc3c66b619bb2884fe5e631b0cdfcb1506791d5ff633c4cd2e14a11709ea8"
-    sha256 cellar: :any, x86_64_linux:      "bc0e8b11d47232c7dd38ad8e570f67b26e93b7e072a7219fadca1309b204800e"
+    sha256 cellar: :any, arm64_golden_gate: "cdf9f13b556405577d4910af8afc67898e061aa1b85d0ec3a264864c7d7be71c"
+    sha256 cellar: :any, arm64_tahoe:       "e0194cc099b1510d176ab809fcbcf0f209e11508f59df5414b45fb7f5aff7578"
+    sha256 cellar: :any, arm64_sequoia:     "8ef960e2e0318c48a72fe7a0fd9fc7430fa9449fa5414805963e82d3f510934b"
+    sha256 cellar: :any, arm64_linux:       "6033ce13d31afbfe4f6d0c165a224cfddf5a73ae3a365b25e2572a3ccecb0bac"
+    sha256 cellar: :any, x86_64_linux:      "5223fdd80e7acfa0a3608fef5baf65751426429a22a3319026c46dac1dd30b09"
   end
 
   depends_on "rust" => :build
