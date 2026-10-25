@@ -1,8 +1,8 @@
 class Retry < Formula
   desc "Repeat a command until the command succeeds"
   homepage "https://github.com/minfrin/retry"
-  url "https://github.com/minfrin/retry/releases/download/retry-1.0.6/retry-1.0.6.tar.bz2"
-  sha256 "b5bbdaee16436fabae608fbc58f47df9726b87b945c9eca1524648500b9afdf3"
+  url "https://github.com/minfrin/retry/releases/download/retry-1.0.7/retry-1.0.7.tar.bz2"
+  sha256 "eb96b60244e09f407db9eb32cb9ad52361aaef4d19ca84817a6f88f577b60d6b"
   license "Apache-2.0"
 
   bottle do
@@ -23,20 +23,22 @@ class Retry < Formula
   end
 
   test do
-    require "socket"
-    port = free_port
-    args = %W[--delay 1 --until 0,28 -- curl --max-time 1 telnet://localhost:#{port}]
-    Open3.popen2e(bin/"retry", *args) do |_, stdout_and_stderr|
-      sleep 3
-      assert_match "curl returned 7", stdout_and_stderr.read_nonblock(1024)
+    (testpath/"retry.sh").write <<~SH
+      attempt=0
+      if [ -f attempts ]; then
+        read -r attempt < attempts
+      fi
+      attempt=$((attempt + 1))
+      echo "$attempt" > attempts
+      [ "$attempt" -eq 3 ] || exit 1
+      echo success
+    SH
 
-      TCPServer.open(port) do |server|
-        session = server.accept
-        session.puts "Hello world!"
-        session.close
-      end
+    assert_equal "success\n", shell_output("#{bin}/retry --quiet --delay 0 --times 3 -- sh retry.sh")
+    assert_equal "3\n", (testpath/"attempts").read
 
-      assert_match "Hello world!", stdout_and_stderr.read
-    end
+    (testpath/"attempts").unlink
+    shell_output("#{bin}/retry --quiet --delay 0 --times 2 -- sh retry.sh", 1)
+    assert_equal "2\n", (testpath/"attempts").read
   end
 end
