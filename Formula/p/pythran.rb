@@ -10,8 +10,7 @@ class Pythran < Formula
   head "https://github.com/serge-sans-paille/pythran.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "785b62344900c458f82eb0c48aa25124f698358fb760762dc371860c9a013b71"
+    sha256 cellar: :any_skip_relocation, all: "4df21debe48d1f89f3a16f361c91dc908572339671f2ae9cba1ba205969d458a"
   end
 
   depends_on "gcc" => :test
