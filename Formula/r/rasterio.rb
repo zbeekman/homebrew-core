@@ -21,7 +21,7 @@ class Rasterio < Formula
   depends_on "certifi" => :no_linkage
   depends_on "gdal"
   depends_on "numpy"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   on_linux do
     depends_on "patchelf" => :build
