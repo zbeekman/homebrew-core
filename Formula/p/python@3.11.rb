@@ -13,11 +13,11 @@ class PythonAT311 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "2a9b48a3adcba59f9b147314d74c9b3e16b19d9ede9192e6c0a1aac3706dd5e5"
-    sha256 arm64_tahoe:       "c850890df7f46a52d85346cf92ffdc12d1d6ed775b196c59e780eca8bc808e03"
-    sha256 arm64_sequoia:     "8fb2b035b745e7f5e93f2c6c4238d43dcfef827c0e66eaf1027112731f58a8c8"
-    sha256 arm64_linux:       "d99033154fdd4bea46084d3db2e48746374e7e2a449a48dfa409e7f57f1f57d7"
-    sha256 x86_64_linux:      "ed05cb663f8cc78669d640a3bf04a86981a0d0d26a70f638de33ef697ad287fc"
+    sha256 arm64_golden_gate: "b7b76c5a78110babe9b96f7c751868047845eb1e939aad04a5bf0ff6bad4f15d"
+    sha256 arm64_tahoe:       "60296cca202c50d315b6b10433a1aadd6fde9de3081f38f5fbc54329e68baa49"
+    sha256 arm64_sequoia:     "96571b8fa8a357adac4b0a25d5766d9b9227a44fa8db64cfdac9ab91bbb58ea1"
+    sha256 arm64_linux:       "58517ef539913779049ba3a71043583d9ca0f093f9aea1262563add83cf451ed"
+    sha256 x86_64_linux:      "930924416fa4c1493f675f4177f895977eedc01ca7d394570af0830f890120f8"
   end
 
   # setuptools remembers the build flags python is built with and uses them to
