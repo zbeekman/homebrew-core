@@ -1,8 +1,8 @@
 class Iodine < Formula
   desc "Tunnel IPv4 traffic through a DNS server"
   homepage "https://code.kryo.se/iodine"
-  url "https://github.com/yarrick/iodine/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "ffc7a58cdde390a01580f4cfc78c446b0965bcb719bde2c68c5e0c27345a8dfc"
+  url "https://github.com/yarrick/iodine/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "0294de30815abaacdc1cc5ce0539a3214a902c4f7d93d6fbabee7a0ef5cc5239"
   license "ISC"
   head "https://github.com/yarrick/iodine.git", branch: "master"
 
@@ -17,20 +17,23 @@ class Iodine < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:      "ba56bb7d3d06fd6fd4fa2ca908c17dec0b5724a49247c105c456b57c6b4111f8"
   end
 
-  depends_on "cmake" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkgconf" => :build
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
   def install
-    system "make", "prefix=#{prefix}", "install"
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
-    # iodine and iodined require being run as root. Match on the non-root error text, which is printed to
-    # stderr, as a successful test
-    assert_match("iodine: Run as root and you'll be happy.", pipe_output("#{sbin}/iodine google.com 2>&1"))
-    assert_match("iodined: Run as root and you'll be happy.", pipe_output("#{sbin}/iodined google.com 2>&1"))
+    # Both executables require root.
+    shell_output("#{sbin}/iodine google.com 2>&1", 255)
+    shell_output("#{sbin}/iodined 10.0.0.1 google.com 2>&1", 255)
   end
 end
