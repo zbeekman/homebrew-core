@@ -7,11 +7,11 @@ class Amass < Formula
   head "https://github.com/owasp-amass/amass.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "dc3553b5def7a0f26408f5e37a0a404f7d7f690b6af9326fb76a5d27f5457f66"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dc3553b5def7a0f26408f5e37a0a404f7d7f690b6af9326fb76a5d27f5457f66"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dc3553b5def7a0f26408f5e37a0a404f7d7f690b6af9326fb76a5d27f5457f66"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "a9648cfc1d935237c7dfc412e05015b8796fed0c3827c1308cfe657cf81f507d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "17d753a64a442608dc274611692a4c735f9dbbfacb8205f0441abf013d9015e9"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "48f97158e2dfbaa19515ee25121d5544c50d78217e631761a51d96dcbcec8388"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "1aa38aaf84268c4f6a611738f2de94502c6a8359475e73660e6b007062bda12e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "ab4312afc237c520b92785e0c28136cf056eb0aaad1b8f6b143b9cf6e1459f6c"
   end
 
   depends_on "go" => :build
