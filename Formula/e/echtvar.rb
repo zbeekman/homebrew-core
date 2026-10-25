@@ -6,12 +6,12 @@ class Echtvar < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any, arm64_golden_gate: "cb43da7beb5cec375582901a362420e496216c705bd5eaf79a2606cb9f302665"
-    sha256 cellar: :any, arm64_tahoe:       "fcab74c9936cc1ab9df9caaf55de71874806f415acc052e33d9d74afaa3f0855"
-    sha256 cellar: :any, arm64_sequoia:     "61155b5559826f1bae9d78090a0885528aafe6ce7c34307e9be3a6c77f533e7f"
-    sha256 cellar: :any, arm64_linux:       "278794dce2a6315d3e2982e1424dfcf0a2a5968db8add141c38bb69dacb55670"
-    sha256 cellar: :any, x86_64_linux:      "d3bcf5b3fc9a3e7f743673396ebbc6f349c762b1447a507198d87ebd1989c14a"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "54fc2342877ecfd3d574aaa7b0cff67d24ded69196d3a1c848b6469e41e5c326"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "3fe2aea1deeab2ceaa2fbcc917d73b5d655244193a96ccc4d1461ae884eb7c93"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "498c3506736f3e62511db5b0bb5cc3c9122de0b93cb4327741bab82e2695e57a"
+    sha256 cellar: :any,                 arm64_linux:       "826d7f12acf0cc484b033d88412e7264e8d888775496cb7abfd8bf1266ca5675"
+    sha256 cellar: :any,                 x86_64_linux:      "470f5a5b37d81b6ce1bef2748d3fdb57eb63c65fcceca0f4ffcd55982232b478"
   end
 
   depends_on "openssl@4" => :build
