@@ -11,8 +11,7 @@ class Tclap < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "1067d4df91f61b3a6af2efd80c62b4359cc7f1f9088892ad9443d13be791bc0a"
+    sha256 cellar: :any_skip_relocation, all: "e198b288be5af5412b065c73ef2510f1aa705fa6fac90bc4043010999b455b0d"
   end
 
   depends_on "cmake" => :build
