@@ -13,11 +13,11 @@ class Coccinelle < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "02e5cb9f9591f7710b32e41c7fcd41354f5d051df508f8117ddf9cbfed1b3d86"
-    sha256 arm64_tahoe:       "6d937adfd3e8fa099bfa99121f660cd52bd27bbc2636c0e3b353faeac5991be6"
-    sha256 arm64_sequoia:     "80ef68b7214208f4a06e2beaf9940782491527c7be6453417d3f7f9214a354b4"
-    sha256 arm64_linux:       "eaa8903c1a40cd7c5e952c6c6c5186e60f194b7dc1daf542e046da857911fc4a"
-    sha256 x86_64_linux:      "33bb07fc0247f451303222ff04e8cbfa7870d700393d5a8022cb2ca19359543d"
+    sha256 arm64_golden_gate: "bc4091065073104e372453f2d3b93f08f16b3dc59d82b9c3e78c2f1f0c8d715a"
+    sha256 arm64_tahoe:       "a0fc5050367daafa8362c6b8434eb1b0b490c8290085fed933038c8e0eb951a9"
+    sha256 arm64_sequoia:     "3cf6eb126e96365566672131345ae9e788511ab43dc42cc9f11059a61a63440a"
+    sha256 arm64_linux:       "a2ba0c0d3a73e74d7767fff726667edf15ea66aa3300d487478325074d8c1f7c"
+    sha256 x86_64_linux:      "d9fa5fa1c87f8c664afc7b42e7775f7b9fdeddc38b7285d713ed134a2548fc65"
   end
 
   depends_on "autoconf" => :build
