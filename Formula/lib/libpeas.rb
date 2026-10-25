@@ -4,7 +4,7 @@ class Libpeas < Formula
   url "https://download.gnome.org/sources/libpeas/2.2/libpeas-2.2.1.tar.xz"
   sha256 "589eca89b437006edf3755478df037c740a2a84cfa5d202dbad6095e828e2488"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
 
   bottle do
     sha256 arm64_golden_gate: "c616b3255f727c1d04dab6475c5d174c148ce7fa8d5b58dec120e36580edd3ee"
@@ -24,7 +24,7 @@ class Libpeas < Formula
   depends_on "gtk+3"
   depends_on "pygobject3"
   depends_on "python@3.15"
-  depends_on "spidermonkey"
+  depends_on "spidermonkey@140"
 
   on_macos do
     depends_on "gettext"
