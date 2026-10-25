@@ -10,12 +10,7 @@ class S3cmd < Formula
   head "https://github.com/s3tools/s3cmd.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "78fa12d0f20fe81efb0eb9233033b75983fc32d2a045710ed75604468991e25c"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "78fa12d0f20fe81efb0eb9233033b75983fc32d2a045710ed75604468991e25c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78fa12d0f20fe81efb0eb9233033b75983fc32d2a045710ed75604468991e25c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "1670eec2c668d970663ad7cbc13280d4a02b720b94de7f299d008164f75b982c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "1670eec2c668d970663ad7cbc13280d4a02b720b94de7f299d008164f75b982c"
+    sha256 cellar: :any_skip_relocation, all: "1631a1bb7891333d5ecce1b16c49e861aea505efcbb21d660408819593565ae8"
   end
 
   depends_on "libmagic" => :no_linkage # for python-magic
