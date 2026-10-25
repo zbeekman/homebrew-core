@@ -4,6 +4,7 @@ class Neovide < Formula
   url "https://github.com/neovide/neovide/archive/refs/tags/0.16.2.tar.gz"
   sha256 "a2016cceab3cba50b6a8b2f6787ae9017a85923575e89a83ebb9d428e8f80ca9"
   license "MIT"
+  revision 1
   head "https://github.com/neovide/neovide.git", branch: "main"
 
   bottle do
@@ -24,7 +25,6 @@ class Neovide < Formula
   uses_from_macos "python" => :build
 
   on_macos do
-    depends_on "cargo-bundle" => :build
     # work around https://github.com/rust-skia/rust-skia/issues/1331
     depends_on "llvm@22" => :build if DevelopmentTools.clang_build_version >= 2100
   end
@@ -35,7 +35,7 @@ class Neovide < Formula
     depends_on "fontconfig"
     depends_on "freetype"
     depends_on "harfbuzz"
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
     depends_on "jpeg-turbo"
     depends_on "libpng"
     # `libxcursor` is loaded when using X11 (DISPLAY) instead of Wayland (WAYLAND_DISPLAY).
@@ -71,11 +71,9 @@ class Neovide < Formula
 
     return unless OS.mac?
 
-    # https://github.com/burtonageo/cargo-bundle/issues/118
-    # Skip the default `.dmg`, which needs `hdiutil`: only the `.app` is installed anyway
-    with_env(TERM: "xterm") { system "cargo", "bundle", "--release", "--format", "osx" }
-    prefix.install "target/release/bundle/osx/Neovide.app"
-    rm bin/"neovide" # Remove the original binary first
+    # Use upstream's app template, as their release builds do
+    prefix.install "extra/osx/Neovide.app"
+    (prefix/"Neovide.app/Contents/MacOS").install bin/"neovide"
     bin.write_exec_script prefix/"Neovide.app/Contents/MacOS/neovide"
   end
 
