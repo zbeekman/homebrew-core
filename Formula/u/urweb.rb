@@ -22,7 +22,7 @@ class Urweb < Formula
   depends_on "libtool" => :build
   depends_on "mlton" => :build
   depends_on "gmp"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "openssl@4"
 
   # Patch to fix build for icu4c 68.2
