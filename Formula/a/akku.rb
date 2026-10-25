@@ -1,10 +1,10 @@
 class Akku < Formula
   desc "Package manager for Scheme"
   homepage "https://akkuscm.org/"
-  url "https://gitlab.com/akkuscm/akku/uploads/819fd1f988c6af5e7df0dfa70aa3d3fe/akku-1.1.0.tar.gz"
-  sha256 "12decdc8a2caba0f67dfcd57b65e4643037757e86da576408d41a5c487552c08"
+  url "https://gitlab.com/-/project/6808260/uploads/44040730f50c8a202e8d39b2c3a8f377/akku-1.2.0.tar.gz"
+  sha256 "4ed046a5d08ee05d4c3f246e7a890485fc93d4fec25dd0600ed64a303e1183b2"
   license "GPL-3.0-or-later"
-  head "https://gitlab.com/akkuscm/akku.git", branch: "master"
+  head "https://gitlab.com/akkuscm/akku.git", branch: "main"
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/6808260/releases"
@@ -33,12 +33,7 @@ class Akku < Formula
   depends_on "pkgconf" => :build
   depends_on "guile"
 
-  # Backport the Guile 3.0.11 workaround for `define-values` temporaries being left unbound
-  patch do
-    file "Patches/akku/1.1.0-guile-3.0.11.patch"
-    type :backport
-    resolves "https://gitlab.com/akkuscm/akku/-/commit/73acf1ff4f3ee77028d954d051a2c852e6b8a620"
-  end
+  uses_from_macos "curl"
 
   deny_network_access!
 
