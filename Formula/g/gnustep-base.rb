@@ -4,7 +4,7 @@ class GnustepBase < Formula
   url "https://github.com/gnustep/libs-base/releases/download/base-1_31_1/gnustep-base-1.31.1.tar.gz"
   sha256 "e7546f1c978a7c75b676953a360194a61e921cb45a4804497b4f346a460545cd"
   license "GPL-2.0-or-later"
-  revision 3
+  revision 4
 
   livecheck do
     url :stable
@@ -39,7 +39,7 @@ class GnustepBase < Formula
   uses_from_macos "libxslt"
 
   on_system :linux, macos: :big_sur_or_older do
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
   end
 
   on_linux do
@@ -50,6 +50,13 @@ class GnustepBase < Formula
 
   fails_with :gcc do
     cause "GCC Objective-C support is insufficient"
+  end
+
+  patch do
+    url "https://github.com/gnustep/libs-base/commit/bace6f54fd5fb882cb3adc79c87cc82d5c6d9c70.patch?full_index=1"
+    sha256 "7b8a8a4465c5807ff6df48a23b9a3085eaa7ff0fef44bf8aeb4c7d9d05df10bf"
+    type :backport
+    resolves "https://github.com/gnustep/libs-base/issues/589"
   end
 
   def install
