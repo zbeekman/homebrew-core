@@ -7,11 +7,11 @@ class ArcaneCli < Formula
   head "https://github.com/getarcaneapp/arcane.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1da6ef49ea31a79989ee9c2d7be5d355c38567cd9ed48c58bebd9b8225142a78"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "7dcca2832619a300db7a60680c58f3a2eb3533b7caa5c1034102615c4b5a3923"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8704cc7b3ae5be5bc2689971d2f3ffe4367f94322477411c210ad89b240116cf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f3a12a4072869d61381e6d07a470acad501f2ac64876bb7176ab1487b5a772b4"
-    sha256 cellar: :any,                 x86_64_linux:      "75e52f5226376b5a6dc5d205f7fdd7ece64d700b77edb5187c3d5f058fb7cf06"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8a6d310cb1ed9c0075365f2dcf224f218db5f97489560505f682ddc0661c807c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "30481fd82398fba55c19bdb1ceb961639d6ee941a97fda6aae946a87348a60a4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "09121664d6e586c32c99296a5e0f01d423184fc90809cdd8f54f4c23864e8e18"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c917f64d3d117e48921e53a12a1059a864a1256ce72a514259f870db274f28f7"
+    sha256 cellar: :any,                 x86_64_linux:      "75c1c0d3a70cf852c9540b6c818966baca88db92a9513b81e470e99c1082c617"
   end
 
   depends_on "go" => :build
