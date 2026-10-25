@@ -5,6 +5,10 @@ class Worldmonitor < Formula
   sha256 "984cfdba6390e71940c6de457eb44c433c94b5a621df3e48342d806053b3f723"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "d45219792fa2e0ff4005e09bf7ec0a4fad180d4d275ac6642768aa863051b0a8"
+  end
+
   depends_on "node"
 
   allow_network_access! :test
