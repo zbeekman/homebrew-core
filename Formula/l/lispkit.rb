@@ -1,8 +1,8 @@
 class Lispkit < Formula
   desc "Scheme framework for extension and scripting languages on macOS and iOS"
   homepage "https://lisppad.app"
-  url "https://github.com/objecthub/swift-lispkit/archive/refs/tags/2.6.3.tar.gz"
-  sha256 "1265ed3249471888b2ad1284070833570dc8d56a374debd3b179362f58fa9771"
+  url "https://github.com/objecthub/swift-lispkit/archive/refs/tags/2.6.4.tar.gz"
+  sha256 "89e19cb34aa29aacea67a33a3187abf854fd2a5d0d0c608e59f50ba2073e2f5e"
   license "Apache-2.0"
 
   bottle do
