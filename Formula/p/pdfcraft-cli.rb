@@ -7,11 +7,11 @@ class PdfcraftCli < Formula
   head "https://github.com/storytold/pdfcraft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4b095b0a63157675a614c430ec6ae603ecd4f53dcbc8dc7f608fcffcfacf5184"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "963027761ddfdb3e62bf925002f4d9bf38ac8a2ccbf151e12403f9f3732ebc07"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ae23a9af742eae458047bf7a30d752e03c63c542745563b60b770ef613ff9fb8"
-    sha256 cellar: :any,                 arm64_linux:       "dd2eaf1a476af12c4de9e090fbf48ec854b5e6aa1d4b3bbbd736700dba95d74c"
-    sha256 cellar: :any,                 x86_64_linux:      "b6a31a4ad07e0018050cc10c113ef5d898558ba46ab8a1ac39f1a69da5808dfd"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "af379d17b443eb443f567f4d3f708f42b78ec9a792af8c718bdb28f9e184ac6d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "186575ba2e7bd94f28663276eae20b57ba098813dbb3942617d218239272b90b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "70efdbcfc1c130d2d4e34e6ef950ad68140522ed6905a49525610062c5630cf5"
+    sha256 cellar: :any,                 arm64_linux:       "06edfdda2b2e7d333657d6b2dd5ea8da083f50e1fb105e2990f8ec863ace2cc0"
+    sha256 cellar: :any,                 x86_64_linux:      "96205164886a6b0883ff800e2fbce43a0da8870b53313da25f82d1e5e1195461"
   end
 
   depends_on "rust" => :build
