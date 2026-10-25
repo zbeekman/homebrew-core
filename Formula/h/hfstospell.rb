@@ -25,7 +25,7 @@ class Hfstospell < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libarchive"
 
   def install
