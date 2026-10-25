@@ -1,9 +1,9 @@
 class Tarlz < Formula
   desc "Data compressor"
   homepage "https://www.nongnu.org/lzip/tarlz.html"
-  url "https://download.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.31.tar.lz"
-  mirror "https://download-mirror.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.31.tar.lz"
-  sha256 "e7fafcaf83ce215d94f758ff07037a3fda4bcea006ccb7909ce3f83218e98f71"
+  url "https://download.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.32.2.tar.lz"
+  mirror "https://download-mirror.savannah.gnu.org/releases/lzip/tarlz/tarlz-0.32.2.tar.lz"
+  sha256 "99d456c62a6ffff80527b2bd933af074ded4148c3c99aabd5205d58abd968109"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -31,20 +31,14 @@ class Tarlz < Formula
   end
 
   test do
-    spath = testpath/"source"
-    dpath = testpath/"destination"
-    stestfilepath = spath/"test.txt"
-    dtestfilepath = dpath/"source/test.txt"
-    lzipfilepath = testpath/"test.tar.lz"
-    stestfilepath.write "TEST CONTENT"
+    archive = testpath/"test.tar.lz"
+    (testpath/"source/test.txt").write "TEST CONTENT"
+    (dest = testpath/"destination").mkpath
 
-    mkdir_p spath
-    mkdir_p dpath
+    system bin/"tarlz", "-C", testpath, "-cf", archive, "source"
+    assert_path_exists archive
 
-    system bin/"tarlz", "-C", testpath, "-cf", lzipfilepath, "source"
-    assert_path_exists lzipfilepath
-
-    system bin/"tarlz", "-C", dpath, "-xf", lzipfilepath
-    assert_equal "TEST CONTENT", dtestfilepath.read
+    system bin/"tarlz", "-C", dest, "-xf", archive
+    assert_equal "TEST CONTENT", (dest/"source/test.txt").read
   end
 end
