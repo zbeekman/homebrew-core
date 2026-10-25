@@ -12,11 +12,11 @@ class Hunk < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "321c0cc4c043e02e04340159bedd38bc34bd89b57b1600feef9c29e6d16d4c73"
-    sha256 arm64_tahoe:       "d4476365df09bf2cdf14178781782e0d1a0edc7983524d3962a18c374f61fdd3"
-    sha256 arm64_sequoia:     "630517d54b1ad10c0ac5de1d934b2a662459842a2dc6da1f904700d1de70d78d"
-    sha256 arm64_linux:       "9812758c4b26af0e8ef6b313f7335b8126a5a243afe753c8be8580b379227241"
-    sha256 x86_64_linux:      "be4ed4a9223b1ea32d0ee3158c10c9e83a4bc4dff6e9abc521b41c1261ff83a3"
+    sha256 arm64_golden_gate: "ee2dbfde1f7145781f71bcafbf7808778791d531bdceb558a49017912280970f"
+    sha256 arm64_tahoe:       "26c3e36c12591b3afef294cc98d02442b108804519136200b9e1789eddd805b9"
+    sha256 arm64_sequoia:     "0fb23342d7371b87d0092a5e09fafba1b65fffa217e2be64d956efd651ae5772"
+    sha256 arm64_linux:       "7c6613ae59b58b5a6e25d08166b2a4a85f0a0659d45314fb388e44482b296779"
+    sha256 x86_64_linux:      "e21a6f2b0d1d28e00d67770ed8249d770e420553474d9c312b9487600300dbc6"
   end
 
   depends_on "bun" => :build
