@@ -4,6 +4,7 @@ class Gascity < Formula
   url "https://github.com/gastownhall/gascity/archive/refs/tags/v1.5.1.tar.gz"
   sha256 "ed81257ac3e7d1d3cf96036dfd7039350f5852bcd556f6842da6cb714e0022ab"
   license "MIT"
+  revision 1
   head "https://github.com/gastownhall/gascity.git", branch: "main"
 
   livecheck do
@@ -22,7 +23,7 @@ class Gascity < Formula
   depends_on "go" => :build
   depends_on "beads"
   depends_on "dolt"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "jq"
   depends_on "tmux"
 
