@@ -1,8 +1,8 @@
 class Ladybug < Formula
   desc "Embedded graph database built for query speed and scalability"
   homepage "https://ladybugdb.com/"
-  url "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.21.2.tar.gz"
-  sha256 "8b3f98df08a6a1a37ff9a45dc32f83b0a52fb063082b7875d9518654775ac150"
+  url "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.22.0.tar.gz"
+  sha256 "b0f7a92aaa852cbb8615393011a0eb8801a32e3bc26e7974d0b65bf4c569b377"
   license "MIT"
 
   # There can be a notable gap between when a version is tagged and a
@@ -43,6 +43,9 @@ class Ladybug < Formula
   deny_network_access!
 
   def install
+    # Upstream pins OpenSSL 3 only for their CI `-Werror` and wheel packaging, while the code supports OpenSSL 4
+    inreplace "CMakeLists.txt", 'if (NOT CMAKE_MATCH_1 STREQUAL "3")', "if (CMAKE_MATCH_1 LESS 3)"
+
     args = %W[-DCMAKE_INSTALL_RPATH=#{rpath}]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
