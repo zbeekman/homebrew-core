@@ -12,11 +12,11 @@ class Onednn < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "601663f3b54af97045ce5dca5a50b5f983fc1f7135161ce2d851798898c1211b"
-    sha256 cellar: :any, arm64_tahoe:       "0b9d6460e1c08ae1716de8c38786ae4a60b55d1235232293001bf414a254903a"
-    sha256 cellar: :any, arm64_sequoia:     "4811fd76f07228228b3ab844d19d06059d23593b43a9f4211cebd9bca66d28a0"
-    sha256 cellar: :any, arm64_linux:       "efcab2205946722936a17e6cbb5a3c7c9587a3ae2ab33b7db175807daf4d5e8f"
-    sha256 cellar: :any, x86_64_linux:      "3d67ce913cd87f6d57939f8fa666c6d353124901187a95976af3e9115019b16f"
+    sha256 cellar: :any, arm64_golden_gate: "65d00d4ea28aa0aeb4eb9739eb240d4879688e9d71dc59796cc9e5fbceaa0955"
+    sha256 cellar: :any, arm64_tahoe:       "98181987dc19d801a212411c0661bb8edc72ad380f5d2b72a102b9b90c79238f"
+    sha256 cellar: :any, arm64_sequoia:     "29ead0d2821c873152269f36bf450583776a2ba0561431c72dbefcc1887d3761"
+    sha256 cellar: :any, arm64_linux:       "2b82d4f9b7a8f088acfc18f2d5f7791562c36aac174c2fd6e4210e0a358a1609"
+    sha256 cellar: :any, x86_64_linux:      "61e0e642a99f893d7c3ed228cbc191b3d495fe1aa2657575b0d74693eb5fa0fd"
   end
 
   depends_on "cmake" => :build
