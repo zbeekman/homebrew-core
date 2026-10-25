@@ -6,6 +6,10 @@ class Kontext < Formula
   license "MIT"
   head "https://github.com/kontext-security/kontext.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c1b07b0d1c79d9507e40ff241f910da0f208c312cdb64664c336763ca937ca20"
+  end
+
   depends_on "go" => :build
   depends_on :macos
 
