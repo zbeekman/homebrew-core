@@ -20,7 +20,7 @@ class Couchdb < Formula
   depends_on "erlang@28" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "openssl@4"
 
   uses_from_macos "ncurses"
