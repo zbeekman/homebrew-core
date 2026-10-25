@@ -8,11 +8,11 @@ class Tmt < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1bf200e2144ade74c6b10137042edd1f226282ecb31feb537d5aedc1a4c7054d"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "69f88276f470cd7cbdc75ed2de2833e9819b52987526304a6e49503cced93fe8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "78b7e92288eed9b9245b2b87c8967e9a4d381a7f03152058c3db35d4898bb524"
-    sha256 cellar: :any,                 arm64_linux:       "9dd749c7f7591933e3537c59c832d07751e6c954deb651e23f04bb9fc7d397e4"
-    sha256 cellar: :any,                 x86_64_linux:      "24f9a0e0c7163ede7d0948c20940d698e3e22328486614aa7fb4c05a949a272a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1e445c9585d385a0b563c06c47c52c8fca35f35cdd3921ef10ead5c07b96ea6e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d69ef0468279c25830b7c3625f1f3c3758c604cd1b5fff3a36bf263c61709364"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dfea0e64b0dc12d781748e332d16bc09e431f27ff33e5064830b1549a7e48780"
+    sha256 cellar: :any,                 arm64_linux:       "befeabbb73a1ca84884d2c87d3bac5c2ffd2e3fbec531242e58c0f831bfd8934"
+    sha256 cellar: :any,                 x86_64_linux:      "5c694bc6122f00dd65f22130130948a3d897f2a8bf45ecb966cf86516ce0df14"
   end
 
   depends_on "beakerlib"
