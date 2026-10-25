@@ -9,12 +9,11 @@ class Sail < Formula
   revision 4
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "9f1ef917a6f04b093c852c7f8fa76a3fe00aa73372c4a965aab4c797a38d025b"
-    sha256 cellar: :any, arm64_tahoe:       "017eee0950a149b3292fc249ad78dc538e74c32e0641a74e204d90ff1cc1afd4"
-    sha256 cellar: :any, arm64_sequoia:     "8dae1b8049366d5fceebaf50e88eee6e5985cbe4b108f7deef41c58205c07739"
-    sha256 cellar: :any, arm64_linux:       "428413f0043aa1fe77818b41b9812c9bcdf70aab611adabdd18071cad8520c68"
-    sha256 cellar: :any, x86_64_linux:      "19195164710329b704c739c283b1d46194b3de06c87a0a69820543f0fdcf05e6"
+    sha256 cellar: :any, arm64_golden_gate: "eaa8be2f39900040a5f880ba7bd34a9b12e63fc625705ee5ac238d9df4f17321"
+    sha256 cellar: :any, arm64_tahoe:       "2c3262e029123976d44d6272e9b990a8f97e9c1d6159c6ad2dbc32467d0babbe"
+    sha256 cellar: :any, arm64_sequoia:     "7dfff695ea5060dffdb7bcbae43b782ac5c288dca16dcc41f1da384f0ab0fb5a"
+    sha256 cellar: :any, arm64_linux:       "4fdad04dbf6504128b59aaa9a94c92fb0d8448f0ad0b0f9190069824c6301c98"
+    sha256 cellar: :any, x86_64_linux:      "95bf4dbc5324a3601cc679782f91b906f5d647ae79efae629b519e99e43f305d"
   end
 
   # `pkgconf` and `rust` are for bcrypt
