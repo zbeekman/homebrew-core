@@ -6,6 +6,14 @@ class GiteaImporter < Formula
   license "MIT"
   head "https://gitea.com/gitea/importer.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "61dbe0b107c94c5879d3575c862418f9ef01e0314567c38576ee42b59775d5c5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "61dbe0b107c94c5879d3575c862418f9ef01e0314567c38576ee42b59775d5c5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "61dbe0b107c94c5879d3575c862418f9ef01e0314567c38576ee42b59775d5c5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "3f76203b9547e8d1ea6331805729d3bea86c9a8eda20dd3ae5810627432fca50"
+    sha256 cellar: :any,                 x86_64_linux:      "851508b0a6014374ca602c65731d6304670782a342f852dbed49951ce8b5e2a1"
+  end
+
   depends_on "go" => :build
 
   allow_network_access! :test
