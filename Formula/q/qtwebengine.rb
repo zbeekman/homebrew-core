@@ -27,6 +27,7 @@ class Qtwebengine < Formula
     "Zlib",              # zlib (macOS)
     :public_domain,      # sigslot; SPL-SQRT-FLOOR
   ]
+  revision 1
   compatibility_version 1
   head "https://code.qt.io/qt/qtwebengine.git", branch: "dev"
 
@@ -83,7 +84,7 @@ class Qtwebengine < Formula
     depends_on "fontconfig"
     depends_on "freetype"
     depends_on "harfbuzz"
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
     depends_on "jpeg-turbo"
     depends_on "libdrm"
     depends_on "libevent"
@@ -158,6 +159,14 @@ class Qtwebengine < Formula
       type :backport
       resolves "https://qt-project.atlassian.net/browse/QTBUG-150276"
     end
+  end
+
+  # Workaround to build with ICU 79+ until QtWebEngine updates V8
+  # https://github.com/v8/v8/commit/f607706154eabc4a949628a88b38dbe95cd2274c
+  patch do
+    file "Patches/node/icu4c-79.patch"
+    directory "src/3rdparty/chromium/v8"
+    type :unofficial # cherry-picked from V8 but not in Qt yet
   end
 
   def install
