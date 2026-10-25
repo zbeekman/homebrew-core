@@ -41,7 +41,10 @@ class Showcert < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_install_with_resources
+
+    # Build an `:all` bottle
+    inreplace venv.site_packages/"magic/loader.py", "/opt/homebrew", HOMEBREW_PREFIX
   end
 
   test do
