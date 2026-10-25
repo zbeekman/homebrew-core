@@ -6,6 +6,7 @@ class Tmt < Formula
   url "https://files.pythonhosted.org/packages/93/c6/582f9e74b702240ce224f227aadc2e0a34485b7e67cfef21461a38f0cd19/tmt-1.79.0.tar.gz"
   sha256 "c94f11b5593a02cdabfd585af4798f9bbe38943be0369cf058a128bb3d6c225f"
   license "MIT"
+  revision 1
 
   bottle do
     rebuild 1
@@ -45,8 +46,8 @@ class Tmt < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/35/c8/1d457d9150ff948f2ce6ada7715e0eeebbe5d3b58a45271a1e222474bcd3/filelock-4.1.1.tar.gz"
-    sha256 "7ba0927482c5a814b0a7f391d029ccdb8010f576f0a74c0dcde1811e8bc4c1b6"
+    url "https://files.pythonhosted.org/packages/d8/28/3893324bcadf8f89b1616637468d766af3f625008c0735bf704fdfa86617/filelock-4.2.4.tar.gz"
+    sha256 "c6d8663535e1650ee430507b4ffbac7b464dd64b7647ea0112a9f406499d163d"
   end
 
   resource "flexcache" do
@@ -95,13 +96,13 @@ class Tmt < Formula
   end
 
   resource "pint" do
-    url "https://files.pythonhosted.org/packages/9f/bc/2c38c32e0fb1f966d3695f4493a3f3ce2cc0cca1bbe7c958b92261b31af9/pint-0.26.1.tar.gz"
-    sha256 "1bbde36eae57a5a289cd05081c6405618a5899814940752064ce351cd0204f71"
+    url "https://files.pythonhosted.org/packages/d3/b0/cef9c8913ebe959d97b2d57b1fc2a77a4291c4f2bd4dc3fe4d3313c938ea/pint-0.26.2.tar.gz"
+    sha256 "391e5d2fc01fdb121c113b8eb47386688575542c1f5144c465ff318bf5133573"
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/80/a8/66d45abadff219e36e2a824181b8f6a67e7ed4572934d6252c71c29d5731/platformdirs-4.13.0.tar.gz"
-    sha256 "1aa0b0d3f224c1f07c295121e312a5a24a180d6ae5a8425ea1784b3e3863e9c0"
+    url "https://files.pythonhosted.org/packages/58/e6/d0abbb256b44e6a05748c6942511ff67db8dbb068de0c35b24bf1b395b09/platformdirs-4.13.5.tar.gz"
+    sha256 "05831adf87d392760f4b5c3a0a95579ab5a10b18b9b9bd43680dcb47544788a0"
   end
 
   resource "pygments" do
