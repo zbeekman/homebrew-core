@@ -2,6 +2,7 @@ class Dotnet < Formula
   desc ".NET Core"
   homepage "https://dotnet.microsoft.com/"
   license "MIT"
+  revision 1
   version_scheme 1
   compatibility_version 8
 
@@ -45,6 +46,14 @@ class Dotnet < Formula
         directory "src/runtime"
         type :backport
         resolves "https://github.com/dotnet/runtime/pull/135534"
+      end
+
+      # Avoid OpenSSL APIs missing from the shim with OpenSSL 4.1
+      patch do
+        file "Patches/dotnet/openssl-4.1-ocsp-bio.patch"
+        directory "src/runtime"
+        type :unofficial
+        resolves "https://github.com/dotnet/runtime/pull/136435"
       end
     end
 
@@ -98,7 +107,7 @@ class Dotnet < Formula
   depends_on "pkgconf" => :build
   depends_on "rapidjson" => :build
   depends_on "brotli"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "openssl@4"
 
   uses_from_macos "cpio" => :build
