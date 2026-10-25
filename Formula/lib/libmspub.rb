@@ -23,7 +23,7 @@ class Libmspub < Formula
   depends_on "boost" => :build
   depends_on "libwpg" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "librevenge"
   depends_on "libwpd"
 
@@ -34,6 +34,8 @@ class Libmspub < Formula
     # Commit ref: https://git.libreoffice.org/libmspub/+/698bed839c9129fa7a90ca1b5a33bf777bc028d1%5E%21
     patch :DATA
   end
+
+  deny_network_access!
 
   def install
     # icu4c 75+ needs C++17 and icu4c 76+ needs icu-uc
