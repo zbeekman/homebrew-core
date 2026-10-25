@@ -6,11 +6,11 @@ class CppPeglib < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4be4242a06f9c307b85af98cce6b89cae592e6704d6f3db903c7d4eaff2097e3"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "6bde4f2a24e596b86080f1bba9e3e8ffec4e8e40ec0f1df282c04b2f249a18af"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3a16ecf5d6bb4cf67d239f05938f5d52f9dc47f4308d37a47e9cecce3829c765"
-    sha256 cellar: :any,                 arm64_linux:       "a77bd3c8db84406f6db0193e3bbdfb7137930a0c917ba4a4dd1220859a2c9ca6"
-    sha256 cellar: :any,                 x86_64_linux:      "bc5cc72fc36942e222af72dcf1533dfeb9b435cd57530d16b0caadc6c9f77547"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b9afef276785f08f460f2edc97518d3a0bf8d62395274f15ac4b7d45e2c34f68"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "c47474808f84dd332df5cdfa5b6acc338f373d1ae842b2f18ddb6f4724fed451"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "dfea0fd2abd5da79085f66cb4a9b8b70368cf21054fc6feb546a223165996002"
+    sha256 cellar: :any,                 arm64_linux:       "baad1e5f08ef6067ab60d6f5765363c6201788f93964d3fe320d68918e477a89"
+    sha256 cellar: :any,                 x86_64_linux:      "80ac176e20ce125ce4708c0c7c17fb208e329797b14a30e408778abbf3739c3e"
   end
 
   depends_on "cmake" => :build
