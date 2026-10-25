@@ -6,13 +6,11 @@ class Cppinsights < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_golden_gate: "ee0989361cda46c3d642d4e31b611d27f4cc550a2db1053ed17a192ff320a0cd"
-    sha256 cellar: :any,                 arm64_tahoe:       "c90332769d11df6c4f53571711bc957fd3dd9b85efb36cf8514ec4b68f536763"
-    sha256 cellar: :any,                 arm64_sequoia:     "08003aceaa6b2252c6b05cf8f5800cd7b38f0fb3e3f9761ae15bad20a1893028"
-    sha256 cellar: :any,                 arm64_sonoma:      "14204b9de05e74325bcdb50588d6a7ce1549d621b8b256aca59fa25fa567f941"
-    sha256 cellar: :any,                 sonoma:            "d066316a0e075f75bf5681bca990302e2391c986198473c0d4412a237026fa27"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "24f0a681d41862e78db82eadb6334ef1f94a73136281ba9c5b4d7598a8961f62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:      "378068391598d3fd0e3a53212ab3d9541391e19fa38ae27f0b6fd572ca873a17"
+    sha256 cellar: :any, arm64_golden_gate: "b5633c0e313c6fd70f9410ffd5a10617ecbbaaa152713b912d5da69cfa814863"
+    sha256 cellar: :any, arm64_tahoe:       "30982f0823a19c63dc716f05d93eaa5c7ac2597d7a31de8234160b90d9de5eb6"
+    sha256 cellar: :any, arm64_sequoia:     "3e791d40ac93afe5c9fef513e43f01c5ab05dd6eb5bd98d5c95c9adfba99824f"
+    sha256 cellar: :any, arm64_linux:       "ad14e8ac3e990a2361d68aeee61268b7c2df80df4df147191bfee0b858a2384f"
+    sha256 cellar: :any, x86_64_linux:      "b8122edafbeda16ff1136088b5a8c8d0174340ec7e24ac48d11c04566141661a"
   end
 
   depends_on "cmake" => :build
