@@ -19,11 +19,12 @@ class MariadbAT106 < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "0d5e51f96ba103c2a3d4a44d890481c073843477efed517fa7cfc3b2b1a95b75"
-    sha256 arm64_tahoe:       "54febd67d7699f9c1724fe82086e1817a72dec8dbc70c2b93b9aaa8585c77922"
-    sha256 arm64_sequoia:     "480ae3f3272da83dea9e9b700704cdcf086ef8956bacc7c4cd2ead0e65c346c4"
-    sha256 arm64_linux:       "a7a6817b4f2c3cdeb9b2c709430517b06d4d343cd4d3ad5d7307a61429610aa9"
-    sha256 x86_64_linux:      "e4d98a4628fd46cc2ca980080b068243e188307821d5f78aeb4af223532be4fa"
+    rebuild 1
+    sha256 arm64_golden_gate: "07a3364401fc451a627db1d64a094e9aa10838e9265ad6b2428e8a6ae78874fc"
+    sha256 arm64_tahoe:       "c9a4be125d5d6af86a1589a39ef030a5a2f3674bd6e5154e35b22ec3859ae0f3"
+    sha256 arm64_sequoia:     "bdfd99a99b97605f6c16f2a98e4923845f4d4aedd901a63426d248da5df2b9f3"
+    sha256 arm64_linux:       "8fe4cba22e0e1cda8f8801d866ece79efc33d0edb92730eb238ee058ca5016de"
+    sha256 x86_64_linux:      "394ba1fd46bac7a8abdaadd016221d46879d0c028aa87817cbf023f56e59aa18"
   end
 
   keg_only :versioned_formula
