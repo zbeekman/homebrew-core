@@ -23,7 +23,7 @@ class Dwdiff < Formula
 
   depends_on "gettext" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
 
   on_macos do
     depends_on "gettext"
