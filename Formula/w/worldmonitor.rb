@@ -6,7 +6,7 @@ class Worldmonitor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d45219792fa2e0ff4005e09bf7ec0a4fad180d4d275ac6642768aa863051b0a8"
+    sha256 cellar: :any_skip_relocation, all: "c3ba5c5f768fb668195363170ed8d12fad6539fc7dd79d91b434ed5d129836dc"
   end
 
   depends_on "node"
