@@ -12,11 +12,12 @@ class Opencode < Formula
   end
 
   bottle do
-    sha256 arm64_golden_gate: "e94025144a945e78f047e79ff80976745c6a73b82511d712bee64bf45deee829"
-    sha256 arm64_tahoe:       "0644b02edaed4e7922b043fdc796fa8c6be5d38fd3e7dee4c234ba0967437df4"
-    sha256 arm64_sequoia:     "92ea92d7b313d1fcc62f1bb1600b17db4b4d305c921ffdbc15f90e597a7995e9"
-    sha256 arm64_linux:       "a6e877b5614acaa09b51159073d491309c23c50a6d604612916d2621cacd258f"
-    sha256 x86_64_linux:      "0b6685629209f53630f830cf1493d5741f125d195ca16588d9c7eae4e3bfe5df"
+    rebuild 1
+    sha256 arm64_golden_gate: "fe028bd6ed6f2b4865c8d1974bf77a8fe3dc77a0213ce950b9d8a6cda0605af0"
+    sha256 arm64_tahoe:       "52fd8af89e77e55da18b10dabb9e3cc6be26a1d96db0cd55e227ee734e0cedba"
+    sha256 arm64_sequoia:     "61b63601216b068eb8dd66a38132fe5cba6d8bc3d6806e5bfe9b394f18bdffbb"
+    sha256 arm64_linux:       "7870ed2af167898340e23c81d9535f8226266d1f6b99d3d47d0e533373d0fd3e"
+    sha256 x86_64_linux:      "c18fcf6d73c112798b0f792aae2c3a29b821963d89b56bc98fd4555b9f13a19a"
   end
 
   depends_on "bun" => :build
@@ -26,7 +27,7 @@ class Opencode < Formula
   depends_on "ripgrep"
 
   on_linux do
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
   end
 
   resource "opencode-pty" do
