@@ -9,12 +9,11 @@ class Weasyprint < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "19590af9f409b34191dcc6852ff1fbf56f9d03e1a8c65c3e06b08ba1e951aed1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "ed84b5ebc627bf4dcf86599b2d4f54427178b1cdb41e0226a7a8cd05b792a1e7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "cae166a73db87eb2cdb677affe66698acc5b3693443b16aa8804ed62b6a43eb9"
-    sha256 cellar: :any,                 arm64_linux:       "3baca13cb4f2231a0ff48512231a0ac8b65f8ebc807698e83e5ceba8cee392a7"
-    sha256 cellar: :any,                 x86_64_linux:      "d5242679a0be62eb7f89ed9b6e1ab5276e4ce66c754f580a688e7520d124805c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "e2f3ca5ef535806e5ff5cb05d601129d9ae0220d4e09554ca3e0b8493ee3e4e7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b386a8eeb59a00ee8f9025edcd8fe156baf4d6461f5feac859bf758d16be6ca0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "c93b1e4548b86ef1c555682303956111f13775e4effa7ca9b4b27fdca72cd042"
+    sha256 cellar: :any,                 arm64_linux:       "7655055d9a1aec93a24eb9d46e92b997b99ff3d288e3dce9b0327ec0de06c6ea"
+    sha256 cellar: :any,                 x86_64_linux:      "4f2b0bdbffb02c1cb15de9df4cddb9789ff1ebfc2a9848751514d415dc59e22d"
   end
 
   depends_on "cffi" => :no_linkage
