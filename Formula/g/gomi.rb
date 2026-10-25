@@ -1,17 +1,17 @@
 class Gomi < Formula
   desc "Functions like rm but with the ability to restore files"
   homepage "https://gomi.dev"
-  url "https://github.com/babarot/gomi/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "514019cc7f87cb19f1a7c2dafd3fffaf29b3239d805f7ff8f92375124a15c1eb"
+  url "https://github.com/babarot/gomi/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "850a09c2b738a1f831cb798ce308137d6ef4207d70544dbc6eaf3fddbfaf7b1a"
   license "MIT"
   head "https://github.com/babarot/gomi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "5190187f841fbd660c9e655c3fecd38679f08428ff8c924084c219ee5172dfa0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "5190187f841fbd660c9e655c3fecd38679f08428ff8c924084c219ee5172dfa0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "5190187f841fbd660c9e655c3fecd38679f08428ff8c924084c219ee5172dfa0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "f671e5c5997900823401deef4d76a301b493a8cb40932860b2bb52b4add3d96e"
-    sha256 cellar: :any,                 x86_64_linux:      "0a137547c0b5cd7209b74a344723c688080b0ff68f1fbcd791e7aa666dbe310d"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "59415d3b3a927bf3ef0bc3d7f6de4d141f90a9366f40adf3ccd2370b12ba8049"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "59415d3b3a927bf3ef0bc3d7f6de4d141f90a9366f40adf3ccd2370b12ba8049"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "59415d3b3a927bf3ef0bc3d7f6de4d141f90a9366f40adf3ccd2370b12ba8049"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "345da30b323c4e35cf22d2434f6eb1e151e11e7c4c972661b4f12f5b903fffff"
+    sha256 cellar: :any,                 x86_64_linux:      "0ec18f170836766b35e31ac31916c1d641d1d8352c88e71207b7928a7f9c5124"
   end
 
   depends_on "go" => :build
