@@ -31,7 +31,7 @@ class NodeAT24 < Formula
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "hdrhistogram_c"
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "libnghttp2"
   depends_on "libnghttp3"
   depends_on "libngtcp2"
@@ -63,6 +63,13 @@ class NodeAT24 < Formula
   fails_with :gcc do
     version "11"
     cause "needs GCC 12 or newer"
+  end
+
+  # https://github.com/v8/v8/commit/f607706154eabc4a949628a88b38dbe95cd2274c
+  patch do
+    file "Patches/node/icu4c-79.patch"
+    directory "deps/v8"
+    type :unofficial # cherry-picked from V8 but not in node yet
   end
 
   def install
