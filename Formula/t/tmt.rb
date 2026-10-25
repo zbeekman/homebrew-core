@@ -3,10 +3,9 @@ class Tmt < Formula
 
   desc "Test Management Tool"
   homepage "https://tmt.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/93/c6/582f9e74b702240ce224f227aadc2e0a34485b7e67cfef21461a38f0cd19/tmt-1.79.0.tar.gz"
-  sha256 "c94f11b5593a02cdabfd585af4798f9bbe38943be0369cf058a128bb3d6c225f"
+  url "https://files.pythonhosted.org/packages/5b/d7/03b86441447940b86f59c814d9bdc7f21ab5d8ed010ec220700b2cd9f497/tmt-1.80.0.tar.gz"
+  sha256 "92decab8ae98c740b37b04cce13234dd4938b0692ee492ff6c22bf7137b96f59"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "1bf200e2144ade74c6b10137042edd1f226282ecb31feb537d5aedc1a4c7054d"
@@ -122,11 +121,6 @@ class Tmt < Formula
   resource "ruamel-yaml" do
     url "https://files.pythonhosted.org/packages/c7/3b/ebda527b56beb90cb7652cb1c7e4f91f48649fbcd8d2eb2fb6e77cd3329b/ruamel_yaml-0.19.1.tar.gz"
     sha256 "53eb66cd27849eff968ebf8f0bf61f46cdac2da1d1f3576dd4ccee9b25c31993"
-  end
-
-  resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/ea/97/60fda20e2fb54b83a61ae14648b0817c8f5d84a3821e40bfbdae1437026a/ruamel_yaml_clib-0.2.15.tar.gz"
-    sha256 "46e4cc8c43ef6a94885f72512094e482114a8a706d3c555a34ed4b0d20200600"
   end
 
   resource "urllib3" do
