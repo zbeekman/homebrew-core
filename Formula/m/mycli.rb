@@ -3,10 +3,9 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/22/f3/5a33a732593bc5392e39ff75963cca0bfa43becaa64ccc00281eff885a9a/mycli-2.30.0.tar.gz"
-  sha256 "869774e6ed8f2d5a4136a8b204d0128ad01579aee281aa1bda03d1acd03ecde3"
+  url "https://files.pythonhosted.org/packages/4d/1d/57d75c73cfe406c9069f6f809b6f9c24b43d11ca4919b70eb006ed2f40dd/mycli-2.30.1.tar.gz"
+  sha256 "02de99676cc910c905bcfbfabcfadc38125e20baba1f380faeb20360c0613934"
   license "BSD-3-Clause"
-  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_golden_gate: "e0c188e3a16f022ca5dd3c44c11a74776ed743d4ab7a67fdb48e6c15c54cfbc4"
@@ -125,8 +124,8 @@ class Mycli < Formula
   end
 
   resource "jiter" do
-    url "https://files.pythonhosted.org/packages/9c/1f/8176d92e001f86505424b41664032ae26a882bc9ca41a32c803f373f9195/jiter-0.17.0.tar.gz"
-    sha256 "03e432f226a453851079fb84cd17c6da9991eab723e28d716f14ae3d906e0c12"
+    url "https://files.pythonhosted.org/packages/63/5b/f68319f4fe624311a744a33d10fdbcac4c971991e348223cba60d31780b2/jiter-0.18.0.tar.gz"
+    sha256 "a0ca63fd9450a212e4e658d4cfe0ab4977c4f9b0003c68828b843c65e27662ff"
   end
 
   resource "jsonschema" do
