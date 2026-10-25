@@ -10,12 +10,11 @@ class Shub < Formula
   head "https://github.com/scrapinghub/shub.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "77e6fe20efaf4d32eb1183872540aaf65ae856fc4dff054b41b3e882836156b5"
-    sha256 cellar: :any, arm64_tahoe:       "0c90fc93486d14e0cbb4b64e12bf75775496ae49d4de0924901a59fa39aaf80a"
-    sha256 cellar: :any, arm64_sequoia:     "f6eebc6e9d9f4fe7edd4ad71301bc286d0d9d164b161590b15dc074ff6499781"
-    sha256 cellar: :any, arm64_linux:       "4427a984b56dc73932576175c07a1e5d8b798a9ea2d3ba9a27dcccc8ec911d56"
-    sha256 cellar: :any, x86_64_linux:      "5ff6ebd803970305aac6dc9f7b032add12e401c6c81430ed5d2381471392539e"
+    sha256 cellar: :any, arm64_golden_gate: "7f46bd1bede4980dc8caccfe48b6f71204941771cb22127325a2110ab85de400"
+    sha256 cellar: :any, arm64_tahoe:       "cd9ff0011163011b29e85e9c302a78c9a45a5017924c9ed77627154b7f7c6521"
+    sha256 cellar: :any, arm64_sequoia:     "4d71fbb076a90c20fad7aebbada1eabd6ea0c986d7810ece95147fad74a12c38"
+    sha256 cellar: :any, arm64_linux:       "93f0ee7e0752d0affded3f0689c811063623e8c095a47f9319ffedec1d1498e1"
+    sha256 cellar: :any, x86_64_linux:      "94f89911d8cb1a51d19201cb73e4aebf60ab4dd3a3962158cd367bc108f92757"
   end
 
   depends_on "certifi" => :no_linkage
