@@ -1,8 +1,8 @@
 class Hypopg < Formula
   desc "Hypothetical Indexes for PostgreSQL"
   homepage "https://github.com/HypoPG/hypopg"
-  url "https://github.com/HypoPG/hypopg/archive/refs/tags/1.4.3.tar.gz"
-  sha256 "498a961d88cf37057fd9e98027d06fe805c8959d51895c3d9b94c9eb4e14f706"
+  url "https://github.com/HypoPG/hypopg/archive/refs/tags/1.4.4.tar.gz"
+  sha256 "727ce0a14183291cb3f30a02b4a6f9a3d99d539bf761602bafb9e20688a6cb5c"
   license "PostgreSQL"
 
   livecheck do
