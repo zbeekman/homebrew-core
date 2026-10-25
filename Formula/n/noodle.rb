@@ -6,11 +6,12 @@ class Noodle < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_golden_gate: "b0e13398a339cee8d88b38e762aa7dfbc439e26d5decdbadfa11e4399b4314e2"
-    sha256 arm64_tahoe:       "65e773afb70d92cbf49842b9f8e49cf33576c3281c37a1e501b72f5476efa641"
-    sha256 arm64_sequoia:     "642c6916dac0b9de68d3630476e10731b2790bd1200efbd634e937b049501309"
-    sha256 arm64_linux:       "7ca41bc126e8d0889ff6fa886f82a3592182b6a0e7caa35faeda4a49ef6b1df6"
-    sha256 x86_64_linux:      "23309bf622c532f06c7d39f37c7fff9220c86aad34cba61da2d5b3a32cf26141"
+    rebuild 1
+    sha256 arm64_golden_gate: "087295450aa4937cee935bc531b8b6a50fe0e07d8d76808e86b7ba6b84dbba01"
+    sha256 arm64_tahoe:       "9148cf5650757d44af86129155a0df46e3e511fadb9e695d8ec509b459c51038"
+    sha256 arm64_sequoia:     "7017b70de4e8ba7ce0e48a91477a74afaeaae5ad10ade49835eef3e732bc396e"
+    sha256 arm64_linux:       "87ca61118dddce7ffd042b1d8b0f8a1b3709369b53a0d1772a12534536c7d13e"
+    sha256 x86_64_linux:      "415deb67807849178f162e2073b9970a1b3c99031379d523b3a9856f21a7a4c2"
   end
 
   depends_on "bun" => :build
@@ -19,7 +20,7 @@ class Noodle < Formula
   depends_on "zig@0.16" => :build
 
   on_linux do
-    depends_on "icu4c@78"
+    depends_on "icu4c@79"
   end
 
   resource "opentui" do
