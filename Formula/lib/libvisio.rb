@@ -22,11 +22,13 @@ class Libvisio < Formula
 
   depends_on "boost" => :build
   depends_on "pkgconf" => :build
-  depends_on "icu4c@78"
+  depends_on "icu4c@79"
   depends_on "librevenge"
 
   uses_from_macos "gperf" => :build
   uses_from_macos "libxml2"
+
+  deny_network_access!
 
   def install
     # icu4c 75+ needs C++17
