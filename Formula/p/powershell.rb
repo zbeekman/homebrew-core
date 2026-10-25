@@ -2,8 +2,8 @@ class Powershell < Formula
   desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"
   url "https://github.com/PowerShell/PowerShell.git",
-      tag:      "v7.6.8",
-      revision: "6e29e4530c5631b6d3d2afacb49c6f1267fb0b42"
+      tag:      "v7.6.9",
+      revision: "bf5fc434120666e5f1a8d1dfd6ecac7efc17a4be"
   license "MIT"
 
   livecheck do
@@ -29,12 +29,6 @@ class Powershell < Formula
     ENV["NUGET_PACKAGES"] = buildpath/".nuget/packages"
     ENV["DOTNET_ROOT"] = dotnet.opt_libexec
     inreplace "global.json", /"version": "\d.*"/, "\"version\": \"#{dotnet.version}\""
-
-    # Use System.Security.Cryptography.{Pkcs,Xml} 10.0.13 with the fixes for CVE-2026-70162 and CVE-2026-84008
-    inreplace %w[
-      src/System.Management.Automation/System.Management.Automation.csproj
-      src/Microsoft.PowerShell.SDK/Microsoft.PowerShell.SDK.csproj
-    ], /(Include="System\.Security\.Cryptography\.(?:Pkcs|Xml)" Version=)"[^"]+"/, '\1"10.0.13"'
 
     target_framework = "net#{dotnet.version.major_minor}"
     dotnet_sources = [
