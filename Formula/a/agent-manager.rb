@@ -7,11 +7,11 @@ class AgentManager < Formula
   head "https://github.com/YoanWai/agent-manager.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "a34b13a8ca4364e04cbcc570bd4b24f57ca881ae281dd31e1ea49942feed0c05"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "df297dda6d18d5d8bf12a6bf887f5794a89222af7cd99c35f12b8bc20b987a9c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a7fe5196b2ad9fa0e9aea71eb0d8915b5d4bdc708df275ed3d16b96015245b65"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "c91b9da59a5ff4fdbd1a52a6e347db226c84326deae59fd03cabb0d898855c4b"
-    sha256 cellar: :any,                 x86_64_linux:      "9ade714f2c233675d1a42d1dd4d0ca7acc3cca780234aed9b79419c89e6944ac"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fd18bc0dea112cab79e039aca563688afc67bf80aeae0ac785d045538140352a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "2b7094fa89c54db7cf8188c83ec5bdfbb81c40b8697d5f0764507e2c8283f44b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "a919025906125c7f13a905ba1b115b60d5f5d4f5e0eef311ed139a7de0fa9f48"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c4a0e729cef9009d0810215956a87b14a93447abad7c65e35d4c3adcf85ac0e7"
+    sha256 cellar: :any,                 x86_64_linux:      "bfae51fff635136407d59787a31e52926a6b42361286a281dce93624e943bfba"
   end
 
   depends_on "go" => :build
