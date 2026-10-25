@@ -10,12 +10,11 @@ class Scrapy < Formula
   head "https://github.com/scrapy/scrapy.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "061c147c1b70b7dca3f064e83f1f2cc1d48df478ed36242fa27671749bbfa4c7"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "75974ce3e784b6acf4db2911c3f8d30700808d0dbc5d814af96ed0afd9e02256"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "26e73d66cac50d32c96579da99fd4e1d806b7e2c9daae7a529e92cd0ae79dcaa"
-    sha256 cellar: :any,                 arm64_linux:       "2ace56e5ebc6d5ac86784682f2f73b73b37d0132dce3bb6ebc069845111ac9a4"
-    sha256 cellar: :any,                 x86_64_linux:      "1fa01ac8cd4a7d66b4b49fa5b5741d95ab106a46065c0c68e0adb04af34a379a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8d2259546b8d5946122d0c9b17e8acf61605b236b15306c5d4e5132255c5c268"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "dea8c5d6f499e6ec04511a3f02970e719ece9f85b6dd0087d5e7a47fc9d1154c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e6e3a3a87d27eb2036527489a821581a1bbeb5b36402101d575ca22465b05f7"
+    sha256 cellar: :any,                 arm64_linux:       "b61491c59e409b59533fd67d4992c833c8767659aa6f55f4aba517fbb05137fe"
+    sha256 cellar: :any,                 x86_64_linux:      "534d0838345dca76b1697cf659d2852a1948e369a3b4f8dd3676a7bbbea6f6eb"
   end
 
   depends_on "certifi" => :no_linkage
