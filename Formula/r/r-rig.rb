@@ -1,8 +1,8 @@
 class RRig < Formula
   desc "R Installation Manager"
   homepage "https://github.com/r-lib/rig"
-  url "https://github.com/r-lib/rig/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "7db832e504371b12fd0d43611ccb4530572da3b679133a8ce33577752d374604"
+  url "https://github.com/r-lib/rig/archive/refs/tags/v0.11.1.tar.gz"
+  sha256 "e6186c4fd550f1c31323d5732c95da78e8a2f0cafcd3e505264b2ec7f5a09da2"
   license "MIT"
 
   livecheck do
