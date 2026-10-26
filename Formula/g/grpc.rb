@@ -1,23 +1,12 @@
 class Grpc < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
+  url "https://github.com/grpc/grpc.git",
+      tag:      "v1.85.0",
+      revision: "a83eb274517ef49e95d5529dac071f4b74abae0d"
   license "Apache-2.0"
-  compatibility_version 6
+  compatibility_version 7
   head "https://github.com/grpc/grpc.git", branch: "master"
-
-  stable do
-    url "https://github.com/grpc/grpc.git",
-        tag:      "v1.84.1",
-        revision: "b0c0c4f8823ba69e7e43aaaf183c30a43e549924"
-
-    # Backport support for OpenSSL 4
-    patch do
-      url "https://github.com/grpc/grpc/commit/fb056ab0bb3ed003febe82f069ff41514288a4f3.patch?full_index=1"
-      sha256 "87b230d855ec21fe0a58d6a1d1c726c1a78ccd2cbda6269998f5177f12f10bb4"
-      type :backport
-      resolves "https://github.com/grpc/grpc/pull/41932"
-    end
-  end
 
   # There can be a notable gap between when a version is tagged and a
   # corresponding release is created, so we check releases instead of the Git
@@ -50,6 +39,8 @@ class Grpc < Formula
     depends_on "zlib-ng-compat"
   end
 
+  def openssl = deps.map(&:name).find { |d| d.match?(/^openssl(@\d+(\.\d+)*)?$/) }
+
   def install
     args = %W[
       -DCMAKE_CXX_STANDARD=17
@@ -78,7 +69,7 @@ class Grpc < Formula
       }
     CPP
 
-    ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("openssl@4")/"pkgconfig"
+    ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib(openssl)/"pkgconfig"
     ENV.prepend_path "PKG_CONFIG_PATH", formula_opt_lib("zlib-ng-compat")/"pkgconfig" if OS.linux?
     flags = shell_output("pkgconf --cflags --libs libcares protobuf re2 grpc++").chomp.split
     system ENV.cc, "test.cpp", "-L#{formula_opt_lib("abseil")}", *flags, "-o", "test"
