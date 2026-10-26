@@ -1,8 +1,8 @@
 class Tclap < Formula
   desc "Templatized C++ command-line parser library"
   homepage "https://tclap.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/tclap/v1.4.0/tclap-1.4.0.tar.gz"
-  sha256 "413014a7e68740d9aa972a058532e3e9959b4af7509d6ae7b11a8c1828378567"
+  url "https://downloads.sourceforge.net/project/tclap/v1.6.0/tclap-1.6.0.tar.gz"
+  sha256 "2ed4bb7655cb4feb7a0432311f1194875bf2d61d6624bf3e513fa101cb0bcb10"
   license "MIT"
 
   livecheck do
@@ -11,7 +11,7 @@ class Tclap < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e198b288be5af5412b065c73ef2510f1aa705fa6fac90bc4043010999b455b0d"
+    sha256 cellar: :any_skip_relocation, all: "8e5c1727caf71a057232bc1248acbedae6eac6b1fe752da419d533fafcf26d76"
   end
 
   depends_on "cmake" => :build
@@ -52,7 +52,7 @@ class Tclap < Formula
         cout << name;
       }
     CPP
-    system ENV.cxx, "test.cpp", "-o", "test"
+    system ENV.cxx, "test.cpp", "-std=c++20", "-o", "test"
     assert_equal "werbemoH", shell_output("./test -r -n Homebrew")
   end
 end
