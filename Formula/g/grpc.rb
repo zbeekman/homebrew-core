@@ -20,11 +20,11 @@ class Grpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "c5bfb97fc3acfae28f6440c17ccda52f61ecf1ec0baa926117c84a445b09daee"
-    sha256 cellar: :any, arm64_tahoe:       "d371e2af0f0b50d1e9cf8084588bb1d51992e0c175fea8326bfb4705d1714e57"
-    sha256 cellar: :any, arm64_sequoia:     "db1c710f5311c5d4aac35b0960eb83e87fee9f32d278232a5250e74bc291727e"
-    sha256               arm64_linux:       "eaf0369a0aa092eeef4ef1f73df6f0dfee0a7f99f93f980d8a575ef11dc180de"
-    sha256               x86_64_linux:      "59cf58764671937ead9ac309bf6f0d6fbc78c58e98bdbde15926159ef98db5d8"
+    sha256 cellar: :any, arm64_golden_gate: "695e263c7005c5c4904e539c6d7f5c65e7492aba2b9412dd9a5df25f16f501e5"
+    sha256 cellar: :any, arm64_tahoe:       "adc305b346d3230f20dd97e9b256df2174b9eac4b91582daba61830b75fdad90"
+    sha256 cellar: :any, arm64_sequoia:     "8ca4087c9f839e9ab88ffb250514fc35e6890cae3a2fc52322e245a66af90b06"
+    sha256               arm64_linux:       "65ccf970dc6db576f5722def4a0b3ba4171dd61db990888986a28da94c41eac3"
+    sha256               x86_64_linux:      "9c941d44a1c205f0a3fd1910455981fabe78dbfea01939364fae12b4706f01c6"
   end
 
   depends_on "cmake" => :build
