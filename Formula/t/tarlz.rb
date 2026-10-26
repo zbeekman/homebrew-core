@@ -12,11 +12,11 @@ class Tarlz < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_golden_gate: "328421f6970c6a2ef8d6761756cf430f9e7729288abd19f66ddc86db47b27ac6"
-    sha256 cellar: :any, arm64_tahoe:       "f86f03912b3b3a5249d1bb7654d29b914c2b117e125e5f22a8e1d9821fc54c62"
-    sha256 cellar: :any, arm64_sequoia:     "7496de4b57ec402943cbd955dd4aad174415dcc08c2f9db551e9785a4b09322d"
-    sha256 cellar: :any, arm64_linux:       "8f39075c4858a8a8f5dd0cedb75077c1a0e49d13fd44e08740a69b4359ec3b23"
-    sha256 cellar: :any, x86_64_linux:      "f5fbb0ecc6fbac68bc548dafeed95eea54527c80a58b6c6393719abe41b58114"
+    sha256 cellar: :any, arm64_golden_gate: "a7f25f5fe5ff8bb768e6514541a8a13131cccf6b29bfe2fb694f01a8184aae89"
+    sha256 cellar: :any, arm64_tahoe:       "4c0a448aace9c239320873476430fd97ae216c4dfe5ca7d03bd0524990ebd223"
+    sha256 cellar: :any, arm64_sequoia:     "ab959257b677e8d0f25ded756a4c9af32cb2f3347e5b97616d2c2e0456e11597"
+    sha256 cellar: :any, arm64_linux:       "9822adcd3dc14a1697806e6efe742eb623a58e9f13c012895326aa77dd294cc5"
+    sha256 cellar: :any, x86_64_linux:      "105e82146d7a36e68ed4c9ac8a09d2b21765aa1b759f0fff84c0c65aff482243"
   end
 
   depends_on "lzlib"
