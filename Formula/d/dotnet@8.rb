@@ -13,12 +13,11 @@ class DotnetAT8 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_golden_gate: "ad33743dabf1b733f98a03b1618c8023bf4010f1e9c2fc4791af18f5afdff5fc"
-    sha256 cellar: :any, arm64_tahoe:       "52474fbbfb77a24c3e690f0d9cf0f8925f04914dbde4831c66f8227bf52139b2"
-    sha256 cellar: :any, arm64_sequoia:     "97db857d0e86f852ab8d12ffe70c5c481ba4c6487f587c0b592de95bf50d60ac"
-    sha256 cellar: :any, arm64_linux:       "92740de7891b8ef22ad11151945ed5f9d74512ffbfaf2c2a87567a7104b59634"
-    sha256 cellar: :any, x86_64_linux:      "8052e75f4adee78db3637a6ea34f09cf126a6a06b22b376e54458629592d4867"
+    sha256 cellar: :any, arm64_golden_gate: "109647785468907f1c21a862fb416c40e6a4353b7cb781f644d06174b9bcdc93"
+    sha256 cellar: :any, arm64_tahoe:       "b2a8b042f99b9a9285f84fab34e957423d950d642c45da2d9d354ae08be9e84b"
+    sha256 cellar: :any, arm64_sequoia:     "c7e618d0a19c34b6033b88157d3f59f80c8a1185bbf8eb7275a5a664b0b3b4da"
+    sha256 cellar: :any, arm64_linux:       "26d8c6c2aa761d9cc909744110c56e17f28389c5c6aa0b0c6434deb002359b01"
+    sha256 cellar: :any, x86_64_linux:      "fd2cfaff0caeba8f9dcc6bb489d5026275228bc4d8d3dc2eb984d79cb2bcf199"
   end
 
   keg_only :versioned_formula
