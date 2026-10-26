@@ -8,11 +8,11 @@ class Usage < Formula
   head "https://github.com/jdx/usage.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8170f0370605923f9c29d77852ef99ccc36896be931baed202c4fdb70a834c01"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "bff3179a8bfc89f211cf36748f989ff3724c0d4f5b270038e5d3d4601d61373e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ad764d6ff6349621b9abd61710d01ba475edfbec95de71053ba2a0947f925e96"
-    sha256 cellar: :any,                 arm64_linux:       "397b34109e53b872999917b3232d4032718c73000be183d8f1b9e13279bd3d45"
-    sha256 cellar: :any,                 x86_64_linux:      "a284c5314e3123fbb5268c0b8f9fab0a6a230b604ff3185dc68e7e5d49aacb8c"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "874609cbaedc68e59e48fd7dc421aa553bd28a11ea7381c989ec719f58ff7d11"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4388138851487559aac58f272467a055b368c59d1dfc469be3ae6183270d9e47"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "ca9e59c8041e4a32a6e44186faece5b609c4b6445352e2191321f9b20a55f450"
+    sha256 cellar: :any,                 arm64_linux:       "af80c7e260d38ee5f1b2c69f0f72bc94ba93430358be98dfadf03ab1529cce9e"
+    sha256 cellar: :any,                 x86_64_linux:      "e0c0c8d549a70a48c34fda72fe0ea52992e348b577c19d1996843a2eb202dfc8"
   end
 
   depends_on "rust" => :build
