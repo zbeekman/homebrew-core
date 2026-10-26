@@ -7,11 +7,11 @@ class ShuttleCli < Formula
   head "https://github.com/lunarway/shuttle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "aefec12638d4390492d12eca20ed2a7c414176d493f2fe9ab51f530dd0619854"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "aefec12638d4390492d12eca20ed2a7c414176d493f2fe9ab51f530dd0619854"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "aefec12638d4390492d12eca20ed2a7c414176d493f2fe9ab51f530dd0619854"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "5e8c5bcaddb5bdbebb85518aa3746cb916c473c48beabec58b683168d9580d5f"
-    sha256 cellar: :any,                 x86_64_linux:      "ce45f1a3ea7684bff6e8096717437959b4db0d6fc89eb821ef3a329099efa4a0"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "b42db6a5913fdcbda428184902ed19bfe684dd978a04053d86ef52e8802cbc46"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "b42db6a5913fdcbda428184902ed19bfe684dd978a04053d86ef52e8802cbc46"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "b42db6a5913fdcbda428184902ed19bfe684dd978a04053d86ef52e8802cbc46"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "c67919f591e02ac1db10320f8fb235c05fb7359648f5a10e853ced59f9e00bb4"
+    sha256 cellar: :any,                 x86_64_linux:      "d57f8975647e08c0471263914968370a4af0077943f019eab89490e00906378a"
   end
 
   depends_on "go" => :build
