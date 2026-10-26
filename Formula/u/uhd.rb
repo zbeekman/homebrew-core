@@ -6,7 +6,7 @@ class Uhd < Formula
   url "https://github.com/EttusResearch/uhd/archive/refs/tags/v4.11.0.0.tar.gz"
   sha256 "1e53faec13ea2be9dd8f765956157d1434f41fa0a124fac8f7b2340f8445b026"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later", "MIT", "BSD-3-Clause", "Apache-2.0"]
-  revision 2
+  revision 3
   compatibility_version 1
   head "https://github.com/EttusResearch/uhd.git", branch: "master"
 
