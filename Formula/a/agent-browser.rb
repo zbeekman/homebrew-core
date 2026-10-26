@@ -1,8 +1,8 @@
 class AgentBrowser < Formula
   desc "Browser automation CLI for AI agents"
   homepage "https://agent-browser.dev/"
-  url "https://github.com/vercel-labs/agent-browser/archive/refs/tags/v0.39.3.tar.gz"
-  sha256 "eb132640189e6171f994ba79c3070b6fdd6523fe24c04a01209dafbd167e11c6"
+  url "https://github.com/vercel-labs/agent-browser/archive/refs/tags/v0.39.4.tar.gz"
+  sha256 "3c2a46ff1f89ef1d14c8ee2f5b5521336b9cf48208475cccb0958ed5ec56ea44"
   license "Apache-2.0"
 
   bottle do
