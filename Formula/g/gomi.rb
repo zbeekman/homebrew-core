@@ -7,11 +7,11 @@ class Gomi < Formula
   head "https://github.com/babarot/gomi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "4ab496828108ae81a28142ea18d295b202f87a0785802230ce20e904f97b20c0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "4ab496828108ae81a28142ea18d295b202f87a0785802230ce20e904f97b20c0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "4ab496828108ae81a28142ea18d295b202f87a0785802230ce20e904f97b20c0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:       "b1a72e3a52c1671c1ec6406f238671b66cd9e5c54a1238c6633d6a196626a679"
-    sha256 cellar: :any,                 x86_64_linux:      "f0367933e7b39bfa2c8928a4f7899c49f8e9b449f3c6f192f42bc0b08aad1ff3"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "8e2cbc859d5904de55dde6119f3bd8a5270a5a26dfc598c9763c22ec57ec9407"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8e2cbc859d5904de55dde6119f3bd8a5270a5a26dfc598c9763c22ec57ec9407"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "8e2cbc859d5904de55dde6119f3bd8a5270a5a26dfc598c9763c22ec57ec9407"
+    sha256 cellar: :any_skip_relocation, arm64_linux:       "54051f257904e4623384ffcb27924e8cd0457bb4eb4baca6a997f2b9f6b8d329"
+    sha256 cellar: :any,                 x86_64_linux:      "7200decf0196d8068bbd56b74d000648e4b73cda3a5df99a9fbf8cf70d81fce4"
   end
 
   depends_on "go" => :build
