@@ -6,6 +6,7 @@ class Cellpose < Formula
   url "https://files.pythonhosted.org/packages/0c/e4/3d4606883a5489b86fa6ab5f65b9d0a243810f64efb934033fe425089d5a/cellpose-4.2.1.1.tar.gz"
   sha256 "229eedea3977184202b2c87b3bd41c609facd742c7203bb4ad3cebd7b6bc6839"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/MouseLand/cellpose.git", branch: "main"
 
   bottle do
@@ -19,7 +20,7 @@ class Cellpose < Formula
   depends_on "python-setuptools" => :build
   depends_on "numpy"
   depends_on "opencv"
-  depends_on "python@3.14"
+  depends_on "python@3.15"
   depends_on "pytorch"
   depends_on "scipy"
   depends_on "torchvision"
