@@ -2,8 +2,8 @@ class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
   # Use the `-full` tarball to avoid having to download during the build.
-  url "https://github.com/JuliaLang/julia/releases/download/v1.13.2/julia-1.13.2-full.tar.gz"
-  sha256 "33703abf30a23f5dd27e4e1adb7fc66c7c03ae98961376e9c04661c84d389229"
+  url "https://github.com/JuliaLang/julia/releases/download/v1.13.3/julia-1.13.3-full.tar.gz"
+  sha256 "13c4cd067962d6c81fea60081925be9e2992a4204289cc30dee3ddd9692cf31b"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
@@ -61,7 +61,7 @@ class Julia < Formula
   patch do
     url "https://github.com/JuliaLang/julia/commit/a60153ef1ecf6928f1962bb557313489e00d8f59.patch?full_index=1"
     sha256 "adba308fd9e3165c3d1c964ac7c659936347ff62e0eb60d406bbf4f21d9a5941"
-    type :unofficial
+    type :backport
     resolves "https://github.com/JuliaLang/julia/pull/63376"
   end
 
@@ -240,10 +240,7 @@ class Julia < Formula
 
     assert_equal "4", shell_output("#{bin}/julia #{args.join(" ")} --print '2 + 2'").chomp
 
-    # FIXME: Skipping test on macOS as runners keep timing out
-    if (!OS.mac? && !Hardware::CPU.intel?) || !ENV["HOMEBREW_GITHUB_ACTIONS"]
-      system bin/"julia", *args, "--eval", 'using Pkg; Pkg.add("Example")'
-    end
+    system bin/"julia", *args, "--eval", 'using Pkg; Pkg.add("Example")'
 
     # Check that Julia can load libraries in lib/"julia".
     # Most of these are symlinks to Homebrew-provided libraries.
