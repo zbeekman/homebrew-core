@@ -1,17 +1,10 @@
 class Av1an < Formula
   desc "Cross-platform command-line encoding framework"
   homepage "https://github.com/rust-av/Av1an"
+  url "https://github.com/rust-av/Av1an/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "f58096a084456acf66f2be273b6c70e05cb53831b2a8a5006569f08a5a7b575a"
   license "GPL-3.0-only"
-  revision 3
   head "https://github.com/rust-av/Av1an.git", branch: "master"
-
-  stable do
-    url "https://github.com/rust-av/Av1an/archive/refs/tags/v0.5.2.tar.gz"
-    sha256 "58eba4215ffaf07a58065e78fb4aec8df9ebda48e9d996621d559f3024b3538b"
-
-    # Workaround for VapourSynth 74+ until new release
-    patch :DATA
-  end
 
   # Differentiate v-prefixed tags from old version schemes
   livecheck do
@@ -38,12 +31,6 @@ class Av1an < Formula
     depends_on "nasm" => :build
   end
 
-  # Fix compatibility with FFmpeg 9.
-  patch do
-    url "https://github.com/rust-av/Av1an/commit/9bbd829c480e58625842d43b7c8f54962914e9a6.patch?full_index=1"
-    sha256 "78a74c9f236141bbc35e1a7e039b5f3b45d730ad7bb7bda62b337b95daf50e55"
-  end
-
   deny_network_access!
 
   def fetch
@@ -66,51 +53,3 @@ class Av1an < Formula
     assert_path_exists testpath/"test.av1.mkv"
   end
 end
-
-__END__
---- a/Cargo.lock
-+++ b/Cargo.lock
-@@ -1030,6 +1030,16 @@ dependencies = [
-  "pkg-config",
- ]
- 
-+[[package]]
-+name = "libloading"
-+version = "0.9.0"
-+source = "registry+https://github.com/rust-lang/crates.io-index"
-+checksum = "754ca22de805bb5744484a5b151a9e1a8e837d5dc232c2d7d8c2e3492edc8b60"
-+dependencies = [
-+ "cfg-if",
-+ "windows-link 0.2.1",
-+]
-+
- [[package]]
- name = "libz-sys"
- version = "1.1.23"
-@@ -2042,9 +2052,9 @@ checksum = "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65"
- 
- [[package]]
- name = "vapoursynth"
--version = "0.5.1"
-+version = "0.5.6"
- source = "registry+https://github.com/rust-lang/crates.io-index"
--checksum = "f817dd2eca0813092eecb84c916acef69419da39ee8563d9aeb25118bc927a71"
-+checksum = "413b994d9955202f99298ef502dec6d84f1be7603483d19158a365f9fdb8f128"
- dependencies = [
-  "anyhow",
-  "thiserror",
-@@ -2053,9 +2063,12 @@ dependencies = [
- 
- [[package]]
- name = "vapoursynth-sys"
--version = "0.5.0"
-+version = "0.6.0"
- source = "registry+https://github.com/rust-lang/crates.io-index"
--checksum = "0dc01f455bc7ef73678bbcab5332fbe745892fa9466ccefe086de52a32fbce19"
-+checksum = "4ef47dc5817613dbe0251eadbe2cea0443edebbb3a551be7b6728314ff44e12e"
-+dependencies = [
-+ "libloading",
-+]
- 
- [[package]]
- name = "vcpkg"
