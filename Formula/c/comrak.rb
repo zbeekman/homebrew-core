@@ -7,11 +7,11 @@ class Comrak < Formula
   head "https://github.com/kivikakk/comrak.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "23e0466f8639572e9ec26be17ad49c4260c0672903b3264ec06b35a730d817b1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "adb8d68daf98cbad3ae7d16240eaa9d9cb86eb69c8b01084047847b6867918d3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "3e812c215e7a077fe8d64b07c5f2ff1b66794ce0ce8592193a42aef2d4732b62"
-    sha256 cellar: :any,                 arm64_linux:       "46cd41bd8784a4739942eca8005ca7ad30f887754cb5c036020d9162bc506a40"
-    sha256 cellar: :any,                 x86_64_linux:      "e3fbde3200d3e6e02d04e73a3344fcae8d753d19d3ad73abd20b3ce72bf0f41a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "213d29ef3b214c03eebd10e524d4ac69e64bbd7be579f5f6b6583198d87b2575"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8953834ddca48b8f3300579ad753985cb415c20ef0f8915b1e75d46e0e87f9ba"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "db1a3ab9c26defdf32859bb6505d6e2b813690b9fad8b0be3f868cc030722d40"
+    sha256 cellar: :any,                 arm64_linux:       "6c580883b875f141c0229d4374bb1075a02279e13ffd96fc3e7baaa245d6f08b"
+    sha256 cellar: :any,                 x86_64_linux:      "7545781123ce0c9b34178009a1e3c462e94b96d1b19f12a7f9a2da6e72fd395d"
   end
 
   depends_on "rust" => :build
